@@ -1,0 +1,10 @@
+# EventBreakerRuleTimestamp
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `Format`                                                                              | **string*                                                                             | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `Length`                                                                              | **int64*                                                                              | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `Type`                                                                                | [EventBreakerRuleTimestampType](../../models/shared/eventbreakerruletimestamptype.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
