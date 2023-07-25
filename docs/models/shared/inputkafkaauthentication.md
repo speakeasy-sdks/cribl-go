@@ -1,0 +1,12 @@
+# InputKafkaAuthentication
+
+Authentication parameters to use when connecting to brokers. Using TLS is highly recommended.
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `Disabled`                                                                                             | *bool*                                                                                                 | :heavy_check_mark:                                                                                     | Enable Authentication                                                                                  |
+| `Mechanism`                                                                                            | [*InputKafkaAuthenticationSASLMechanism](../../models/shared/inputkafkaauthenticationsaslmechanism.md) | :heavy_minus_sign:                                                                                     | SASL authentication mechanism to use.                                                                  |
+| `XFlagprefix`                                                                                          | **string*                                                                                              | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

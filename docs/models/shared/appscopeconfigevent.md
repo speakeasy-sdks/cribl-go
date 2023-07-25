@@ -1,0 +1,12 @@
+# AppscopeConfigEvent
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `Enable`                                                                      | *bool*                                                                        | :heavy_check_mark:                                                            | N/A                                                                           |
+| `Format`                                                                      | [AppscopeConfigEventFormat](../../models/shared/appscopeconfigeventformat.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `Transport`                                                                   | [AppscopeTransport](../../models/shared/appscopetransport.md)                 | :heavy_check_mark:                                                            | N/A                                                                           |
+| `Type`                                                                        | [AppscopeConfigEventType](../../models/shared/appscopeconfigeventtype.md)     | :heavy_check_mark:                                                            | N/A                                                                           |
+| `Watch`                                                                       | [][AppscopeConfigEventWatch](../../models/shared/appscopeconfigeventwatch.md) | :heavy_check_mark:                                                            | N/A                                                                           |

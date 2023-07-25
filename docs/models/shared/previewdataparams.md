@@ -1,0 +1,20 @@
+# PreviewDataParams
+
+PreviewDataParams object
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `CPUProfile`                                                          | **bool*                                                               | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Dropped`                                                             | **bool*                                                               | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Events`                                                              | []map[string]*interface{}*                                            | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `InputID`                                                             | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Level`                                                               | **int64*                                                              | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Memory`                                                              | **int64*                                                              | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Mode`                                                                | [PreviewDataParamsMode](../../models/shared/previewdataparamsmode.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `PipelineID`                                                          | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `SampleID`                                                            | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `SamplePipelineID`                                                    | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Timeout`                                                             | **int64*                                                              | :heavy_minus_sign:                                                    | N/A                                                                   |

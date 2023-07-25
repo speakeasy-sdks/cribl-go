@@ -1,0 +1,9 @@
+# AppscopeConfigWithCustomLibscopeLog
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `Level`                                                                                                      | [*AppscopeConfigWithCustomLibscopeLogLevel](../../models/shared/appscopeconfigwithcustomlibscopeloglevel.md) | :heavy_minus_sign:                                                                                           | N/A                                                                                                          |
+| `Transport`                                                                                                  | [*AppscopeTransport](../../models/shared/appscopetransport.md)                                               | :heavy_minus_sign:                                                                                           | N/A                                                                                                          |

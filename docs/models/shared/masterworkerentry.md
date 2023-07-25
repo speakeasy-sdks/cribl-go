@@ -1,0 +1,16 @@
+# MasterWorkerEntry
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `Deployable`                                                          | **bool*                                                               | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `FirstMsgTime`                                                        | *int64*                                                               | :heavy_check_mark:                                                    | N/A                                                                   |
+| `Group`                                                               | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `ID`                                                                  | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `Info`                                                                | [MasterWorkerEntryInfo](../../models/shared/masterworkerentryinfo.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| `LastMsgTime`                                                         | *int64*                                                               | :heavy_check_mark:                                                    | N/A                                                                   |
+| `Status`                                                              | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Type`                                                                | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `WorkerProcesses`                                                     | *int64*                                                               | :heavy_check_mark:                                                    | N/A                                                                   |

@@ -1,0 +1,9 @@
+# InputWindowsMetricsHostCustomSystem
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `Detail`                                                                                                   | **bool*                                                                                                    | :heavy_minus_sign:                                                                                         | Generate metrics for all system information                                                                |
+| `Mode`                                                                                                     | [*InputWindowsMetricsHostCustomSystemMode](../../models/shared/inputwindowsmetricshostcustomsystemmode.md) | :heavy_minus_sign:                                                                                         | Select the level of details for system metrics                                                             |

@@ -1,0 +1,11 @@
+# IAMTrustPolicyStatement
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `Action`                                                                                     | []*string*                                                                                   | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `Condition`                                                                                  | [*IAMTrustPolicyStatementCondition](../../models/shared/iamtrustpolicystatementcondition.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `Effect`                                                                                     | *string*                                                                                     | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `Principal`                                                                                  | [IAMTrustPolicyStatementPrincipal](../../models/shared/iamtrustpolicystatementprincipal.md)  | :heavy_check_mark:                                                                           | N/A                                                                                          |

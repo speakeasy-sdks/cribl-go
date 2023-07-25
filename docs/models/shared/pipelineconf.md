@@ -1,0 +1,13 @@
+# PipelineConf
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `AsyncFuncTimeout`                                                            | **int64*                                                                      | :heavy_minus_sign:                                                            | Time (in ms) to wait for an async function to complete processing a data item |
+| `Description`                                                                 | **string*                                                                     | :heavy_minus_sign:                                                            | Simple description of this pipeline                                           |
+| `Functions`                                                                   | [][PipelineFunctionConf](../../models/shared/pipelinefunctionconf.md)         | :heavy_minus_sign:                                                            | List of functions to pass data through                                        |
+| `Groups`                                                                      | map[string][PipelineConfGroups](../../models/shared/pipelineconfgroups.md)    | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Output`                                                                      | **string*                                                                     | :heavy_minus_sign:                                                            | The output destination for events processed by this pipeline                  |
+| `Streamtags`                                                                  | []*string*                                                                    | :heavy_minus_sign:                                                            | Add tags for filtering and grouping in @{product}.                            |

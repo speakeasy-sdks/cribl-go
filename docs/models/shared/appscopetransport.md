@@ -1,0 +1,13 @@
+# AppscopeTransport
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `Buffer`                                                                   | [*AppscopeTransportBuffer](../../models/shared/appscopetransportbuffer.md) | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `Host`                                                                     | **string*                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `Path`                                                                     | **string*                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `Port`                                                                     | **int64*                                                                   | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `TLS`                                                                      | [*AppscopeTransportTLS](../../models/shared/appscopetransporttls.md)       | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `Type`                                                                     | **string*                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |

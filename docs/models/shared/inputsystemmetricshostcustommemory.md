@@ -1,0 +1,9 @@
+# InputSystemMetricsHostCustomMemory
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `Detail`                                                                                                 | **bool*                                                                                                  | :heavy_minus_sign:                                                                                       | Generate metrics for all memory states                                                                   |
+| `Mode`                                                                                                   | [*InputSystemMetricsHostCustomMemoryMode](../../models/shared/inputsystemmetricshostcustommemorymode.md) | :heavy_minus_sign:                                                                                       | Select the level of details for memory metrics                                                           |

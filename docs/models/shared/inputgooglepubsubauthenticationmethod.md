@@ -1,0 +1,11 @@
+# InputGooglePubsubAuthenticationMethod
+
+Google authentication method. Choose Auto to use environment variables PUBSUB_PROJECT and PUBSUB_CREDENTIALS..
+
+
+## Values
+
+| Name                                          | Value                                         |
+| --------------------------------------------- | --------------------------------------------- |
+| `InputGooglePubsubAuthenticationMethodSecret` | secret                                        |
+| `InputGooglePubsubAuthenticationMethodManual` | manual                                        |

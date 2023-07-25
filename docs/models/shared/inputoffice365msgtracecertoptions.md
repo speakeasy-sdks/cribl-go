@@ -1,0 +1,11 @@
+# InputOffice365MsgTraceCertOptions
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `CertPath`                                                                                    | *string*                                                                                      | :heavy_check_mark:                                                                            | Path to the certificate to use. Certificate should be in PEM format. Can reference $ENV_VARS. |
+| `CertificateName`                                                                             | **string*                                                                                     | :heavy_minus_sign:                                                                            | The name of the predefined certificate.                                                       |
+| `Passphrase`                                                                                  | **string*                                                                                     | :heavy_minus_sign:                                                                            | Passphrase to use to decrypt the private key.                                                 |
+| `PrivKeyPath`                                                                                 | *string*                                                                                      | :heavy_check_mark:                                                                            | Path to the private key to use. Key should be in PEM format. Can reference $ENV_VARS.         |
