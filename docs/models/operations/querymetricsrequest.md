@@ -1,0 +1,12 @@
+# QueryMetricsRequest
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `Earliest`                                                                    | **int64*                                                                      | :heavy_minus_sign:                                                            | earliest time to query against                                                |
+| `FilterExpr`                                                                  | **string*                                                                     | :heavy_minus_sign:                                                            | a js expression to apply against the metrics returned (can filter dimensions) |
+| `Latest`                                                                      | **int64*                                                                      | :heavy_minus_sign:                                                            | latest time to query against                                                  |
+| `MetricNameFilter`                                                            | **string*                                                                     | :heavy_minus_sign:                                                            | can be a regex or an array of metric names                                    |
+| `NumBuckets`                                                                  | **int64*                                                                      | :heavy_minus_sign:                                                            | buckets in the past to include in the query results                           |

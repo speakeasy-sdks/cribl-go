@@ -1,0 +1,17 @@
+# ExpressionOptions
+
+
+## Fields
+
+| Field                                                            | Type                                                             | Required                                                         | Description                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `AllowInternal`                                                  | **bool*                                                          | :heavy_minus_sign:                                               | N/A                                                              |
+| `Args`                                                           | []*string*                                                       | :heavy_minus_sign:                                               | N/A                                                              |
+| `AstTraverseCallback`                                            | [*TraverseCallback](../../models/shared/traversecallback.md)     | :heavy_minus_sign:                                               | N/A                                                              |
+| `Context`                                                        | **string*                                                        | :heavy_minus_sign:                                               | N/A                                                              |
+| `DisallowAssign`                                                 | **bool*                                                          | :heavy_minus_sign:                                               | N/A                                                              |
+| `MaxNumOfAllowedIterations`                                      | **int64*                                                         | :heavy_minus_sign:                                               | N/A                                                              |
+| `PartialEval`                                                    | [*PartialEvalRewrite](../../models/shared/partialevalrewrite.md) | :heavy_minus_sign:                                               | N/A                                                              |
+| `ReplaceIdentifiers`                                             | **bool*                                                          | :heavy_minus_sign:                                               | N/A                                                              |
+| `ReplaceLiterals`                                                | **bool*                                                          | :heavy_minus_sign:                                               | N/A                                                              |
+| `Unprotected`                                                    | **bool*                                                          | :heavy_minus_sign:                                               | N/A                                                              |

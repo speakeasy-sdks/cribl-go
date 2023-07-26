@@ -1,0 +1,14 @@
+# AppscopeConfig
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `Cribl`                                                                   | [*AppscopeConfigCribl](../../models/shared/appscopeconfigcribl.md)        | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `Event`                                                                   | [*AppscopeConfigEvent](../../models/shared/appscopeconfigevent.md)        | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `Libscope`                                                                | [*AppscopeConfigLibscope](../../models/shared/appscopeconfiglibscope.md)  | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `Metric`                                                                  | [*AppscopeConfigMetric](../../models/shared/appscopeconfigmetric.md)      | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `Payload`                                                                 | [*AppscopeConfigPayload](../../models/shared/appscopeconfigpayload.md)    | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `Protocol`                                                                | [][AppscopeConfigProtocol](../../models/shared/appscopeconfigprotocol.md) | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `Tags`                                                                    | [][AppscopeConfigTags](../../models/shared/appscopeconfigtags.md)         | :heavy_minus_sign:                                                        | N/A                                                                       |
