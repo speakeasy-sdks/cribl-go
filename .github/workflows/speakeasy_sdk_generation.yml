@@ -3,6 +3,7 @@ permissions:
   checks: write
   contents: write
   statuses: write
+  pull-requests: write
 "on":
   workflow_dispatch:
     inputs:
@@ -19,10 +20,10 @@ jobs:
       force: ${{ github.event.inputs.force }}
       languages: |
         - go
-      mode: direct
+      mode: pr
       openapi_doc_auth_header: x-api-key
       openapi_docs: |
-        - https://raw.githubusercontent.com/speakeasy-sdks/cribl-go/main/openapi.yaml
+        - ./openapi.yaml
       speakeasy_version: latest
       create_release: true
     secrets:
