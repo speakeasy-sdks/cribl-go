@@ -69,7 +69,7 @@ type Cribl struct {
 	Branches                   *branches
 	BulletinMessage            *bulletinMessage
 	BulletinMessages           *bulletinMessages
-	Bytes                      *bytes
+	Bytes                      *bytesT
 	CancelRunningGroup         *cancelRunningGroup
 	Certificate                *certificate
 	Certificates               *certificates
@@ -319,8 +319,8 @@ func New(opts ...SDKOption) *Cribl {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "1.0.0",
-			GenVersion:        "2.73.0",
+			SDKVersion:        "1.1.0",
+			GenVersion:        "2.75.1",
 			ServerDefaults: []map[string]string{
 				{
 					"organizationID": "api",
