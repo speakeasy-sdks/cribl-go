@@ -108,7 +108,11 @@ func (s *lookup) Create(ctx context.Context, request interface{}) (*operations.C
 
 // Delete - Delete LookupFile
 // Delete LookupFile
-func (s *lookup) Delete(ctx context.Context, request operations.DeleteLookupRequest) (*operations.DeleteLookupResponse, error) {
+func (s *lookup) Delete(ctx context.Context, id string) (*operations.DeleteLookupResponse, error) {
+	request := operations.DeleteLookupRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/lookups/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *lookup) Delete(ctx context.Context, request operations.DeleteLookupRequ
 
 // Get - Get LookupFile by ID
 // Get LookupFile by ID
-func (s *lookup) Get(ctx context.Context, request operations.GetLookupRequest) (*operations.GetLookupResponse, error) {
+func (s *lookup) Get(ctx context.Context, id string) (*operations.GetLookupResponse, error) {
+	request := operations.GetLookupRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/lookups/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *lookup) Get(ctx context.Context, request operations.GetLookupRequest) (
 
 // Update - Update LookupFile
 // Update LookupFile
-func (s *lookup) Update(ctx context.Context, request operations.UpdateLookupRequest) (*operations.UpdateLookupResponse, error) {
+func (s *lookup) Update(ctx context.Context, id string, requestBody interface{}) (*operations.UpdateLookupResponse, error) {
+	request := operations.UpdateLookupRequest{
+		ID:          id,
+		RequestBody: requestBody,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/lookups/{id}", request, nil)
 	if err != nil {
@@ -346,7 +359,11 @@ func (s *lookup) Update(ctx context.Context, request operations.UpdateLookupRequ
 
 // Upload - Upload LookupFile
 // Upload LookupFile
-func (s *lookup) Upload(ctx context.Context, request operations.UploadLookupRequest) (*operations.UploadLookupResponse, error) {
+func (s *lookup) Upload(ctx context.Context, filename *string) (*operations.UploadLookupResponse, error) {
+	request := operations.UploadLookupRequest{
+		Filename: filename,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/system/lookups"
 

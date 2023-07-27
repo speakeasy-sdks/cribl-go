@@ -25,7 +25,11 @@ func newLatestPQ(sdkConfig sdkConfiguration) *latestPQ {
 
 // Get - Get status of latest clear PQ job for an output
 // Get status of latest clear PQ job for an output
-func (s *latestPQ) Get(ctx context.Context, request operations.GetLatestPQRequest) (*operations.GetLatestPQResponse, error) {
+func (s *latestPQ) Get(ctx context.Context, id string) (*operations.GetLatestPQResponse, error) {
+	request := operations.GetLatestPQRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/outputs/{id}/pq", request, nil)
 	if err != nil {

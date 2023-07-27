@@ -26,7 +26,11 @@ func newUserID(sdkConfig sdkConfiguration) *userID {
 
 // Delete - Delete User
 // Delete User
-func (s *userID) Delete(ctx context.Context, request operations.DeleteUserIDRequest) (*operations.DeleteUserIDResponse, error) {
+func (s *userID) Delete(ctx context.Context, id string) (*operations.DeleteUserIDResponse, error) {
+	request := operations.DeleteUserIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/users/{id}", request, nil)
 	if err != nil {
@@ -103,7 +107,11 @@ func (s *userID) Delete(ctx context.Context, request operations.DeleteUserIDRequ
 
 // Get - Get User by ID
 // Get User by ID
-func (s *userID) Get(ctx context.Context, request operations.GetUserIDRequest) (*operations.GetUserIDResponse, error) {
+func (s *userID) Get(ctx context.Context, id string) (*operations.GetUserIDResponse, error) {
+	request := operations.GetUserIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/users/{id}", request, nil)
 	if err != nil {

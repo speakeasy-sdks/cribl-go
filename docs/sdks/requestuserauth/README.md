@@ -29,8 +29,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.RequestUserAuth.Logout(ctx, shared.LogoutRequest{
-        RelayState: cribl.String("culpa"),
-        SAMLResponse: cribl.String("reiciendis"),
+        RelayState: cribl.String("quod"),
+        SAMLResponse: cribl.String("a"),
     })
     if err != nil {
         log.Fatal(err)

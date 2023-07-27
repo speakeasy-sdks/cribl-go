@@ -27,12 +27,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    code := "mollitia"
+    state := "nulla"
 
     ctx := context.Background()
-    res, err := s.IDPAuth.Get(ctx, operations.GetIDPAuthRequest{
-        Code: cribl.String("beatae"),
-        State: cribl.String("sunt"),
-    })
+    res, err := s.IDPAuth.Get(ctx, code, state)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,10 +44,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.GetIDPAuthRequest](../../models/operations/getidpauthrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `code`                                                | **string*                                             | :heavy_minus_sign:                                    | Authorization Code                                    |
+| `state`                                               | **string*                                             | :heavy_minus_sign:                                    | N/A                                                   |
 
 
 ### Response

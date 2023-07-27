@@ -27,11 +27,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    filterExp := "voluptate"
 
     ctx := context.Background()
-    res, err := s.WorkerEdgeNodesCount.Get(ctx, operations.GetWorkerEdgeNodesCountRequest{
-        FilterExp: cribl.String("necessitatibus"),
-    })
+    res, err := s.WorkerEdgeNodesCount.Get(ctx, filterExp)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,10 +43,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetWorkerEdgeNodesCountRequest](../../models/operations/getworkeredgenodescountrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `filterExp`                                           | **string*                                             | :heavy_minus_sign:                                    | Filter expression evaluated against nodes             |
 
 
 ### Response

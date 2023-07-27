@@ -33,11 +33,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "voluptatibus"
 
     ctx := context.Background()
-    res, err := s.Job.Cancel(ctx, operations.CancelJobRequest{
-        ID: "d364ffd4-5590-46d1-a63d-48e935c2c9e8",
-    })
+    res, err := s.Job.Cancel(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -50,10 +49,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
-| `request`                                                                  | [operations.CancelJobRequest](../../models/operations/canceljobrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Job instance id                                       |
 
 
 ### Response
@@ -84,11 +83,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "molestias"
 
     ctx := context.Background()
-    res, err := s.Job.Delete(ctx, operations.DeleteJobRequest{
-        ID: "1f30be3e-4320-42d7-a165-76506641870d",
-    })
+    res, err := s.Job.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -101,10 +99,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
-| `request`                                                                  | [operations.DeleteJobRequest](../../models/operations/deletejobrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Job instance id                                       |
 
 
 ### Response
@@ -135,11 +133,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "officia"
 
     ctx := context.Background()
-    res, err := s.Job.Get(ctx, operations.GetJobRequest{
-        ID: "9d21f9ad-030c-44ec-811a-0836429068b8",
-    })
+    res, err := s.Job.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -152,10 +149,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `ctx`                                                                | [context.Context](https://pkg.go.dev/context#Context)                | :heavy_check_mark:                                                   | The context to use for the request.                                  |
-| `request`                                                            | [operations.GetJobRequest](../../models/operations/getjobrequest.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Job instance id                                       |
 
 
 ### Response
@@ -186,11 +183,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "libero"
 
     ctx := context.Background()
-    res, err := s.Job.PauseJob(ctx, operations.PauseJobRequest{
-        ID: "502a55e7-f73b-4c84-9e32-0a319f4badf9",
-    })
+    res, err := s.Job.PauseJob(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -203,10 +199,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| `ctx`                                                                    | [context.Context](https://pkg.go.dev/context#Context)                    | :heavy_check_mark:                                                       | The context to use for the request.                                      |
-| `request`                                                                | [operations.PauseJobRequest](../../models/operations/pausejobrequest.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Job instance id                                       |
 
 
 ### Response
@@ -237,11 +233,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "totam"
 
     ctx := context.Background()
-    res, err := s.Job.Prevent(ctx, operations.PreventJobRequest{
-        ID: "47c9a867-bc42-4426-a658-16ddca8ef51f",
-    })
+    res, err := s.Job.Prevent(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -254,10 +249,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.PreventJobRequest](../../models/operations/preventjobrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Job Instance id                                       |
 
 
 ### Response
@@ -288,11 +283,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "sequi"
 
     ctx := context.Background()
-    res, err := s.Job.Resume(ctx, operations.ResumeJobRequest{
-        ID: "cb4c593e-c12c-4daa-90ec-7afedbd80df4",
-    })
+    res, err := s.Job.Resume(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -305,10 +299,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
-| `request`                                                                  | [operations.ResumeJobRequest](../../models/operations/resumejobrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Job instance id                                       |
 
 
 ### Response

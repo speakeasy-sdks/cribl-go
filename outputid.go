@@ -26,7 +26,11 @@ func newOutputID(sdkConfig sdkConfiguration) *outputID {
 
 // Delete - Delete Output
 // Delete Output
-func (s *outputID) Delete(ctx context.Context, request operations.DeleteOutputIDRequest) (*operations.DeleteOutputIDResponse, error) {
+func (s *outputID) Delete(ctx context.Context, id string) (*operations.DeleteOutputIDResponse, error) {
+	request := operations.DeleteOutputIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/outputs/{id}", request, nil)
 	if err != nil {
@@ -103,7 +107,11 @@ func (s *outputID) Delete(ctx context.Context, request operations.DeleteOutputID
 
 // Get - Get Output by ID
 // Get Output by ID
-func (s *outputID) Get(ctx context.Context, request operations.GetOutputIDRequest) (*operations.GetOutputIDResponse, error) {
+func (s *outputID) Get(ctx context.Context, id string) (*operations.GetOutputIDResponse, error) {
+	request := operations.GetOutputIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/outputs/{id}", request, nil)
 	if err != nil {
@@ -180,7 +188,12 @@ func (s *outputID) Get(ctx context.Context, request operations.GetOutputIDReques
 
 // Update - Update Output
 // Update Output
-func (s *outputID) Update(ctx context.Context, request operations.UpdateOutputIDRequest) (*operations.UpdateOutputIDResponse, error) {
+func (s *outputID) Update(ctx context.Context, id string, output *shared.Output) (*operations.UpdateOutputIDResponse, error) {
+	request := operations.UpdateOutputIDRequest{
+		ID:     id,
+		Output: output,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/outputs/{id}", request, nil)
 	if err != nil {

@@ -36,12 +36,19 @@ func main() {
         Conf: &shared.MappingRulesetConf{
             Functions: []map[string]interface{}{
                 map[string]interface{}{
-                    "consequatur": "delectus",
-                    "incidunt": "dolore",
+                    "dolor": "rerum",
+                    "sed": "accusamus",
+                    "optio": "delectus",
+                    "minus": "quo",
+                },
+                map[string]interface{}{
+                    "asperiores": "voluptatum",
+                    "iste": "corporis",
+                    "accusantium": "illo",
                 },
             },
         },
-        ID: "5accf667-aaf9-4bba-9185-fe431d6bf5c8",
+        ID: "0f5dd3d6-fa18-404e-94c8-2f168a363c88",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,11 +96,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "ducimus"
 
     ctx := context.Background()
-    res, err := s.MappingRuleset.Delete(ctx, operations.DeleteMappingRulesetRequest{
-        ID: "38fbb8c2-0cb6-47fc-8b42-5e99e6234c9f",
-    })
+    res, err := s.MappingRuleset.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -106,10 +112,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.DeleteMappingRulesetRequest](../../models/operations/deletemappingrulesetrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -140,11 +146,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "adipisci"
 
     ctx := context.Background()
-    res, err := s.MappingRuleset.Get(ctx, operations.GetMappingRulesetRequest{
-        ID: "7b79dfeb-77a5-4c38-94ba-f91e506ef890",
-    })
+    res, err := s.MappingRuleset.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -157,10 +162,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetMappingRulesetRequest](../../models/operations/getmappingrulesetrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -191,31 +196,29 @@ func main() {
             BearerAuth: "",
         }),
     )
-
-    ctx := context.Background()
-    res, err := s.MappingRuleset.Update(ctx, operations.UpdateMappingRulesetRequest{
-        MappingRuleset: &shared.MappingRuleset{
-            Active: cribl.Bool(false),
-            Conf: &shared.MappingRulesetConf{
-                Functions: []map[string]interface{}{
-                    map[string]interface{}{
-                        "tempora": "nam",
-                        "numquam": "odio",
-                    },
-                    map[string]interface{}{
-                        "maiores": "veritatis",
-                        "autem": "earum",
-                    },
-                    map[string]interface{}{
-                        "ex": "possimus",
-                        "nesciunt": "corrupti",
-                    },
+    id := "recusandae"
+    mappingRuleset := &shared.MappingRuleset{
+        Active: cribl.Bool(false),
+        Conf: &shared.MappingRulesetConf{
+            Functions: []map[string]interface{}{
+                map[string]interface{}{
+                    "numquam": "sequi",
+                    "voluptatum": "sit",
+                    "rerum": "veritatis",
+                },
+                map[string]interface{}{
+                    "autem": "quidem",
+                    "totam": "porro",
+                    "deserunt": "magni",
+                    "nihil": "voluptas",
                 },
             },
-            ID: "5a3c4ac6-31b9-49e2-aced-8f9fdb9410f6",
         },
-        ID: "3bbf8178-37b0-41af-9d78-8624189eb448",
-    })
+        ID: "a60a04c4-95cc-4699-971b-51c1bdb1cf4b",
+    }
+
+    ctx := context.Background()
+    res, err := s.MappingRuleset.Update(ctx, id, mappingRuleset)
     if err != nil {
         log.Fatal(err)
     }
@@ -228,10 +231,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateMappingRulesetRequest](../../models/operations/updatemappingrulesetrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `ctx`                                                           | [context.Context](https://pkg.go.dev/context#Context)           | :heavy_check_mark:                                              | The context to use for the request.                             |
+| `id`                                                            | *string*                                                        | :heavy_check_mark:                                              | Unique ID                                                       |
+| `mappingRuleset`                                                | [*shared.MappingRuleset](../../models/shared/mappingruleset.md) | :heavy_minus_sign:                                              | MappingRuleset object to be updated                             |
 
 
 ### Response

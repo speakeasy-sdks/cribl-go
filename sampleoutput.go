@@ -26,7 +26,12 @@ func newSampleOutput(sdkConfig sdkConfiguration) *sampleOutput {
 
 // Post - Send sample data to an output to validate configuration or test connectivity
 // Send sample data to an output to validate configuration or test connectivity
-func (s *sampleOutput) Post(ctx context.Context, request operations.PostSampleOutputRequest) (*operations.PostSampleOutputResponse, error) {
+func (s *sampleOutput) Post(ctx context.Context, id string, outputTestRequest *shared.OutputTestRequest) (*operations.PostSampleOutputResponse, error) {
+	request := operations.PostSampleOutputRequest{
+		ID:                id,
+		OutputTestRequest: outputTestRequest,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/outputs/{id}/test", request, nil)
 	if err != nil {

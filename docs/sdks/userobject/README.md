@@ -75,27 +75,25 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "enim"
+    user := &shared.User{
+        CurrentPassword: cribl.String("nihil"),
+        Disabled: false,
+        Email: "Una_Turcotte27@gmail.com",
+        First: "quam",
+        ID: "353f63c8-2093-479a-a69c-d5fbcf79da18",
+        Last: "fuga",
+        Password: cribl.String("odio"),
+        Roles: []string{
+            "magni",
+            "eos",
+            "harum",
+        },
+        Username: "Watson_Moen",
+    }
 
     ctx := context.Background()
-    res, err := s.UserObject.Update(ctx, operations.UpdateUserObjectRequest{
-        User: &shared.User{
-            CurrentPassword: cribl.String("ratione"),
-            Disabled: false,
-            Email: "Eric.Jacobi57@hotmail.com",
-            First: "architecto",
-            ID: "80ff60eb-9a66-458e-a9a4-b843d382dbec",
-            Last: "ducimus",
-            Password: cribl.String("ad"),
-            Roles: []string{
-                "ea",
-                "corrupti",
-                "minus",
-                "autem",
-            },
-            Username: "Aglae58",
-        },
-        ID: "468ce304-d884-49bf-8214-c337f96bb0c6",
-    })
+    res, err := s.UserObject.Update(ctx, id, user)
     if err != nil {
         log.Fatal(err)
     }
@@ -108,10 +106,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.UpdateUserObjectRequest](../../models/operations/updateuserobjectrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `user`                                                | [*shared.User](../../models/shared/user.md)           | :heavy_minus_sign:                                    | User object                                           |
 
 
 ### Response

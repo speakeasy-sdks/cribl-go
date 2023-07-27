@@ -30,13 +30,12 @@ func main() {
     ctx := context.Background()
     res, err := s.QuerySnippet.Apply(ctx, shared.PreviewRequestBody{
         Events: []interface{}{
-            "assumenda",
-            "quaerat",
-            "id",
-            "eveniet",
+            "aperiam",
+            "voluptates",
+            "possimus",
         },
         Options: &shared.PreviewOptions{},
-        Query: "optio",
+        Query: "fugit",
     })
     if err != nil {
         log.Fatal(err)

@@ -26,7 +26,11 @@ func newRegexLibEntryID(sdkConfig sdkConfiguration) *regexLibEntryID {
 
 // Get - Get RegexLibEntry by ID
 // Get RegexLibEntry by ID
-func (s *regexLibEntryID) Get(ctx context.Context, request operations.GetRegexLibEntryIDRequest) (*operations.GetRegexLibEntryIDResponse, error) {
+func (s *regexLibEntryID) Get(ctx context.Context, id string) (*operations.GetRegexLibEntryIDResponse, error) {
+	request := operations.GetRegexLibEntryIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/regex/{id}", request, nil)
 	if err != nil {

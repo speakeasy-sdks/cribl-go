@@ -27,11 +27,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    pid := "harum"
 
     ctx := context.Background()
-    res, err := s.ProcessRunningDetail.Get(ctx, operations.GetProcessRunningDetailRequest{
-        Pid: "temporibus",
-    })
+    res, err := s.ProcessRunningDetail.Get(ctx, pid)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,10 +43,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetProcessRunningDetailRequest](../../models/operations/getprocessrunningdetailrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `pid`                                                 | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response

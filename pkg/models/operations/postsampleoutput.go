@@ -8,17 +8,10 @@ import (
 )
 
 type PostSampleOutputRequest struct {
-	// OutputTestRequest object
-	OutputTestRequest *shared.OutputTestRequest `request:"mediaType=application/json"`
 	// Output Id
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *PostSampleOutputRequest) GetOutputTestRequest() *shared.OutputTestRequest {
-	if o == nil {
-		return nil
-	}
-	return o.OutputTestRequest
+	// OutputTestRequest object
+	OutputTestRequest *shared.OutputTestRequest `request:"mediaType=application/json"`
 }
 
 func (o *PostSampleOutputRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *PostSampleOutputRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *PostSampleOutputRequest) GetOutputTestRequest() *shared.OutputTestRequest {
+	if o == nil {
+		return nil
+	}
+	return o.OutputTestRequest
 }
 
 type PostSampleOutputResponse struct {

@@ -25,7 +25,11 @@ func newDestinationQueue(sdkConfig sdkConfiguration) *destinationQueue {
 
 // Delete - Delete destination persistent queue
 // Delete destination persistent queue
-func (s *destinationQueue) Delete(ctx context.Context, request operations.DeleteDestinationQueueRequest) (*operations.DeleteDestinationQueueResponse, error) {
+func (s *destinationQueue) Delete(ctx context.Context, id string) (*operations.DeleteDestinationQueueResponse, error) {
+	request := operations.DeleteDestinationQueueRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/outputs/{id}/pq", request, nil)
 	if err != nil {

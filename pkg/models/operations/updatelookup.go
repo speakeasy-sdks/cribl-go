@@ -115,17 +115,10 @@ func (o *UpdateLookupRequestBody1) GetTags() *string {
 }
 
 type UpdateLookupRequest struct {
-	// LookupFile object to be updated
-	RequestBody interface{} `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateLookupRequest) GetRequestBody() interface{} {
-	if o == nil {
-		return nil
-	}
-	return o.RequestBody
+	// LookupFile object to be updated
+	RequestBody interface{} `request:"mediaType=application/json"`
 }
 
 func (o *UpdateLookupRequest) GetID() string {
@@ -133,6 +126,13 @@ func (o *UpdateLookupRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateLookupRequest) GetRequestBody() interface{} {
+	if o == nil {
+		return nil
+	}
+	return o.RequestBody
 }
 
 type UpdateLookup200ApplicationJSON2 struct {

@@ -108,7 +108,13 @@ func (s *pack) Clone(ctx context.Context, request shared.PackClone) (*operations
 
 // Export - Export Pack
 // Export Pack
-func (s *pack) Export(ctx context.Context, request operations.ExportPackRequest) (*operations.ExportPackResponse, error) {
+func (s *pack) Export(ctx context.Context, id string, mode string, filename *string) (*operations.ExportPackResponse, error) {
+	request := operations.ExportPackRequest{
+		ID:       id,
+		Mode:     mode,
+		Filename: filename,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/packs/{id}/export", request, nil)
 	if err != nil {
@@ -270,7 +276,11 @@ func (s *pack) Install(ctx context.Context, request shared.CrudEntityBase) (*ope
 
 // Uninstall - Uninstall Pack from the system
 // Uninstall Pack from the system
-func (s *pack) Uninstall(ctx context.Context, request operations.UninstallPackRequest) (*operations.UninstallPackResponse, error) {
+func (s *pack) Uninstall(ctx context.Context, id string) (*operations.UninstallPackResponse, error) {
+	request := operations.UninstallPackRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/packs/{id}", request, nil)
 	if err != nil {
@@ -347,7 +357,14 @@ func (s *pack) Uninstall(ctx context.Context, request operations.UninstallPackRe
 
 // Upgrade - Upgrade Pack
 // Upgrade Pack
-func (s *pack) Upgrade(ctx context.Context, request operations.UpgradePackRequest) (*operations.UpgradePackResponse, error) {
+func (s *pack) Upgrade(ctx context.Context, id string, minor *string, source *string, spec *string) (*operations.UpgradePackResponse, error) {
+	request := operations.UpgradePackRequest{
+		ID:     id,
+		Minor:  minor,
+		Source: source,
+		Spec:   spec,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/packs/{id}", request, nil)
 	if err != nil {
@@ -428,7 +445,11 @@ func (s *pack) Upgrade(ctx context.Context, request operations.UpgradePackReques
 
 // Upload - Upload Pack
 // Upload Pack
-func (s *pack) Upload(ctx context.Context, request operations.UploadPackRequest) (*operations.UploadPackResponse, error) {
+func (s *pack) Upload(ctx context.Context, filename *string) (*operations.UploadPackResponse, error) {
+	request := operations.UploadPackRequest{
+		Filename: filename,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/packs"
 

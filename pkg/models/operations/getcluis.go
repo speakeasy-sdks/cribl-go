@@ -8,17 +8,10 @@ import (
 )
 
 type GetCluisRequest struct {
-	// Search query context, either "stream" or "edge"
-	Context *string `queryParam:"style=form,explode=true,name=context"`
 	// Search query
 	Query string `queryParam:"style=form,explode=true,name=query"`
-}
-
-func (o *GetCluisRequest) GetContext() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Context
+	// Search query context, either "stream" or "edge"
+	Context *string `queryParam:"style=form,explode=true,name=context"`
 }
 
 func (o *GetCluisRequest) GetQuery() string {
@@ -26,6 +19,13 @@ func (o *GetCluisRequest) GetQuery() string {
 		return ""
 	}
 	return o.Query
+}
+
+func (o *GetCluisRequest) GetContext() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Context
 }
 
 type GetCluisResponse struct {

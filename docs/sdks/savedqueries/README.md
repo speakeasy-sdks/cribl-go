@@ -32,20 +32,20 @@ func main() {
 
     ctx := context.Background()
     res, err := s.SavedQueries.Create(ctx, shared.SavedQuery{
-        Description: cribl.String("corporis"),
-        Earliest: cribl.String("at"),
-        ID: "03084fbb-a5cc-4eff-9cb0-1fe51e528a45",
-        Latest: cribl.String("mollitia"),
-        Name: "Morris Champlin",
-        Query: "ullam",
-        SampleRate: cribl.Int64(982059),
+        Description: cribl.String("voluptatibus"),
+        Earliest: cribl.String("numquam"),
+        ID: "badf947c-9a86-47bc-8242-6665816ddca8",
+        Latest: cribl.String("voluptates"),
+        Name: "Maurice Bins",
+        Query: "expedita",
+        SampleRate: cribl.Int64(266370),
         Schedule: &shared.SavedQuerySchedule{
-            CronSchedule: "corrupti",
+            CronSchedule: "cumque",
             Enabled: false,
-            KeepLastN: 725625,
-            Tz: "placeat",
+            KeepLastN: 368599,
+            Tz: "occaecati",
         },
-        User: cribl.String("explicabo"),
+        User: cribl.String("ipsum"),
     })
     if err != nil {
         log.Fatal(err)
@@ -93,11 +93,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "accusamus"
 
     ctx := context.Background()
-    res, err := s.SavedQueries.Delete(ctx, operations.DeleteSavedQueriesRequest{
-        ID: "caba8da4-127d-4d59-bff4-711aa1bc74b8",
-    })
+    res, err := s.SavedQueries.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -110,10 +109,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.DeleteSavedQueriesRequest](../../models/operations/deletesavedqueriesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -191,27 +190,26 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "quisquam"
+    savedQuery := &shared.SavedQuery{
+        Description: cribl.String("quasi"),
+        Earliest: cribl.String("fugit"),
+        ID: "cdaad0ec-7afe-4dbd-80df-448a47f9390c",
+        Latest: cribl.String("minima"),
+        Name: "Ms. Guy Macejkovic",
+        Query: "ipsum",
+        SampleRate: cribl.Int64(874283),
+        Schedule: &shared.SavedQuerySchedule{
+            CronSchedule: "fuga",
+            Enabled: false,
+            KeepLastN: 704732,
+            Tz: "maiores",
+        },
+        User: cribl.String("error"),
+    }
 
     ctx := context.Background()
-    res, err := s.SavedQueries.Update(ctx, operations.UpdateSavedQueriesRequest{
-        SavedQuery: &shared.SavedQuery{
-            Description: cribl.String("aliquid"),
-            Earliest: cribl.String("placeat"),
-            ID: "ecc74f77-b484-48bd-aa6f-0441d2c3b808",
-            Latest: cribl.String("sit"),
-            Name: "Alex Douglas",
-            Query: "eveniet",
-            SampleRate: cribl.Int64(56956),
-            Schedule: &shared.SavedQuerySchedule{
-                CronSchedule: "laboriosam",
-                Enabled: false,
-                KeepLastN: 25321,
-                Tz: "labore",
-            },
-            User: cribl.String("ullam"),
-        },
-        ID: "9bebbad0-2f25-486b-8f15-2558daa95be6",
-    })
+    res, err := s.SavedQueries.Update(ctx, id, savedQuery)
     if err != nil {
         log.Fatal(err)
     }
@@ -224,10 +222,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.UpdateSavedQueriesRequest](../../models/operations/updatesavedqueriesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                               | Type                                                    | Required                                                | Description                                             |
+| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
+| `ctx`                                                   | [context.Context](https://pkg.go.dev/context#Context)   | :heavy_check_mark:                                      | The context to use for the request.                     |
+| `id`                                                    | *string*                                                | :heavy_check_mark:                                      | Unique ID                                               |
+| `savedQuery`                                            | [*shared.SavedQuery](../../models/shared/savedquery.md) | :heavy_minus_sign:                                      | SavedQuery object to be updated                         |
 
 
 ### Response

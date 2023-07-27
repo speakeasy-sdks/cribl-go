@@ -27,12 +27,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "ullam"
+    group := "in"
 
     ctx := context.Background()
-    res, err := s.ChangedFiles.Get(ctx, operations.GetChangedFilesRequest{
-        ID: cribl.String("6c645b08-b618-491b-aa0f-e1ade008e6f8"),
-        Group: cribl.String("minus"),
-    })
+    res, err := s.ChangedFiles.Get(ctx, id, group)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,10 +44,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.GetChangedFilesRequest](../../models/operations/getchangedfilesrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | **string*                                             | :heavy_minus_sign:                                    | Commit ID                                             |
+| `group`                                               | **string*                                             | :heavy_minus_sign:                                    | Group ID                                              |
 
 
 ### Response

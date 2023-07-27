@@ -29,11 +29,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "modi"
 
     ctx := context.Background()
-    res, err := s.DatabaseConnectionConfigID.Delete(ctx, operations.DeleteDatabaseConnectionConfigIDRequest{
-        ID: "f2257411-faf4-4b75-84e4-72e802857a5b",
-    })
+    res, err := s.DatabaseConnectionConfigID.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
-| `request`                                                                                                                | [operations.DeleteDatabaseConnectionConfigIDRequest](../../models/operations/deletedatabaseconnectionconfigidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -80,11 +79,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "nam"
 
     ctx := context.Background()
-    res, err := s.DatabaseConnectionConfigID.Get(ctx, operations.GetDatabaseConnectionConfigIDRequest{
-        ID: "40463a7d-575f-4140-8e76-4ad7334ec1b7",
-    })
+    res, err := s.DatabaseConnectionConfigID.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -97,10 +95,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.GetDatabaseConnectionConfigIDRequest](../../models/operations/getdatabaseconnectionconfigidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -131,22 +129,21 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "vero"
+    databaseConnectionConfig := &shared.DatabaseConnectionConfig{
+        AuthType: "voluptatem",
+        ConfigObj: cribl.String("ipsam"),
+        ConnectionString: cribl.String("vel"),
+        ConnectionTimeout: cribl.Int64(1383),
+        DatabaseType: &shared.DatabaseConnectionType{},
+        Description: "quasi",
+        ID: "3f59da75-7a59-4ecf-af66-ef1caa3383c2",
+        RequestTimeout: cribl.Int64(746585),
+        Tags: cribl.String("repudiandae"),
+    }
 
     ctx := context.Background()
-    res, err := s.DatabaseConnectionConfigID.Update(ctx, operations.UpdateDatabaseConnectionConfigIDRequest{
-        DatabaseConnectionConfig: &shared.DatabaseConnectionConfig{
-            AuthType: "quas",
-            ConfigObj: cribl.String("et"),
-            ConnectionString: cribl.String("facilis"),
-            ConnectionTimeout: cribl.Int64(229276),
-            DatabaseType: &shared.DatabaseConnectionType{},
-            Description: "autem",
-            ID: "a08088d1-00ef-4ada-a00e-f0422eb2164c",
-            RequestTimeout: cribl.Int64(975095),
-            Tags: cribl.String("molestias"),
-        },
-        ID: "ab8366c7-23ff-4da9-a06b-ee4825c1fc0e",
-    })
+    res, err := s.DatabaseConnectionConfigID.Update(ctx, id, databaseConnectionConfig)
     if err != nil {
         log.Fatal(err)
     }
@@ -159,10 +156,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
-| `request`                                                                                                                | [operations.UpdateDatabaseConnectionConfigIDRequest](../../models/operations/updatedatabaseconnectionconfigidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `ctx`                                                                               | [context.Context](https://pkg.go.dev/context#Context)                               | :heavy_check_mark:                                                                  | The context to use for the request.                                                 |
+| `id`                                                                                | *string*                                                                            | :heavy_check_mark:                                                                  | Unique ID                                                                           |
+| `databaseConnectionConfig`                                                          | [*shared.DatabaseConnectionConfig](../../models/shared/databaseconnectionconfig.md) | :heavy_minus_sign:                                                                  | DatabaseConnectionConfig object to be updated                                       |
 
 
 ### Response

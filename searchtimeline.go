@@ -26,7 +26,11 @@ func newSearchTimeline(sdkConfig sdkConfiguration) *searchTimeline {
 
 // Get - Get search timeline
 // Get search timeline
-func (s *searchTimeline) Get(ctx context.Context, request operations.GetSearchTimelineRequest) (*operations.GetSearchTimelineResponse, error) {
+func (s *searchTimeline) Get(ctx context.Context, id string) (*operations.GetSearchTimelineResponse, error) {
+	request := operations.GetSearchTimelineRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/jobs/{id}/timeline", request, nil)
 	if err != nil {

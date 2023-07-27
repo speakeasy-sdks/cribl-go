@@ -108,7 +108,11 @@ func (s *restSecret) Create(ctx context.Context, request shared.RestSecret) (*op
 
 // Delete - Delete RestSecret
 // Delete RestSecret
-func (s *restSecret) Delete(ctx context.Context, request operations.DeleteRestSecretRequest) (*operations.DeleteRestSecretResponse, error) {
+func (s *restSecret) Delete(ctx context.Context, id string) (*operations.DeleteRestSecretResponse, error) {
+	request := operations.DeleteRestSecretRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/secrets/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *restSecret) Delete(ctx context.Context, request operations.DeleteRestSe
 
 // Get - Get RestSecret by ID
 // Get RestSecret by ID
-func (s *restSecret) Get(ctx context.Context, request operations.GetRestSecretRequest) (*operations.GetRestSecretResponse, error) {
+func (s *restSecret) Get(ctx context.Context, id string) (*operations.GetRestSecretResponse, error) {
+	request := operations.GetRestSecretRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/secrets/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *restSecret) Get(ctx context.Context, request operations.GetRestSecretRe
 
 // Update - Update RestSecret
 // Update RestSecret
-func (s *restSecret) Update(ctx context.Context, request operations.UpdateRestSecretRequest) (*operations.UpdateRestSecretResponse, error) {
+func (s *restSecret) Update(ctx context.Context, id string, restSecret *shared.RestSecret) (*operations.UpdateRestSecretResponse, error) {
+	request := operations.UpdateRestSecretRequest{
+		ID:         id,
+		RestSecret: restSecret,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/secrets/{id}", request, nil)
 	if err != nil {

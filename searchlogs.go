@@ -26,7 +26,11 @@ func newSearchLogs(sdkConfig sdkConfiguration) *searchLogs {
 
 // Get - Get search logs
 // Get search logs
-func (s *searchLogs) Get(ctx context.Context, request operations.GetSearchLogsRequest) (*operations.GetSearchLogsResponse, error) {
+func (s *searchLogs) Get(ctx context.Context, id string) (*operations.GetSearchLogsResponse, error) {
+	request := operations.GetSearchLogsRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/jobs/{id}/logs", request, nil)
 	if err != nil {

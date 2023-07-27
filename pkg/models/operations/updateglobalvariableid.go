@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateGlobalVariableIDRequest struct {
-	// Global Variable object to be updated
-	GlobalVar *shared.GlobalVar `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateGlobalVariableIDRequest) GetGlobalVar() *shared.GlobalVar {
-	if o == nil {
-		return nil
-	}
-	return o.GlobalVar
+	// Global Variable object to be updated
+	GlobalVar *shared.GlobalVar `request:"mediaType=application/json"`
 }
 
 func (o *UpdateGlobalVariableIDRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateGlobalVariableIDRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateGlobalVariableIDRequest) GetGlobalVar() *shared.GlobalVar {
+	if o == nil {
+		return nil
+	}
+	return o.GlobalVar
 }
 
 type UpdateGlobalVariableIDResponse struct {

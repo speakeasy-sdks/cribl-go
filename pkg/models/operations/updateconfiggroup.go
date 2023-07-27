@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateConfigGroupRequest struct {
-	// ConfigGroup object to be updated
-	ConfigGroup *shared.ConfigGroup `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateConfigGroupRequest) GetConfigGroup() *shared.ConfigGroup {
-	if o == nil {
-		return nil
-	}
-	return o.ConfigGroup
+	// ConfigGroup object to be updated
+	ConfigGroup *shared.ConfigGroup `request:"mediaType=application/json"`
 }
 
 func (o *UpdateConfigGroupRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateConfigGroupRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateConfigGroupRequest) GetConfigGroup() *shared.ConfigGroup {
+	if o == nil {
+		return nil
+	}
+	return o.ConfigGroup
 }
 
 type UpdateConfigGroupResponse struct {

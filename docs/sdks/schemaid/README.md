@@ -29,11 +29,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "sed"
 
     ctx := context.Background()
-    res, err := s.SchemaID.Delete(ctx, operations.DeleteSchemaIDRequest{
-        ID: "aae03f33-ca79-4fb9-9e40-32ba26fd368b",
-    })
+    res, err := s.SchemaID.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.DeleteSchemaIDRequest](../../models/operations/deleteschemaidrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -80,11 +79,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "non"
 
     ctx := context.Background()
-    res, err := s.SchemaID.Get(ctx, operations.GetSchemaIDRequest{
-        ID: "a9216bcb-4158-435c-b364-1723133edc04",
-    })
+    res, err := s.SchemaID.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -97,10 +95,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.GetSchemaIDRequest](../../models/operations/getschemaidrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -131,15 +129,16 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "porro"
+    requestBody := map[string]interface{}{
+        "soluta": "ipsa",
+        "reiciendis": "labore",
+        "vero": "eos",
+        "quas": "quasi",
+    }
 
     ctx := context.Background()
-    res, err := s.SchemaID.Update(ctx, operations.UpdateSchemaIDRequest{
-        RequestBody: map[string]interface{}{
-            "rerum": "quod",
-            "nemo": "architecto",
-        },
-        ID: "63bbca49-227c-442c-a2c5-5350495c5dbb",
-    })
+    res, err := s.SchemaID.Update(ctx, id, requestBody)
     if err != nil {
         log.Fatal(err)
     }
@@ -152,10 +151,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.UpdateSchemaIDRequest](../../models/operations/updateschemaidrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `requestBody`                                         | map[string]*interface{}*                              | :heavy_minus_sign:                                    | Schema object to be updated                           |
 
 
 ### Response

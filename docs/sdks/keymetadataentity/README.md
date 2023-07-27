@@ -33,14 +33,14 @@ func main() {
     ctx := context.Background()
     res, err := s.KeyMetadataEntity.Create(ctx, shared.KeyMetadataEntity{
         Algorithm: shared.KeyMetadataEntityEncryptionAlgorithmAes256Gcm,
-        CipherKey: cribl.String("at"),
-        Created: cribl.Int64(986594),
-        Description: cribl.String("omnis"),
-        Expires: cribl.Int64(463695),
-        KeyID: "exercitationem",
-        Keyclass: 915145,
+        CipherKey: cribl.String("accusamus"),
+        Created: cribl.Int64(518990),
+        Description: cribl.String("reiciendis"),
+        Expires: cribl.Int64(66074),
+        KeyID: "sint",
+        Keyclass: 472414,
         Kms: shared.KeyMetadataEntityKMSForThisKeyLocal,
-        PlainKey: cribl.String("sequi"),
+        PlainKey: cribl.String("esse"),
         UseIV: cribl.Bool(false),
     })
     if err != nil {
@@ -89,11 +89,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "iure"
 
     ctx := context.Background()
-    res, err := s.KeyMetadataEntity.Delete(ctx, operations.DeleteKeyMetadataEntityRequest{
-        ID: "56686092-e9c3-4ddc-9f11-1dea1026d541",
-    })
+    res, err := s.KeyMetadataEntity.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -106,10 +105,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.DeleteKeyMetadataEntityRequest](../../models/operations/deletekeymetadataentityrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -140,11 +139,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "odio"
 
     ctx := context.Background()
-    res, err := s.KeyMetadataEntity.Get(ctx, operations.GetKeyMetadataEntityRequest{
-        ID: "a4d190fe-b217-480b-8cc0-dbbddb484708",
-    })
+    res, err := s.KeyMetadataEntity.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -157,10 +155,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.GetKeyMetadataEntityRequest](../../models/operations/getkeymetadataentityrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -191,23 +189,22 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "nesciunt"
+    keyMetadataEntity := &shared.KeyMetadataEntity{
+        Algorithm: shared.KeyMetadataEntityEncryptionAlgorithmAes256Gcm,
+        CipherKey: cribl.String("vel"),
+        Created: cribl.Int64(208683),
+        Description: cribl.String("corporis"),
+        Expires: cribl.Int64(375350),
+        KeyID: "consequuntur",
+        Keyclass: 641133,
+        Kms: shared.KeyMetadataEntityKMSForThisKeyLocal,
+        PlainKey: cribl.String("reprehenderit"),
+        UseIV: cribl.Bool(false),
+    }
 
     ctx := context.Background()
-    res, err := s.KeyMetadataEntity.Update(ctx, operations.UpdateKeyMetadataEntityRequest{
-        KeyMetadataEntity: &shared.KeyMetadataEntity{
-            Algorithm: shared.KeyMetadataEntityEncryptionAlgorithmAes256Gcm,
-            CipherKey: cribl.String("facilis"),
-            Created: cribl.Int64(306023),
-            Description: cribl.String("repudiandae"),
-            Expires: cribl.Int64(227424),
-            KeyID: "natus",
-            Keyclass: 68253,
-            Kms: shared.KeyMetadataEntityKMSForThisKeyLocal,
-            PlainKey: cribl.String("officiis"),
-            UseIV: cribl.Bool(false),
-        },
-        ID: "6bc158c4-c4e5-4459-9ea3-42260e9b200c",
-    })
+    res, err := s.KeyMetadataEntity.Update(ctx, id, keyMetadataEntity)
     if err != nil {
         log.Fatal(err)
     }
@@ -220,10 +217,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.UpdateKeyMetadataEntityRequest](../../models/operations/updatekeymetadataentityrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `ctx`                                                                 | [context.Context](https://pkg.go.dev/context#Context)                 | :heavy_check_mark:                                                    | The context to use for the request.                                   |
+| `id`                                                                  | *string*                                                              | :heavy_check_mark:                                                    | Unique ID                                                             |
+| `keyMetadataEntity`                                                   | [*shared.KeyMetadataEntity](../../models/shared/keymetadataentity.md) | :heavy_minus_sign:                                                    | KeyMetadataEntity object to be updated                                |
 
 
 ### Response

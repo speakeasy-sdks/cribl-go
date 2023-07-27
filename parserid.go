@@ -26,7 +26,11 @@ func newParserID(sdkConfig sdkConfiguration) *parserID {
 
 // Delete - Delete Parser
 // Delete Parser
-func (s *parserID) Delete(ctx context.Context, request operations.DeleteParserIDRequest) (*operations.DeleteParserIDResponse, error) {
+func (s *parserID) Delete(ctx context.Context, id string) (*operations.DeleteParserIDResponse, error) {
+	request := operations.DeleteParserIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/parsers/{id}", request, nil)
 	if err != nil {
@@ -103,7 +107,11 @@ func (s *parserID) Delete(ctx context.Context, request operations.DeleteParserID
 
 // Get - Get Parser by ID
 // Get Parser by ID
-func (s *parserID) Get(ctx context.Context, request operations.GetParserIDRequest) (*operations.GetParserIDResponse, error) {
+func (s *parserID) Get(ctx context.Context, id string) (*operations.GetParserIDResponse, error) {
+	request := operations.GetParserIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/parsers/{id}", request, nil)
 	if err != nil {
@@ -180,7 +188,12 @@ func (s *parserID) Get(ctx context.Context, request operations.GetParserIDReques
 
 // Update - Update Parser
 // Update Parser
-func (s *parserID) Update(ctx context.Context, request operations.UpdateParserIDRequest) (*operations.UpdateParserIDResponse, error) {
+func (s *parserID) Update(ctx context.Context, id string, requestBody map[string]interface{}) (*operations.UpdateParserIDResponse, error) {
+	request := operations.UpdateParserIDRequest{
+		ID:          id,
+		RequestBody: requestBody,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/parsers/{id}", request, nil)
 	if err != nil {

@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateDatabaseConnectionConfigIDRequest struct {
-	// DatabaseConnectionConfig object to be updated
-	DatabaseConnectionConfig *shared.DatabaseConnectionConfig `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateDatabaseConnectionConfigIDRequest) GetDatabaseConnectionConfig() *shared.DatabaseConnectionConfig {
-	if o == nil {
-		return nil
-	}
-	return o.DatabaseConnectionConfig
+	// DatabaseConnectionConfig object to be updated
+	DatabaseConnectionConfig *shared.DatabaseConnectionConfig `request:"mediaType=application/json"`
 }
 
 func (o *UpdateDatabaseConnectionConfigIDRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateDatabaseConnectionConfigIDRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateDatabaseConnectionConfigIDRequest) GetDatabaseConnectionConfig() *shared.DatabaseConnectionConfig {
+	if o == nil {
+		return nil
+	}
+	return o.DatabaseConnectionConfig
 }
 
 type UpdateDatabaseConnectionConfigIDResponse struct {

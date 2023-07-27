@@ -108,7 +108,11 @@ func (s *dataset) Create(ctx context.Context, request shared.DatasetProviderType
 
 // Delete - Delete DatasetProviderType
 // Delete DatasetProviderType
-func (s *dataset) Delete(ctx context.Context, request operations.DeleteDatasetProviderTypeRequest) (*operations.DeleteDatasetProviderTypeResponse, error) {
+func (s *dataset) Delete(ctx context.Context, id string) (*operations.DeleteDatasetProviderTypeResponse, error) {
+	request := operations.DeleteDatasetProviderTypeRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/dataset-provider-types/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *dataset) Delete(ctx context.Context, request operations.DeleteDatasetPr
 
 // Get - Get DatasetProviderType by ID
 // Get DatasetProviderType by ID
-func (s *dataset) Get(ctx context.Context, request operations.GetDatasetProviderTypeRequest) (*operations.GetDatasetProviderTypeResponse, error) {
+func (s *dataset) Get(ctx context.Context, id string) (*operations.GetDatasetProviderTypeResponse, error) {
+	request := operations.GetDatasetProviderTypeRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/dataset-provider-types/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *dataset) Get(ctx context.Context, request operations.GetDatasetProvider
 
 // Update - Update DatasetProviderType
 // Update DatasetProviderType
-func (s *dataset) Update(ctx context.Context, request operations.UpdateDatasetProviderTypeRequest) (*operations.UpdateDatasetProviderTypeResponse, error) {
+func (s *dataset) Update(ctx context.Context, id string, datasetProviderType *shared.DatasetProviderType) (*operations.UpdateDatasetProviderTypeResponse, error) {
+	request := operations.UpdateDatasetProviderTypeRequest{
+		ID:                  id,
+		DatasetProviderType: datasetProviderType,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/dataset-provider-types/{id}", request, nil)
 	if err != nil {

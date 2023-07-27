@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateEventBreakerRequest struct {
-	// Event Breaker Ruleset object to be updated
-	EventBreakerRuleset *shared.EventBreakerRuleset `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateEventBreakerRequest) GetEventBreakerRuleset() *shared.EventBreakerRuleset {
-	if o == nil {
-		return nil
-	}
-	return o.EventBreakerRuleset
+	// Event Breaker Ruleset object to be updated
+	EventBreakerRuleset *shared.EventBreakerRuleset `request:"mediaType=application/json"`
 }
 
 func (o *UpdateEventBreakerRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateEventBreakerRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateEventBreakerRequest) GetEventBreakerRuleset() *shared.EventBreakerRuleset {
+	if o == nil {
+		return nil
+	}
+	return o.EventBreakerRuleset
 }
 
 type UpdateEventBreakerResponse struct {

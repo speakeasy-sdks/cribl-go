@@ -27,7 +27,12 @@ func newBytes(sdkConfig sdkConfiguration) *bytesT {
 
 // Get - Get some number of bytes from the file at the given path
 // Get some number of bytes from the file at the given path
-func (s *bytesT) Get(ctx context.Context, request operations.GetBytesRequest) (*operations.GetBytesResponse, error) {
+func (s *bytesT) Get(ctx context.Context, path string, bytesRequested *int64) (*operations.GetBytesResponse, error) {
+	request := operations.GetBytesRequest{
+		Path:           path,
+		BytesRequested: bytesRequested,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/edge/file/sample"
 

@@ -26,7 +26,12 @@ func newRequestAuth(sdkConfig sdkConfiguration) *requestAuth {
 }
 
 // Get - Accepts an authentication request from an IDP and authenticates the user
-func (s *requestAuth) Get(ctx context.Context, request operations.GetRequestAuthRequest) (*operations.GetRequestAuthResponse, error) {
+func (s *requestAuth) Get(ctx context.Context, relayState *string, samlResponse *string) (*operations.GetRequestAuthResponse, error) {
+	request := operations.GetRequestAuthRequest{
+		RelayState:   relayState,
+		SAMLResponse: samlResponse,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/sso/callback"
 

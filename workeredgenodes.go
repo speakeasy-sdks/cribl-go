@@ -27,7 +27,14 @@ func newWorkerEdgeNodes(sdkConfig sdkConfiguration) *workerEdgeNodes {
 
 // Get - get worker and edge nodes
 // get worker and edge nodes
-func (s *workerEdgeNodes) Get(ctx context.Context, request operations.GetWorkerEdgeNodesRequest) (*operations.GetWorkerEdgeNodesResponse, error) {
+func (s *workerEdgeNodes) Get(ctx context.Context, filterExp *string, limit *int64, offset *int64, sortExp *string) (*operations.GetWorkerEdgeNodesResponse, error) {
+	request := operations.GetWorkerEdgeNodesRequest{
+		FilterExp: filterExp,
+		Limit:     limit,
+		Offset:    offset,
+		SortExp:   sortExp,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/master/workers"
 

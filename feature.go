@@ -26,7 +26,11 @@ func newFeature(sdkConfig sdkConfiguration) *feature {
 
 // Get - Get feature by Id
 // Get feature by id (i.e. 'type/name`)
-func (s *feature) Get(ctx context.Context, request operations.GetFeatureRequest) (*operations.GetFeatureResponse, error) {
+func (s *feature) Get(ctx context.Context, id string) (*operations.GetFeatureResponse, error) {
+	request := operations.GetFeatureRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/settings/features/{id}", request, nil)
 	if err != nil {

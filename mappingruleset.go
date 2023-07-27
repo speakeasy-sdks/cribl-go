@@ -108,7 +108,11 @@ func (s *mappingRuleset) Create(ctx context.Context, request shared.MappingRules
 
 // Delete - Delete MappingRuleset
 // Delete MappingRuleset
-func (s *mappingRuleset) Delete(ctx context.Context, request operations.DeleteMappingRulesetRequest) (*operations.DeleteMappingRulesetResponse, error) {
+func (s *mappingRuleset) Delete(ctx context.Context, id string) (*operations.DeleteMappingRulesetResponse, error) {
+	request := operations.DeleteMappingRulesetRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/fleet-mappings/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *mappingRuleset) Delete(ctx context.Context, request operations.DeleteMa
 
 // Get - Get MappingRuleset by ID
 // Get MappingRuleset by ID
-func (s *mappingRuleset) Get(ctx context.Context, request operations.GetMappingRulesetRequest) (*operations.GetMappingRulesetResponse, error) {
+func (s *mappingRuleset) Get(ctx context.Context, id string) (*operations.GetMappingRulesetResponse, error) {
+	request := operations.GetMappingRulesetRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/fleet-mappings/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *mappingRuleset) Get(ctx context.Context, request operations.GetMappingR
 
 // Update - Update MappingRuleset
 // Update MappingRuleset
-func (s *mappingRuleset) Update(ctx context.Context, request operations.UpdateMappingRulesetRequest) (*operations.UpdateMappingRulesetResponse, error) {
+func (s *mappingRuleset) Update(ctx context.Context, id string, mappingRuleset *shared.MappingRuleset) (*operations.UpdateMappingRulesetResponse, error) {
+	request := operations.UpdateMappingRulesetRequest{
+		ID:             id,
+		MappingRuleset: mappingRuleset,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/mappings/{id}", request, nil)
 	if err != nil {

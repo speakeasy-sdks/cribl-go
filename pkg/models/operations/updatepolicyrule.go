@@ -8,17 +8,10 @@ import (
 )
 
 type UpdatePolicyRuleRequest struct {
-	// PolicyRule object to be updated
-	PolicyRule *shared.PolicyRule `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdatePolicyRuleRequest) GetPolicyRule() *shared.PolicyRule {
-	if o == nil {
-		return nil
-	}
-	return o.PolicyRule
+	// PolicyRule object to be updated
+	PolicyRule *shared.PolicyRule `request:"mediaType=application/json"`
 }
 
 func (o *UpdatePolicyRuleRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdatePolicyRuleRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdatePolicyRuleRequest) GetPolicyRule() *shared.PolicyRule {
+	if o == nil {
+		return nil
+	}
+	return o.PolicyRule
 }
 
 type UpdatePolicyRuleResponse struct {

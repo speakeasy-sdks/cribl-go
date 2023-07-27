@@ -8,17 +8,10 @@ import (
 )
 
 type GetConfigGroupRequest struct {
-	// query string additional fields to add to results: git.commit, git.localChanges, git.log
-	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *GetConfigGroupRequest) GetFields() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Fields
+	// query string additional fields to add to results: git.commit, git.localChanges, git.log
+	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *GetConfigGroupRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *GetConfigGroupRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *GetConfigGroupRequest) GetFields() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type GetConfigGroupResponse struct {

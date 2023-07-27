@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateCertificateRequest struct {
-	// Certificate object to be updated
-	Certificate *shared.Certificate `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateCertificateRequest) GetCertificate() *shared.Certificate {
-	if o == nil {
-		return nil
-	}
-	return o.Certificate
+	// Certificate object to be updated
+	Certificate *shared.Certificate `request:"mediaType=application/json"`
 }
 
 func (o *UpdateCertificateRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateCertificateRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateCertificateRequest) GetCertificate() *shared.Certificate {
+	if o == nil {
+		return nil
+	}
+	return o.Certificate
 }
 
 type UpdateCertificateResponse struct {

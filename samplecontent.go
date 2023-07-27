@@ -26,7 +26,11 @@ func newSampleContent(sdkConfig sdkConfiguration) *sampleContent {
 
 // Get - Get sample content by ID
 // Get sample content by ID
-func (s *sampleContent) Get(ctx context.Context, request operations.GetSampleContentRequest) (*operations.GetSampleContentResponse, error) {
+func (s *sampleContent) Get(ctx context.Context, id string) (*operations.GetSampleContentResponse, error) {
+	request := operations.GetSampleContentRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/samples/{id}/content", request, nil)
 	if err != nil {

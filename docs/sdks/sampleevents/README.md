@@ -33,34 +33,19 @@ func main() {
         Dropped: cribl.Bool(false),
         Events: []map[string]interface{}{
             map[string]interface{}{
-                "voluptate": "cum",
-                "esse": "alias",
-                "consequuntur": "architecto",
-            },
-            map[string]interface{}{
-                "nemo": "magni",
-                "quae": "quaerat",
-                "suscipit": "rerum",
-            },
-            map[string]interface{}{
-                "aliquam": "repudiandae",
-                "unde": "excepturi",
-            },
-            map[string]interface{}{
-                "facilis": "doloremque",
-                "officiis": "nisi",
-                "reprehenderit": "necessitatibus",
-                "alias": "provident",
+                "quaerat": "corporis",
+                "accusamus": "iusto",
+                "sapiente": "esse",
             },
         },
-        InputID: cribl.String("ut"),
-        Level: cribl.Int64(941776),
-        Memory: cribl.Int64(814159),
-        Mode: shared.PreviewDataParamsModeRouteAndSend,
-        PipelineID: "saepe",
-        SampleID: "assumenda",
-        SamplePipelineID: cribl.String("exercitationem"),
-        Timeout: cribl.Int64(347919),
+        InputID: cribl.String("neque"),
+        Level: cribl.Int64(697591),
+        Memory: cribl.Int64(788469),
+        Mode: shared.PreviewDataParamsModeRoute,
+        PipelineID: "tempora",
+        SampleID: "ipsam",
+        SamplePipelineID: cribl.String("officiis"),
+        Timeout: cribl.Int64(196497),
     })
     if err != nil {
         log.Fatal(err)

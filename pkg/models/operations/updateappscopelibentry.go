@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateAppscopeLibEntryRequest struct {
-	// AppscopeLibEntry object to be updated
-	AppscopeLibEntry *shared.AppscopeLibEntry `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateAppscopeLibEntryRequest) GetAppscopeLibEntry() *shared.AppscopeLibEntry {
-	if o == nil {
-		return nil
-	}
-	return o.AppscopeLibEntry
+	// AppscopeLibEntry object to be updated
+	AppscopeLibEntry *shared.AppscopeLibEntry `request:"mediaType=application/json"`
 }
 
 func (o *UpdateAppscopeLibEntryRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateAppscopeLibEntryRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateAppscopeLibEntryRequest) GetAppscopeLibEntry() *shared.AppscopeLibEntry {
+	if o == nil {
+		return nil
+	}
+	return o.AppscopeLibEntry
 }
 
 type UpdateAppscopeLibEntryResponse struct {

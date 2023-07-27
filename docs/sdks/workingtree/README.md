@@ -27,11 +27,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    group := "molestias"
 
     ctx := context.Background()
-    res, err := s.WorkingTree.Get(ctx, operations.GetWorkingTreeRequest{
-        Group: cribl.String("vero"),
-    })
+    res, err := s.WorkingTree.Get(ctx, group)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,10 +43,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetWorkingTreeRequest](../../models/operations/getworkingtreerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `group`                                               | **string*                                             | :heavy_minus_sign:                                    | Group ID                                              |
 
 
 ### Response

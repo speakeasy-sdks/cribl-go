@@ -33,7 +33,10 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Schema.Create(ctx, map[string]interface{}{
-        "recusandae": "perspiciatis",
+        "consectetur": "sapiente",
+        "voluptatibus": "assumenda",
+        "repellendus": "omnis",
+        "delectus": "odio",
     })
     if err != nil {
         log.Fatal(err)
@@ -81,11 +84,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "voluptatibus"
 
     ctx := context.Background()
-    res, err := s.Schema.Delete(ctx, operations.DeleteSchemaRequest{
-        ID: "802d82f0-d45e-4b4a-8b67-4ee5cfc18edc",
-    })
+    res, err := s.Schema.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -98,10 +100,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.DeleteSchemaRequest](../../models/operations/deleteschemarequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -132,11 +134,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "aut"
 
     ctx := context.Background()
-    res, err := s.Schema.Get(ctx, operations.GetSchemaRequest{
-        ID: "7f787e32-e04b-43d3-ad0c-5670ef42bd3c",
-    })
+    res, err := s.Schema.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -149,10 +150,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
-| `request`                                                                  | [operations.GetSchemaRequest](../../models/operations/getschemarequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -185,9 +186,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Schema.Post(ctx, map[string]interface{}{
-        "earum": "vitae",
-        "impedit": "eligendi",
-        "veniam": "aperiam",
+        "omnis": "similique",
+        "asperiores": "modi",
     })
     if err != nil {
         log.Fatal(err)
@@ -235,14 +235,13 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "facere"
+    requestBody := map[string]interface{}{
+        "quis": "in",
+    }
 
     ctx := context.Background()
-    res, err := s.Schema.Update(ctx, operations.UpdateSchemaRequest{
-        RequestBody: map[string]interface{}{
-            "repellat": "voluptas",
-        },
-        ID: "c39bcd0a-6290-4f95-bf38-5189ad7ef807",
-    })
+    res, err := s.Schema.Update(ctx, id, requestBody)
     if err != nil {
         log.Fatal(err)
     }
@@ -255,10 +254,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.UpdateSchemaRequest](../../models/operations/updateschemarequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `requestBody`                                         | map[string]*interface{}*                              | :heavy_minus_sign:                                    | Schema object to be updated                           |
 
 
 ### Response

@@ -27,13 +27,12 @@ func main() {
             BearerAuth: "",
         }),
     )
+    group := "iste"
+    id := "dicta"
+    maxFiles := 552439
 
     ctx := context.Background()
-    res, err := s.JobResult.Get(ctx, operations.GetJobResultRequest{
-        Group: "quam",
-        ID: "9af4d357-24cd-4b0f-8d28-1187d56844ed",
-        MaxFiles: cribl.Int64(921127),
-    })
+    res, err := s.JobResult.Get(ctx, group, id, maxFiles)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,12 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.GetJobResultRequest](../../models/operations/getjobresultrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `group`                                               | *string*                                              | :heavy_check_mark:                                    | Group the job belongs to                              |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Instance id of the job to get results for             |
+| `maxFiles`                                            | **int64*                                              | :heavy_minus_sign:                                    | Maximum files to get job results                      |
 
 
 ### Response

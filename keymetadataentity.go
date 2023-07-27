@@ -108,7 +108,11 @@ func (s *keyMetadataEntity) Create(ctx context.Context, request shared.KeyMetada
 
 // Delete - Delete KeyMetadataEntity
 // Delete KeyMetadataEntity
-func (s *keyMetadataEntity) Delete(ctx context.Context, request operations.DeleteKeyMetadataEntityRequest) (*operations.DeleteKeyMetadataEntityResponse, error) {
+func (s *keyMetadataEntity) Delete(ctx context.Context, id string) (*operations.DeleteKeyMetadataEntityResponse, error) {
+	request := operations.DeleteKeyMetadataEntityRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/keys/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *keyMetadataEntity) Delete(ctx context.Context, request operations.Delet
 
 // Get - Get KeyMetadataEntity by ID
 // Get KeyMetadataEntity by ID
-func (s *keyMetadataEntity) Get(ctx context.Context, request operations.GetKeyMetadataEntityRequest) (*operations.GetKeyMetadataEntityResponse, error) {
+func (s *keyMetadataEntity) Get(ctx context.Context, id string) (*operations.GetKeyMetadataEntityResponse, error) {
+	request := operations.GetKeyMetadataEntityRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/keys/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *keyMetadataEntity) Get(ctx context.Context, request operations.GetKeyMe
 
 // Update - Update KeyMetadataEntity
 // Update KeyMetadataEntity
-func (s *keyMetadataEntity) Update(ctx context.Context, request operations.UpdateKeyMetadataEntityRequest) (*operations.UpdateKeyMetadataEntityResponse, error) {
+func (s *keyMetadataEntity) Update(ctx context.Context, id string, keyMetadataEntity *shared.KeyMetadataEntity) (*operations.UpdateKeyMetadataEntityResponse, error) {
+	request := operations.UpdateKeyMetadataEntityRequest{
+		ID:                id,
+		KeyMetadataEntity: keyMetadataEntity,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/keys/{id}", request, nil)
 	if err != nil {

@@ -32,10 +32,10 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Profiler.Create(ctx, shared.ProfilerItem{
-        CreateTime: cribl.Int64(447678),
-        ID: "1cffbd0e-b74b-4842-9953-b44bd3c43159",
-        Size: cribl.Int64(825303),
-        WorkerID: cribl.String("adipisci"),
+        CreateTime: cribl.Int64(496578),
+        ID: "00878756-143f-45a6-898b-55554080d40b",
+        Size: cribl.Int64(751298),
+        WorkerID: cribl.String("similique"),
     })
     if err != nil {
         log.Fatal(err)
@@ -83,11 +83,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "porro"
 
     ctx := context.Background()
-    res, err := s.Profiler.Delete(ctx, operations.DeleteProfilerRequest{
-        ID: "3e5953c0-0113-4986-baa4-1e6c31cc2f1f",
-    })
+    res, err := s.Profiler.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -100,10 +99,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.DeleteProfilerRequest](../../models/operations/deleteprofilerrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -134,11 +133,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "impedit"
 
     ctx := context.Background()
-    res, err := s.Profiler.Get(ctx, operations.GetProfilerRequest{
-        ID: "cb51c9a4-1ffb-4e9c-bd79-5ee65e076cc7",
-    })
+    res, err := s.Profiler.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -151,10 +149,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.GetProfilerRequest](../../models/operations/getprofilerrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -185,17 +183,16 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "nisi"
+    profilerItem := &shared.ProfilerItem{
+        CreateTime: cribl.Int64(768920),
+        ID: "bd6b5f3e-c909-4304-b926-bad2553819b4",
+        Size: cribl.Int64(452653),
+        WorkerID: cribl.String("eius"),
+    }
 
     ctx := context.Background()
-    res, err := s.Profiler.Update(ctx, operations.UpdateProfilerRequest{
-        ProfilerItem: &shared.ProfilerItem{
-            CreateTime: cribl.Int64(648469),
-            ID: "bf616ea5-c716-4419-b4b9-0f2e09d19d2f",
-            Size: cribl.Int64(768772),
-            WorkerID: cribl.String("explicabo"),
-        },
-        ID: "f9e2e105-944b-4935-9237-a72f90849d6a",
-    })
+    res, err := s.Profiler.Update(ctx, id, profilerItem)
     if err != nil {
         log.Fatal(err)
     }
@@ -208,10 +205,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.UpdateProfilerRequest](../../models/operations/updateprofilerrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `ctx`                                                       | [context.Context](https://pkg.go.dev/context#Context)       | :heavy_check_mark:                                          | The context to use for the request.                         |
+| `id`                                                        | *string*                                                    | :heavy_check_mark:                                          | Unique ID                                                   |
+| `profilerItem`                                              | [*shared.ProfilerItem](../../models/shared/profileritem.md) | :heavy_minus_sign:                                          | ProfilerItem object to be updated                           |
 
 
 ### Response

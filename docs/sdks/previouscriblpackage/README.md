@@ -27,11 +27,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    file := "suscipit"
 
     ctx := context.Background()
-    res, err := s.PreviousCriblPackage.Get(ctx, operations.GetPreviousCriblPackageRequest{
-        File: "laboriosam",
-    })
+    res, err := s.PreviousCriblPackage.Get(ctx, file)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,10 +43,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetPreviousCriblPackageRequest](../../models/operations/getpreviouscriblpackagerequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `file`                                                | *string*                                              | :heavy_check_mark:                                    | Name of the file to be downloaded                     |
 
 
 ### Response

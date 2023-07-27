@@ -26,7 +26,11 @@ func newEventBreakerID(sdkConfig sdkConfiguration) *eventBreakerID {
 
 // Get - Get Event Breaker Ruleset by ID
 // Get Event Breaker Ruleset by ID
-func (s *eventBreakerID) Get(ctx context.Context, request operations.GetEventBreakerIDRequest) (*operations.GetEventBreakerIDResponse, error) {
+func (s *eventBreakerID) Get(ctx context.Context, id string) (*operations.GetEventBreakerIDResponse, error) {
+	request := operations.GetEventBreakerIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/breakers/{id}", request, nil)
 	if err != nil {

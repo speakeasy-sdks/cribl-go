@@ -27,7 +27,12 @@ func newChangedFiles(sdkConfig sdkConfiguration) *changedFiles {
 
 // Get - get the files changed
 // get the files changed
-func (s *changedFiles) Get(ctx context.Context, request operations.GetChangedFilesRequest) (*operations.GetChangedFilesResponse, error) {
+func (s *changedFiles) Get(ctx context.Context, id *string, group *string) (*operations.GetChangedFilesResponse, error) {
+	request := operations.GetChangedFilesRequest{
+		ID:    id,
+		Group: group,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/version/files"
 

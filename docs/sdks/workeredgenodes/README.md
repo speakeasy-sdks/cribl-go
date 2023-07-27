@@ -28,14 +28,13 @@ func main() {
             BearerAuth: "",
         }),
     )
+    filterExp := "eius"
+    limit := 342393
+    offset := 406037
+    sortExp := "amet"
 
     ctx := context.Background()
-    res, err := s.WorkerEdgeNodes.Get(ctx, operations.GetWorkerEdgeNodesRequest{
-        FilterExp: cribl.String("autem"),
-        Limit: cribl.Int64(526516),
-        Offset: cribl.Int64(537518),
-        SortExp: cribl.String("illum"),
-    })
+    res, err := s.WorkerEdgeNodes.Get(ctx, filterExp, limit, offset, sortExp)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,10 +47,13 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.GetWorkerEdgeNodesRequest](../../models/operations/getworkeredgenodesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `filterExp`                                           | **string*                                             | :heavy_minus_sign:                                    | Filter expression evaluated against nodes             |
+| `limit`                                               | **int64*                                              | :heavy_minus_sign:                                    | Maximum number of nodes to return                     |
+| `offset`                                              | **int64*                                              | :heavy_minus_sign:                                    | Pagination offset                                     |
+| `sortExp`                                             | **string*                                             | :heavy_minus_sign:                                    | Sorting expression evaluated against nodes            |
 
 
 ### Response

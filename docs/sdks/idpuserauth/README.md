@@ -27,12 +27,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    relayState := "officia"
+    samlResponse := "sed"
 
     ctx := context.Background()
-    res, err := s.IDPUserAuth.Logout(ctx, operations.LogoutIDPUserAuthRequest{
-        RelayState: cribl.String("molestias"),
-        SAMLResponse: cribl.String("beatae"),
-    })
+    res, err := s.IDPUserAuth.Logout(ctx, relayState, samlResponse)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,10 +44,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.LogoutIDPUserAuthRequest](../../models/operations/logoutidpuserauthrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `relayState`                                          | **string*                                             | :heavy_minus_sign:                                    | N/A                                                   |
+| `samlResponse`                                        | **string*                                             | :heavy_minus_sign:                                    | Logout request object                                 |
 
 
 ### Response

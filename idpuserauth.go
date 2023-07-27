@@ -26,7 +26,12 @@ func newIDPUserAuth(sdkConfig sdkConfiguration) *idpUserAuth {
 }
 
 // Logout - Accepts a logout request from an IDP and logs out the user
-func (s *idpUserAuth) Logout(ctx context.Context, request operations.LogoutIDPUserAuthRequest) (*operations.LogoutIDPUserAuthResponse, error) {
+func (s *idpUserAuth) Logout(ctx context.Context, relayState *string, samlResponse *string) (*operations.LogoutIDPUserAuthResponse, error) {
+	request := operations.LogoutIDPUserAuthRequest{
+		RelayState:   relayState,
+		SAMLResponse: samlResponse,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/slo/callback"
 

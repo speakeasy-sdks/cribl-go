@@ -27,12 +27,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    group := "autem"
+    id := "vel"
 
     ctx := context.Background()
-    res, err := s.TaskErrors.Get(ctx, operations.GetTaskErrorsRequest{
-        Group: "soluta",
-        ID: "5744d08a-2267-4aae-a79e-3c71ad31becb",
-    })
+    res, err := s.TaskErrors.Get(ctx, group, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,10 +44,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.GetTaskErrorsRequest](../../models/operations/gettaskerrorsrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `group`                                               | *string*                                              | :heavy_check_mark:                                    | Group the job belongs to                              |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Instance id of the job to get results for             |
 
 
 ### Response

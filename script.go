@@ -107,7 +107,11 @@ func (s *script) Create(ctx context.Context, request map[string]interface{}) (*o
 
 // Delete - Delete Script
 // Delete Script
-func (s *script) Delete(ctx context.Context, request operations.DeleteScriptRequest) (*operations.DeleteScriptResponse, error) {
+func (s *script) Delete(ctx context.Context, id string) (*operations.DeleteScriptResponse, error) {
+	request := operations.DeleteScriptRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/scripts/{id}", request, nil)
 	if err != nil {
@@ -184,7 +188,11 @@ func (s *script) Delete(ctx context.Context, request operations.DeleteScriptRequ
 
 // Get - Get Script by ID
 // Get Script by ID
-func (s *script) Get(ctx context.Context, request operations.GetScriptRequest) (*operations.GetScriptResponse, error) {
+func (s *script) Get(ctx context.Context, id string) (*operations.GetScriptResponse, error) {
+	request := operations.GetScriptRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/scripts/{id}", request, nil)
 	if err != nil {
@@ -261,7 +269,12 @@ func (s *script) Get(ctx context.Context, request operations.GetScriptRequest) (
 
 // Update - Update Script
 // Update Script
-func (s *script) Update(ctx context.Context, request operations.UpdateScriptRequest) (*operations.UpdateScriptResponse, error) {
+func (s *script) Update(ctx context.Context, id string, requestBody map[string]interface{}) (*operations.UpdateScriptResponse, error) {
+	request := operations.UpdateScriptRequest{
+		ID:          id,
+		RequestBody: requestBody,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/scripts/{id}", request, nil)
 	if err != nil {

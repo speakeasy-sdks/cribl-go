@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateParserIDRequest struct {
-	// Parser object to be updated
-	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateParserIDRequest) GetRequestBody() map[string]interface{} {
-	if o == nil {
-		return nil
-	}
-	return o.RequestBody
+	// Parser object to be updated
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 }
 
 func (o *UpdateParserIDRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateParserIDRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateParserIDRequest) GetRequestBody() map[string]interface{} {
+	if o == nil {
+		return nil
+	}
+	return o.RequestBody
 }
 
 type UpdateParserIDResponse struct {

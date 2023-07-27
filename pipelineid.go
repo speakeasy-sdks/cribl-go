@@ -26,7 +26,11 @@ func newPipelineID(sdkConfig sdkConfiguration) *pipelineID {
 
 // Delete - Delete Pipeline
 // Delete Pipeline
-func (s *pipelineID) Delete(ctx context.Context, request operations.DeletePipelineIDRequest) (*operations.DeletePipelineIDResponse, error) {
+func (s *pipelineID) Delete(ctx context.Context, id string) (*operations.DeletePipelineIDResponse, error) {
+	request := operations.DeletePipelineIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/pipelines/{id}", request, nil)
 	if err != nil {
@@ -103,7 +107,11 @@ func (s *pipelineID) Delete(ctx context.Context, request operations.DeletePipeli
 
 // Get - Get Pipeline by ID
 // Get Pipeline by ID
-func (s *pipelineID) Get(ctx context.Context, request operations.GetPipelineIDRequest) (*operations.GetPipelineIDResponse, error) {
+func (s *pipelineID) Get(ctx context.Context, id string) (*operations.GetPipelineIDResponse, error) {
+	request := operations.GetPipelineIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/pipelines/{id}", request, nil)
 	if err != nil {
@@ -180,7 +188,12 @@ func (s *pipelineID) Get(ctx context.Context, request operations.GetPipelineIDRe
 
 // Update - Update Pipeline
 // Update Pipeline
-func (s *pipelineID) Update(ctx context.Context, request operations.UpdatePipelineIDRequest) (*operations.UpdatePipelineIDResponse, error) {
+func (s *pipelineID) Update(ctx context.Context, id string, pipeline *shared.Pipeline) (*operations.UpdatePipelineIDResponse, error) {
+	request := operations.UpdatePipelineIDRequest{
+		ID:       id,
+		Pipeline: pipeline,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/pipelines/{id}", request, nil)
 	if err != nil {

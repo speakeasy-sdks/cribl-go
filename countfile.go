@@ -27,7 +27,11 @@ func newCountFile(sdkConfig sdkConfiguration) *countFile {
 
 // Get - get the count of files of changed
 // get the count of files of changed
-func (s *countFile) Get(ctx context.Context, request operations.GetCountFileRequest) (*operations.GetCountFileResponse, error) {
+func (s *countFile) Get(ctx context.Context, group *string) (*operations.GetCountFileResponse, error) {
+	request := operations.GetCountFileRequest{
+		Group: group,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/version/count"
 

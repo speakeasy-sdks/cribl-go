@@ -26,7 +26,12 @@ func newGroupBundle(sdkConfig sdkConfiguration) *groupBundle {
 
 // Get - Get effective bundle version for given Group
 // Get effective bundle version for given Group
-func (s *groupBundle) Get(ctx context.Context, request operations.GetGroupBundleRequest) (*operations.GetGroupBundleResponse, error) {
+func (s *groupBundle) Get(ctx context.Context, id string, deployRequest *shared.DeployRequest) (*operations.GetGroupBundleResponse, error) {
+	request := operations.GetGroupBundleRequest{
+		ID:            id,
+		DeployRequest: deployRequest,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/master/groups/{id}/configVersion", request, nil)
 	if err != nil {

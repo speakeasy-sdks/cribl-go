@@ -8,17 +8,10 @@ import (
 )
 
 type GetBytesRequest struct {
-	// The number of bytes to return;   this value could be constrained by system limits.
-	BytesRequested *int64 `queryParam:"style=form,explode=true,name=bytesRequested"`
 	// The path to the file to sample
 	Path string `queryParam:"style=form,explode=true,name=path"`
-}
-
-func (o *GetBytesRequest) GetBytesRequested() *int64 {
-	if o == nil {
-		return nil
-	}
-	return o.BytesRequested
+	// The number of bytes to return;   this value could be constrained by system limits.
+	BytesRequested *int64 `queryParam:"style=form,explode=true,name=bytesRequested"`
 }
 
 func (o *GetBytesRequest) GetPath() string {
@@ -26,6 +19,13 @@ func (o *GetBytesRequest) GetPath() string {
 		return ""
 	}
 	return o.Path
+}
+
+func (o *GetBytesRequest) GetBytesRequested() *int64 {
+	if o == nil {
+		return nil
+	}
+	return o.BytesRequested
 }
 
 type GetBytesResponse struct {

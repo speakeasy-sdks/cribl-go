@@ -108,7 +108,11 @@ func (s *policyRule) Create(ctx context.Context, request shared.PolicyRule) (*op
 
 // Delete - Delete PolicyRule
 // Delete PolicyRule
-func (s *policyRule) Delete(ctx context.Context, request operations.DeletePolicyRuleRequest) (*operations.DeletePolicyRuleResponse, error) {
+func (s *policyRule) Delete(ctx context.Context, id string) (*operations.DeletePolicyRuleResponse, error) {
+	request := operations.DeletePolicyRuleRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/policies/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *policyRule) Delete(ctx context.Context, request operations.DeletePolicy
 
 // Get - Get PolicyRule by ID
 // Get PolicyRule by ID
-func (s *policyRule) Get(ctx context.Context, request operations.GetPolicyRuleRequest) (*operations.GetPolicyRuleResponse, error) {
+func (s *policyRule) Get(ctx context.Context, id string) (*operations.GetPolicyRuleResponse, error) {
+	request := operations.GetPolicyRuleRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/policies/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *policyRule) Get(ctx context.Context, request operations.GetPolicyRuleRe
 
 // Update - Update PolicyRule
 // Update PolicyRule
-func (s *policyRule) Update(ctx context.Context, request operations.UpdatePolicyRuleRequest) (*operations.UpdatePolicyRuleResponse, error) {
+func (s *policyRule) Update(ctx context.Context, id string, policyRule *shared.PolicyRule) (*operations.UpdatePolicyRuleResponse, error) {
+	request := operations.UpdatePolicyRuleRequest{
+		ID:         id,
+		PolicyRule: policyRule,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/policies/{id}", request, nil)
 	if err != nil {

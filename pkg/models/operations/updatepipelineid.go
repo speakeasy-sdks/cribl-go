@@ -8,17 +8,10 @@ import (
 )
 
 type UpdatePipelineIDRequest struct {
-	// Pipeline object to be updated
-	Pipeline *shared.Pipeline `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdatePipelineIDRequest) GetPipeline() *shared.Pipeline {
-	if o == nil {
-		return nil
-	}
-	return o.Pipeline
+	// Pipeline object to be updated
+	Pipeline *shared.Pipeline `request:"mediaType=application/json"`
 }
 
 func (o *UpdatePipelineIDRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdatePipelineIDRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdatePipelineIDRequest) GetPipeline() *shared.Pipeline {
+	if o == nil {
+		return nil
+	}
+	return o.Pipeline
 }
 
 type UpdatePipelineIDResponse struct {

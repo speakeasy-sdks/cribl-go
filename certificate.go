@@ -108,7 +108,11 @@ func (s *certificate) Create(ctx context.Context, request shared.Certificate) (*
 
 // Delete - Delete Certificate
 // Delete Certificate
-func (s *certificate) Delete(ctx context.Context, request operations.DeleteCertificateRequest) (*operations.DeleteCertificateResponse, error) {
+func (s *certificate) Delete(ctx context.Context, id string) (*operations.DeleteCertificateResponse, error) {
+	request := operations.DeleteCertificateRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/certificates/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *certificate) Delete(ctx context.Context, request operations.DeleteCerti
 
 // Get - Get Certificate by ID
 // Get Certificate by ID
-func (s *certificate) Get(ctx context.Context, request operations.GetCertificateRequest) (*operations.GetCertificateResponse, error) {
+func (s *certificate) Get(ctx context.Context, id string) (*operations.GetCertificateResponse, error) {
+	request := operations.GetCertificateRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/certificates/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *certificate) Get(ctx context.Context, request operations.GetCertificate
 
 // Update - Update Certificate
 // Update Certificate
-func (s *certificate) Update(ctx context.Context, request operations.UpdateCertificateRequest) (*operations.UpdateCertificateResponse, error) {
+func (s *certificate) Update(ctx context.Context, id string, certificate *shared.Certificate) (*operations.UpdateCertificateResponse, error) {
+	request := operations.UpdateCertificateRequest{
+		ID:          id,
+		Certificate: certificate,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/certificates/{id}", request, nil)
 	if err != nil {

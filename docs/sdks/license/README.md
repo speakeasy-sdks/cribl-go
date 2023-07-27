@@ -31,24 +31,23 @@ func main() {
 
     ctx := context.Background()
     res, err := s.License.Create(ctx, shared.License{
-        Cls: shared.LicenseClsFree,
-        Email: "Lurline.Welch@yahoo.com",
-        Exp: 370195,
-        FPh: 729612,
-        FPhg: 153942,
-        GUID: "omnis",
-        Iat: 120646,
-        ID: "22030d83-f5ae-4b77-99d2-2e8c1f849382",
-        Iss: "nemo",
-        License: "delectus",
+        Cls: shared.LicenseClsProd,
+        Email: "Joy33@gmail.com",
+        Exp: 906232,
+        FPh: 206063,
+        FPhg: 816365,
+        GUID: "aliquam",
+        Iat: 552581,
+        ID: "fdaf313a-1f5f-4d94-a59c-0b36f25ea944",
+        Iss: "tenetur",
+        License: "adipisci",
         Limits: map[string]interface{}{
-            "porro": "quaerat",
-            "magni": "cumque",
-            "quos": "in",
-            "commodi": "maxime",
+            "in": "minima",
+            "ex": "minus",
+            "ab": "beatae",
         },
-        Quota: 151486,
-        Title: "Miss",
+        Quota: 943143,
+        Title: "Mrs.",
     })
     if err != nil {
         log.Fatal(err)
@@ -96,11 +95,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "quisquam"
 
     ctx := context.Background()
-    res, err := s.License.Delete(ctx, operations.DeleteLicenseRequest{
-        ID: "2dfb4cfc-1c76-4230-b841-fb1bd23fdb14",
-    })
+    res, err := s.License.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -113,10 +111,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.DeleteLicenseRequest](../../models/operations/deletelicenserequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -147,11 +145,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "dolor"
 
     ctx := context.Background()
-    res, err := s.License.Get(ctx, operations.GetLicenseRequest{
-        ID: "db6be5a6-8599-48e2-aae2-0da16fc2b271",
-    })
+    res, err := s.License.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -164,10 +161,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.GetLicenseRequest](../../models/operations/getlicenserequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response

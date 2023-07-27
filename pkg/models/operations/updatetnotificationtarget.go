@@ -8,17 +8,10 @@ import (
 )
 
 type UpdatetNotificationTargetRequest struct {
-	// NotificationTarget object to be updated
-	NotificationTarget *shared.NotificationTarget `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdatetNotificationTargetRequest) GetNotificationTarget() *shared.NotificationTarget {
-	if o == nil {
-		return nil
-	}
-	return o.NotificationTarget
+	// NotificationTarget object to be updated
+	NotificationTarget *shared.NotificationTarget `request:"mediaType=application/json"`
 }
 
 func (o *UpdatetNotificationTargetRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdatetNotificationTargetRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdatetNotificationTargetRequest) GetNotificationTarget() *shared.NotificationTarget {
+	if o == nil {
+		return nil
+	}
+	return o.NotificationTarget
 }
 
 type UpdatetNotificationTargetResponse struct {

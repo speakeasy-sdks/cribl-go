@@ -7,17 +7,10 @@ import (
 )
 
 type UpdateScriptRequest struct {
-	// Script object to be updated
-	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateScriptRequest) GetRequestBody() map[string]interface{} {
-	if o == nil {
-		return nil
-	}
-	return o.RequestBody
+	// Script object to be updated
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 }
 
 func (o *UpdateScriptRequest) GetID() string {
@@ -25,6 +18,13 @@ func (o *UpdateScriptRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateScriptRequest) GetRequestBody() map[string]interface{} {
+	if o == nil {
+		return nil
+	}
+	return o.RequestBody
 }
 
 type UpdateScriptResponse struct {

@@ -29,11 +29,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "architecto"
 
     ctx := context.Background()
-    res, err := s.PipelineID.Delete(ctx, operations.DeletePipelineIDRequest{
-        ID: "8140b64f-f8ae-4170-af03-b5f37e4aa868",
-    })
+    res, err := s.PipelineID.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.DeletePipelineIDRequest](../../models/operations/deletepipelineidrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -80,11 +79,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "praesentium"
 
     ctx := context.Background()
-    res, err := s.PipelineID.Get(ctx, operations.GetPipelineIDRequest{
-        ID: "55596673-2aa5-4dcb-a682-cb70f8cfd5fb",
-    })
+    res, err := s.PipelineID.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -97,10 +95,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.GetPipelineIDRequest](../../models/operations/getpipelineidrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -131,59 +129,60 @@ func main() {
             BearerAuth: "",
         }),
     )
-
-    ctx := context.Background()
-    res, err := s.PipelineID.Update(ctx, operations.UpdatePipelineIDRequest{
-        Pipeline: &shared.Pipeline{
-            Conf: shared.PipelineConf{
-                AsyncFuncTimeout: cribl.Int64(388851),
-                Description: cribl.String("earum"),
-                Functions: []shared.PipelineFunctionConf{
-                    shared.PipelineFunctionConf{
-                        Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
-                        Description: cribl.String("dicta"),
-                        Disabled: cribl.Bool(false),
-                        Filter: cribl.String("quidem"),
-                        Final: cribl.Bool(false),
-                        GroupID: cribl.String("omnis"),
-                        ID: "a9f74846-e2c3-4309-9b05-36d9e75ca006",
-                    },
-                    shared.PipelineFunctionConf{
-                        Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
-                        Description: cribl.String("earum"),
-                        Disabled: cribl.Bool(false),
-                        Filter: cribl.String("quis"),
-                        Final: cribl.Bool(false),
-                        GroupID: cribl.String("dolorem"),
-                        ID: "92c11a25-a8bf-492f-9742-8ad9a9f8bf82",
-                    },
-                    shared.PipelineFunctionConf{
-                        Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
-                        Description: cribl.String("odit"),
-                        Disabled: cribl.Bool(false),
-                        Filter: cribl.String("illo"),
-                        Final: cribl.Bool(false),
-                        GroupID: cribl.String("architecto"),
-                        ID: "25359d98-387f-47a7-9cd7-2cd2484da217",
-                    },
+    id := "eveniet"
+    pipeline := &shared.Pipeline{
+        Conf: shared.PipelineConf{
+            AsyncFuncTimeout: cribl.Int64(221781),
+            Description: cribl.String("expedita"),
+            Functions: []shared.PipelineFunctionConf{
+                shared.PipelineFunctionConf{
+                    Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
+                    Description: cribl.String("iste"),
+                    Disabled: cribl.Bool(false),
+                    Filter: cribl.String("illo"),
+                    Final: cribl.Bool(false),
+                    GroupID: cribl.String("minus"),
+                    ID: "8d975e0e-8419-4d8f-84f1-44f3e07edcc4",
                 },
-                Groups: map[string]shared.PipelineConfGroups{
-                    "omnis": shared.PipelineConfGroups{
-                        Description: cribl.String("reiciendis"),
-                        Disabled: cribl.Bool(false),
-                        Name: "Marguerite Roob PhD",
-                    },
+                shared.PipelineFunctionConf{
+                    Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
+                    Description: cribl.String("dolorum"),
+                    Disabled: cribl.Bool(false),
+                    Filter: cribl.String("deserunt"),
+                    Final: cribl.Bool(false),
+                    GroupID: cribl.String("ad"),
+                    ID: "f3cabd90-5a97-42e0-9672-8227b2d30947",
                 },
-                Output: cribl.String("tenetur"),
-                Streamtags: []string{
-                    "nihil",
-                    "quia",
+                shared.PipelineFunctionConf{
+                    Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
+                    Description: cribl.String("accusantium"),
+                    Disabled: cribl.Bool(false),
+                    Filter: cribl.String("distinctio"),
+                    Final: cribl.Bool(false),
+                    GroupID: cribl.String("sapiente"),
+                    ID: "7a4fa87c-f535-4a6f-ae54-ebf60c321f02",
                 },
             },
-            ID: "5f1169ac-1e41-4d8a-a3c2-3e34f2dfa4a1",
+            Groups: map[string]shared.PipelineConfGroups{
+                "rerum": shared.PipelineConfGroups{
+                    Description: cribl.String("in"),
+                    Disabled: cribl.Bool(false),
+                    Name: "Paulette Dibbert",
+                },
+            },
+            Output: cribl.String("dignissimos"),
+            Streamtags: []string{
+                "itaque",
+                "vitae",
+                "est",
+                "accusantium",
+            },
         },
-        ID: "97f6de92-2151-4fe1-b120-99853e9f543d",
-    })
+        ID: "cc8df79f-0a39-46d9-8c36-4b7c15dfbace",
+    }
+
+    ctx := context.Background()
+    res, err := s.PipelineID.Update(ctx, id, pipeline)
     if err != nil {
         log.Fatal(err)
     }
@@ -196,10 +195,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.UpdatePipelineIDRequest](../../models/operations/updatepipelineidrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `pipeline`                                            | [*shared.Pipeline](../../models/shared/pipeline.md)   | :heavy_minus_sign:                                    | Pipeline object to be updated                         |
 
 
 ### Response

@@ -26,7 +26,12 @@ func newRouteObject(sdkConfig sdkConfiguration) *routeObject {
 
 // Update - Add, delete or update the routes with the required content.
 // Add, delete or update the routes with the required content.
-func (s *routeObject) Update(ctx context.Context, request operations.UpdateRouteObjectRequest) (*operations.UpdateRouteObjectResponse, error) {
+func (s *routeObject) Update(ctx context.Context, id string, routes *shared.Routes) (*operations.UpdateRouteObjectResponse, error) {
+	request := operations.UpdateRouteObjectRequest{
+		ID:     id,
+		Routes: routes,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/routes/{id}", request, nil)
 	if err != nil {

@@ -29,15 +29,15 @@ func main() {
 
     ctx := context.Background()
     res, err := s.DatabaseConnection.Post(ctx, shared.DatabaseConnectionConfig{
-        AuthType: "a",
-        ConfigObj: cribl.String("dolor"),
-        ConnectionString: cribl.String("occaecati"),
-        ConnectionTimeout: cribl.Int64(539813),
+        AuthType: "fuga",
+        ConfigObj: cribl.String("laudantium"),
+        ConnectionString: cribl.String("incidunt"),
+        ConnectionTimeout: cribl.Int64(97493),
         DatabaseType: &shared.DatabaseConnectionType{},
-        Description: "beatae",
-        ID: "d4c700b6-07f3-4c93-873b-9da3f2ceda7e",
-        RequestTimeout: cribl.Int64(185348),
-        Tags: cribl.String("consectetur"),
+        Description: "rem",
+        ID: "d162309f-b092-4992-9aef-b9f58c4d86e6",
+        RequestTimeout: cribl.Int64(520761),
+        Tags: cribl.String("earum"),
     })
     if err != nil {
         log.Fatal(err)

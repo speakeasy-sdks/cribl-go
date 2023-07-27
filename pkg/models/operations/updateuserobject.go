@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateUserObjectRequest struct {
-	// User object
-	User *shared.User `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateUserObjectRequest) GetUser() *shared.User {
-	if o == nil {
-		return nil
-	}
-	return o.User
+	// User object
+	User *shared.User `request:"mediaType=application/json"`
 }
 
 func (o *UpdateUserObjectRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateUserObjectRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateUserObjectRequest) GetUser() *shared.User {
+	if o == nil {
+		return nil
+	}
+	return o.User
 }
 
 type UpdateUserObjectResponse struct {

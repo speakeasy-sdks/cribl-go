@@ -26,7 +26,11 @@ func newRouteListID(sdkConfig sdkConfiguration) *routeListID {
 
 // Get - List all routes by id
 // List all routes by id
-func (s *routeListID) Get(ctx context.Context, request operations.GetRouteListIDRequest) (*operations.GetRouteListIDResponse, error) {
+func (s *routeListID) Get(ctx context.Context, id string) (*operations.GetRouteListIDResponse, error) {
+	request := operations.GetRouteListIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/routes/{id}", request, nil)
 	if err != nil {

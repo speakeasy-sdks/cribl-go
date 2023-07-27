@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateOutputIDRequest struct {
-	// Output object to be updated
-	Output *shared.Output `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateOutputIDRequest) GetOutput() *shared.Output {
-	if o == nil {
-		return nil
-	}
-	return o.Output
+	// Output object to be updated
+	Output *shared.Output `request:"mediaType=application/json"`
 }
 
 func (o *UpdateOutputIDRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateOutputIDRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateOutputIDRequest) GetOutput() *shared.Output {
+	if o == nil {
+		return nil
+	}
+	return o.Output
 }
 
 type UpdateOutputIDResponse struct {

@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateLoggerConfigRequest struct {
-	// LoggerConfig object to be updated
-	LoggerConfig *shared.LoggerConfig `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateLoggerConfigRequest) GetLoggerConfig() *shared.LoggerConfig {
-	if o == nil {
-		return nil
-	}
-	return o.LoggerConfig
+	// LoggerConfig object to be updated
+	LoggerConfig *shared.LoggerConfig `request:"mediaType=application/json"`
 }
 
 func (o *UpdateLoggerConfigRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateLoggerConfigRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateLoggerConfigRequest) GetLoggerConfig() *shared.LoggerConfig {
+	if o == nil {
+		return nil
+	}
+	return o.LoggerConfig
 }
 
 type UpdateLoggerConfigResponse struct {

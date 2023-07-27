@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateSavedQueriesRequest struct {
-	// SavedQuery object to be updated
-	SavedQuery *shared.SavedQuery `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateSavedQueriesRequest) GetSavedQuery() *shared.SavedQuery {
-	if o == nil {
-		return nil
-	}
-	return o.SavedQuery
+	// SavedQuery object to be updated
+	SavedQuery *shared.SavedQuery `request:"mediaType=application/json"`
 }
 
 func (o *UpdateSavedQueriesRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateSavedQueriesRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateSavedQueriesRequest) GetSavedQuery() *shared.SavedQuery {
+	if o == nil {
+		return nil
+	}
+	return o.SavedQuery
 }
 
 type UpdateSavedQueriesResponse struct {

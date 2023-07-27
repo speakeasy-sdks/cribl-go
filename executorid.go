@@ -26,7 +26,11 @@ func newExecutorID(sdkConfig sdkConfiguration) *executorID {
 
 // Get - Get Executor by ID
 // Get Executor by ID
-func (s *executorID) Get(ctx context.Context, request operations.GetExecutorIDRequest) (*operations.GetExecutorIDResponse, error) {
+func (s *executorID) Get(ctx context.Context, id string) (*operations.GetExecutorIDResponse, error) {
+	request := operations.GetExecutorIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/executors/{id}", request, nil)
 	if err != nil {

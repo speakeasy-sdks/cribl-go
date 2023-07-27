@@ -27,11 +27,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    databaseType := "ducimus"
 
     ctx := context.Background()
-    res, err := s.ListDatabaseConnection.Get(ctx, operations.GetListDatabaseConnectionRequest{
-        DatabaseType: cribl.String("deserunt"),
-    })
+    res, err := s.ListDatabaseConnection.Get(ctx, databaseType)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,10 +43,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.GetListDatabaseConnectionRequest](../../models/operations/getlistdatabaseconnectionrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `databaseType`                                        | **string*                                             | :heavy_minus_sign:                                    | type of database connection                           |
 
 
 ### Response

@@ -26,7 +26,11 @@ func newCondition(sdkConfig sdkConfiguration) *condition {
 
 // Get - Get Condition by ID
 // Get Condition by ID
-func (s *condition) Get(ctx context.Context, request operations.GetConditionRequest) (*operations.GetConditionResponse, error) {
+func (s *condition) Get(ctx context.Context, id string) (*operations.GetConditionResponse, error) {
+	request := operations.GetConditionRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/conditions/{id}", request, nil)
 	if err != nil {

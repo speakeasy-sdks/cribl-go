@@ -101,7 +101,12 @@ func (s *userObject) Get(ctx context.Context) (*operations.GetUserObjectResponse
 
 // Update - Update User except for their roles
 // Update User except for their roles
-func (s *userObject) Update(ctx context.Context, request operations.UpdateUserObjectRequest) (*operations.UpdateUserObjectResponse, error) {
+func (s *userObject) Update(ctx context.Context, id string, user *shared.User) (*operations.UpdateUserObjectResponse, error) {
+	request := operations.UpdateUserObjectRequest{
+		ID:   id,
+		User: user,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/users/{id}/info", request, nil)
 	if err != nil {

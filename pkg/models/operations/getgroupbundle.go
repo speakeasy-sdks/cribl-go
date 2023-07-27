@@ -8,17 +8,10 @@ import (
 )
 
 type GetGroupBundleRequest struct {
-	// DeployRequest object
-	DeployRequest *shared.DeployRequest `request:"mediaType=application/json"`
 	// Group ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *GetGroupBundleRequest) GetDeployRequest() *shared.DeployRequest {
-	if o == nil {
-		return nil
-	}
-	return o.DeployRequest
+	// DeployRequest object
+	DeployRequest *shared.DeployRequest `request:"mediaType=application/json"`
 }
 
 func (o *GetGroupBundleRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *GetGroupBundleRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *GetGroupBundleRequest) GetDeployRequest() *shared.DeployRequest {
+	if o == nil {
+		return nil
+	}
+	return o.DeployRequest
 }
 
 type GetGroupBundleResponse struct {

@@ -27,7 +27,11 @@ func newWorkingTree(sdkConfig sdkConfiguration) *workingTree {
 
 // Get - get the the working tree status
 // get the the working tree status
-func (s *workingTree) Get(ctx context.Context, request operations.GetWorkingTreeRequest) (*operations.GetWorkingTreeResponse, error) {
+func (s *workingTree) Get(ctx context.Context, group *string) (*operations.GetWorkingTreeResponse, error) {
+	request := operations.GetWorkingTreeRequest{
+		Group: group,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/version/status"
 

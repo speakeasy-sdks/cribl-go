@@ -27,12 +27,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    path := "perspiciatis"
+    bytesRequested := 446394
 
     ctx := context.Background()
-    res, err := s.Bytes.Get(ctx, operations.GetBytesRequest{
-        BytesRequested: cribl.Int64(715208),
-        Path: "voluptatum",
-    })
+    res, err := s.Bytes.Get(ctx, path, bytesRequested)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,10 +44,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| `ctx`                                                                    | [context.Context](https://pkg.go.dev/context#Context)                    | :heavy_check_mark:                                                       | The context to use for the request.                                      |
-| `request`                                                                | [operations.GetBytesRequest](../../models/operations/getbytesrequest.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `path`                                                                             | *string*                                                                           | :heavy_check_mark:                                                                 | The path to the file to sample                                                     |
+| `bytesRequested`                                                                   | **int64*                                                                           | :heavy_minus_sign:                                                                 | The number of bytes to return;   this value could be constrained by system limits. |
 
 
 ### Response

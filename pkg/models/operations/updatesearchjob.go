@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateSearchJobRequest struct {
-	// SearchJob object to be updated
-	SearchJob *shared.SearchJob `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateSearchJobRequest) GetSearchJob() *shared.SearchJob {
-	if o == nil {
-		return nil
-	}
-	return o.SearchJob
+	// SearchJob object to be updated
+	SearchJob *shared.SearchJob `request:"mediaType=application/json"`
 }
 
 func (o *UpdateSearchJobRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateSearchJobRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateSearchJobRequest) GetSearchJob() *shared.SearchJob {
+	if o == nil {
+		return nil
+	}
+	return o.SearchJob
 }
 
 type UpdateSearchJobResponse struct {

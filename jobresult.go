@@ -26,7 +26,13 @@ func newJobResult(sdkConfig sdkConfiguration) *jobResult {
 
 // Get - Get results for a discover job by instance id
 // Get results for a discover job by instance id
-func (s *jobResult) Get(ctx context.Context, request operations.GetJobResultRequest) (*operations.GetJobResultResponse, error) {
+func (s *jobResult) Get(ctx context.Context, group string, id string, maxFiles *int64) (*operations.GetJobResultResponse, error) {
+	request := operations.GetJobResultRequest{
+		Group:    group,
+		ID:       id,
+		MaxFiles: maxFiles,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}/results/{group}", request, nil)
 	if err != nil {

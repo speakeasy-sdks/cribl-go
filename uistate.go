@@ -26,7 +26,11 @@ func newUIState(sdkConfig sdkConfiguration) *uiState {
 
 // Get - Get UI state by key
 // Get UI state by key
-func (s *uiState) Get(ctx context.Context, request operations.GetUIStateRequest) (*operations.GetUIStateResponse, error) {
+func (s *uiState) Get(ctx context.Context, key string) (*operations.GetUIStateResponse, error) {
+	request := operations.GetUIStateRequest{
+		Key: key,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ui/{key}", request, nil)
 	if err != nil {
@@ -103,7 +107,12 @@ func (s *uiState) Get(ctx context.Context, request operations.GetUIStateRequest)
 
 // Update - Update UI state by key
 // Update UI state by key
-func (s *uiState) Update(ctx context.Context, request operations.UpdateUIStateRequest) (*operations.UpdateUIStateResponse, error) {
+func (s *uiState) Update(ctx context.Context, key string, uiStatePatch *shared.UIStatePatch) (*operations.UpdateUIStateResponse, error) {
+	request := operations.UpdateUIStateRequest{
+		Key:          key,
+		UIStatePatch: uiStatePatch,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ui/{key}", request, nil)
 	if err != nil {

@@ -29,11 +29,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "rem"
 
     ctx := context.Background()
-    res, err := s.MappingRulesets.Delete(ctx, operations.DeleteMappingRulesetsRequest{
-        ID: "224a6a0e-123b-4784-bec5-9e1f67f3c4cc",
-    })
+    res, err := s.MappingRulesets.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.DeleteMappingRulesetsRequest](../../models/operations/deletemappingrulesetsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -127,34 +126,38 @@ func main() {
             BearerAuth: "",
         }),
     )
-
-    ctx := context.Background()
-    res, err := s.MappingRulesets.Update(ctx, operations.UpdateMappingRulesetsRequest{
-        MappingRuleset: &shared.MappingRuleset{
-            Active: cribl.Bool(false),
-            Conf: &shared.MappingRulesetConf{
-                Functions: []map[string]interface{}{
-                    map[string]interface{}{
-                        "libero": "suscipit",
-                        "illum": "iusto",
-                    },
-                    map[string]interface{}{
-                        "sint": "aliquid",
-                        "repellat": "sapiente",
-                    },
-                    map[string]interface{}{
-                        "eligendi": "ullam",
-                    },
-                    map[string]interface{}{
-                        "eius": "dignissimos",
-                        "corporis": "perferendis",
-                    },
+    id := "atque"
+    mappingRuleset := &shared.MappingRuleset{
+        Active: cribl.Bool(false),
+        Conf: &shared.MappingRulesetConf{
+            Functions: []map[string]interface{}{
+                map[string]interface{}{
+                    "pariatur": "sapiente",
+                    "quo": "incidunt",
+                    "quod": "minus",
+                },
+                map[string]interface{}{
+                    "id": "excepturi",
+                    "occaecati": "libero",
+                    "quo": "esse",
+                    "hic": "maxime",
+                },
+                map[string]interface{}{
+                    "soluta": "fugit",
+                },
+                map[string]interface{}{
+                    "eligendi": "recusandae",
+                    "veritatis": "aut",
+                    "laudantium": "iusto",
+                    "dolor": "voluptates",
                 },
             },
-            ID: "1357e44f-51f8-4b08-8c31-97e193a24546",
         },
-        ID: "7f94874c-2d5c-4c49-b223-3e66bd8fe5d0",
-    })
+        ID: "42b006d6-7887-48ba-8581-a58208c54fef",
+    }
+
+    ctx := context.Background()
+    res, err := s.MappingRulesets.Update(ctx, id, mappingRuleset)
     if err != nil {
         log.Fatal(err)
     }
@@ -167,10 +170,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.UpdateMappingRulesetsRequest](../../models/operations/updatemappingrulesetsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `ctx`                                                           | [context.Context](https://pkg.go.dev/context#Context)           | :heavy_check_mark:                                              | The context to use for the request.                             |
+| `id`                                                            | *string*                                                        | :heavy_check_mark:                                              | Unique ID                                                       |
+| `mappingRuleset`                                                | [*shared.MappingRuleset](../../models/shared/mappingruleset.md) | :heavy_minus_sign:                                              | MappingRuleset object to be updated                             |
 
 
 ### Response

@@ -34,17 +34,19 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pack.Clone(ctx, shared.PackClone{
-        Dest: cribl.String("consectetur"),
+        Dest: cribl.String("impedit"),
         DstGroups: []string{
-            "nesciunt",
-            "earum",
+            "voluptatum",
+            "ipsa",
         },
         Force: cribl.Bool(false),
         Packs: []string{
-            "dolor",
-            "placeat",
+            "dolorem",
+            "repellat",
+            "aspernatur",
+            "inventore",
         },
-        SrcGroup: "quos",
+        SrcGroup: "sequi",
     })
     if err != nil {
         log.Fatal(err)
@@ -92,13 +94,12 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "fugit"
+    mode := "fuga"
+    filename := "hic"
 
     ctx := context.Background()
-    res, err := s.Pack.Export(ctx, operations.ExportPackRequest{
-        Filename: cribl.String("sed"),
-        ID: "09379aa6-9cd5-4fbc-b79d-a18a7822bf95",
-        Mode: "quos",
-    })
+    res, err := s.Pack.Export(ctx, id, mode, filename)
     if err != nil {
         log.Fatal(err)
     }
@@ -111,10 +112,12 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.ExportPackRequest](../../models/operations/exportpackrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
+| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| `ctx`                                                     | [context.Context](https://pkg.go.dev/context#Context)     | :heavy_check_mark:                                        | The context to use for the request.                       |
+| `id`                                                      | *string*                                                  | :heavy_check_mark:                                        | Pack name                                                 |
+| `mode`                                                    | *string*                                                  | :heavy_check_mark:                                        | Export mode, one of "merge_safe", "merge", "default_only" |
+| `filename`                                                | **string*                                                 | :heavy_minus_sign:                                        | Filename of the exported Pack                             |
 
 
 ### Response
@@ -147,7 +150,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pack.Install(ctx, shared.CrudEntityBase{
-        ID: "94e6861a-db55-4f9e-9d75-1c9fe8f7502b",
+        ID: "03102d51-4f4c-4c6f-98bf-9621a6a4f77a",
     })
     if err != nil {
         log.Fatal(err)
@@ -195,11 +198,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "laudantium"
 
     ctx := context.Background()
-    res, err := s.Pack.Uninstall(ctx, operations.UninstallPackRequest{
-        ID: "fdc34508-41f1-4764-8563-79f3fb27e21f",
-    })
+    res, err := s.Pack.Uninstall(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -212,10 +214,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.UninstallPackRequest](../../models/operations/uninstallpackrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Pack name                                             |
 
 
 ### Response
@@ -246,14 +248,13 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "esse"
+    minor := "eveniet"
+    source := "earum"
+    spec := "velit"
 
     ctx := context.Background()
-    res, err := s.Pack.Upgrade(ctx, operations.UpgradePackRequest{
-        ID: "862657b3-6fc6-4b9f-987c-e525c67641a8",
-        Minor: cribl.String("velit"),
-        Source: cribl.String("quasi"),
-        Spec: cribl.String("sed"),
-    })
+    res, err := s.Pack.Upgrade(ctx, id, minor, source, spec)
     if err != nil {
         log.Fatal(err)
     }
@@ -266,10 +267,13 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.UpgradePackRequest](../../models/operations/upgradepackrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `ctx`                                                       | [context.Context](https://pkg.go.dev/context#Context)       | :heavy_check_mark:                                          | The context to use for the request.                         |
+| `id`                                                        | *string*                                                    | :heavy_check_mark:                                          | Pack name                                                   |
+| `minor`                                                     | **string*                                                   | :heavy_minus_sign:                                          | body boolean optional Only upgrade to minor/patch versions  |
+| `source`                                                    | **string*                                                   | :heavy_minus_sign:                                          | body string required Pack source                            |
+| `spec`                                                      | **string*                                                   | :heavy_minus_sign:                                          | body string optional Specify a branch, tag or a semver spec |
 
 
 ### Response
@@ -300,11 +304,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    filename := "officiis"
 
     ctx := context.Background()
-    res, err := s.Pack.Upload(ctx, operations.UploadPackRequest{
-        Filename: cribl.String("officiis"),
-    })
+    res, err := s.Pack.Upload(ctx, filename)
     if err != nil {
         log.Fatal(err)
     }
@@ -317,10 +320,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.UploadPackRequest](../../models/operations/uploadpackrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `filename`                                            | **string*                                             | :heavy_minus_sign:                                    | the file to upload                                    |
 
 
 ### Response

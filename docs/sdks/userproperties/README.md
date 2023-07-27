@@ -27,24 +27,22 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "natus"
+    userProfile := &shared.UserProfile{
+        Disabled: false,
+        Email: "Shakira.Huels@gmail.com",
+        First: "vitae",
+        ID: "adb55f9e-5d75-41c9-be8f-7502bfdc3450",
+        Last: "blanditiis",
+        Password: cribl.String("modi"),
+        Roles: []string{
+            "a",
+        },
+        Username: "Assunta.Krajcik",
+    }
 
     ctx := context.Background()
-    res, err := s.UserProperties.Update(ctx, operations.UpdateUserPropertiesRequest{
-        UserProfile: &shared.UserProfile{
-            Disabled: false,
-            Email: "Thora.Fisher@yahoo.com",
-            First: "facere",
-            ID: "b1344ba9-f78a-45c0-ad7a-ab62e97261fb",
-            Last: "alias",
-            Password: cribl.String("quod"),
-            Roles: []string{
-                "corrupti",
-                "temporibus",
-            },
-            Username: "Brooklyn.Klein10",
-        },
-        ID: "996b5b4b-50ee-4f71-ab7a-7ab0344b1710",
-    })
+    res, err := s.UserProperties.Update(ctx, id, userProfile)
     if err != nil {
         log.Fatal(err)
     }
@@ -57,10 +55,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateUserPropertiesRequest](../../models/operations/updateuserpropertiesrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
+| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| `ctx`                                                     | [context.Context](https://pkg.go.dev/context#Context)     | :heavy_check_mark:                                        | The context to use for the request.                       |
+| `id`                                                      | *string*                                                  | :heavy_check_mark:                                        | Unique ID                                                 |
+| `userProfile`                                             | [*shared.UserProfile](../../models/shared/userprofile.md) | :heavy_minus_sign:                                        | UserProfile object                                        |
 
 
 ### Response

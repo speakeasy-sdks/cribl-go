@@ -26,7 +26,11 @@ func newFieldSummaries(sdkConfig sdkConfiguration) *fieldSummaries {
 
 // Get - List field summaries
 // List field summaries
-func (s *fieldSummaries) Get(ctx context.Context, request operations.GetFieldSummariesRequest) (*operations.GetFieldSummariesResponse, error) {
+func (s *fieldSummaries) Get(ctx context.Context, id string) (*operations.GetFieldSummariesResponse, error) {
+	request := operations.GetFieldSummariesRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/jobs/{id}/field-summaries", request, nil)
 	if err != nil {

@@ -34,836 +34,262 @@ func main() {
     res, err := s.SearchJob.Create(ctx, shared.SearchJob{
         ChartConfig: &shared.ChartConfig{
             Axis: &shared.ChartConfigAxis{
-                XAxis: cribl.String("delectus"),
+                XAxis: cribl.String("enim"),
                 YAxis: []string{
-                    "totam",
-                    "quidem",
+                    "unde",
+                    "quae",
+                    "eum",
                 },
             },
             Legend: &shared.Legend{},
             Series: []shared.ChartSeries{
                 shared.ChartSeries{
-                    Color: cribl.String("sequi"),
+                    Color: cribl.String("eveniet"),
                     Data: []map[string]interface{}{
                         map[string]interface{}{
-                            "modi": "dolores",
-                            "beatae": "rerum",
-                            "repellendus": "ut",
-                            "nesciunt": "facere",
+                            "blanditiis": "quidem",
                         },
                         map[string]interface{}{
-                            "delectus": "ipsa",
-                        },
-                        map[string]interface{}{
-                            "libero": "eaque",
-                            "animi": "doloremque",
-                            "consequatur": "perferendis",
-                            "dolor": "earum",
+                            "reiciendis": "placeat",
+                            "dolores": "consequatur",
+                            "nesciunt": "quia",
+                            "quidem": "voluptas",
                         },
                     },
-                    DataExpression: "facilis",
+                    DataExpression: "quo",
                     DataFilter: map[string]interface{}{
-                        "sed": "fugiat",
+                        "dignissimos": "omnis",
+                        "omnis": "fugit",
+                        "dolorem": "quidem",
                     },
-                    Name: "Garry Effertz",
+                    Name: "Raquel Bruen",
+                    Type: &shared.ChartType{},
+                },
+                shared.ChartSeries{
+                    Color: cribl.String("atque"),
+                    Data: []map[string]interface{}{
+                        map[string]interface{}{
+                            "reprehenderit": "deserunt",
+                            "itaque": "et",
+                            "eos": "impedit",
+                            "ex": "praesentium",
+                        },
+                        map[string]interface{}{
+                            "vitae": "tenetur",
+                            "laudantium": "aspernatur",
+                            "eligendi": "repudiandae",
+                        },
+                    },
+                    DataExpression: "dicta",
+                    DataFilter: map[string]interface{}{
+                        "ullam": "iusto",
+                    },
+                    Name: "Allison Corwin II",
                     Type: &shared.ChartType{},
                 },
             },
             Settings: &shared.Settings{
-                Color: cribl.String("aperiam"),
-                ColorPalette: 867423,
-                Type: "excepturi",
+                Color: cribl.String("amet"),
+                ColorPalette: 454165,
+                Type: "voluptate",
             },
             SingleValue: shared.SingleValue{
-                Color: cribl.String("aliquam"),
-                Decimals: cribl.Int64(973256),
-                Label: cribl.String("fuga"),
-                Prefix: cribl.String("deserunt"),
-                Suffix: cribl.String("iure"),
-                Type: cribl.String("labore"),
+                Color: cribl.String("pariatur"),
+                Decimals: cribl.Int64(791421),
+                Label: cribl.String("a"),
+                Prefix: cribl.String("fuga"),
+                Suffix: cribl.String("totam"),
+                Type: cribl.String("cupiditate"),
             },
             XAxis: &shared.Axis{
                 AxisLabel: &shared.AxisLabel{
                     Formatter: &shared.AxisLabelFormatter{},
                     FormatterData: []int64{
-                        767608,
+                        986594,
+                        608172,
+                        463695,
+                        349087,
                     },
                 },
-                Type: cribl.String("corporis"),
+                Type: cribl.String("voluptates"),
             },
         },
         CompatibilityChecks: &shared.SearchJobCompatibilityChecks{
             Datatypes: cribl.Bool(false),
         },
-        CorrelationID: cribl.String("odio"),
+        CorrelationID: cribl.String("sequi"),
         CPUMetrics: &shared.CPUTimeMetric{
-            TotalCPUSeconds: 841280,
-            TotalExecCPUSeconds: 116932,
+            TotalCPUSeconds: 336640,
+            TotalExecCPUSeconds: 413135,
         },
         DatatypeOverrides: &shared.DatatypeOverrides{
             BreakerRulesets: []shared.EventBreakerRuleset{
                 shared.EventBreakerRuleset{
-                    Description: cribl.String("vero"),
-                    ID: "dc2050d3-8dc3-4ce1-8547-2f9ee69166a8",
+                    Description: cribl.String("rem"),
+                    ID: "6092e9c3-ddc5-4f11-9dea-1026d541a4d1",
                     Lib: shared.EventBreakerRulesetLibraryCustom.ToPointer(),
-                    MinRawLength: cribl.Int64(734741),
+                    MinRawLength: cribl.Int64(607181),
                     Rules: []shared.EventBreakerRulesetRules{
                         shared.EventBreakerRulesetRules{
-                            Condition: "adipisci",
+                            Condition: "sapiente",
                             Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("dolore"),
-                                FieldFilterExpr: cribl.String("tempora"),
+                                DstField: cribl.String("officiis"),
+                                FieldFilterExpr: cribl.String("expedita"),
                                 Fields: []string{
-                                    "debitis",
-                                    "similique",
+                                    "vitae",
                                 },
                                 Keep: []string{
-                                    "blanditiis",
-                                    "libero",
-                                    "sequi",
-                                    "laborum",
+                                    "quas",
+                                    "ipsa",
                                 },
                                 Remove: []string{
-                                    "totam",
+                                    "placeat",
+                                    "quod",
+                                    "eligendi",
                                 },
                             },
                             Disabled: cribl.Bool(false),
                             Fields: []shared.EventBreakerRulesetRulesFields{
                                 shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Angelica Huel DVM"),
-                                    Value: "officiis",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Lisa Huel IV"),
-                                    Value: "repellendus",
+                                    Name: cribl.String("Preston Rau"),
+                                    Value: "soluta",
                                 },
                             },
-                            MaxEventBytes: cribl.Int64(184285),
-                            Name: "Evan Russel",
+                            MaxEventBytes: cribl.Int64(297325),
+                            Name: "Ms. Ricky Koch",
                             ParserEnabled: cribl.Bool(false),
                             Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("officia"),
-                                Length: cribl.Int64(920194),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
+                                Format: cribl.String("facilis"),
+                                Length: cribl.Int64(306023),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
                             },
-                            TimestampAnchorRegex: "voluptatem",
-                            TimestampEarliest: cribl.String("quod"),
-                            TimestampLatest: cribl.String("vitae"),
-                            TimestampTimezone: cribl.String("vel"),
+                            TimestampAnchorRegex: "amet",
+                            TimestampEarliest: cribl.String("natus"),
+                            TimestampLatest: cribl.String("ab"),
+                            TimestampTimezone: cribl.String("officiis"),
                             Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSONArray,
                         },
-                        shared.EventBreakerRulesetRules{
-                            Condition: "laboriosam",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("veritatis"),
-                                FieldFilterExpr: cribl.String("similique"),
-                                Fields: []string{
-                                    "temporibus",
-                                },
-                                Keep: []string{
-                                    "veritatis",
-                                    "ipsum",
-                                    "iure",
-                                },
-                                Remove: []string{
-                                    "molestiae",
-                                    "itaque",
-                                    "voluptatum",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Mrs. Ethel Deckow"),
-                                    Value: "velit",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Leslie Hirthe"),
-                                    Value: "veniam",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Krystal Quitzon"),
-                                    Value: "aliquam",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Dean Mayert MD"),
-                                    Value: "veniam",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(409677),
-                            Name: "Terence Pfeffer",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("pariatur"),
-                                Length: cribl.Int64(672505),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeAuto,
-                            },
-                            TimestampAnchorRegex: "omnis",
-                            TimestampEarliest: cribl.String("maxime"),
-                            TimestampLatest: cribl.String("officia"),
-                            TimestampTimezone: cribl.String("iusto"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeHeader,
-                        },
-                        shared.EventBreakerRulesetRules{
-                            Condition: "ab",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("deleniti"),
-                                FieldFilterExpr: cribl.String("et"),
-                                Fields: []string{
-                                    "sint",
-                                    "ipsam",
-                                    "laboriosam",
-                                    "molestiae",
-                                },
-                                Keep: []string{
-                                    "ex",
-                                },
-                                Remove: []string{
-                                    "dolorem",
-                                    "minus",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Cynthia Reichert"),
-                                    Value: "nisi",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Frances Johnson"),
-                                    Value: "non",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(382928),
-                            Name: "Mr. Margie Heller",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("tempore"),
-                                Length: cribl.Int64(144579),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
-                            },
-                            TimestampAnchorRegex: "magni",
-                            TimestampEarliest: cribl.String("sunt"),
-                            TimestampLatest: cribl.String("quidem"),
-                            TimestampTimezone: cribl.String("perspiciatis"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeCsv,
-                        },
-                        shared.EventBreakerRulesetRules{
-                            Condition: "eos",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("saepe"),
-                                FieldFilterExpr: cribl.String("ipsa"),
-                                Fields: []string{
-                                    "consequuntur",
-                                    "aliquam",
-                                },
-                                Keep: []string{
-                                    "reprehenderit",
-                                    "quidem",
-                                },
-                                Remove: []string{
-                                    "officia",
-                                    "modi",
-                                    "alias",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Paul Harvey"),
-                                    Value: "libero",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Cristina Huels DVM"),
-                                    Value: "facere",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Sean Daugherty"),
-                                    Value: "incidunt",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(866777),
-                            Name: "Deborah Waters",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("accusantium"),
-                                Length: cribl.Int64(890631),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
-                            },
-                            TimestampAnchorRegex: "aliquam",
-                            TimestampEarliest: cribl.String("quasi"),
-                            TimestampLatest: cribl.String("repellendus"),
-                            TimestampTimezone: cribl.String("architecto"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeCsv,
-                        },
                     },
-                    Tags: cribl.String("labore"),
+                    Tags: cribl.String("rerum"),
                 },
                 shared.EventBreakerRuleset{
-                    Description: cribl.String("nisi"),
-                    ID: "5e85156f-ff73-4fdf-94fd-d5ea9543398d",
+                    Description: cribl.String("placeat"),
+                    ID: "158c4c4e-5459-49ea-b422-60e9b200ce78",
                     Lib: shared.EventBreakerRulesetLibraryCustom.ToPointer(),
-                    MinRawLength: cribl.Int64(671516),
+                    MinRawLength: cribl.Int64(666321),
                     Rules: []shared.EventBreakerRulesetRules{
                         shared.EventBreakerRulesetRules{
-                            Condition: "soluta",
+                            Condition: "expedita",
                             Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("eius"),
-                                FieldFilterExpr: cribl.String("dolores"),
+                                DstField: cribl.String("quibusdam"),
+                                FieldFilterExpr: cribl.String("quos"),
                                 Fields: []string{
-                                    "deleniti",
-                                    "assumenda",
-                                    "iure",
-                                },
-                                Keep: []string{
-                                    "neque",
-                                },
-                                Remove: []string{
-                                    "quos",
-                                    "saepe",
-                                    "incidunt",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("David Dooley"),
-                                    Value: "culpa",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Tabitha Monahan IV"),
-                                    Value: "similique",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Rhonda Gislason"),
-                                    Value: "nisi",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Guadalupe Ankunding"),
-                                    Value: "nulla",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(676138),
-                            Name: "Sammy Franecki",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("quibusdam"),
-                                Length: cribl.Int64(40155),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
-                            },
-                            TimestampAnchorRegex: "nobis",
-                            TimestampEarliest: cribl.String("laboriosam"),
-                            TimestampLatest: cribl.String("esse"),
-                            TimestampTimezone: cribl.String("et"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeCsv,
-                        },
-                        shared.EventBreakerRulesetRules{
-                            Condition: "optio",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("quam"),
-                                FieldFilterExpr: cribl.String("delectus"),
-                                Fields: []string{
-                                    "vero",
-                                },
-                                Keep: []string{
-                                    "culpa",
-                                },
-                                Remove: []string{
-                                    "quasi",
-                                    "veniam",
-                                    "provident",
-                                    "consequuntur",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Eduardo Bayer DDS"),
-                                    Value: "magnam",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(615698),
-                            Name: "Katherine Ziemann",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("quibusdam"),
-                                Length: cribl.Int64(519586),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
-                            },
-                            TimestampAnchorRegex: "maxime",
-                            TimestampEarliest: cribl.String("totam"),
-                            TimestampLatest: cribl.String("id"),
-                            TimestampTimezone: cribl.String("neque"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSON,
-                        },
-                        shared.EventBreakerRulesetRules{
-                            Condition: "vel",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("ipsum"),
-                                FieldFilterExpr: cribl.String("occaecati"),
-                                Fields: []string{
-                                    "similique",
-                                    "quis",
-                                    "facilis",
+                                    "quidem",
                                     "in",
+                                    "culpa",
+                                    "doloremque",
                                 },
                                 Keep: []string{
-                                    "nisi",
-                                    "natus",
-                                    "eaque",
+                                    "dicta",
+                                    "architecto",
+                                    "suscipit",
                                 },
                                 Remove: []string{
-                                    "facilis",
+                                    "officiis",
+                                    "dignissimos",
+                                    "fugit",
+                                    "ratione",
                                 },
                             },
                             Disabled: cribl.Bool(false),
                             Fields: []shared.EventBreakerRulesetRulesFields{
                                 shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Joshua Padberg"),
-                                    Value: "maiores",
+                                    Name: cribl.String("Susan Mraz"),
+                                    Value: "deserunt",
                                 },
                                 shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Emma Dickinson"),
-                                    Value: "tempora",
+                                    Name: cribl.String("Brenda Tremblay"),
+                                    Value: "hic",
                                 },
                                 shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Miss Willard Welch"),
-                                    Value: "rem",
+                                    Name: cribl.String("Andrea Hilpert"),
+                                    Value: "omnis",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Mrs. Phyllis Christiansen PhD"),
+                                    Value: "voluptatum",
                                 },
                             },
-                            MaxEventBytes: cribl.Int64(796754),
-                            Name: "Faye Braun",
+                            MaxEventBytes: cribl.Int64(245116),
+                            Name: "Dan Nolan",
                             ParserEnabled: cribl.Bool(false),
                             Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("dolor"),
-                                Length: cribl.Int64(155108),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
+                                Format: cribl.String("iusto"),
+                                Length: cribl.Int64(493865),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
                             },
                             TimestampAnchorRegex: "occaecati",
-                            TimestampEarliest: cribl.String("doloribus"),
-                            TimestampLatest: cribl.String("libero"),
-                            TimestampTimezone: cribl.String("culpa"),
+                            TimestampEarliest: cribl.String("assumenda"),
+                            TimestampLatest: cribl.String("sunt"),
+                            TimestampTimezone: cribl.String("odit"),
                             Type: shared.EventBreakerRulesetRulesEventBreakerTypeCsv,
                         },
-                        shared.EventBreakerRulesetRules{
-                            Condition: "molestias",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("magnam"),
-                                FieldFilterExpr: cribl.String("voluptate"),
-                                Fields: []string{
-                                    "officia",
-                                    "qui",
-                                },
-                                Keep: []string{
-                                    "vero",
-                                    "quas",
-                                    "possimus",
-                                },
-                                Remove: []string{
-                                    "quo",
-                                    "ullam",
-                                    "ipsa",
-                                    "placeat",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Mr. Jeffery Hegmann"),
-                                    Value: "iusto",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Allison Kutch"),
-                                    Value: "provident",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Linda Kulas MD"),
-                                    Value: "alias",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(25872),
-                            Name: "Sergio Johns",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("eligendi"),
-                                Length: cribl.Int64(496307),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeAuto,
-                            },
-                            TimestampAnchorRegex: "eum",
-                            TimestampEarliest: cribl.String("possimus"),
-                            TimestampLatest: cribl.String("dolore"),
-                            TimestampTimezone: cribl.String("neque"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeRegex,
-                        },
                     },
-                    Tags: cribl.String("omnis"),
-                },
-                shared.EventBreakerRuleset{
-                    Description: cribl.String("quaerat"),
-                    ID: "398c783c-9239-48ed-bd3a-b7ca3c5ca864",
-                    Lib: shared.EventBreakerRulesetLibraryCustom.ToPointer(),
-                    MinRawLength: cribl.Int64(624011),
-                    Rules: []shared.EventBreakerRulesetRules{
-                        shared.EventBreakerRulesetRules{
-                            Condition: "ducimus",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("perferendis"),
-                                FieldFilterExpr: cribl.String("impedit"),
-                                Fields: []string{
-                                    "quibusdam",
-                                    "veniam",
-                                    "pariatur",
-                                    "commodi",
-                                },
-                                Keep: []string{
-                                    "corrupti",
-                                    "iste",
-                                    "distinctio",
-                                },
-                                Remove: []string{
-                                    "consequuntur",
-                                    "voluptatem",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Ms. Erin Bergnaum"),
-                                    Value: "illum",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Katrina Tillman"),
-                                    Value: "ratione",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(817807),
-                            Name: "Erika Cruickshank",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("inventore"),
-                                Length: cribl.Int64(280313),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
-                            },
-                            TimestampAnchorRegex: "molestias",
-                            TimestampEarliest: cribl.String("fuga"),
-                            TimestampLatest: cribl.String("odit"),
-                            TimestampTimezone: cribl.String("minus"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeRegex,
-                        },
-                        shared.EventBreakerRulesetRules{
-                            Condition: "sint",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("exercitationem"),
-                                FieldFilterExpr: cribl.String("magnam"),
-                                Fields: []string{
-                                    "quaerat",
-                                    "minima",
-                                },
-                                Keep: []string{
-                                    "unde",
-                                    "ullam",
-                                    "enim",
-                                    "facere",
-                                },
-                                Remove: []string{
-                                    "cumque",
-                                    "et",
-                                    "praesentium",
-                                    "minima",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Mr. Oscar Mitchell"),
-                                    Value: "iure",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Calvin Dietrich"),
-                                    Value: "explicabo",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Cameron O'Kon"),
-                                    Value: "incidunt",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Dominic Nienow"),
-                                    Value: "sed",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(229336),
-                            Name: "Silvia Stoltenberg",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("dolor"),
-                                Length: cribl.Int64(516716),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeAuto,
-                            },
-                            TimestampAnchorRegex: "vitae",
-                            TimestampEarliest: cribl.String("laborum"),
-                            TimestampLatest: cribl.String("beatae"),
-                            TimestampTimezone: cribl.String("vitae"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSONArray,
-                        },
-                        shared.EventBreakerRulesetRules{
-                            Condition: "non",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("laudantium"),
-                                FieldFilterExpr: cribl.String("consequuntur"),
-                                Fields: []string{
-                                    "nulla",
-                                    "ducimus",
-                                    "eveniet",
-                                },
-                                Keep: []string{
-                                    "enim",
-                                    "voluptas",
-                                    "veniam",
-                                    "voluptatem",
-                                },
-                                Remove: []string{
-                                    "vel",
-                                    "aspernatur",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Leon Lesch"),
-                                    Value: "nulla",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(481914),
-                            Name: "Sherri Hirthe",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("modi"),
-                                Length: cribl.Int64(763869),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeAuto,
-                            },
-                            TimestampAnchorRegex: "accusantium",
-                            TimestampEarliest: cribl.String("fuga"),
-                            TimestampLatest: cribl.String("doloremque"),
-                            TimestampTimezone: cribl.String("reprehenderit"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeRegex,
-                        },
-                    },
-                    Tags: cribl.String("veritatis"),
-                },
-                shared.EventBreakerRuleset{
-                    Description: cribl.String("similique"),
-                    ID: "961d24a7-dbb8-4f53-ad89-2cf7812cb512",
-                    Lib: shared.EventBreakerRulesetLibraryCustom.ToPointer(),
-                    MinRawLength: cribl.Int64(771645),
-                    Rules: []shared.EventBreakerRulesetRules{
-                        shared.EventBreakerRulesetRules{
-                            Condition: "esse",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("voluptatum"),
-                                FieldFilterExpr: cribl.String("aspernatur"),
-                                Fields: []string{
-                                    "accusantium",
-                                    "nobis",
-                                },
-                                Keep: []string{
-                                    "corporis",
-                                    "tempora",
-                                    "voluptatum",
-                                    "a",
-                                },
-                                Remove: []string{
-                                    "blanditiis",
-                                    "hic",
-                                    "blanditiis",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Miss Maryann Wiegand"),
-                                    Value: "totam",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Willie Wunsch III"),
-                                    Value: "nulla",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Meredith Lynch PhD"),
-                                    Value: "doloremque",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Ms. Mabel Bernhard DVM"),
-                                    Value: "voluptas",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(470523),
-                            Name: "Loretta Howe",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("doloribus"),
-                                Length: cribl.Int64(187770),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
-                            },
-                            TimestampAnchorRegex: "ex",
-                            TimestampEarliest: cribl.String("quos"),
-                            TimestampLatest: cribl.String("dicta"),
-                            TimestampTimezone: cribl.String("minus"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSONArray,
-                        },
-                        shared.EventBreakerRulesetRules{
-                            Condition: "molestiae",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("iure"),
-                                FieldFilterExpr: cribl.String("blanditiis"),
-                                Fields: []string{
-                                    "impedit",
-                                    "itaque",
-                                    "molestiae",
-                                    "quaerat",
-                                },
-                                Keep: []string{
-                                    "dolore",
-                                },
-                                Remove: []string{
-                                    "excepturi",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Heather Heller IV"),
-                                    Value: "voluptas",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Jean Goldner"),
-                                    Value: "officia",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Ora Homenick"),
-                                    Value: "neque",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(648985),
-                            Name: "Melvin Stracke",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("quibusdam"),
-                                Length: cribl.Int64(841408),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
-                            },
-                            TimestampAnchorRegex: "dolorem",
-                            TimestampEarliest: cribl.String("velit"),
-                            TimestampLatest: cribl.String("vero"),
-                            TimestampTimezone: cribl.String("placeat"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeCsv,
-                        },
-                        shared.EventBreakerRulesetRules{
-                            Condition: "vel",
-                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                DstField: cribl.String("non"),
-                                FieldFilterExpr: cribl.String("incidunt"),
-                                Fields: []string{
-                                    "ipsum",
-                                    "itaque",
-                                    "non",
-                                },
-                                Keep: []string{
-                                    "esse",
-                                    "id",
-                                    "natus",
-                                },
-                                Remove: []string{
-                                    "saepe",
-                                    "modi",
-                                    "assumenda",
-                                },
-                            },
-                            Disabled: cribl.Bool(false),
-                            Fields: []shared.EventBreakerRulesetRulesFields{
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Pearl Trantow"),
-                                    Value: "libero",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Arturo Harris"),
-                                    Value: "aliquam",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Mrs. Tracy Walker"),
-                                    Value: "numquam",
-                                },
-                                shared.EventBreakerRulesetRulesFields{
-                                    Name: cribl.String("Mr. Todd Feil"),
-                                    Value: "perferendis",
-                                },
-                            },
-                            MaxEventBytes: cribl.Int64(439135),
-                            Name: "Bryant Dickens",
-                            ParserEnabled: cribl.Bool(false),
-                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                Format: cribl.String("quo"),
-                                Length: cribl.Int64(14112),
-                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
-                            },
-                            TimestampAnchorRegex: "sed",
-                            TimestampEarliest: cribl.String("harum"),
-                            TimestampLatest: cribl.String("vero"),
-                            TimestampTimezone: cribl.String("nihil"),
-                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSON,
-                        },
-                    },
-                    Tags: cribl.String("incidunt"),
+                    Tags: cribl.String("deleniti"),
                 },
             },
             DisableBreakers: false,
         },
-        EarliestEpoch: cribl.Int64(953959),
+        EarliestEpoch: cribl.Int64(760793),
         ErrorStateConfig: &shared.SearchJobErrorStateConfig{
             Coordinated: false,
             ErrorMessages: []string{
-                "consequuntur",
+                "repellat",
             },
         },
-        Group: "numquam",
-        ID: "49d86f4b-b20f-4e5d-911c-bfe749caf45a",
-        LatestEpoch: cribl.Int64(151039),
-        NumEventsAfter: cribl.Int64(474867),
-        NumEventsBefore: cribl.Int64(964857),
-        Query: "ex",
-        SampleRate: cribl.Int64(624255),
+        Group: "atque",
+        ID: "493825fd-c42c-4876-82c2-dfb4cfc1c762",
+        LatestEpoch: cribl.Int64(197441),
+        NumEventsAfter: cribl.Int64(4787),
+        NumEventsBefore: cribl.Int64(970131),
+        Query: "quos",
+        SampleRate: cribl.Int64(256310),
         SearchConfig: shared.SearchConfig{
             Datasets: []string{
-                "consequuntur",
-                "quod",
-                "occaecati",
-                "earum",
+                "maiores",
             },
             HasSendOperator: false,
             OrderedFieldNames: []string{
-                "temporibus",
-                "quae",
+                "architecto",
+                "rerum",
+                "assumenda",
             },
             SearchTerms: []shared.SearchTerm{
                 shared.SearchTerm{
                     IsCaseSensitive: false,
-                    Term: "debitis",
+                    Term: "dolorem",
                 },
             },
             SortFields: []shared.SortByField{
                 shared.SortByField{
                     Direction: shared.SortByFieldDirectionDescending,
-                    FieldName: "quidem",
+                    FieldName: "nam",
                     NullPosition: shared.SortByFieldNullPositionNullsFirst,
                 },
                 shared.SortByField{
-                    Direction: shared.SortByFieldDirectionDescending,
-                    FieldName: "repellendus",
-                    NullPosition: shared.SortByFieldNullPositionNullsFirst,
-                },
-                shared.SortByField{
-                    Direction: shared.SortByFieldDirectionDescending,
-                    FieldName: "vel",
+                    Direction: shared.SortByFieldDirectionAscending,
+                    FieldName: "pariatur",
                     NullPosition: shared.SortByFieldNullPositionNullsLast,
+                },
+                shared.SortByField{
+                    Direction: shared.SortByFieldDirectionAscending,
+                    FieldName: "tempore",
+                    NullPosition: shared.SortByFieldNullPositionNullsLast,
+                },
+                shared.SortByField{
+                    Direction: shared.SortByFieldDirectionAscending,
+                    FieldName: "officia",
+                    NullPosition: shared.SortByFieldNullPositionNullsFirst,
                 },
             },
             SuppressEventMarking: false,
@@ -871,43 +297,53 @@ func main() {
         },
         SearchParameterDeclarations: []shared.SearchParameter{
             shared.SearchParameter{
-                DefaultValue: cribl.String("adipisci"),
-                Name: "Ruth MacGyver",
-                Type: shared.SearchParameterTypeBoolean,
+                DefaultValue: cribl.String("corporis"),
+                Name: "Luther Leuschke",
+                Type: shared.SearchParameterTypeString,
+            },
+            shared.SearchParameter{
+                DefaultValue: cribl.String("laborum"),
+                Name: "Craig Barrows",
+                Type: shared.SearchParameterTypeString,
+            },
+            shared.SearchParameter{
+                DefaultValue: cribl.String("commodi"),
+                Name: "Sylvester Cormier",
+                Type: shared.SearchParameterTypeNumber,
             },
         },
-        SearchParameterValues: cribl.String("nesciunt"),
-        Status: shared.SearchJobStatusRunning,
+        SearchParameterValues: cribl.String("ab"),
+        Status: shared.SearchJobStatusFailed,
         TableConfig: &shared.TableViewSettings{
             ColumnFilterSettings: &shared.ColumnFilterSettings{
-                Contains: "in",
+                Contains: "sed",
             },
             ColumnFormatSettings: &shared.ColumnFormatSettings{
-                Palette: "modi",
-                Precision: "nihil",
-                Prefix: "velit",
-                Suffix: "aut",
+                Palette: "blanditiis",
+                Precision: "sint",
+                Prefix: "placeat",
+                Suffix: "ullam",
             },
             ColumnOrderSettings: &shared.ColumnOrderSettings{
-                Order: "rem",
+                Order: "molestiae",
             },
             ColumnSortSettings: &shared.ColumnSortSettings{
-                Sort: "odit",
+                Sort: "itaque",
             },
-            RowNumberColumnWidth: cribl.Int64(727641),
+            RowNumberColumnWidth: cribl.Int64(523156),
             ShowColumnTotals: false,
             ShowColumnTotalsPinned: false,
             ShowRowNumbers: false,
             ShowRowTotals: false,
             ShowRowTotalsPinned: false,
-            ViewMode: shared.TableViewSettingsViewModeTable,
+            ViewMode: shared.TableViewSettingsViewModeEvent,
         },
-        TargetEventTime: cribl.Int64(278751),
-        TimeCompleted: cribl.Int64(992821),
-        TimeCreated: 181311,
-        TimeStarted: cribl.Int64(650392),
-        Type: shared.SearchJobTypeScheduled.ToPointer(),
-        User: "dicta",
+        TargetEventTime: cribl.Int64(250520),
+        TimeCompleted: cribl.Int64(926142),
+        TimeCreated: 605043,
+        TimeStarted: cribl.Int64(58567),
+        Type: shared.SearchJobTypeStandard.ToPointer(),
+        User: "dolor",
     })
     if err != nil {
         log.Fatal(err)
@@ -955,11 +391,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "occaecati"
 
     ctx := context.Background()
-    res, err := s.SearchJob.Delete(ctx, operations.DeleteSearchJobRequest{
-        ID: "fd5671e9-c326-4350-a467-143789ce0e99",
-    })
+    res, err := s.SearchJob.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -972,10 +407,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.DeleteSearchJobRequest](../../models/operations/deletesearchjobrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -1006,11 +441,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "quibusdam"
 
     ctx := context.Background()
-    res, err := s.SearchJob.Get(ctx, operations.GetSearchJobRequest{
-        ID: "1594d93a-74c0-4252-be3b-4b4db8b778eb",
-    })
+    res, err := s.SearchJob.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -1023,10 +457,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.GetSearchJobRequest](../../models/operations/getsearchjobrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -1057,456 +491,909 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "magni"
+    searchJob := &shared.SearchJob{
+        ChartConfig: &shared.ChartConfig{
+            Axis: &shared.ChartConfigAxis{
+                XAxis: cribl.String("consequuntur"),
+                YAxis: []string{
+                    "eius",
+                },
+            },
+            Legend: &shared.Legend{},
+            Series: []shared.ChartSeries{
+                shared.ChartSeries{
+                    Color: cribl.String("ipsam"),
+                    Data: []map[string]interface{}{
+                        map[string]interface{}{
+                            "modi": "nisi",
+                            "explicabo": "modi",
+                            "doloremque": "odio",
+                        },
+                        map[string]interface{}{
+                            "voluptatum": "tempora",
+                        },
+                    },
+                    DataExpression: "delectus",
+                    DataFilter: map[string]interface{}{
+                        "dolorum": "libero",
+                        "ratione": "molestiae",
+                    },
+                    Name: "Mr. Bert Wunsch",
+                    Type: &shared.ChartType{},
+                },
+                shared.ChartSeries{
+                    Color: cribl.String("consequuntur"),
+                    Data: []map[string]interface{}{
+                        map[string]interface{}{
+                            "occaecati": "labore",
+                        },
+                        map[string]interface{}{
+                            "quidem": "exercitationem",
+                            "veniam": "modi",
+                            "quasi": "quae",
+                            "similique": "possimus",
+                        },
+                    },
+                    DataExpression: "quo",
+                    DataFilter: map[string]interface{}{
+                        "ex": "sint",
+                        "est": "doloribus",
+                    },
+                    Name: "James Nolan",
+                    Type: &shared.ChartType{},
+                },
+            },
+            Settings: &shared.Settings{
+                Color: cribl.String("quo"),
+                ColorPalette: 477099,
+                Type: "maxime",
+            },
+            SingleValue: shared.SingleValue{
+                Color: cribl.String("facere"),
+                Decimals: cribl.Int64(769247),
+                Label: cribl.String("cupiditate"),
+                Prefix: cribl.String("deleniti"),
+                Suffix: cribl.String("quasi"),
+                Type: cribl.String("maiores"),
+            },
+            XAxis: &shared.Axis{
+                AxisLabel: &shared.AxisLabel{
+                    Formatter: &shared.AxisLabelFormatter{},
+                    FormatterData: []int64{
+                        396184,
+                    },
+                },
+                Type: cribl.String("laudantium"),
+            },
+        },
+        CompatibilityChecks: &shared.SearchJobCompatibilityChecks{
+            Datatypes: cribl.Bool(false),
+        },
+        CorrelationID: cribl.String("unde"),
+        CPUMetrics: &shared.CPUTimeMetric{
+            TotalCPUSeconds: 544660,
+            TotalExecCPUSeconds: 63369,
+        },
+        DatatypeOverrides: &shared.DatatypeOverrides{
+            BreakerRulesets: []shared.EventBreakerRuleset{
+                shared.EventBreakerRuleset{
+                    Description: cribl.String("ea"),
+                    ID: "bb33cfaa-348c-431b-b407-ee4fcf0c42b7",
+                    Lib: shared.EventBreakerRulesetLibraryCustom.ToPointer(),
+                    MinRawLength: cribl.Int64(532336),
+                    Rules: []shared.EventBreakerRulesetRules{
+                        shared.EventBreakerRulesetRules{
+                            Condition: "vitae",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("ullam"),
+                                FieldFilterExpr: cribl.String("nisi"),
+                                Fields: []string{
+                                    "voluptas",
+                                },
+                                Keep: []string{
+                                    "excepturi",
+                                },
+                                Remove: []string{
+                                    "est",
+                                    "perferendis",
+                                    "quibusdam",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Sue Huel"),
+                                    Value: "dolore",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Ms. Wilbert Ratke"),
+                                    Value: "totam",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Rex Bode"),
+                                    Value: "sit",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Jill Collins"),
+                                    Value: "odio",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(2758),
+                            Name: "Jaime Schuppe",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("fugit"),
+                                Length: cribl.Int64(134267),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
+                            },
+                            TimestampAnchorRegex: "illum",
+                            TimestampEarliest: cribl.String("praesentium"),
+                            TimestampLatest: cribl.String("sint"),
+                            TimestampTimezone: cribl.String("exercitationem"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeTimestamp,
+                        },
+                        shared.EventBreakerRulesetRules{
+                            Condition: "voluptatum",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("facilis"),
+                                FieldFilterExpr: cribl.String("placeat"),
+                                Fields: []string{
+                                    "dolores",
+                                    "dolore",
+                                    "pariatur",
+                                    "facilis",
+                                },
+                                Keep: []string{
+                                    "nemo",
+                                    "natus",
+                                    "nisi",
+                                },
+                                Remove: []string{
+                                    "amet",
+                                    "dolor",
+                                    "nostrum",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Clinton Greenholt"),
+                                    Value: "adipisci",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(583138),
+                            Name: "Herbert Steuber",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("repellendus"),
+                                Length: cribl.Int64(906524),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeAuto,
+                            },
+                            TimestampAnchorRegex: "distinctio",
+                            TimestampEarliest: cribl.String("vel"),
+                            TimestampLatest: cribl.String("necessitatibus"),
+                            TimestampTimezone: cribl.String("iste"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSON,
+                        },
+                        shared.EventBreakerRulesetRules{
+                            Condition: "corrupti",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("cupiditate"),
+                                FieldFilterExpr: cribl.String("voluptatibus"),
+                                Fields: []string{
+                                    "dolorum",
+                                    "soluta",
+                                },
+                                Keep: []string{
+                                    "in",
+                                    "delectus",
+                                    "commodi",
+                                },
+                                Remove: []string{
+                                    "fugit",
+                                    "ullam",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Monique Denesik"),
+                                    Value: "totam",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Iris Roob"),
+                                    Value: "dolor",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(667634),
+                            Name: "Rufus Conn II",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("facilis"),
+                                Length: cribl.Int64(708360),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
+                            },
+                            TimestampAnchorRegex: "nisi",
+                            TimestampEarliest: cribl.String("ipsam"),
+                            TimestampLatest: cribl.String("voluptatem"),
+                            TimestampTimezone: cribl.String("illo"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSONArray,
+                        },
+                        shared.EventBreakerRulesetRules{
+                            Condition: "incidunt",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("eveniet"),
+                                FieldFilterExpr: cribl.String("quae"),
+                                Fields: []string{
+                                    "asperiores",
+                                    "veniam",
+                                },
+                                Keep: []string{
+                                    "asperiores",
+                                    "eum",
+                                    "deserunt",
+                                },
+                                Remove: []string{
+                                    "nemo",
+                                    "molestias",
+                                    "architecto",
+                                    "expedita",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Malcolm Shanahan"),
+                                    Value: "ipsum",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Jean Corkery"),
+                                    Value: "neque",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Jesse Abbott"),
+                                    Value: "facere",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Ms. Alberto Hagenes"),
+                                    Value: "modi",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(683980),
+                            Name: "Leah Nienow",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("dolor"),
+                                Length: cribl.Int64(322773),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
+                            },
+                            TimestampAnchorRegex: "sit",
+                            TimestampEarliest: cribl.String("molestias"),
+                            TimestampLatest: cribl.String("voluptas"),
+                            TimestampTimezone: cribl.String("expedita"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSONArray,
+                        },
+                    },
+                    Tags: cribl.String("maiores"),
+                },
+                shared.EventBreakerRuleset{
+                    Description: cribl.String("ea"),
+                    ID: "6fef020e-9f44-43b4-a57b-992c8dbda6a6",
+                    Lib: shared.EventBreakerRulesetLibraryCustom.ToPointer(),
+                    MinRawLength: cribl.Int64(120432),
+                    Rules: []shared.EventBreakerRulesetRules{
+                        shared.EventBreakerRulesetRules{
+                            Condition: "sapiente",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("id"),
+                                FieldFilterExpr: cribl.String("odit"),
+                                Fields: []string{
+                                    "iste",
+                                },
+                                Keep: []string{
+                                    "explicabo",
+                                    "ullam",
+                                    "atque",
+                                },
+                                Remove: []string{
+                                    "pariatur",
+                                    "aut",
+                                    "similique",
+                                    "iste",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Lynn Green"),
+                                    Value: "quam",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Stanley Von II"),
+                                    Value: "excepturi",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Eleanor Bartell"),
+                                    Value: "culpa",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Miss Leah Dicki"),
+                                    Value: "nihil",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(631904),
+                            Name: "Tommie Hand",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("reiciendis"),
+                                Length: cribl.Int64(832135),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
+                            },
+                            TimestampAnchorRegex: "ab",
+                            TimestampEarliest: cribl.String("mollitia"),
+                            TimestampLatest: cribl.String("possimus"),
+                            TimestampTimezone: cribl.String("praesentium"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSON,
+                        },
+                        shared.EventBreakerRulesetRules{
+                            Condition: "quam",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("animi"),
+                                FieldFilterExpr: cribl.String("debitis"),
+                                Fields: []string{
+                                    "voluptatem",
+                                    "quisquam",
+                                    "vitae",
+                                },
+                                Keep: []string{
+                                    "architecto",
+                                    "sint",
+                                    "eligendi",
+                                    "occaecati",
+                                },
+                                Remove: []string{
+                                    "tempore",
+                                    "officia",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Willard Howe"),
+                                    Value: "sapiente",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Rodney Weissnat"),
+                                    Value: "autem",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Terrance Bernhard"),
+                                    Value: "dolor",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(528082),
+                            Name: "Mrs. Forrest Waelchi",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("vitae"),
+                                Length: cribl.Int64(256975),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeAuto,
+                            },
+                            TimestampAnchorRegex: "modi",
+                            TimestampEarliest: cribl.String("quos"),
+                            TimestampLatest: cribl.String("minus"),
+                            TimestampTimezone: cribl.String("voluptate"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeHeader,
+                        },
+                        shared.EventBreakerRulesetRules{
+                            Condition: "reprehenderit",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("reprehenderit"),
+                                FieldFilterExpr: cribl.String("animi"),
+                                Fields: []string{
+                                    "voluptates",
+                                },
+                                Keep: []string{
+                                    "qui",
+                                    "delectus",
+                                    "exercitationem",
+                                    "ipsum",
+                                },
+                                Remove: []string{
+                                    "doloremque",
+                                    "sed",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Darnell Watsica"),
+                                    Value: "cupiditate",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Alicia Bernier"),
+                                    Value: "necessitatibus",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Cody Ward"),
+                                    Value: "non",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(962497),
+                            Name: "Sadie Casper",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("illum"),
+                                Length: cribl.Int64(916051),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
+                            },
+                            TimestampAnchorRegex: "est",
+                            TimestampEarliest: cribl.String("in"),
+                            TimestampLatest: cribl.String("illo"),
+                            TimestampTimezone: cribl.String("voluptate"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeRegex,
+                        },
+                        shared.EventBreakerRulesetRules{
+                            Condition: "delectus",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("incidunt"),
+                                FieldFilterExpr: cribl.String("dolore"),
+                                Fields: []string{
+                                    "est",
+                                    "quo",
+                                },
+                                Keep: []string{
+                                    "delectus",
+                                    "laboriosam",
+                                    "laboriosam",
+                                    "quam",
+                                },
+                                Remove: []string{
+                                    "officia",
+                                    "repellat",
+                                    "cupiditate",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Ms. Oliver Steuber"),
+                                    Value: "sapiente",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Dr. Alexander Douglas"),
+                                    Value: "quidem",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Maurice Runolfsdottir"),
+                                    Value: "atque",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(979706),
+                            Name: "Andres Larson",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("eaque"),
+                                Length: cribl.Int64(773455),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
+                            },
+                            TimestampAnchorRegex: "ex",
+                            TimestampEarliest: cribl.String("odio"),
+                            TimestampLatest: cribl.String("delectus"),
+                            TimestampTimezone: cribl.String("minus"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSON,
+                        },
+                    },
+                    Tags: cribl.String("distinctio"),
+                },
+                shared.EventBreakerRuleset{
+                    Description: cribl.String("eius"),
+                    ID: "25e99e62-34c9-4f7b-b9df-eb77a5c38d4b",
+                    Lib: shared.EventBreakerRulesetLibraryCustom.ToPointer(),
+                    MinRawLength: cribl.Int64(638085),
+                    Rules: []shared.EventBreakerRulesetRules{
+                        shared.EventBreakerRulesetRules{
+                            Condition: "cupiditate",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("illo"),
+                                FieldFilterExpr: cribl.String("saepe"),
+                                Fields: []string{
+                                    "eaque",
+                                    "ex",
+                                },
+                                Keep: []string{
+                                    "delectus",
+                                    "deleniti",
+                                    "provident",
+                                    "aut",
+                                },
+                                Remove: []string{
+                                    "nostrum",
+                                    "tempora",
+                                    "nam",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Ms. Bernice Wuckert"),
+                                    Value: "minima",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Marcella Dooley"),
+                                    Value: "fuga",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(195789),
+                            Name: "Bradley Osinski",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("adipisci"),
+                                Length: cribl.Int64(124796),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
+                            },
+                            TimestampAnchorRegex: "occaecati",
+                            TimestampEarliest: cribl.String("provident"),
+                            TimestampLatest: cribl.String("necessitatibus"),
+                            TimestampTimezone: cribl.String("fugit"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSONArray,
+                        },
+                        shared.EventBreakerRulesetRules{
+                            Condition: "optio",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("eveniet"),
+                                FieldFilterExpr: cribl.String("fugiat"),
+                                Fields: []string{
+                                    "a",
+                                    "natus",
+                                    "sapiente",
+                                },
+                                Keep: []string{
+                                    "facilis",
+                                    "molestias",
+                                    "dolore",
+                                    "et",
+                                },
+                                Remove: []string{
+                                    "maiores",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Hannah Rath"),
+                                    Value: "vitae",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Kay Frami"),
+                                    Value: "aperiam",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(112788),
+                            Name: "Emmett Swaniawski",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("deleniti"),
+                                Length: cribl.Int64(523266),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
+                            },
+                            TimestampAnchorRegex: "eos",
+                            TimestampEarliest: cribl.String("labore"),
+                            TimestampLatest: cribl.String("sunt"),
+                            TimestampTimezone: cribl.String("blanditiis"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeHeader,
+                        },
+                        shared.EventBreakerRulesetRules{
+                            Condition: "accusamus",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("distinctio"),
+                                FieldFilterExpr: cribl.String("incidunt"),
+                                Fields: []string{
+                                    "blanditiis",
+                                    "ducimus",
+                                },
+                                Keep: []string{
+                                    "sapiente",
+                                },
+                                Remove: []string{
+                                    "accusantium",
+                                    "ratione",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Juan Marquardt"),
+                                    Value: "asperiores",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(98250),
+                            Name: "Vivian Rolfson",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("veritatis"),
+                                Length: cribl.Int64(328744),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeAuto,
+                            },
+                            TimestampAnchorRegex: "itaque",
+                            TimestampEarliest: cribl.String("error"),
+                            TimestampLatest: cribl.String("expedita"),
+                            TimestampTimezone: cribl.String("error"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeTimestamp,
+                        },
+                        shared.EventBreakerRulesetRules{
+                            Condition: "temporibus",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("voluptate"),
+                                FieldFilterExpr: cribl.String("earum"),
+                                Fields: []string{
+                                    "odit",
+                                    "odit",
+                                },
+                                Keep: []string{
+                                    "error",
+                                    "vel",
+                                },
+                                Remove: []string{
+                                    "alias",
+                                    "itaque",
+                                    "ab",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Bridget Kshlerin"),
+                                    Value: "esse",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(876682),
+                            Name: "Derek Mohr DVM",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("autem"),
+                                Length: cribl.Int64(449861),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
+                            },
+                            TimestampAnchorRegex: "amet",
+                            TimestampEarliest: cribl.String("cumque"),
+                            TimestampLatest: cribl.String("dolore"),
+                            TimestampTimezone: cribl.String("optio"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeTimestamp,
+                        },
+                    },
+                    Tags: cribl.String("repudiandae"),
+                },
+                shared.EventBreakerRuleset{
+                    Description: cribl.String("tempora"),
+                    ID: "b6d7696f-f3c5-4747-9013-57e44f51f8b0",
+                    Lib: shared.EventBreakerRulesetLibraryCustom.ToPointer(),
+                    MinRawLength: cribl.Int64(516739),
+                    Rules: []shared.EventBreakerRulesetRules{
+                        shared.EventBreakerRulesetRules{
+                            Condition: "quo",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("dolor"),
+                                FieldFilterExpr: cribl.String("sunt"),
+                                Fields: []string{
+                                    "quam",
+                                    "officiis",
+                                    "dicta",
+                                },
+                                Keep: []string{
+                                    "consectetur",
+                                    "deserunt",
+                                    "odit",
+                                },
+                                Remove: []string{
+                                    "corporis",
+                                    "quaerat",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Essie Mante"),
+                                    Value: "nihil",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Rachael Corkery"),
+                                    Value: "nobis",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(784120),
+                            Name: "Katrina Kunze",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("consectetur"),
+                                Length: cribl.Int64(188399),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
+                            },
+                            TimestampAnchorRegex: "iure",
+                            TimestampEarliest: cribl.String("aliquid"),
+                            TimestampLatest: cribl.String("cum"),
+                            TimestampTimezone: cribl.String("fugiat"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeHeader,
+                        },
+                        shared.EventBreakerRulesetRules{
+                            Condition: "voluptatibus",
+                            Definitions: &shared.EventBreakerRulesetRulesDefinitions{
+                                DstField: cribl.String("officiis"),
+                                FieldFilterExpr: cribl.String("corporis"),
+                                Fields: []string{
+                                    "aut",
+                                    "voluptatem",
+                                    "libero",
+                                    "excepturi",
+                                },
+                                Keep: []string{
+                                    "omnis",
+                                    "officiis",
+                                },
+                                Remove: []string{
+                                    "magni",
+                                    "sit",
+                                    "velit",
+                                    "voluptatum",
+                                },
+                            },
+                            Disabled: cribl.Bool(false),
+                            Fields: []shared.EventBreakerRulesetRulesFields{
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Nicole Becker"),
+                                    Value: "aut",
+                                },
+                                shared.EventBreakerRulesetRulesFields{
+                                    Name: cribl.String("Mr. Forrest Ryan"),
+                                    Value: "ea",
+                                },
+                            },
+                            MaxEventBytes: cribl.Int64(262231),
+                            Name: "Mr. Sandra Franey",
+                            ParserEnabled: cribl.Bool(false),
+                            Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
+                                Format: cribl.String("ipsum"),
+                                Length: cribl.Int64(891063),
+                                Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeFormat,
+                            },
+                            TimestampAnchorRegex: "eaque",
+                            TimestampEarliest: cribl.String("incidunt"),
+                            TimestampLatest: cribl.String("ut"),
+                            TimestampTimezone: cribl.String("delectus"),
+                            Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSONArray,
+                        },
+                    },
+                    Tags: cribl.String("ullam"),
+                },
+            },
+            DisableBreakers: false,
+        },
+        EarliestEpoch: cribl.Int64(978683),
+        ErrorStateConfig: &shared.SearchJobErrorStateConfig{
+            Coordinated: false,
+            ErrorMessages: []string{
+                "reprehenderit",
+                "eos",
+                "assumenda",
+                "cumque",
+            },
+        },
+        Group: "ut",
+        ID: "077d0cc3-f408-4efc-95ce-b4d6e1eae0f7",
+        LatestEpoch: cribl.Int64(332429),
+        NumEventsAfter: cribl.Int64(683192),
+        NumEventsBefore: cribl.Int64(929012),
+        Query: "possimus",
+        SampleRate: cribl.Int64(947561),
+        SearchConfig: shared.SearchConfig{
+            Datasets: []string{
+                "deserunt",
+            },
+            HasSendOperator: false,
+            OrderedFieldNames: []string{
+                "id",
+                "distinctio",
+                "corporis",
+                "quas",
+            },
+            SearchTerms: []shared.SearchTerm{
+                shared.SearchTerm{
+                    IsCaseSensitive: false,
+                    Term: "cupiditate",
+                },
+                shared.SearchTerm{
+                    IsCaseSensitive: false,
+                    Term: "unde",
+                },
+                shared.SearchTerm{
+                    IsCaseSensitive: false,
+                    Term: "et",
+                },
+            },
+            SortFields: []shared.SortByField{
+                shared.SortByField{
+                    Direction: shared.SortByFieldDirectionDescending,
+                    FieldName: "sed",
+                    NullPosition: shared.SortByFieldNullPositionNullsFirst,
+                },
+                shared.SortByField{
+                    Direction: shared.SortByFieldDirectionDescending,
+                    FieldName: "pariatur",
+                    NullPosition: shared.SortByFieldNullPositionNullsLast,
+                },
+                shared.SortByField{
+                    Direction: shared.SortByFieldDirectionAscending,
+                    FieldName: "corrupti",
+                    NullPosition: shared.SortByFieldNullPositionNullsLast,
+                },
+                shared.SortByField{
+                    Direction: shared.SortByFieldDirectionAscending,
+                    FieldName: "vel",
+                    NullPosition: shared.SortByFieldNullPositionNullsFirst,
+                },
+            },
+            SuppressEventMarking: false,
+            UseFormattedVisualization: false,
+        },
+        SearchParameterDeclarations: []shared.SearchParameter{
+            shared.SearchParameter{
+                DefaultValue: cribl.String("odio"),
+                Name: "Beverly Block",
+                Type: shared.SearchParameterTypeBoolean,
+            },
+            shared.SearchParameter{
+                DefaultValue: cribl.String("commodi"),
+                Name: "Mr. Rene Harris",
+                Type: shared.SearchParameterTypeString,
+            },
+            shared.SearchParameter{
+                DefaultValue: cribl.String("vero"),
+                Name: "Miss Evan Dibbert",
+                Type: shared.SearchParameterTypeNumber,
+            },
+            shared.SearchParameter{
+                DefaultValue: cribl.String("maiores"),
+                Name: "Lee Runte",
+                Type: shared.SearchParameterTypeNumber,
+            },
+        },
+        SearchParameterValues: cribl.String("explicabo"),
+        Status: shared.SearchJobStatusQueued,
+        TableConfig: &shared.TableViewSettings{
+            ColumnFilterSettings: &shared.ColumnFilterSettings{
+                Contains: "quos",
+            },
+            ColumnFormatSettings: &shared.ColumnFormatSettings{
+                Palette: "deleniti",
+                Precision: "enim",
+                Prefix: "sit",
+                Suffix: "voluptatem",
+            },
+            ColumnOrderSettings: &shared.ColumnOrderSettings{
+                Order: "natus",
+            },
+            ColumnSortSettings: &shared.ColumnSortSettings{
+                Sort: "voluptatem",
+            },
+            RowNumberColumnWidth: cribl.Int64(271216),
+            ShowColumnTotals: false,
+            ShowColumnTotalsPinned: false,
+            ShowRowNumbers: false,
+            ShowRowTotals: false,
+            ShowRowTotalsPinned: false,
+            ViewMode: shared.TableViewSettingsViewModeTable,
+        },
+        TargetEventTime: cribl.Int64(98846),
+        TimeCompleted: cribl.Int64(82915),
+        TimeCreated: 402908,
+        TimeStarted: cribl.Int64(43928),
+        Type: shared.SearchJobTypeDatatypePreview.ToPointer(),
+        User: "dolores",
+    }
 
     ctx := context.Background()
-    res, err := s.SearchJob.Update(ctx, operations.UpdateSearchJobRequest{
-        SearchJob: &shared.SearchJob{
-            ChartConfig: &shared.ChartConfig{
-                Axis: &shared.ChartConfigAxis{
-                    XAxis: cribl.String("nam"),
-                    YAxis: []string{
-                        "officiis",
-                        "quasi",
-                    },
-                },
-                Legend: &shared.Legend{},
-                Series: []shared.ChartSeries{
-                    shared.ChartSeries{
-                        Color: cribl.String("aspernatur"),
-                        Data: []map[string]interface{}{
-                            map[string]interface{}{
-                                "ad": "eaque",
-                                "aspernatur": "expedita",
-                                "laborum": "hic",
-                                "rerum": "explicabo",
-                            },
-                            map[string]interface{}{
-                                "nam": "placeat",
-                                "aliquam": "aliquid",
-                                "adipisci": "ipsam",
-                                "fugiat": "enim",
-                            },
-                            map[string]interface{}{
-                                "eum": "exercitationem",
-                                "at": "culpa",
-                                "alias": "eos",
-                                "quos": "quisquam",
-                            },
-                            map[string]interface{}{
-                                "accusamus": "sint",
-                            },
-                        },
-                        DataExpression: "enim",
-                        DataFilter: map[string]interface{}{
-                            "mollitia": "veritatis",
-                        },
-                        Name: "Philip Armstrong",
-                        Type: &shared.ChartType{},
-                    },
-                    shared.ChartSeries{
-                        Color: cribl.String("deserunt"),
-                        Data: []map[string]interface{}{
-                            map[string]interface{}{
-                                "commodi": "magnam",
-                                "rem": "occaecati",
-                            },
-                            map[string]interface{}{
-                                "voluptate": "nam",
-                                "quam": "blanditiis",
-                                "laboriosam": "odio",
-                                "adipisci": "necessitatibus",
-                            },
-                            map[string]interface{}{
-                                "consectetur": "fuga",
-                            },
-                        },
-                        DataExpression: "quasi",
-                        DataFilter: map[string]interface{}{
-                            "dolorum": "vel",
-                        },
-                        Name: "Terrance Mante",
-                        Type: &shared.ChartType{},
-                    },
-                    shared.ChartSeries{
-                        Color: cribl.String("perspiciatis"),
-                        Data: []map[string]interface{}{
-                            map[string]interface{}{
-                                "natus": "numquam",
-                                "tempora": "corrupti",
-                            },
-                            map[string]interface{}{
-                                "asperiores": "veniam",
-                                "cumque": "praesentium",
-                            },
-                        },
-                        DataExpression: "ut",
-                        DataFilter: map[string]interface{}{
-                            "blanditiis": "nesciunt",
-                        },
-                        Name: "Hannah Leffler",
-                        Type: &shared.ChartType{},
-                    },
-                    shared.ChartSeries{
-                        Color: cribl.String("consectetur"),
-                        Data: []map[string]interface{}{
-                            map[string]interface{}{
-                                "a": "ex",
-                                "dolore": "dicta",
-                                "minima": "facilis",
-                                "sit": "incidunt",
-                            },
-                            map[string]interface{}{
-                                "molestias": "hic",
-                                "error": "repellendus",
-                            },
-                            map[string]interface{}{
-                                "dicta": "ratione",
-                                "delectus": "ut",
-                                "officiis": "itaque",
-                                "nulla": "distinctio",
-                            },
-                            map[string]interface{}{
-                                "in": "deleniti",
-                                "tempore": "reiciendis",
-                                "commodi": "sit",
-                                "ea": "molestias",
-                            },
-                        },
-                        DataExpression: "quia",
-                        DataFilter: map[string]interface{}{
-                            "rem": "molestias",
-                            "eius": "necessitatibus",
-                        },
-                        Name: "Harvey Jacobi",
-                        Type: &shared.ChartType{},
-                    },
-                },
-                Settings: &shared.Settings{
-                    Color: cribl.String("corporis"),
-                    ColorPalette: 771363,
-                    Type: "in",
-                },
-                SingleValue: shared.SingleValue{
-                    Color: cribl.String("fugit"),
-                    Decimals: cribl.Int64(454934),
-                    Label: cribl.String("provident"),
-                    Prefix: cribl.String("quis"),
-                    Suffix: cribl.String("expedita"),
-                    Type: cribl.String("quam"),
-                },
-                XAxis: &shared.Axis{
-                    AxisLabel: &shared.AxisLabel{
-                        Formatter: &shared.AxisLabelFormatter{},
-                        FormatterData: []int64{
-                            346519,
-                            113947,
-                            300584,
-                        },
-                    },
-                    Type: cribl.String("blanditiis"),
-                },
-            },
-            CompatibilityChecks: &shared.SearchJobCompatibilityChecks{
-                Datatypes: cribl.Bool(false),
-            },
-            CorrelationID: cribl.String("nulla"),
-            CPUMetrics: &shared.CPUTimeMetric{
-                TotalCPUSeconds: 432899,
-                TotalExecCPUSeconds: 845164,
-            },
-            DatatypeOverrides: &shared.DatatypeOverrides{
-                BreakerRulesets: []shared.EventBreakerRuleset{
-                    shared.EventBreakerRuleset{
-                        Description: cribl.String("ut"),
-                        ID: "9e5635b3-3bc0-4f97-8c42-fc9f4844225e",
-                        Lib: shared.EventBreakerRulesetLibraryCustom.ToPointer(),
-                        MinRawLength: cribl.Int64(450324),
-                        Rules: []shared.EventBreakerRulesetRules{
-                            shared.EventBreakerRulesetRules{
-                                Condition: "expedita",
-                                Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                    DstField: cribl.String("ducimus"),
-                                    FieldFilterExpr: cribl.String("excepturi"),
-                                    Fields: []string{
-                                        "doloremque",
-                                        "iure",
-                                    },
-                                    Keep: []string{
-                                        "cumque",
-                                        "eaque",
-                                    },
-                                    Remove: []string{
-                                        "earum",
-                                        "culpa",
-                                        "vel",
-                                        "sapiente",
-                                    },
-                                },
-                                Disabled: cribl.Bool(false),
-                                Fields: []shared.EventBreakerRulesetRulesFields{
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("Miss Kelli Maggio MD"),
-                                        Value: "deleniti",
-                                    },
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("Austin Hartmann"),
-                                        Value: "vitae",
-                                    },
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("Dana Gottlieb"),
-                                        Value: "adipisci",
-                                    },
-                                },
-                                MaxEventBytes: cribl.Int64(591998),
-                                Name: "Theodore Wiza",
-                                ParserEnabled: cribl.Bool(false),
-                                Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                    Format: cribl.String("voluptate"),
-                                    Length: cribl.Int64(130289),
-                                    Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeAuto,
-                                },
-                                TimestampAnchorRegex: "perferendis",
-                                TimestampEarliest: cribl.String("possimus"),
-                                TimestampLatest: cribl.String("dicta"),
-                                TimestampTimezone: cribl.String("delectus"),
-                                Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSONArray,
-                            },
-                            shared.EventBreakerRulesetRules{
-                                Condition: "exercitationem",
-                                Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                    DstField: cribl.String("quis"),
-                                    FieldFilterExpr: cribl.String("quos"),
-                                    Fields: []string{
-                                        "cupiditate",
-                                        "excepturi",
-                                        "quod",
-                                        "iure",
-                                    },
-                                    Keep: []string{
-                                        "odit",
-                                    },
-                                    Remove: []string{
-                                        "fugit",
-                                        "nam",
-                                        "optio",
-                                        "accusantium",
-                                    },
-                                },
-                                Disabled: cribl.Bool(false),
-                                Fields: []shared.EventBreakerRulesetRulesFields{
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("Jesus Barrows"),
-                                        Value: "possimus",
-                                    },
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("Simon Nicolas"),
-                                        Value: "doloremque",
-                                    },
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("Rachel Sporer"),
-                                        Value: "placeat",
-                                    },
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("Carlton Schowalter"),
-                                        Value: "modi",
-                                    },
-                                },
-                                MaxEventBytes: cribl.Int64(795501),
-                                Name: "Oliver Breitenberg",
-                                ParserEnabled: cribl.Bool(false),
-                                Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                    Format: cribl.String("eveniet"),
-                                    Length: cribl.Int64(573938),
-                                    Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeCurrent,
-                                },
-                                TimestampAnchorRegex: "illo",
-                                TimestampEarliest: cribl.String("minima"),
-                                TimestampLatest: cribl.String("nulla"),
-                                TimestampTimezone: cribl.String("reiciendis"),
-                                Type: shared.EventBreakerRulesetRulesEventBreakerTypeHeader,
-                            },
-                        },
-                        Tags: cribl.String("ipsa"),
-                    },
-                    shared.EventBreakerRuleset{
-                        Description: cribl.String("amet"),
-                        ID: "907f3783-1983-4d42-a54a-85466597c502",
-                        Lib: shared.EventBreakerRulesetLibraryCustom.ToPointer(),
-                        MinRawLength: cribl.Int64(213871),
-                        Rules: []shared.EventBreakerRulesetRules{
-                            shared.EventBreakerRulesetRules{
-                                Condition: "maxime",
-                                Definitions: &shared.EventBreakerRulesetRulesDefinitions{
-                                    DstField: cribl.String("inventore"),
-                                    FieldFilterExpr: cribl.String("modi"),
-                                    Fields: []string{
-                                        "vitae",
-                                        "quibusdam",
-                                    },
-                                    Keep: []string{
-                                        "et",
-                                        "dolorum",
-                                    },
-                                    Remove: []string{
-                                        "mollitia",
-                                        "autem",
-                                        "illum",
-                                    },
-                                },
-                                Disabled: cribl.Bool(false),
-                                Fields: []shared.EventBreakerRulesetRulesFields{
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("Corey Pacocha"),
-                                        Value: "aliquid",
-                                    },
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("Penny Kihn"),
-                                        Value: "reiciendis",
-                                    },
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("Brandon Rogahn"),
-                                        Value: "aspernatur",
-                                    },
-                                    shared.EventBreakerRulesetRulesFields{
-                                        Name: cribl.String("George Ankunding"),
-                                        Value: "maiores",
-                                    },
-                                },
-                                MaxEventBytes: cribl.Int64(422823),
-                                Name: "Mr. Elbert Bins II",
-                                ParserEnabled: cribl.Bool(false),
-                                Timestamp: shared.EventBreakerRulesetRulesTimestampFormat{
-                                    Format: cribl.String("ducimus"),
-                                    Length: cribl.Int64(380884),
-                                    Type: shared.EventBreakerRulesetRulesTimestampFormatTimestampTypeAuto,
-                                },
-                                TimestampAnchorRegex: "alias",
-                                TimestampEarliest: cribl.String("libero"),
-                                TimestampLatest: cribl.String("quibusdam"),
-                                TimestampTimezone: cribl.String("fuga"),
-                                Type: shared.EventBreakerRulesetRulesEventBreakerTypeJSONArray,
-                            },
-                        },
-                        Tags: cribl.String("similique"),
-                    },
-                },
-                DisableBreakers: false,
-            },
-            EarliestEpoch: cribl.Int64(995708),
-            ErrorStateConfig: &shared.SearchJobErrorStateConfig{
-                Coordinated: false,
-                ErrorMessages: []string{
-                    "accusamus",
-                    "illum",
-                    "blanditiis",
-                    "tempora",
-                },
-            },
-            Group: "similique",
-            ID: "35a41238-e1a7-435a-826a-e33bef971a8f",
-            LatestEpoch: cribl.Int64(267918),
-            NumEventsAfter: cribl.Int64(401466),
-            NumEventsBefore: cribl.Int64(749037),
-            Query: "placeat",
-            SampleRate: cribl.Int64(651310),
-            SearchConfig: shared.SearchConfig{
-                Datasets: []string{
-                    "quae",
-                },
-                HasSendOperator: false,
-                OrderedFieldNames: []string{
-                    "commodi",
-                },
-                SearchTerms: []shared.SearchTerm{
-                    shared.SearchTerm{
-                        IsCaseSensitive: false,
-                        Term: "officiis",
-                    },
-                    shared.SearchTerm{
-                        IsCaseSensitive: false,
-                        Term: "omnis",
-                    },
-                    shared.SearchTerm{
-                        IsCaseSensitive: false,
-                        Term: "ea",
-                    },
-                    shared.SearchTerm{
-                        IsCaseSensitive: false,
-                        Term: "ipsam",
-                    },
-                },
-                SortFields: []shared.SortByField{
-                    shared.SortByField{
-                        Direction: shared.SortByFieldDirectionAscending,
-                        FieldName: "vitae",
-                        NullPosition: shared.SortByFieldNullPositionNullsFirst,
-                    },
-                    shared.SortByField{
-                        Direction: shared.SortByFieldDirectionDescending,
-                        FieldName: "voluptatem",
-                        NullPosition: shared.SortByFieldNullPositionNullsLast,
-                    },
-                    shared.SortByField{
-                        Direction: shared.SortByFieldDirectionDescending,
-                        FieldName: "tenetur",
-                        NullPosition: shared.SortByFieldNullPositionNullsLast,
-                    },
-                },
-                SuppressEventMarking: false,
-                UseFormattedVisualization: false,
-            },
-            SearchParameterDeclarations: []shared.SearchParameter{
-                shared.SearchParameter{
-                    DefaultValue: cribl.String("necessitatibus"),
-                    Name: "Jackie Witting",
-                    Type: shared.SearchParameterTypeNumber,
-                },
-                shared.SearchParameter{
-                    DefaultValue: cribl.String("occaecati"),
-                    Name: "Miss Maurice Hauck",
-                    Type: shared.SearchParameterTypeNumber,
-                },
-                shared.SearchParameter{
-                    DefaultValue: cribl.String("commodi"),
-                    Name: "Woodrow Fadel",
-                    Type: shared.SearchParameterTypeBoolean,
-                },
-            },
-            SearchParameterValues: cribl.String("cum"),
-            Status: shared.SearchJobStatusNew,
-            TableConfig: &shared.TableViewSettings{
-                ColumnFilterSettings: &shared.ColumnFilterSettings{
-                    Contains: "quo",
-                },
-                ColumnFormatSettings: &shared.ColumnFormatSettings{
-                    Palette: "officiis",
-                    Precision: "laudantium",
-                    Prefix: "est",
-                    Suffix: "fuga",
-                },
-                ColumnOrderSettings: &shared.ColumnOrderSettings{
-                    Order: "autem",
-                },
-                ColumnSortSettings: &shared.ColumnSortSettings{
-                    Sort: "quis",
-                },
-                RowNumberColumnWidth: cribl.Int64(265507),
-                ShowColumnTotals: false,
-                ShowColumnTotalsPinned: false,
-                ShowRowNumbers: false,
-                ShowRowTotals: false,
-                ShowRowTotalsPinned: false,
-                ViewMode: shared.TableViewSettingsViewModeEvent,
-            },
-            TargetEventTime: cribl.Int64(184401),
-            TimeCompleted: cribl.Int64(642434),
-            TimeCreated: 585645,
-            TimeStarted: cribl.Int64(525089),
-            Type: shared.SearchJobTypeDatatypePreview.ToPointer(),
-            User: "debitis",
-        },
-        ID: "b7e14ca5-6408-4915-8097-019a48f88ece",
-    })
+    res, err := s.SearchJob.Update(ctx, id, searchJob)
     if err != nil {
         log.Fatal(err)
     }
@@ -1519,10 +1406,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.UpdateSearchJobRequest](../../models/operations/updatesearchjobrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `searchJob`                                           | [*shared.SearchJob](../../models/shared/searchjob.md) | :heavy_minus_sign:                                    | SearchJob object to be updated                        |
 
 
 ### Response
