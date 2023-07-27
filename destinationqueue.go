@@ -5,10 +5,10 @@ package cribl
 import (
 	"bytes"
 	"context"
-	"cribl/pkg/models/operations"
-	"cribl/pkg/models/sdkerrors"
-	"cribl/pkg/utils"
 	"fmt"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/operations"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/sdkerrors"
+	"github.com/speakeasy-sdks/cribl-go/pkg/utils"
 	"io"
 	"net/http"
 )

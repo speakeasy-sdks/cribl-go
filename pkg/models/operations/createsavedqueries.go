@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"cribl/pkg/models/shared"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/shared"
 	"net/http"
 )
 

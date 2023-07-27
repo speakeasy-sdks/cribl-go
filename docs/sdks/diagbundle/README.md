@@ -18,9 +18,9 @@ package main
 import(
 	"context"
 	"log"
-	"cribl"
-	"cribl/pkg/models/shared"
-	"cribl/pkg/models/operations"
+	"github.com/speakeasy-sdks/cribl-go"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/shared"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/operations"
 )
 
 func main() {
@@ -69,8 +69,8 @@ package main
 import(
 	"context"
 	"log"
-	"cribl"
-	"cribl/pkg/models/shared"
+	"github.com/speakeasy-sdks/cribl-go"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/shared"
 )
 
 func main() {
@@ -116,8 +116,8 @@ package main
 import(
 	"context"
 	"log"
-	"cribl"
-	"cribl/pkg/models/shared"
+	"github.com/speakeasy-sdks/cribl-go"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/shared"
 )
 
 func main() {

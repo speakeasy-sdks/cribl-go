@@ -1,4 +1,4 @@
-module cribl
+module github.com/speakeasy-sdks/cribl-go
 
 go 1.14
 

@@ -3,9 +3,9 @@
 package cribl
 
 import (
-	"cribl/pkg/models/shared"
-	"cribl/pkg/utils"
 	"fmt"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/shared"
+	"github.com/speakeasy-sdks/cribl-go/pkg/utils"
 	"net/http"
 	"time"
 )
@@ -319,7 +319,7 @@ func New(opts ...SDKOption) *Cribl {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "1.1.0",
+			SDKVersion:        "1.1.1",
 			GenVersion:        "2.75.1",
 			ServerDefaults: []map[string]string{
 				{

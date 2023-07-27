@@ -3,8 +3,8 @@
 package sdkerrors
 
 import (
-	"cribl/pkg/models/shared"
 	"encoding/json"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/shared"
 	"net/http"
 )
 

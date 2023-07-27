@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"cribl/pkg/types"
+	"github.com/speakeasy-sdks/cribl-go/pkg/types"
 )
 
 const (
