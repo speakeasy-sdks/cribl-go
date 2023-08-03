@@ -2,9 +2,9 @@
 
 ### Available Operations
 
-* [Get](#get) - Get a list of TrustPolicy objects
+* [ListTrustPolicies](#listtrustpolicies) - Get a list of TrustPolicy objects
 
-## Get
+## ListTrustPolicies
 
 Get a list of TrustPolicy objects
 
@@ -28,7 +28,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.TrustPolicies.Get(ctx)
+    res, err := s.TrustPolicies.ListTrustPolicies(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,5 +48,5 @@ func main() {
 
 ### Response
 
-**[*operations.GetTrustPoliciesResponse](../../models/operations/gettrustpoliciesresponse.md), error**
+**[*operations.ListTrustPoliciesResponse](../../models/operations/listtrustpoliciesresponse.md), error**
 

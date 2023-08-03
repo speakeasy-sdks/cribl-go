@@ -47,3 +47,11 @@ Based on:
 - Speakeasy CLI 1.68.2 (2.79.1) https://github.com/speakeasy-api/speakeasy
 ### Releases
 - [Go v1.2.0] https://github.com/speakeasy-sdks/cribl-go/releases/tag/v1.2.0 - .
+
+## 2023-08-03 14:59:00
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.68.2 (2.79.1) https://github.com/speakeasy-api/speakeasy
+### Releases
+- [Go v1.2.1] https://github.com/speakeasy-sdks/cribl-go/releases/tag/v1.2.1 - .

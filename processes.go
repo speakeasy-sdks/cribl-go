@@ -25,9 +25,9 @@ func newProcesses(sdkConfig sdkConfiguration) *processes {
 	}
 }
 
-// Get - Get a list of processes under management
+// ListProcesses - Get a list of processes under management
 // Get a list of processes under management
-func (s *processes) Get(ctx context.Context) (*operations.GetProcessesResponse, error) {
+func (s *processes) ListProcesses(ctx context.Context) (*operations.ListProcessesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/system/processes"
 
@@ -57,7 +57,7 @@ func (s *processes) Get(ctx context.Context) (*operations.GetProcessesResponse, 
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetProcessesResponse{
+	res := &operations.ListProcessesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

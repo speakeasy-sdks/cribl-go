@@ -25,9 +25,9 @@ func newTrustPolicies(sdkConfig sdkConfiguration) *trustPolicies {
 	}
 }
 
-// Get - Get a list of TrustPolicy objects
+// ListTrustPolicies - Get a list of TrustPolicy objects
 // Get a list of TrustPolicy objects
-func (s *trustPolicies) Get(ctx context.Context) (*operations.GetTrustPoliciesResponse, error) {
+func (s *trustPolicies) ListTrustPolicies(ctx context.Context) (*operations.ListTrustPoliciesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/search/trust-policies"
 
@@ -57,7 +57,7 @@ func (s *trustPolicies) Get(ctx context.Context) (*operations.GetTrustPoliciesRe
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetTrustPoliciesResponse{
+	res := &operations.ListTrustPoliciesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

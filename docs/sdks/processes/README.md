@@ -2,9 +2,9 @@
 
 ### Available Operations
 
-* [Get](#get) - Get a list of processes under management
+* [ListProcesses](#listprocesses) - Get a list of processes under management
 
-## Get
+## ListProcesses
 
 Get a list of processes under management
 
@@ -28,7 +28,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Processes.Get(ctx)
+    res, err := s.Processes.ListProcesses(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,5 +48,5 @@ func main() {
 
 ### Response
 
-**[*operations.GetProcessesResponse](../../models/operations/getprocessesresponse.md), error**
+**[*operations.ListProcessesResponse](../../models/operations/listprocessesresponse.md), error**
 
