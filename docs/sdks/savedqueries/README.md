@@ -4,7 +4,8 @@
 
 * [Create](#create) - Create SavedQuery
 * [Delete](#delete) - Delete SavedQuery
-* [Get](#get) - Get a list of SavedQuery objects
+* [Get](#get) - Get SavedQuery by ID
+* [ListSavedQueries](#listsavedqueries) - Get a list of SavedQuery objects
 * [Update](#update) - Update SavedQuery
 
 ## Create
@@ -32,20 +33,20 @@ func main() {
 
     ctx := context.Background()
     res, err := s.SavedQueries.Create(ctx, shared.SavedQuery{
-        Description: cribl.String("voluptatibus"),
-        Earliest: cribl.String("numquam"),
-        ID: "badf947c-9a86-47bc-8242-6665816ddca8",
-        Latest: cribl.String("voluptates"),
-        Name: "Maurice Bins",
-        Query: "expedita",
-        SampleRate: cribl.Int64(266370),
+        Description: cribl.String("error"),
+        Earliest: cribl.String("recusandae"),
+        ID: "f3ffdd9f-7f07-49af-8d35-724cdb0f4d28",
+        Latest: cribl.String("quasi"),
+        Name: "Irma Kub",
+        Query: "iure",
+        SampleRate: cribl.Int64(512408),
         Schedule: &shared.SavedQuerySchedule{
-            CronSchedule: "cumque",
+            CronSchedule: "modi",
             Enabled: false,
-            KeepLastN: 368599,
-            Tz: "occaecati",
+            KeepLastN: 301701,
+            Tz: "accusamus",
         },
-        User: cribl.String("ipsum"),
+        User: cribl.String("nulla"),
     })
     if err != nil {
         log.Fatal(err)
@@ -93,7 +94,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "accusamus"
+    id := "repudiandae"
 
     ctx := context.Background()
     res, err := s.SavedQueries.Delete(ctx, id)
@@ -122,6 +123,56 @@ func main() {
 
 ## Get
 
+Get SavedQuery by ID
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	"github.com/speakeasy-sdks/cribl-go"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/shared"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/operations"
+)
+
+func main() {
+    s := cribl.New(
+        cribl.WithSecurity(shared.Security{
+            BearerAuth: "",
+        }),
+    )
+    id := "quibusdam"
+
+    ctx := context.Background()
+    res, err := s.SavedQueries.Get(ctx, id)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.SavedQuery != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+
+
+### Response
+
+**[*operations.GetSavedQueryResponse](../../models/operations/getsavedqueryresponse.md), error**
+
+
+## ListSavedQueries
+
 Get a list of SavedQuery objects
 
 ### Example Usage
@@ -144,7 +195,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.SavedQueries.Get(ctx)
+    res, err := s.SavedQueries.ListSavedQueries(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -164,7 +215,7 @@ func main() {
 
 ### Response
 
-**[*operations.GetSavedQueriesResponse](../../models/operations/getsavedqueriesresponse.md), error**
+**[*operations.ListSavedQueriesResponse](../../models/operations/listsavedqueriesresponse.md), error**
 
 
 ## Update
@@ -190,22 +241,22 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quisquam"
+    id := "praesentium"
     savedQuery := &shared.SavedQuery{
-        Description: cribl.String("quasi"),
-        Earliest: cribl.String("fugit"),
-        ID: "cdaad0ec-7afe-4dbd-80df-448a47f9390c",
-        Latest: cribl.String("minima"),
-        Name: "Ms. Guy Macejkovic",
-        Query: "ipsum",
-        SampleRate: cribl.Int64(874283),
+        Description: cribl.String("enim"),
+        Earliest: cribl.String("animi"),
+        ID: "9065e628-bdfc-4203-ab6c-879923b7e135",
+        Latest: cribl.String("atque"),
+        Name: "Nettie Kilback",
+        Query: "et",
+        SampleRate: cribl.Int64(181267),
         Schedule: &shared.SavedQuerySchedule{
-            CronSchedule: "fuga",
+            CronSchedule: "impedit",
             Enabled: false,
-            KeepLastN: 704732,
-            Tz: "maiores",
+            KeepLastN: 401388,
+            Tz: "praesentium",
         },
-        User: cribl.String("error"),
+        User: cribl.String("natus"),
     }
 
     ctx := context.Background()

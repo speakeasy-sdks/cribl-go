@@ -41,12 +41,822 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.AppscopeLibEntries.Get(ctx)
+    res, err := s.AppscopeConfigs.Create(ctx, shared.AppscopeLibEntry{
+        Config: shared.AppscopeConfigWithCustom{
+            Cribl: &shared.AppscopeConfigWithCustomCribl{
+                Authtoken: cribl.String("corrupti"),
+                Enable: cribl.Bool(false),
+                Transport: &shared.AppscopeTransport{
+                    Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                    Host: cribl.String("distinctio"),
+                    Path: cribl.String("quibusdam"),
+                    Port: cribl.Int64(602763),
+                    TLS: &shared.AppscopeTransportTLS{
+                        Cacertpath: cribl.String("nulla"),
+                        Enable: cribl.Bool(false),
+                        Validateserver: cribl.Bool(false),
+                    },
+                    Type: cribl.String("corrupti"),
+                },
+                UseScopeSourceTransport: cribl.Bool(false),
+            },
+            Custom: []shared.AppscopeCustom{
+                shared.AppscopeCustom{
+                    Ancestor: cribl.String("vel"),
+                    Arg: cribl.String("error"),
+                    Config: shared.AppscopeConfig{
+                        Cribl: &shared.AppscopeConfigCribl{
+                            Authtoken: cribl.String("deserunt"),
+                            Enable: cribl.Bool(false),
+                            Transport: &shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("iure"),
+                                Path: cribl.String("magnam"),
+                                Port: cribl.Int64(891773),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("ipsa"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("delectus"),
+                            },
+                            UseScopeSourceTransport: cribl.Bool(false),
+                        },
+                        Event: &shared.AppscopeConfigEvent{
+                            Enable: false,
+                            Format: shared.AppscopeConfigEventFormat{
+                                Enhancefs: false,
+                                Maxeventpersec: 272656,
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("molestiae"),
+                                Path: cribl.String("minus"),
+                                Port: cribl.Int64(812169),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("voluptatum"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("iusto"),
+                            },
+                            Type: shared.AppscopeConfigEventTypeNdjson,
+                            Watch: []shared.AppscopeConfigEventWatch{
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("nisi"),
+                                    Headers: cribl.String("recusandae"),
+                                    Name: cribl.String("Miss Raymond Hauck III"),
+                                    Type: "repellendus",
+                                    Value: cribl.String("sapiente"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("quo"),
+                                    Headers: cribl.String("odit"),
+                                    Name: cribl.String("Wilfred Wolff"),
+                                    Type: "quod",
+                                    Value: cribl.String("esse"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("totam"),
+                                    Headers: cribl.String("porro"),
+                                    Name: cribl.String("Samuel Reichel"),
+                                    Type: "fugit",
+                                    Value: cribl.String("deleniti"),
+                                },
+                            },
+                        },
+                        Libscope: &shared.AppscopeConfigLibscope{
+                            Commanddir: cribl.String("hic"),
+                            Configevent: cribl.Bool(false),
+                            Log: &shared.AppscopeConfigLibscopeLog{
+                                Level: shared.AppscopeConfigLibscopeLogLevelError.ToPointer(),
+                                Transport: &shared.AppscopeTransport{
+                                    Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                    Host: cribl.String("beatae"),
+                                    Path: cribl.String("commodi"),
+                                    Port: cribl.Int64(473600),
+                                    TLS: &shared.AppscopeTransportTLS{
+                                        Cacertpath: cribl.String("modi"),
+                                        Enable: cribl.Bool(false),
+                                        Validateserver: cribl.Bool(false),
+                                    },
+                                    Type: cribl.String("qui"),
+                                },
+                            },
+                            Summaryperiod: cribl.Int64(774234),
+                        },
+                        Metric: &shared.AppscopeConfigMetric{
+                            Enable: false,
+                            Format: shared.AppscopeConfigMetricFormat{
+                                Statsdmaxlen: cribl.Int64(736918),
+                                Statsdprefix: cribl.String("esse"),
+                                Type: cribl.String("ipsum"),
+                                Verbosity: cribl.Int64(568434),
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("perferendis"),
+                                Path: cribl.String("ad"),
+                                Port: cribl.Int64(617636),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("sed"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("iste"),
+                            },
+                            Watch: []string{
+                                "natus",
+                            },
+                        },
+                        Payload: &shared.AppscopeConfigPayload{
+                            Dir: "laboriosam",
+                            Enable: false,
+                        },
+                        Protocol: []shared.AppscopeConfigProtocol{
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 902599,
+                                Name: "Harvey Hessel",
+                                Payload: false,
+                                Regex: "saepe",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 697631,
+                                Name: "Brenda Wisozk",
+                                Payload: false,
+                                Regex: "laborum",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 170909,
+                                Name: "Stacy Champlin",
+                                Payload: false,
+                                Regex: "omnis",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 363711,
+                                Name: "Velma Batz",
+                                Payload: false,
+                                Regex: "doloribus",
+                            },
+                        },
+                        Tags: []shared.AppscopeConfigTags{
+                            shared.AppscopeConfigTags{
+                                Key: "architecto",
+                                Value: "mollitia",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "dolorem",
+                                Value: "culpa",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "consequuntur",
+                                Value: "repellat",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "mollitia",
+                                Value: "occaecati",
+                            },
+                        },
+                    },
+                    Env: cribl.String("numquam"),
+                    Hostname: cribl.String("immediate-instructor.info"),
+                    Procname: cribl.String("velit"),
+                    Username: cribl.String("Linda.Cronin"),
+                },
+                shared.AppscopeCustom{
+                    Ancestor: cribl.String("laborum"),
+                    Arg: cribl.String("animi"),
+                    Config: shared.AppscopeConfig{
+                        Cribl: &shared.AppscopeConfigCribl{
+                            Authtoken: cribl.String("enim"),
+                            Enable: cribl.Bool(false),
+                            Transport: &shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("quo"),
+                                Path: cribl.String("sequi"),
+                                Port: cribl.Int64(949572),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("ipsam"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("id"),
+                            },
+                            UseScopeSourceTransport: cribl.Bool(false),
+                        },
+                        Event: &shared.AppscopeConfigEvent{
+                            Enable: false,
+                            Format: shared.AppscopeConfigEventFormat{
+                                Enhancefs: false,
+                                Maxeventpersec: 820994,
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("quasi"),
+                                Path: cribl.String("error"),
+                                Port: cribl.Int64(837945),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("laborum"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("quasi"),
+                            },
+                            Type: shared.AppscopeConfigEventTypeNdjson,
+                            Watch: []shared.AppscopeConfigEventWatch{
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("voluptatibus"),
+                                    Headers: cribl.String("vero"),
+                                    Name: cribl.String("Miss Irma Wolff"),
+                                    Type: "cum",
+                                    Value: cribl.String("perferendis"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("doloremque"),
+                                    Headers: cribl.String("reprehenderit"),
+                                    Name: cribl.String("Shawna Carter"),
+                                    Type: "iusto",
+                                    Value: cribl.String("dicta"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("harum"),
+                                    Headers: cribl.String("enim"),
+                                    Name: cribl.String("Mrs. Leslie VonRueden"),
+                                    Type: "molestias",
+                                    Value: cribl.String("excepturi"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("pariatur"),
+                                    Headers: cribl.String("modi"),
+                                    Name: cribl.String("Dr. Jordan Von"),
+                                    Type: "veritatis",
+                                    Value: cribl.String("itaque"),
+                                },
+                            },
+                        },
+                        Libscope: &shared.AppscopeConfigLibscope{
+                            Commanddir: cribl.String("incidunt"),
+                            Configevent: cribl.Bool(false),
+                            Log: &shared.AppscopeConfigLibscopeLog{
+                                Level: shared.AppscopeConfigLibscopeLogLevelInfo.ToPointer(),
+                                Transport: &shared.AppscopeTransport{
+                                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                    Host: cribl.String("est"),
+                                    Path: cribl.String("quibusdam"),
+                                    Port: cribl.Int64(131797),
+                                    TLS: &shared.AppscopeTransportTLS{
+                                        Cacertpath: cribl.String("deserunt"),
+                                        Enable: cribl.Bool(false),
+                                        Validateserver: cribl.Bool(false),
+                                    },
+                                    Type: cribl.String("distinctio"),
+                                },
+                            },
+                            Summaryperiod: cribl.Int64(841386),
+                        },
+                        Metric: &shared.AppscopeConfigMetric{
+                            Enable: false,
+                            Format: shared.AppscopeConfigMetricFormat{
+                                Statsdmaxlen: cribl.Int64(289406),
+                                Statsdprefix: cribl.String("modi"),
+                                Type: cribl.String("qui"),
+                                Verbosity: cribl.Int64(397821),
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("quos"),
+                                Path: cribl.String("perferendis"),
+                                Port: cribl.Int64(164940),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("assumenda"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("ipsam"),
+                            },
+                            Watch: []string{
+                                "fugit",
+                            },
+                        },
+                        Payload: &shared.AppscopeConfigPayload{
+                            Dir: "dolorum",
+                            Enable: false,
+                        },
+                        Protocol: []shared.AppscopeConfigProtocol{
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 270008,
+                                Name: "Geoffrey Green",
+                                Payload: false,
+                                Regex: "non",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 756107,
+                                Name: "Gilbert Medhurst",
+                                Payload: false,
+                                Regex: "officia",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 223081,
+                                Name: "Randal Parisian",
+                                Payload: false,
+                                Regex: "illum",
+                            },
+                        },
+                        Tags: []shared.AppscopeConfigTags{
+                            shared.AppscopeConfigTags{
+                                Key: "rerum",
+                                Value: "dicta",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "magnam",
+                                Value: "cumque",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "facere",
+                                Value: "ea",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "aliquid",
+                                Value: "laborum",
+                            },
+                        },
+                    },
+                    Env: cribl.String("accusamus"),
+                    Hostname: cribl.String("exemplary-mover.biz"),
+                    Procname: cribl.String("accusamus"),
+                    Username: cribl.String("Virgil_Pouros"),
+                },
+                shared.AppscopeCustom{
+                    Ancestor: cribl.String("id"),
+                    Arg: cribl.String("blanditiis"),
+                    Config: shared.AppscopeConfig{
+                        Cribl: &shared.AppscopeConfigCribl{
+                            Authtoken: cribl.String("deleniti"),
+                            Enable: cribl.Bool(false),
+                            Transport: &shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("amet"),
+                                Path: cribl.String("deserunt"),
+                                Port: cribl.Int64(394869),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("vel"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("natus"),
+                            },
+                            UseScopeSourceTransport: cribl.Bool(false),
+                        },
+                        Event: &shared.AppscopeConfigEvent{
+                            Enable: false,
+                            Format: shared.AppscopeConfigEventFormat{
+                                Enhancefs: false,
+                                Maxeventpersec: 606393,
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("perferendis"),
+                                Path: cribl.String("nihil"),
+                                Port: cribl.Int64(301575),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("distinctio"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("id"),
+                            },
+                            Type: shared.AppscopeConfigEventTypeNdjson,
+                            Watch: []shared.AppscopeConfigEventWatch{
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("labore"),
+                                    Headers: cribl.String("suscipit"),
+                                    Name: cribl.String("Robin Keebler"),
+                                    Type: "architecto",
+                                    Value: cribl.String("magnam"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("et"),
+                                    Headers: cribl.String("excepturi"),
+                                    Name: cribl.String("Ramona Lueilwitz MD"),
+                                    Type: "reiciendis",
+                                    Value: cribl.String("mollitia"),
+                                },
+                            },
+                        },
+                        Libscope: &shared.AppscopeConfigLibscope{
+                            Commanddir: cribl.String("ad"),
+                            Configevent: cribl.Bool(false),
+                            Log: &shared.AppscopeConfigLibscopeLog{
+                                Level: shared.AppscopeConfigLibscopeLogLevelWarning.ToPointer(),
+                                Transport: &shared.AppscopeTransport{
+                                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                    Host: cribl.String("necessitatibus"),
+                                    Path: cribl.String("odit"),
+                                    Port: cribl.Int64(367562),
+                                    TLS: &shared.AppscopeTransportTLS{
+                                        Cacertpath: cribl.String("quasi"),
+                                        Enable: cribl.Bool(false),
+                                        Validateserver: cribl.Bool(false),
+                                    },
+                                    Type: cribl.String("iure"),
+                                },
+                            },
+                            Summaryperiod: cribl.Int64(984043),
+                        },
+                        Metric: &shared.AppscopeConfigMetric{
+                            Enable: false,
+                            Format: shared.AppscopeConfigMetricFormat{
+                                Statsdmaxlen: cribl.Int64(891924),
+                                Statsdprefix: cribl.String("eius"),
+                                Type: cribl.String("maxime"),
+                                Verbosity: cribl.Int64(537023),
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("in"),
+                                Path: cribl.String("architecto"),
+                                Port: cribl.Int64(99569),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("repudiandae"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("ullam"),
+                            },
+                            Watch: []string{
+                                "nihil",
+                                "repellat",
+                                "quibusdam",
+                            },
+                        },
+                        Payload: &shared.AppscopeConfigPayload{
+                            Dir: "sed",
+                            Enable: false,
+                        },
+                        Protocol: []shared.AppscopeConfigProtocol{
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 868126,
+                                Name: "Kathryn Lang",
+                                Payload: false,
+                                Regex: "sunt",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 779051,
+                                Name: "Ervin Schoen",
+                                Payload: false,
+                                Regex: "odit",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 407183,
+                                Name: "Virginia Wunsch",
+                                Payload: false,
+                                Regex: "voluptate",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 420075,
+                                Name: "Gary Streich",
+                                Payload: false,
+                                Regex: "perferendis",
+                            },
+                        },
+                        Tags: []shared.AppscopeConfigTags{
+                            shared.AppscopeConfigTags{
+                                Key: "amet",
+                                Value: "aut",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "cumque",
+                                Value: "corporis",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "hic",
+                                Value: "libero",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "nobis",
+                                Value: "dolores",
+                            },
+                        },
+                    },
+                    Env: cribl.String("quis"),
+                    Hostname: cribl.String("mealy-kilometer.com"),
+                    Procname: cribl.String("quis"),
+                    Username: cribl.String("Cody17"),
+                },
+                shared.AppscopeCustom{
+                    Ancestor: cribl.String("minus"),
+                    Arg: cribl.String("quam"),
+                    Config: shared.AppscopeConfig{
+                        Cribl: &shared.AppscopeConfigCribl{
+                            Authtoken: cribl.String("dolor"),
+                            Enable: cribl.Bool(false),
+                            Transport: &shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("nostrum"),
+                                Path: cribl.String("hic"),
+                                Port: cribl.Int64(928082),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("omnis"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("facilis"),
+                            },
+                            UseScopeSourceTransport: cribl.Bool(false),
+                        },
+                        Event: &shared.AppscopeConfigEvent{
+                            Enable: false,
+                            Format: shared.AppscopeConfigEventFormat{
+                                Enhancefs: false,
+                                Maxeventpersec: 596656,
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("porro"),
+                                Path: cribl.String("consequuntur"),
+                                Port: cribl.Int64(500026),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("error"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("eaque"),
+                            },
+                            Type: shared.AppscopeConfigEventTypeNdjson,
+                            Watch: []shared.AppscopeConfigEventWatch{
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("rerum"),
+                                    Headers: cribl.String("adipisci"),
+                                    Name: cribl.String("Merle Gleichner"),
+                                    Type: "deleniti",
+                                    Value: cribl.String("pariatur"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("provident"),
+                                    Headers: cribl.String("nobis"),
+                                    Name: cribl.String("Toby Hahn"),
+                                    Type: "dolorem",
+                                    Value: cribl.String("dolorem"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("dolor"),
+                                    Headers: cribl.String("qui"),
+                                    Name: cribl.String("Mindy Marks"),
+                                    Type: "dignissimos",
+                                    Value: cribl.String("reiciendis"),
+                                },
+                            },
+                        },
+                        Libscope: &shared.AppscopeConfigLibscope{
+                            Commanddir: cribl.String("amet"),
+                            Configevent: cribl.Bool(false),
+                            Log: &shared.AppscopeConfigLibscopeLog{
+                                Level: shared.AppscopeConfigLibscopeLogLevelError.ToPointer(),
+                                Transport: &shared.AppscopeTransport{
+                                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                    Host: cribl.String("veritatis"),
+                                    Path: cribl.String("ipsa"),
+                                    Port: cribl.Int64(56418),
+                                    TLS: &shared.AppscopeTransportTLS{
+                                        Cacertpath: cribl.String("iure"),
+                                        Enable: cribl.Bool(false),
+                                        Validateserver: cribl.Bool(false),
+                                    },
+                                    Type: cribl.String("odio"),
+                                },
+                            },
+                            Summaryperiod: cribl.Int64(311796),
+                        },
+                        Metric: &shared.AppscopeConfigMetric{
+                            Enable: false,
+                            Format: shared.AppscopeConfigMetricFormat{
+                                Statsdmaxlen: cribl.Int64(881005),
+                                Statsdprefix: cribl.String("quidem"),
+                                Type: cribl.String("voluptatibus"),
+                                Verbosity: cribl.Int64(377752),
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("eos"),
+                                Path: cribl.String("atque"),
+                                Port: cribl.Int64(24678),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("fugiat"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("ab"),
+                            },
+                            Watch: []string{
+                                "dolorum",
+                                "iusto",
+                                "voluptate",
+                            },
+                        },
+                        Payload: &shared.AppscopeConfigPayload{
+                            Dir: "dolorum",
+                            Enable: false,
+                        },
+                        Protocol: []shared.AppscopeConfigProtocol{
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 607045,
+                                Name: "Kelvin Zboncak",
+                                Payload: false,
+                                Regex: "voluptate",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 663078,
+                                Name: "Mrs. Ray Collins",
+                                Payload: false,
+                                Regex: "accusamus",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 320017,
+                                Name: "Sam Oberbrunner",
+                                Payload: false,
+                                Regex: "repellendus",
+                            },
+                        },
+                        Tags: []shared.AppscopeConfigTags{
+                            shared.AppscopeConfigTags{
+                                Key: "similique",
+                                Value: "alias",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "at",
+                                Value: "quaerat",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "tempora",
+                                Value: "vel",
+                            },
+                        },
+                    },
+                    Env: cribl.String("quod"),
+                    Hostname: cribl.String("uneven-commitment.net"),
+                    Procname: cribl.String("a"),
+                    Username: cribl.String("Jacky.Pfeffer"),
+                },
+            },
+            Event: &shared.AppscopeConfigWithCustomEvent{
+                Enable: false,
+                Format: shared.AppscopeConfigWithCustomEventFormat{
+                    Enhancefs: false,
+                    Maxeventpersec: 788740,
+                },
+                Transport: shared.AppscopeTransport{
+                    Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                    Host: cribl.String("amet"),
+                    Path: cribl.String("tempore"),
+                    Port: cribl.Int64(880298),
+                    TLS: &shared.AppscopeTransportTLS{
+                        Cacertpath: cribl.String("numquam"),
+                        Enable: cribl.Bool(false),
+                        Validateserver: cribl.Bool(false),
+                    },
+                    Type: cribl.String("enim"),
+                },
+                Type: shared.AppscopeConfigWithCustomEventTypeNdjson,
+                Watch: []shared.AppscopeConfigWithCustomEventWatch{
+                    shared.AppscopeConfigWithCustomEventWatch{
+                        Allowbinary: cribl.Bool(false),
+                        Enabled: cribl.Bool(false),
+                        Field: cribl.String("sapiente"),
+                        Headers: cribl.String("totam"),
+                        Name: cribl.String("Karen Rath"),
+                        Type: "vel",
+                        Value: cribl.String("libero"),
+                    },
+                },
+            },
+            Libscope: &shared.AppscopeConfigWithCustomLibscope{
+                Commanddir: cribl.String("voluptas"),
+                Configevent: cribl.Bool(false),
+                Log: &shared.AppscopeConfigWithCustomLibscopeLog{
+                    Level: shared.AppscopeConfigWithCustomLibscopeLogLevelError.ToPointer(),
+                    Transport: &shared.AppscopeTransport{
+                        Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                        Host: cribl.String("ipsum"),
+                        Path: cribl.String("incidunt"),
+                        Port: cribl.Int64(186458),
+                        TLS: &shared.AppscopeTransportTLS{
+                            Cacertpath: cribl.String("cupiditate"),
+                            Enable: cribl.Bool(false),
+                            Validateserver: cribl.Bool(false),
+                        },
+                        Type: cribl.String("maxime"),
+                    },
+                },
+                Summaryperiod: cribl.Int64(863856),
+            },
+            Metric: &shared.AppscopeConfigWithCustomMetric{
+                Enable: false,
+                Format: shared.AppscopeConfigWithCustomMetricFormat{
+                    Statsdmaxlen: cribl.Int64(747080),
+                    Statsdprefix: cribl.String("dicta"),
+                    Type: cribl.String("laborum"),
+                    Verbosity: cribl.Int64(517379),
+                },
+                Transport: shared.AppscopeTransport{
+                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                    Host: cribl.String("aspernatur"),
+                    Path: cribl.String("dolores"),
+                    Port: cribl.Int64(716860),
+                    TLS: &shared.AppscopeTransportTLS{
+                        Cacertpath: cribl.String("facilis"),
+                        Enable: cribl.Bool(false),
+                        Validateserver: cribl.Bool(false),
+                    },
+                    Type: cribl.String("aliquid"),
+                },
+                Watch: []string{
+                    "molestias",
+                    "temporibus",
+                },
+            },
+            Payload: &shared.AppscopeConfigWithCustomPayload{
+                Dir: "qui",
+                Enable: false,
+            },
+            Protocol: []shared.AppscopeConfigWithCustomProtocol{
+                shared.AppscopeConfigWithCustomProtocol{
+                    Binary: false,
+                    Detect: false,
+                    Len: 144847,
+                    Name: "Courtney Cassin",
+                    Payload: false,
+                    Regex: "hic",
+                },
+            },
+            Tags: []shared.AppscopeConfigWithCustomTags{
+                shared.AppscopeConfigWithCustomTags{
+                    Key: "cumque",
+                    Value: "soluta",
+                },
+            },
+        },
+        Description: "nobis",
+        ID: "1e31b8b9-0f34-443a-9108-e0adcf4b9218",
+        Lib: shared.CriblLibCriblCustom,
+        Tags: cribl.String("occaecati"),
+    })
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AppScopeLibEntries != nil {
+    if res.AppscopeLibEntry != nil {
         // handle response
     }
 }
@@ -57,874 +867,523 @@ func main() {
 ## Available Resources and Operations
 
 
-### [AppscopeLibEntries](docs/sdks/appscopelibentries/README.md)
+### [AppscopeConfigs](docs/sdks/appscopeconfigs/README.md)
 
-* [Get](docs/sdks/appscopelibentries/README.md#get) - Get a list of AppscopeLibEntry objects
+* [Create](docs/sdks/appscopeconfigs/README.md#create) - Create AppscopeLibEntry
+* [Delete](docs/sdks/appscopeconfigs/README.md#delete) - Delete AppscopeLibEntry
+* [Get](docs/sdks/appscopeconfigs/README.md#get) - Get AppscopeLibEntry by ID
+* [ListAppscopeLibEntries](docs/sdks/appscopeconfigs/README.md#listappscopelibentries) - Get a list of AppscopeLibEntry objects
+* [Update](docs/sdks/appscopeconfigs/README.md#update) - Update AppscopeLibEntry
 
-### [AppscopeLibEntry](docs/sdks/appscopelibentry/README.md)
+### [Auth](docs/sdks/auth/README.md)
 
-* [Create](docs/sdks/appscopelibentry/README.md#create) - Create AppscopeLibEntry
-* [Delete](docs/sdks/appscopelibentry/README.md#delete) - Delete AppscopeLibEntry
-* [Get](docs/sdks/appscopelibentry/README.md#get) - Get AppscopeLibEntry by ID
-* [Update](docs/sdks/appscopelibentry/README.md#update) - Update AppscopeLibEntry
+* [IDPlogout](docs/sdks/auth/README.md#idplogout) - Accepts a logout request from an IDP and logs out the user
+* [AcceptIDPRequest](docs/sdks/auth/README.md#acceptidprequest) - Accepts an authentication request from an IDP and authenticates the user
+* [Get](docs/sdks/auth/README.md#get) - Get IDP used for an authorization code callback
+* [GetMetadata](docs/sdks/auth/README.md#getmetadata) - Obtain metadata which Cribl Stream/Edge uses when acting as a Service Provider
+* [GetRedirect](docs/sdks/auth/README.md#getredirect) - Obtain redirect information
+* [ListAuthGroup](docs/sdks/auth/README.md#listauthgroup) - List the external authentication system's groups
+* [Login](docs/sdks/auth/README.md#login) - Log in and obtain Auth token
+* [Logout](docs/sdks/auth/README.md#logout) - Log current user out
+* [LogoutRedirect](docs/sdks/auth/README.md#logoutredirect) - Redirect user to IDP with logout request
+* [Post](docs/sdks/auth/README.md#post) - API call that the IDP should use for an authentication request
+* [RequestLogout](docs/sdks/auth/README.md#requestlogout) - API call that the IDP should use for a logout request
 
-### [AuthToken](docs/sdks/authtoken/README.md)
+### [Authorize](docs/sdks/authorize/README.md)
 
-* [Login](docs/sdks/authtoken/README.md#login) - Log in and obtain Auth token
-
-### [AuthenticationSettings](docs/sdks/authenticationsettings/README.md)
-
-* [Get](docs/sdks/authenticationsettings/README.md#get) - Get authentication settings
-* [Update](docs/sdks/authenticationsettings/README.md#update) - Update authentication settings
-
-### [Authorizations](docs/sdks/authorizations/README.md)
-
-* [Get](docs/sdks/authorizations/README.md#get) - get the client's authorization policy
-
-### [Branches](docs/sdks/branches/README.md)
-
-* [Get](docs/sdks/branches/README.md#get) - get the list of branches
-
-### [BulletinMessage](docs/sdks/bulletinmessage/README.md)
-
-* [Create](docs/sdks/bulletinmessage/README.md#create) - Create BulletinMessage
-* [Delete](docs/sdks/bulletinmessage/README.md#delete) - Delete BulletinMessage
-* [Get](docs/sdks/bulletinmessage/README.md#get) - Get BulletinMessage by ID
-
-### [BulletinMessages](docs/sdks/bulletinmessages/README.md)
-
-* [Get](docs/sdks/bulletinmessages/README.md#get) - Get a list of BulletinMessage objects
-
-### [Bytes](docs/sdks/bytes/README.md)
-
-* [Get](docs/sdks/bytes/README.md#get) - Get some number of bytes from the file at the given path
-
-### [CancelRunningGroup](docs/sdks/cancelrunninggroup/README.md)
-
-* [Post](docs/sdks/cancelrunninggroup/README.md#post) - Cancel a running group upgrade
-
-### [Certificate](docs/sdks/certificate/README.md)
-
-* [Create](docs/sdks/certificate/README.md#create) - Create Certificate
-* [Delete](docs/sdks/certificate/README.md#delete) - Delete Certificate
-* [Get](docs/sdks/certificate/README.md#get) - Get Certificate by ID
-* [Update](docs/sdks/certificate/README.md#update) - Update Certificate
+* [ListAuthorizations](docs/sdks/authorize/README.md#listauthorizations) - get the client's authorization policy
+* [ListClientRoles](docs/sdks/authorize/README.md#listclientroles) - get the client's roles
 
 ### [Certificates](docs/sdks/certificates/README.md)
 
-* [Get](docs/sdks/certificates/README.md#get) - Get a list of Certificate objects
+* [Create](docs/sdks/certificates/README.md#create) - Create Certificate
+* [Delete](docs/sdks/certificates/README.md#delete) - Delete Certificate
+* [Get](docs/sdks/certificates/README.md#get) - Get Certificate by ID
+* [ListCertificates](docs/sdks/certificates/README.md#listcertificates) - Get a list of Certificate objects
+* [Update](docs/sdks/certificates/README.md#update) - Update Certificate
 
-### [ChangedFiles](docs/sdks/changedfiles/README.md)
+### [Changelog](docs/sdks/changelog/README.md)
 
-* [Get](docs/sdks/changedfiles/README.md#get) - get the files changed
+* [ListChangelogs](docs/sdks/changelog/README.md#listchangelogs) - Get changelog viewed state
 
-### [ChangelogViewState](docs/sdks/changelogviewstate/README.md)
+### [Clui](docs/sdks/clui/README.md)
 
-* [Update](docs/sdks/changelogviewstate/README.md#update) - Update changelog viewed state
+* [ListCluisResults](docs/sdks/clui/README.md#listcluisresults) - Get CLUI search results
 
-### [Changelogs](docs/sdks/changelogs/README.md)
+### [Collectors](docs/sdks/collectors/README.md)
 
-* [Get](docs/sdks/changelogs/README.md#get) - Get changelog viewed state
-
-### [ClientRoles](docs/sdks/clientroles/README.md)
-
-* [Get](docs/sdks/clientroles/README.md#get) - get the client's roles
-
-### [Cluis](docs/sdks/cluis/README.md)
-
-* [Get](docs/sdks/cluis/README.md#get) - Get CLUI search results
-
-### [Collector](docs/sdks/collector/README.md)
-
-* [Get](docs/sdks/collector/README.md#get) - Get Collector by ID
-
-### [CollectorObject](docs/sdks/collectorobject/README.md)
-
-* [Get](docs/sdks/collectorobject/README.md#get) - Get a list of Collector objects
-
-### [Commit](docs/sdks/commit/README.md)
-
-* [Create](docs/sdks/commit/README.md#create) - create a new commit containing the current configs the given log message describing the changes.
-
-### [Condition](docs/sdks/condition/README.md)
-
-* [Get](docs/sdks/condition/README.md#get) - Get Condition by ID
+* [Get](docs/sdks/collectors/README.md#get) - Get Collector by ID
+* [ListCollectorObject](docs/sdks/collectors/README.md#listcollectorobject) - Get a list of Collector objects
 
 ### [Conditions](docs/sdks/conditions/README.md)
 
-* [Get](docs/sdks/conditions/README.md#get) - Get a list of Condition objects
+* [Get](docs/sdks/conditions/README.md#get) - Get Condition by ID
+* [ListConditions](docs/sdks/conditions/README.md#listconditions) - Get a list of Condition objects
 
-### [ConfigGroup](docs/sdks/configgroup/README.md)
+### [DatabaseConnections](docs/sdks/databaseconnections/README.md)
 
-* [Create](docs/sdks/configgroup/README.md#create) - Create ConfigGroup
-* [Delete](docs/sdks/configgroup/README.md#delete) - Delete ConfigGroup
-* [Get](docs/sdks/configgroup/README.md#get) - Get a specific ConfigGroup object
-* [Update](docs/sdks/configgroup/README.md#update) - Update ConfigGroup
-
-### [ConfiguredCollectors](docs/sdks/configuredcollectors/README.md)
-
-* [Get](docs/sdks/configuredcollectors/README.md#get) - Get list of configured collectors
-
-### [Container](docs/sdks/container/README.md)
-
-* [Get](docs/sdks/container/README.md#get) - Get details for a single container on the edge host. Add stream=true to get a stream instead.
-
-### [CountFile](docs/sdks/countfile/README.md)
-
-* [Get](docs/sdks/countfile/README.md#get) - get the count of files of changed
-
-### [CreatePipeline](docs/sdks/createpipeline/README.md)
-
-* [Post](docs/sdks/createpipeline/README.md#post) - Create Pipeline
-
-### [CriblMetadata](docs/sdks/criblmetadata/README.md)
-
-* [Get](docs/sdks/criblmetadata/README.md#get) - Obtain metadata which Cribl Stream/Edge uses when acting as a Service Provider
-
-### [CriblSystemSettings](docs/sdks/criblsystemsettings/README.md)
-
-* [Get](docs/sdks/criblsystemsettings/README.md#get) - Get Cribl system settings
-* [Update](docs/sdks/criblsystemsettings/README.md#update) - Update Cribl system settings
-
-### [CriblsSettings](docs/sdks/criblssettings/README.md)
-
-* [~~Get~~](docs/sdks/criblssettings/README.md#get) - Get Cribl system settings. Deprecated: use specific endpoints /system/limits, /system/job-limits, /system/redis-cache-limits, /system/services-limits, /system/settings/git-settings, and /system/settings/conf respectively :warning: **Deprecated**
-* [~~Update~~](docs/sdks/criblssettings/README.md#update) - Update Cribl system settings. Deprecated: use specific endpoints /system/limits, /system/job-limits, /system/settings/git-settings, /system/settings/auth and /system/settings/conf respectively :warning: **Deprecated**
-
-### [CurrentConfig](docs/sdks/currentconfig/README.md)
-
-* [Push](docs/sdks/currentconfig/README.md#push) - push the current configs to the remote repository.
-
-### [DataSample](docs/sdks/datasample/README.md)
-
-* [Post](docs/sdks/datasample/README.md#post) - Create DataSample
-
-### [DataSampleID](docs/sdks/datasampleid/README.md)
-
-* [Delete](docs/sdks/datasampleid/README.md#delete) - Delete DataSample
-* [Get](docs/sdks/datasampleid/README.md#get) - Get DataSample by ID
-* [Update](docs/sdks/datasampleid/README.md#update) - Update DataSample
-
-### [DatabaseConnection](docs/sdks/databaseconnection/README.md)
-
-* [Post](docs/sdks/databaseconnection/README.md#post) - Create DatabaseConnectionConfig
-
-### [DatabaseConnectionConfigID](docs/sdks/databaseconnectionconfigid/README.md)
-
-* [Delete](docs/sdks/databaseconnectionconfigid/README.md#delete) - Delete DatabaseConnectionConfig
-* [Get](docs/sdks/databaseconnectionconfigid/README.md#get) - Get DatabaseConnectionConfig by ID
-* [Update](docs/sdks/databaseconnectionconfigid/README.md#update) - Update DatabaseConnectionConfig
-
-### [Dataset](docs/sdks/dataset/README.md)
-
-* [Create](docs/sdks/dataset/README.md#create) - Create DatasetProviderType
-* [Delete](docs/sdks/dataset/README.md#delete) - Delete DatasetProviderType
-* [Get](docs/sdks/dataset/README.md#get) - Get DatasetProviderType by ID
-* [Update](docs/sdks/dataset/README.md#update) - Update DatasetProviderType
-
-### [DatasetObject](docs/sdks/datasetobject/README.md)
-
-* [Create](docs/sdks/datasetobject/README.md#create) - Create Dataset
-* [Delete](docs/sdks/datasetobject/README.md#delete) - Delete Dataset
-* [Get](docs/sdks/datasetobject/README.md#get) - Get Dataset by ID
-* [Update](docs/sdks/datasetobject/README.md#update) - Update Dataset
-
-### [DatasetObjects](docs/sdks/datasetobjects/README.md)
-
-* [Get](docs/sdks/datasetobjects/README.md#get) - Get a list of Dataset objects
+* [TestDatabaseConnection](docs/sdks/databaseconnections/README.md#testdatabaseconnection) - Test a database connection given a type and connectionString
+* [Delete](docs/sdks/databaseconnections/README.md#delete) - Delete DatabaseConnectionConfig
+* [Get](docs/sdks/databaseconnections/README.md#get) - Get DatabaseConnectionConfig by ID
+* [ListDatabaseConnection](docs/sdks/databaseconnections/README.md#listdatabaseconnection) - Get a list of DatabaseConnection objects
+* [Post](docs/sdks/databaseconnections/README.md#post) - Create DatabaseConnectionConfig
+* [Update](docs/sdks/databaseconnections/README.md#update) - Update DatabaseConnectionConfig
 
 ### [Datasets](docs/sdks/datasets/README.md)
 
-* [Get](docs/sdks/datasets/README.md#get) - Get a list of DatasetProviderType objects
+* [Create](docs/sdks/datasets/README.md#create) - Create Dataset
+* [CreateProviderType](docs/sdks/datasets/README.md#createprovidertype) - Create DatasetProviderType
+* [Delete](docs/sdks/datasets/README.md#delete) - Delete Dataset
+* [DeleteProviderType](docs/sdks/datasets/README.md#deleteprovidertype) - Delete DatasetProviderType
+* [Get](docs/sdks/datasets/README.md#get) - Get Dataset by ID
+* [GetProviderType](docs/sdks/datasets/README.md#getprovidertype) - Get DatasetProviderType by ID
+* [ListDatasetObjects](docs/sdks/datasets/README.md#listdatasetobjects) - Get a list of Dataset objects
+* [ListProviderTypes](docs/sdks/datasets/README.md#listprovidertypes) - Get a list of DatasetProviderType objects
+* [Update](docs/sdks/datasets/README.md#update) - Update Dataset
+* [UpdateProviderType](docs/sdks/datasets/README.md#updateprovidertype) - Update DatasetProviderType
 
-### [DestinationQueue](docs/sdks/destinationqueue/README.md)
+### [Diag](docs/sdks/diag/README.md)
 
-* [Delete](docs/sdks/destinationqueue/README.md#delete) - Delete destination persistent queue
+* [Delete](docs/sdks/diag/README.md#delete) - Remove diag bundle
+* [Get](docs/sdks/diag/README.md#get) - Returns a diag bundle as a tar.gz archive
+* [GetSystemInfo](docs/sdks/diag/README.md#getsysteminfo) - Get basic system information
+* [ListExistingDiagBundles](docs/sdks/diag/README.md#listexistingdiagbundles) - Get list of existing diag bundles
+* [Send](docs/sdks/diag/README.md#send) - Send a diag bundle (tar.gz archive) to Cribl
 
-### [DiagBundle](docs/sdks/diagbundle/README.md)
+### [Distributed](docs/sdks/distributed/README.md)
 
-* [Delete](docs/sdks/diagbundle/README.md#delete) - Remove diag bundle
-* [Get](docs/sdks/diagbundle/README.md#get) - Returns a diag bundle as a tar.gz archive
-* [Send](docs/sdks/diagbundle/README.md#send) - Send a diag bundle (tar.gz archive) to Cribl
+* [Get](docs/sdks/distributed/README.md#get) - Get summary of Distributed deployment
+* [ListDiagBundles](docs/sdks/distributed/README.md#listdiagbundles) - Get list of existing diag bundles
 
-### [DiagBundles](docs/sdks/diagbundles/README.md)
+### [Edge](docs/sdks/edge/README.md)
 
-* [Get](docs/sdks/diagbundles/README.md#get) - Get list of existing diag bundles
+* [GetDirectoryListing](docs/sdks/edge/README.md#getdirectorylisting) - Get a directory listing of the given path
+* [GetMetadata](docs/sdks/edge/README.md#getmetadata) - Get the host's metadata structure
+* [GetRunDetails](docs/sdks/edge/README.md#getrundetails) - Get details of a process running on the edge host
+* [ListBytes](docs/sdks/edge/README.md#listbytes) - Get some number of bytes from the file at the given path
+* [ListConfiguredCollectors](docs/sdks/edge/README.md#listconfiguredcollectors) - Get list of configured collectors
+* [ListEdgeHostFiles](docs/sdks/edge/README.md#listedgehostfiles) - Get details about a file on the edge host.
+* [ListLogFiles](docs/sdks/edge/README.md#listlogfiles) - list log files
+* [ListProcessRunningDetail](docs/sdks/edge/README.md#listprocessrunningdetail) - Get a detailed list of processes running on the edge host
 
-### [DistributedDeployment](docs/sdks/distributeddeployment/README.md)
+### [EdgeContainers](docs/sdks/edgecontainers/README.md)
 
-* [Get](docs/sdks/distributeddeployment/README.md#get) - Get summary of Distributed deployment
+* [Get](docs/sdks/edgecontainers/README.md#get) - Get details for a single container on the edge host. Add stream=true to get a stream instead.
+* [ListContainerDetail](docs/sdks/edgecontainers/README.md#listcontainerdetail) - Get a detailed list of containers running on the edge host.
 
-### [EdgeHostFiles](docs/sdks/edgehostfiles/README.md)
+### [EdgeEvents](docs/sdks/edgeevents/README.md)
 
-* [Get](docs/sdks/edgehostfiles/README.md#get) - Get details about a file on the edge host.
+* [ListConfiguredCollectors](docs/sdks/edgeevents/README.md#listconfiguredcollectors) - Get list of configured collectors
 
-### [EdgeListing](docs/sdks/edgelisting/README.md)
+### [EdgeFiles](docs/sdks/edgefiles/README.md)
 
-* [Get](docs/sdks/edgelisting/README.md#get) - Get a directory listing of the given path
+* [ListEdgeHostFiles](docs/sdks/edgefiles/README.md#listedgehostfiles) - Get details about a file on the edge host.
 
-### [EventBreaker](docs/sdks/eventbreaker/README.md)
+### [EdgeLs](docs/sdks/edgels/README.md)
 
-* [Delete](docs/sdks/eventbreaker/README.md#delete) - Delete Event Breaker Ruleset
-* [Post](docs/sdks/eventbreaker/README.md#post) - Create Event Breaker Ruleset
-* [Update](docs/sdks/eventbreaker/README.md#update) - Update Event Breaker Ruleset
+* [GetDirectoryListing](docs/sdks/edgels/README.md#getdirectorylisting) - Get a directory listing of the given path
 
-### [EventBreakerID](docs/sdks/eventbreakerid/README.md)
+### [EdgeProcesses](docs/sdks/edgeprocesses/README.md)
 
-* [Get](docs/sdks/eventbreakerid/README.md#get) - Get Event Breaker Ruleset by ID
+* [GetRunDetails](docs/sdks/edgeprocesses/README.md#getrundetails) - Get details of a process running on the edge host
+* [ListProcessRunningDetail](docs/sdks/edgeprocesses/README.md#listprocessrunningdetail) - Get a detailed list of processes running on the edge host
 
-### [EventBreakerOnData](docs/sdks/eventbreakerondata/README.md)
+### [EventBreakerRules](docs/sdks/eventbreakerrules/README.md)
 
-* [Post](docs/sdks/eventbreakerondata/README.md#post) - Runs an event breaker rule on the specified data
+* [Delete](docs/sdks/eventbreakerrules/README.md#delete) - Delete Event Breaker Ruleset
+* [Get](docs/sdks/eventbreakerrules/README.md#get) - Get Event Breaker Ruleset by ID
+* [ListEventBreaker](docs/sdks/eventbreakerrules/README.md#listeventbreaker) - Get a list of Event Breaker Ruleset objects
+* [Post](docs/sdks/eventbreakerrules/README.md#post) - Create Event Breaker Ruleset
+* [Update](docs/sdks/eventbreakerrules/README.md#update) - Update Event Breaker Ruleset
 
 ### [Events](docs/sdks/events/README.md)
 
-* [Get](docs/sdks/events/README.md#get) - Get events generated by a specified source
+* [ListEvents](docs/sdks/events/README.md#listevents) - Get events generated by a specified source
 
-### [ExecuteDistributedUpgrade](docs/sdks/executedistributedupgrade/README.md)
+### [Executors](docs/sdks/executors/README.md)
 
-* [Post](docs/sdks/executedistributedupgrade/README.md#post) - Execute distributed group upgrade
+* [Get](docs/sdks/executors/README.md#get) - Get Executor by ID
+* [ListExecutorObject](docs/sdks/executors/README.md#listexecutorobject) - Get a list of Executor objects
 
-### [ExecutorID](docs/sdks/executorid/README.md)
+### [Expressions](docs/sdks/expressions/README.md)
 
-* [Get](docs/sdks/executorid/README.md#get) - Get Executor by ID
-
-### [ExecutorObject](docs/sdks/executorobject/README.md)
-
-* [Get](docs/sdks/executorobject/README.md#get) - Get a list of Executor objects
-
-### [ExistingDiagBundles](docs/sdks/existingdiagbundles/README.md)
-
-* [Get](docs/sdks/existingdiagbundles/README.md#get) - Get list of existing diag bundles
-
-### [Feature](docs/sdks/feature/README.md)
-
-* [Get](docs/sdks/feature/README.md#get) - Get feature by Id
+* [Post](docs/sdks/expressions/README.md#post) - Evaluate JavaScript expression
 
 ### [Features](docs/sdks/features/README.md)
 
-* [Get](docs/sdks/features/README.md#get) - List all features
+* [Get](docs/sdks/features/README.md#get) - Get feature by Id
+* [ListFeatures](docs/sdks/features/README.md#listfeatures) - List all features
 
-### [FieldSummaries](docs/sdks/fieldsummaries/README.md)
+### [FileSampler](docs/sdks/filesampler/README.md)
 
-* [Get](docs/sdks/fieldsummaries/README.md#get) - List field summaries
-
-### [FleetMapping](docs/sdks/fleetmapping/README.md)
-
-* [Create](docs/sdks/fleetmapping/README.md#create) - Create MappingRuleset
+* [ListBytes](docs/sdks/filesampler/README.md#listbytes) - Get some number of bytes from the file at the given path
 
 ### [FleetMappings](docs/sdks/fleetmappings/README.md)
 
-* [Get](docs/sdks/fleetmappings/README.md#get) - Get a list of MappingRuleset objects
+* [Create](docs/sdks/fleetmappings/README.md#create) - Create MappingRuleset
+* [Delete](docs/sdks/fleetmappings/README.md#delete) - Delete MappingRuleset
+* [Get](docs/sdks/fleetmappings/README.md#get) - Get MappingRuleset by ID
+* [ListFleetMappings](docs/sdks/fleetmappings/README.md#listfleetmappings) - Get a list of MappingRuleset objects
+* [Update](docs/sdks/fleetmappings/README.md#update) - Update MappingRuleset
 
-### [FleetOrWorkerGroup](docs/sdks/fleetorworkergroup/README.md)
+### [Functions](docs/sdks/functions/README.md)
 
-* [Deploy](docs/sdks/fleetorworkergroup/README.md#deploy) - Deploy commits for a Fleet or Worker Group
+* [Get](docs/sdks/functions/README.md#get) - Get Function by ID
+* [ListObjectFunction](docs/sdks/functions/README.md#listobjectfunction) - Get a list of Function objects
 
-### [FunctionID](docs/sdks/functionid/README.md)
+### [Git](docs/sdks/git/README.md)
 
-* [Get](docs/sdks/functionid/README.md#get) - Get Function by ID
+* [CountFiles](docs/sdks/git/README.md#countfiles) - get the count of files of changed
+* [Create](docs/sdks/git/README.md#create) - create a new commit containing the current configs the given log message describing the changes.
+* [Get](docs/sdks/git/README.md#get) - Get info about versioning availability
+* [GetLogandTextualDiff](docs/sdks/git/README.md#getlogandtextualdiff) - get the log message and textual diff for given commit
+* [GetTextualDiff](docs/sdks/git/README.md#gettextualdiff) - get the textual diff for given commit
+* [GetWorkingTree](docs/sdks/git/README.md#getworkingtree) - get the the working tree status
+* [ListBranches](docs/sdks/git/README.md#listbranches) - get the list of branches
+* [ListChangedFiles](docs/sdks/git/README.md#listchangedfiles) - get the files changed
+* [ListGitSettings](docs/sdks/git/README.md#listgitsettings) - Get git settings
+* [Push](docs/sdks/git/README.md#push) - push the current configs to the remote repository.
+* [Sync](docs/sdks/git/README.md#sync) - syncs with remote repo via POST requests
+* [Update](docs/sdks/git/README.md#update) - Update git settings
 
-### [GitSettings](docs/sdks/gitsettings/README.md)
+### [GlobalVariables](docs/sdks/globalvariables/README.md)
 
-* [Get](docs/sdks/gitsettings/README.md#get) - Get git settings
-* [Update](docs/sdks/gitsettings/README.md#update) - Update git settings
+* [Delete](docs/sdks/globalvariables/README.md#delete) - Delete Global Variable
+* [Get](docs/sdks/globalvariables/README.md#get) - Get Global Variable by ID
+* [ListGlobalVariable](docs/sdks/globalvariables/README.md#listglobalvariable) - Get a list of Global Variable objects
+* [Post](docs/sdks/globalvariables/README.md#post) - Create Global Variable
+* [Update](docs/sdks/globalvariables/README.md#update) - Update Global Variable
 
-### [GiveCriblVersion](docs/sdks/givecriblversion/README.md)
+### [Grokfiles](docs/sdks/grokfiles/README.md)
 
-* [Post](docs/sdks/givecriblversion/README.md#post) - Upgrade Cribl to a given version
-
-### [GlobalVariable](docs/sdks/globalvariable/README.md)
-
-* [Post](docs/sdks/globalvariable/README.md#post) - Create Global Variable
-
-### [GlobalVariableID](docs/sdks/globalvariableid/README.md)
-
-* [Delete](docs/sdks/globalvariableid/README.md#delete) - Delete Global Variable
-* [Get](docs/sdks/globalvariableid/README.md#get) - Get Global Variable by ID
-* [Update](docs/sdks/globalvariableid/README.md#update) - Update Global Variable
-
-### [GrokFile](docs/sdks/grokfile/README.md)
-
-* [Create](docs/sdks/grokfile/README.md#create) - Create GrokFile
-* [Delete](docs/sdks/grokfile/README.md#delete) - Delete GrokFile
-* [Get](docs/sdks/grokfile/README.md#get) - Get GrokFile by ID
-* [Update](docs/sdks/grokfile/README.md#update) - Update GrokFile
-
-### [GrokFiles](docs/sdks/grokfiles/README.md)
-
-* [Get](docs/sdks/grokfiles/README.md#get) - Get a list of GrokFile objects
-
-### [GroupBundle](docs/sdks/groupbundle/README.md)
-
-* [Get](docs/sdks/groupbundle/README.md#get) - Get effective bundle version for given Group
+* [Create](docs/sdks/grokfiles/README.md#create) - Create GrokFile
+* [Delete](docs/sdks/grokfiles/README.md#delete) - Delete GrokFile
+* [Get](docs/sdks/grokfiles/README.md#get) - Get GrokFile by ID
+* [ListGrokFiles](docs/sdks/grokfiles/README.md#listgrokfiles) - Get a list of GrokFile objects
+* [Update](docs/sdks/grokfiles/README.md#update) - Update GrokFile
 
 ### [Groups](docs/sdks/groups/README.md)
 
-* [Get](docs/sdks/groups/README.md#get) - Get a list of ConfigGroup objects
+* [Create](docs/sdks/groups/README.md#create) - Create ConfigGroup
+* [Delete](docs/sdks/groups/README.md#delete) - Delete ConfigGroup
+* [Deploy](docs/sdks/groups/README.md#deploy) - Deploy commits for a Fleet or Worker Group
+* [Get](docs/sdks/groups/README.md#get) - Get a specific ConfigGroup object
+* [GetConfigVersion](docs/sdks/groups/README.md#getconfigversion) - Get effective bundle version for given Group
+* [ListGroups](docs/sdks/groups/README.md#listgroups) - Get a list of ConfigGroup objects
+* [Update](docs/sdks/groups/README.md#update) - Update ConfigGroup
 
-### [HealthInfo](docs/sdks/healthinfo/README.md)
+### [Health](docs/sdks/health/README.md)
 
-* [Get](docs/sdks/healthinfo/README.md#get) - Provides health info for REST server
+* [Get](docs/sdks/health/README.md#get) - Provides health info for REST server
 
-### [HostMetadataStructure](docs/sdks/hostmetadatastructure/README.md)
+### [Jobs](docs/sdks/jobs/README.md)
 
-* [Get](docs/sdks/hostmetadatastructure/README.md#get) - Get the host's metadata structure
+* [Cancel](docs/sdks/jobs/README.md#cancel) - Cancel a job by instance id
+* [Delete](docs/sdks/jobs/README.md#delete) - Remove job from job inspector by instance id
+* [Get](docs/sdks/jobs/README.md#get) - Get job info by instance id
+* [GetError](docs/sdks/jobs/README.md#geterror) - Get Task errors for a job by id
+* [GetResult](docs/sdks/jobs/README.md#getresult) - Get results for a discover job by instance id
+* [ListJobInfos](docs/sdks/jobs/README.md#listjobinfos) - Get info on jobs
+* [ListJobResults](docs/sdks/jobs/README.md#listjobresults) - Get results for a discover job by instance id
+* [ListTaskErrors](docs/sdks/jobs/README.md#listtaskerrors) - Get Task errors for a job by id
+* [PauseJob](docs/sdks/jobs/README.md#pausejob) - Pause a job by instance id
+* [Prevent](docs/sdks/jobs/README.md#prevent) - prevent job from being deleted automatically
+* [Resume](docs/sdks/jobs/README.md#resume) - Resume a job by instance id
+* [RunJob](docs/sdks/jobs/README.md#runjob) - Run or schedule a job
 
-### [IDPAuth](docs/sdks/idpauth/README.md)
+### [Keys](docs/sdks/keys/README.md)
 
-* [Get](docs/sdks/idpauth/README.md#get) - Get IDP used for an authorization code callback
-
-### [IDPUserAuth](docs/sdks/idpuserauth/README.md)
-
-* [Logout](docs/sdks/idpuserauth/README.md#logout) - Accepts a logout request from an IDP and logs out the user
-
-### [InternalSystemMetrics](docs/sdks/internalsystemmetrics/README.md)
-
-* [Post](docs/sdks/internalsystemmetrics/README.md#post) - Aggregate raw internal system metrics
-
-### [JavascriptExpression](docs/sdks/javascriptexpression/README.md)
-
-* [Post](docs/sdks/javascriptexpression/README.md#post) - Evaluate JavaScript expression
-
-### [Job](docs/sdks/job/README.md)
-
-* [Cancel](docs/sdks/job/README.md#cancel) - Cancel a job by instance id
-* [Delete](docs/sdks/job/README.md#delete) - Remove job from job inspector by instance id
-* [Get](docs/sdks/job/README.md#get) - Get job info by instance id
-* [PauseJob](docs/sdks/job/README.md#pausejob) - Pause a job by instance id
-* [Prevent](docs/sdks/job/README.md#prevent) - prevent job from being deleted automatically
-* [Resume](docs/sdks/job/README.md#resume) - Resume a job by instance id
-* [RunJob](docs/sdks/job/README.md#runjob) - Run or schedule a job
-
-### [JobInfos](docs/sdks/jobinfos/README.md)
-
-* [Get](docs/sdks/jobinfos/README.md#get) - Get info on jobs
-
-### [JobResult](docs/sdks/jobresult/README.md)
-
-* [Get](docs/sdks/jobresult/README.md#get) - Get results for a discover job by instance id
-
-### [JobResults](docs/sdks/jobresults/README.md)
-
-* [Get](docs/sdks/jobresults/README.md#get) - Get results for a discover job by instance id
-
-### [JobStatus](docs/sdks/jobstatus/README.md)
-
-* [Get](docs/sdks/jobstatus/README.md#get) - Get job status
-
-### [KMSConfig](docs/sdks/kmsconfig/README.md)
-
-* [Get](docs/sdks/kmsconfig/README.md#get) - Get Cribl KMS config
-* [Update](docs/sdks/kmsconfig/README.md#update) - Update Cribl KMS config
-
-### [KMSHealth](docs/sdks/kmshealth/README.md)
-
-* [Get](docs/sdks/kmshealth/README.md#get) - Get Cribl KMS health
-
-### [KeyMetadataEntities](docs/sdks/keymetadataentities/README.md)
-
-* [Get](docs/sdks/keymetadataentities/README.md#get) - Get a list of KeyMetadataEntity objects
-
-### [KeyMetadataEntity](docs/sdks/keymetadataentity/README.md)
-
-* [Create](docs/sdks/keymetadataentity/README.md#create) - Create KeyMetadataEntity
-* [Delete](docs/sdks/keymetadataentity/README.md#delete) - Delete KeyMetadataEntity
-* [Get](docs/sdks/keymetadataentity/README.md#get) - Get KeyMetadataEntity by ID
-* [Update](docs/sdks/keymetadataentity/README.md#update) - Update KeyMetadataEntity
-
-### [LatestPQ](docs/sdks/latestpq/README.md)
-
-* [Get](docs/sdks/latestpq/README.md#get) - Get status of latest clear PQ job for an output
-
-### [License](docs/sdks/license/README.md)
-
-* [Create](docs/sdks/license/README.md#create) - Create License
-* [Delete](docs/sdks/license/README.md#delete) - Delete License
-* [Get](docs/sdks/license/README.md#get) - Get License by ID
-
-### [LicenseUsageMetrics](docs/sdks/licenseusagemetrics/README.md)
-
-* [Get](docs/sdks/licenseusagemetrics/README.md#get) - Get license usage metrics, aggregated by day, up to last 90 days
+* [Create](docs/sdks/keys/README.md#create) - Create KeyMetadataEntity
+* [Delete](docs/sdks/keys/README.md#delete) - Delete KeyMetadataEntity
+* [Get](docs/sdks/keys/README.md#get) - Get KeyMetadataEntity by ID
+* [ListKeyMetadataEntities](docs/sdks/keys/README.md#listkeymetadataentities) - Get a list of KeyMetadataEntity objects
+* [Update](docs/sdks/keys/README.md#update) - Update KeyMetadataEntity
 
 ### [Licenses](docs/sdks/licenses/README.md)
 
-* [Get](docs/sdks/licenses/README.md#get) - Get a list of License objects
+* [Create](docs/sdks/licenses/README.md#create) - Create License
+* [Delete](docs/sdks/licenses/README.md#delete) - Delete License
+* [Get](docs/sdks/licenses/README.md#get) - Get License by ID
+* [ListLicenseUsageMetrics](docs/sdks/licenses/README.md#listlicenseusagemetrics) - Get license usage metrics, aggregated by day, up to last 90 days
+* [ListLicenses](docs/sdks/licenses/README.md#listlicenses) - Get a list of License objects
 
-### [ListAuthGroup](docs/sdks/listauthgroup/README.md)
+### [Logger](docs/sdks/logger/README.md)
 
-* [Get](docs/sdks/listauthgroup/README.md#get) - List the external authentication system's groups
+* [Delete](docs/sdks/logger/README.md#delete) - Delete LoggerConfig
+* [Get](docs/sdks/logger/README.md#get) - Get LoggerConfig by ID
+* [ListLoggerConfigs](docs/sdks/logger/README.md#listloggerconfigs) - Get a list of LoggerConfig objects
+* [Update](docs/sdks/logger/README.md#update) - Update LoggerConfig
 
-### [ListContainerDetail](docs/sdks/listcontainerdetail/README.md)
+### [Logging](docs/sdks/logging/README.md)
 
-* [Get](docs/sdks/listcontainerdetail/README.md#get) - Get a detailed list of containers running on the edge host.
-
-### [ListCriblVersion](docs/sdks/listcriblversion/README.md)
-
-* [Get](docs/sdks/listcriblversion/README.md#get) - Get a list of Cribl versions available for upgrade
-
-### [ListDataSample](docs/sdks/listdatasample/README.md)
-
-* [Get](docs/sdks/listdatasample/README.md#get) - Get a list of DataSample objects
-
-### [ListDatabaseConnection](docs/sdks/listdatabaseconnection/README.md)
-
-* [Get](docs/sdks/listdatabaseconnection/README.md#get) - Get a list of DatabaseConnection objects
-
-### [ListEventBreaker](docs/sdks/listeventbreaker/README.md)
-
-* [Get](docs/sdks/listeventbreaker/README.md#get) - Get a list of Event Breaker Ruleset objects
-
-### [ListGlobalVariable](docs/sdks/listglobalvariable/README.md)
-
-* [Get](docs/sdks/listglobalvariable/README.md#get) - Get a list of Global Variable objects
-
-### [ListParser](docs/sdks/listparser/README.md)
-
-* [Get](docs/sdks/listparser/README.md#get) - Get a list of Parser objects
-
-### [ListProcessRunningDetail](docs/sdks/listprocessrunningdetail/README.md)
-
-* [Get](docs/sdks/listprocessrunningdetail/README.md#get) - Get a detailed list of processes running on the edge host
-
-### [ListSchema](docs/sdks/listschema/README.md)
-
-* [Get](docs/sdks/listschema/README.md#get) - Get a list of Schema objects
-
-### [LiveData](docs/sdks/livedata/README.md)
-
-* [Post](docs/sdks/livedata/README.md#post) - Capture live incoming data
-
-### [LogFileContent](docs/sdks/logfilecontent/README.md)
-
-* [Get](docs/sdks/logfilecontent/README.md#get) - Get contents of the log file
-
-### [LogFileContents](docs/sdks/logfilecontents/README.md)
-
-* [Get](docs/sdks/logfilecontents/README.md#get) - Get contents of the log file
-
-### [LogFileList](docs/sdks/logfilelist/README.md)
-
-* [Get](docs/sdks/logfilelist/README.md#get) - list log files
-
-### [LogFiles](docs/sdks/logfiles/README.md)
-
-* [Get](docs/sdks/logfiles/README.md#get) - Get a list of log files
-
-### [LogFilesContent](docs/sdks/logfilescontent/README.md)
-
-* [Get](docs/sdks/logfilescontent/README.md#get) - Get contents of the log file
-
-### [LogandTextual](docs/sdks/logandtextual/README.md)
-
-* [Get](docs/sdks/logandtextual/README.md#get) - get the log message and textual diff for given commit
-
-### [LoggerConfig](docs/sdks/loggerconfig/README.md)
-
-* [Delete](docs/sdks/loggerconfig/README.md#delete) - Delete LoggerConfig
-* [Get](docs/sdks/loggerconfig/README.md#get) - Get LoggerConfig by ID
-* [Update](docs/sdks/loggerconfig/README.md#update) - Update LoggerConfig
-
-### [LoggerConfigs](docs/sdks/loggerconfigs/README.md)
-
-* [Get](docs/sdks/loggerconfigs/README.md#get) - Get a list of LoggerConfig objects
-
-### [Lookup](docs/sdks/lookup/README.md)
-
-* [Create](docs/sdks/lookup/README.md#create) - Create LookupFile
-* [Delete](docs/sdks/lookup/README.md#delete) - Delete LookupFile
-* [Get](docs/sdks/lookup/README.md#get) - Get LookupFile by ID
-* [Update](docs/sdks/lookup/README.md#update) - Update LookupFile
-* [Upload](docs/sdks/lookup/README.md#upload) - Upload LookupFile
+* [Get](docs/sdks/logging/README.md#get) - Get contents of the log file
+* [ListLogFileContents](docs/sdks/logging/README.md#listlogfilecontents) - Get contents of the log file
+* [ListLogFiles](docs/sdks/logging/README.md#listlogfiles) - Get a list of log files
+* [ListLogFilesContents](docs/sdks/logging/README.md#listlogfilescontents) - Get contents of the log file
 
 ### [Lookups](docs/sdks/lookups/README.md)
 
-* [Get](docs/sdks/lookups/README.md#get) - Get a list of LookupFile objects
+* [Create](docs/sdks/lookups/README.md#create) - Create LookupFile
+* [Delete](docs/sdks/lookups/README.md#delete) - Delete LookupFile
+* [Get](docs/sdks/lookups/README.md#get) - Get LookupFile by ID
+* [ListLookups](docs/sdks/lookups/README.md#listlookups) - Get a list of LookupFile objects
+* [Update](docs/sdks/lookups/README.md#update) - Update LookupFile
+* [Upload](docs/sdks/lookups/README.md#upload) - Upload LookupFile
 
-### [MappingRuleset](docs/sdks/mappingruleset/README.md)
+### [Mappings](docs/sdks/mappings/README.md)
 
-* [Create](docs/sdks/mappingruleset/README.md#create) - Create MappingRuleset
-* [Delete](docs/sdks/mappingruleset/README.md#delete) - Delete MappingRuleset
-* [Get](docs/sdks/mappingruleset/README.md#get) - Get MappingRuleset by ID
-* [Update](docs/sdks/mappingruleset/README.md#update) - Update MappingRuleset
+* [Create](docs/sdks/mappings/README.md#create) - Create MappingRuleset
+* [Delete](docs/sdks/mappings/README.md#delete) - Delete MappingRuleset
+* [Get](docs/sdks/mappings/README.md#get) - Get MappingRuleset by ID
+* [ListMappingRulesets](docs/sdks/mappings/README.md#listmappingrulesets) - Get a list of MappingRuleset objects
+* [Update](docs/sdks/mappings/README.md#update) - Update MappingRuleset
 
-### [MappingRulesetID](docs/sdks/mappingrulesetid/README.md)
+### [Messages](docs/sdks/messages/README.md)
 
-* [Get](docs/sdks/mappingrulesetid/README.md#get) - Get MappingRuleset by ID
-
-### [MappingRulesets](docs/sdks/mappingrulesets/README.md)
-
-* [Delete](docs/sdks/mappingrulesets/README.md#delete) - Delete MappingRuleset
-* [Get](docs/sdks/mappingrulesets/README.md#get) - Get a list of MappingRuleset objects
-* [Update](docs/sdks/mappingrulesets/README.md#update) - Update MappingRuleset
-
-### [MasterNodePackage](docs/sdks/masternodepackage/README.md)
-
-* [Post](docs/sdks/masternodepackage/README.md#post) - Upgrade master node with the provided package
+* [Create](docs/sdks/messages/README.md#create) - Create BulletinMessage
+* [Delete](docs/sdks/messages/README.md#delete) - Delete BulletinMessage
+* [Get](docs/sdks/messages/README.md#get) - Get BulletinMessage by ID
+* [ListBulletinMessages](docs/sdks/messages/README.md#listbulletinmessages) - Get a list of BulletinMessage objects
 
 ### [Metrics](docs/sdks/metrics/README.md)
 
+* [Aggregate](docs/sdks/metrics/README.md#aggregate) - Aggregate raw internal system metrics
 * [Post](docs/sdks/metrics/README.md#post) - Enumerate all internal system metrics
 * [Query](docs/sdks/metrics/README.md#query) - Query raw internal system metrics
 
-### [NotificationTarget](docs/sdks/notificationtarget/README.md)
-
-* [Create](docs/sdks/notificationtarget/README.md#create) - Create NotificationTarget
-* [Delete](docs/sdks/notificationtarget/README.md#delete) - Delete NotificationTarget
-* [Get](docs/sdks/notificationtarget/README.md#get) - Get NotificationTarget by ID
-* [Update](docs/sdks/notificationtarget/README.md#update) - Update NotificationTarget
-
 ### [NotificationTargets](docs/sdks/notificationtargets/README.md)
 
-* [Get](docs/sdks/notificationtargets/README.md#get) - Get a list of NotificationTarget objects
+* [Create](docs/sdks/notificationtargets/README.md#create) - Create NotificationTarget
+* [Delete](docs/sdks/notificationtargets/README.md#delete) - Delete NotificationTarget
+* [Get](docs/sdks/notificationtargets/README.md#get) - Get NotificationTarget by ID
+* [ListNotificationTargets](docs/sdks/notificationtargets/README.md#listnotificationtargets) - Get a list of NotificationTarget objects
+* [Update](docs/sdks/notificationtargets/README.md#update) - Update NotificationTarget
 
-### [ObjectFunction](docs/sdks/objectfunction/README.md)
+### [Outputs](docs/sdks/outputs/README.md)
 
-* [Get](docs/sdks/objectfunction/README.md#get) - Get a list of Function objects
-
-### [OutputID](docs/sdks/outputid/README.md)
-
-* [Delete](docs/sdks/outputid/README.md#delete) - Delete Output
-* [Get](docs/sdks/outputid/README.md#get) - Get Output by ID
-* [Update](docs/sdks/outputid/README.md#update) - Update Output
-
-### [OutputObject](docs/sdks/outputobject/README.md)
-
-* [Create](docs/sdks/outputobject/README.md#create) - Create Output
-
-### [OutputObjects](docs/sdks/outputobjects/README.md)
-
-* [Get](docs/sdks/outputobjects/README.md#get) - Get a list of Output objects
-
-### [OutputStatus](docs/sdks/outputstatus/README.md)
-
-* [Get](docs/sdks/outputstatus/README.md#get) - Get a list of OutputStatus objects
-
-### [OutputStatusID](docs/sdks/outputstatusid/README.md)
-
-* [Get](docs/sdks/outputstatusid/README.md#get) - Get OutputStatus by ID
-
-### [Pack](docs/sdks/pack/README.md)
-
-* [Clone](docs/sdks/pack/README.md#clone) - Clone Pack
-* [Export](docs/sdks/pack/README.md#export) - Export Pack
-* [Install](docs/sdks/pack/README.md#install) - Install Pack
-* [Uninstall](docs/sdks/pack/README.md#uninstall) - Uninstall Pack from the system
-* [Upgrade](docs/sdks/pack/README.md#upgrade) - Upgrade Pack
-* [Upload](docs/sdks/pack/README.md#upload) - Upload Pack
+* [Create](docs/sdks/outputs/README.md#create) - Create Output
+* [Delete](docs/sdks/outputs/README.md#delete) - Delete Output
+* [DeletePQ](docs/sdks/outputs/README.md#deletepq) - Delete destination persistent queue
+* [Get](docs/sdks/outputs/README.md#get) - Get Output by ID
+* [GetLatestPQ](docs/sdks/outputs/README.md#getlatestpq) - Get status of latest clear PQ job for an output
+* [GetSamples](docs/sdks/outputs/README.md#getsamples) - Get samples data for the specified output. Used to get sample data for the test action.
+* [GetStatus](docs/sdks/outputs/README.md#getstatus) - Get OutputStatus by ID
+* [ListOutputObjects](docs/sdks/outputs/README.md#listoutputobjects) - Get a list of Output objects
+* [ListOutputStatus](docs/sdks/outputs/README.md#listoutputstatus) - Get a list of OutputStatus objects
+* [Post](docs/sdks/outputs/README.md#post) - Send sample data to an output to validate configuration or test connectivity
+* [Update](docs/sdks/outputs/README.md#update) - Update Output
 
 ### [Packs](docs/sdks/packs/README.md)
 
-* [Get](docs/sdks/packs/README.md#get) - Get info on packs
+* [Clone](docs/sdks/packs/README.md#clone) - Clone Pack
+* [Export](docs/sdks/packs/README.md#export) - Export Pack
+* [Install](docs/sdks/packs/README.md#install) - Install Pack
+* [ListPacks](docs/sdks/packs/README.md#listpacks) - Get info on packs
+* [Uninstall](docs/sdks/packs/README.md#uninstall) - Uninstall Pack from the system
+* [Upgrade](docs/sdks/packs/README.md#upgrade) - Upgrade Pack
+* [Upload](docs/sdks/packs/README.md#upload) - Upload Pack
 
-### [ParserID](docs/sdks/parserid/README.md)
+### [Parquetschemas](docs/sdks/parquetschemas/README.md)
 
-* [Delete](docs/sdks/parserid/README.md#delete) - Delete Parser
-* [Get](docs/sdks/parserid/README.md#get) - Get Parser by ID
-* [Update](docs/sdks/parserid/README.md#update) - Update Parser
+* [Delete](docs/sdks/parquetschemas/README.md#delete) - Delete Schema
+* [Get](docs/sdks/parquetschemas/README.md#get) - Get Schema by ID
+* [ListSchema](docs/sdks/parquetschemas/README.md#listschema) - Get a list of Schema objects
+* [Post](docs/sdks/parquetschemas/README.md#post) - Create Schema
+* [Update](docs/sdks/parquetschemas/README.md#update) - Update Schema
 
-### [ParserObject](docs/sdks/parserobject/README.md)
+### [Parsers](docs/sdks/parsers/README.md)
 
-* [Post](docs/sdks/parserobject/README.md#post) - Create Parser
+* [Delete](docs/sdks/parsers/README.md#delete) - Delete Parser
+* [Get](docs/sdks/parsers/README.md#get) - Get Parser by ID
+* [ListParser](docs/sdks/parsers/README.md#listparser) - Get a list of Parser objects
+* [Post](docs/sdks/parsers/README.md#post) - Create Parser
+* [Update](docs/sdks/parsers/README.md#update) - Update Parser
 
-### [PipelineID](docs/sdks/pipelineid/README.md)
+### [Pipelines](docs/sdks/pipelines/README.md)
 
-* [Delete](docs/sdks/pipelineid/README.md#delete) - Delete Pipeline
-* [Get](docs/sdks/pipelineid/README.md#get) - Get Pipeline by ID
-* [Update](docs/sdks/pipelineid/README.md#update) - Update Pipeline
+* [Delete](docs/sdks/pipelines/README.md#delete) - Delete Pipeline
+* [Get](docs/sdks/pipelines/README.md#get) - Get Pipeline by ID
+* [ListPipelineObject](docs/sdks/pipelines/README.md#listpipelineobject) - Get a list of Pipeline objects
+* [Post](docs/sdks/pipelines/README.md#post) - Create Pipeline
+* [Update](docs/sdks/pipelines/README.md#update) - Update Pipeline
 
-### [PipelineObject](docs/sdks/pipelineobject/README.md)
+### [Policies](docs/sdks/policies/README.md)
 
-* [Get](docs/sdks/pipelineobject/README.md#get) - Get a list of Pipeline objects
+* [Create](docs/sdks/policies/README.md#create) - Create PolicyRule
+* [Delete](docs/sdks/policies/README.md#delete) - Delete PolicyRule
+* [Get](docs/sdks/policies/README.md#get) - Get PolicyRule by ID
+* [ListPolicyRules](docs/sdks/policies/README.md#listpolicyrules) - Get a list of PolicyRule objects
+* [Update](docs/sdks/policies/README.md#update) - Update PolicyRule
 
-### [PolicyRule](docs/sdks/policyrule/README.md)
+### [Preview](docs/sdks/preview/README.md)
 
-* [Create](docs/sdks/policyrule/README.md#create) - Create PolicyRule
-* [Delete](docs/sdks/policyrule/README.md#delete) - Delete PolicyRule
-* [Get](docs/sdks/policyrule/README.md#get) - Get PolicyRule by ID
-* [Update](docs/sdks/policyrule/README.md#update) - Update PolicyRule
-
-### [PolicyRules](docs/sdks/policyrules/README.md)
-
-* [Get](docs/sdks/policyrules/README.md#get) - Get a list of PolicyRule objects
-
-### [PreviousCriblPackage](docs/sdks/previouscriblpackage/README.md)
-
-* [Get](docs/sdks/previouscriblpackage/README.md#get) - Get the previously downloaded Cribl package
-
-### [ProcessRunningDetail](docs/sdks/processrunningdetail/README.md)
-
-* [Get](docs/sdks/processrunningdetail/README.md#get) - Get details of a process running on the edge host
+* [CaptureLiveData](docs/sdks/preview/README.md#capturelivedata) - Capture live incoming data
+* [SendEvents](docs/sdks/preview/README.md#sendevents) - Sends sample events through a pipeline and returns the results
 
 ### [Processes](docs/sdks/processes/README.md)
 
-* [Get](docs/sdks/processes/README.md#get) - Get a list of processes under management
+* [ListProcesses](docs/sdks/processes/README.md#listprocesses) - Get a list of processes under management
 
 ### [Profiler](docs/sdks/profiler/README.md)
 
 * [Create](docs/sdks/profiler/README.md#create) - Create ProfilerItem
 * [Delete](docs/sdks/profiler/README.md#delete) - Delete ProfilerItem
 * [Get](docs/sdks/profiler/README.md#get) - Get ProfilerItem by ID
+* [ListProfilers](docs/sdks/profiler/README.md#listprofilers) - Get a list of ProfilerItem objects
 * [Update](docs/sdks/profiler/README.md#update) - Update ProfilerItem
 
-### [Profilers](docs/sdks/profilers/README.md)
+### [Regexes](docs/sdks/regexes/README.md)
 
-* [Get](docs/sdks/profilers/README.md#get) - Get a list of ProfilerItem objects
-
-### [QuerySnippet](docs/sdks/querysnippet/README.md)
-
-* [Apply](docs/sdks/querysnippet/README.md#apply) - Applies a query snippet on a set of input events for preview
-
-### [RedirectInfo](docs/sdks/redirectinfo/README.md)
-
-* [Get](docs/sdks/redirectinfo/README.md#get) - Obtain redirect information
-
-### [RedirectUserAuth](docs/sdks/redirectuserauth/README.md)
-
-* [Logout](docs/sdks/redirectuserauth/README.md#logout) - Redirect user to IDP with logout request
-
-### [RegexLibEntry](docs/sdks/regexlibentry/README.md)
-
-* [Delete](docs/sdks/regexlibentry/README.md#delete) - Delete RegexLibEntry
-* [Post](docs/sdks/regexlibentry/README.md#post) - Create RegexLibEntry
-* [Update](docs/sdks/regexlibentry/README.md#update) - Update RegexLibEntry
-
-### [RegexLibEntryID](docs/sdks/regexlibentryid/README.md)
-
-* [Get](docs/sdks/regexlibentryid/README.md#get) - Get RegexLibEntry by ID
-
-### [RegexLibEntryObject](docs/sdks/regexlibentryobject/README.md)
-
-* [Get](docs/sdks/regexlibentryobject/README.md#get) - Get a list of RegexLibEntry objects
-
-### [ReloadCriblSettings](docs/sdks/reloadcriblsettings/README.md)
-
-* [Post](docs/sdks/reloadcriblsettings/README.md#post) - Reload Cribl settings from the filesystem
-
-### [RemoteRepo](docs/sdks/remoterepo/README.md)
-
-* [Sync](docs/sdks/remoterepo/README.md#sync) - syncs with remote repo via POST requests
-
-### [RequestAuth](docs/sdks/requestauth/README.md)
-
-* [Get](docs/sdks/requestauth/README.md#get) - Accepts an authentication request from an IDP and authenticates the user
-* [Post](docs/sdks/requestauth/README.md#post) - API call that the IDP should use for an authentication request
-
-### [RequestUserAuth](docs/sdks/requestuserauth/README.md)
-
-* [Logout](docs/sdks/requestuserauth/README.md#logout) - API call that the IDP should use for a logout request
-
-### [RestSecret](docs/sdks/restsecret/README.md)
-
-* [Create](docs/sdks/restsecret/README.md#create) - Create RestSecret
-* [Delete](docs/sdks/restsecret/README.md#delete) - Delete RestSecret
-* [Get](docs/sdks/restsecret/README.md#get) - Get RestSecret by ID
-* [Update](docs/sdks/restsecret/README.md#update) - Update RestSecret
-
-### [RestSecrets](docs/sdks/restsecrets/README.md)
-
-* [Get](docs/sdks/restsecrets/README.md#get) - Get a list of RestSecret objects
-
-### [RestartCriblSettings](docs/sdks/restartcriblsettings/README.md)
-
-* [Post](docs/sdks/restartcriblsettings/README.md#post) - Restart Cribl server
-
-### [Role](docs/sdks/role/README.md)
-
-* [Create](docs/sdks/role/README.md#create) - Create Role
-* [Delete](docs/sdks/role/README.md#delete) - Delete Role
-* [Get](docs/sdks/role/README.md#get) - Get Role by ID
-* [Update](docs/sdks/role/README.md#update) - Update Role
+* [Delete](docs/sdks/regexes/README.md#delete) - Delete RegexLibEntry
+* [Get](docs/sdks/regexes/README.md#get) - Get RegexLibEntry by ID
+* [ListRegexLibEntryObject](docs/sdks/regexes/README.md#listregexlibentryobject) - Get a list of RegexLibEntry objects
+* [Post](docs/sdks/regexes/README.md#post) - Create RegexLibEntry
+* [Update](docs/sdks/regexes/README.md#update) - Update RegexLibEntry
 
 ### [Roles](docs/sdks/roles/README.md)
 
-* [Get](docs/sdks/roles/README.md#get) - Get a list of Role objects
+* [Create](docs/sdks/roles/README.md#create) - Create Role
+* [Delete](docs/sdks/roles/README.md#delete) - Delete Role
+* [Get](docs/sdks/roles/README.md#get) - Get Role by ID
+* [ListRoles](docs/sdks/roles/README.md#listroles) - Get a list of Role objects
+* [Update](docs/sdks/roles/README.md#update) - Update Role
 
-### [RouteListID](docs/sdks/routelistid/README.md)
+### [Routes](docs/sdks/routes/README.md)
 
-* [Get](docs/sdks/routelistid/README.md#get) - List all routes by id
+* [Get](docs/sdks/routes/README.md#get) - List all routes by id
+* [ListRouteLists](docs/sdks/routes/README.md#listroutelists) - List all routes
+* [Update](docs/sdks/routes/README.md#update) - Add, delete or update the routes with the required content.
 
-### [RouteLists](docs/sdks/routelists/README.md)
+### [Samples](docs/sdks/samples/README.md)
 
-* [Get](docs/sdks/routelists/README.md#get) - List all routes
-
-### [RouteObject](docs/sdks/routeobject/README.md)
-
-* [Update](docs/sdks/routeobject/README.md#update) - Add, delete or update the routes with the required content.
-
-### [SampleContent](docs/sdks/samplecontent/README.md)
-
-* [Get](docs/sdks/samplecontent/README.md#get) - Get sample content by ID
-
-### [SampleEvents](docs/sdks/sampleevents/README.md)
-
-* [Post](docs/sdks/sampleevents/README.md#post) - Sends sample events through a pipeline and returns the results
-
-### [SampleOutput](docs/sdks/sampleoutput/README.md)
-
-* [Post](docs/sdks/sampleoutput/README.md#post) - Send sample data to an output to validate configuration or test connectivity
-
-### [SavedJob](docs/sdks/savedjob/README.md)
-
-* [Delete](docs/sdks/savedjob/README.md#delete) - Delete SavedJob
-* [Get](docs/sdks/savedjob/README.md#get) - Get SavedJob by ID
-* [Update](docs/sdks/savedjob/README.md#update) - Update SavedJob
+* [CaptureLiveData](docs/sdks/samples/README.md#capturelivedata) - Capture live incoming data
+* [Delete](docs/sdks/samples/README.md#delete) - Delete DataSample
+* [Get](docs/sdks/samples/README.md#get) - Get DataSample by ID
+* [GetContent](docs/sdks/samples/README.md#getcontent) - Get sample content by ID
+* [ListDataSample](docs/sdks/samples/README.md#listdatasample) - Get a list of DataSample objects
+* [Post](docs/sdks/samples/README.md#post) - Create DataSample
+* [SendEvents](docs/sdks/samples/README.md#sendevents) - Sends sample events through a pipeline and returns the results
+* [Update](docs/sdks/samples/README.md#update) - Update DataSample
 
 ### [SavedJobs](docs/sdks/savedjobs/README.md)
 
 * [Create](docs/sdks/savedjobs/README.md#create) - Create SavedJob
-* [Get](docs/sdks/savedjobs/README.md#get) - Get a list of SavedJob objects
+* [Delete](docs/sdks/savedjobs/README.md#delete) - Delete SavedJob
+* [Get](docs/sdks/savedjobs/README.md#get) - Get SavedJob by ID
+* [ListSavedJobs](docs/sdks/savedjobs/README.md#listsavedjobs) - Get a list of SavedJob objects
+* [Update](docs/sdks/savedjobs/README.md#update) - Update SavedJob
 
 ### [SavedQueries](docs/sdks/savedqueries/README.md)
 
 * [Create](docs/sdks/savedqueries/README.md#create) - Create SavedQuery
 * [Delete](docs/sdks/savedqueries/README.md#delete) - Delete SavedQuery
-* [Get](docs/sdks/savedqueries/README.md#get) - Get a list of SavedQuery objects
+* [Get](docs/sdks/savedqueries/README.md#get) - Get SavedQuery by ID
+* [ListSavedQueries](docs/sdks/savedqueries/README.md#listsavedqueries) - Get a list of SavedQuery objects
 * [Update](docs/sdks/savedqueries/README.md#update) - Update SavedQuery
-
-### [SavedQuery](docs/sdks/savedquery/README.md)
-
-* [Get](docs/sdks/savedquery/README.md#get) - Get SavedQuery by ID
-
-### [Schema](docs/sdks/schema/README.md)
-
-* [Create](docs/sdks/schema/README.md#create) - Create Schema
-* [Delete](docs/sdks/schema/README.md#delete) - Delete Schema
-* [Get](docs/sdks/schema/README.md#get) - Get Schema by ID
-* [Post](docs/sdks/schema/README.md#post) - Create Schema
-* [Update](docs/sdks/schema/README.md#update) - Update Schema
-
-### [SchemaID](docs/sdks/schemaid/README.md)
-
-* [Delete](docs/sdks/schemaid/README.md#delete) - Delete Schema
-* [Get](docs/sdks/schemaid/README.md#get) - Get Schema by ID
-* [Update](docs/sdks/schemaid/README.md#update) - Update Schema
 
 ### [Schemas](docs/sdks/schemas/README.md)
 
-* [Get](docs/sdks/schemas/README.md#get) - Get a list of Schema objects
-
-### [Script](docs/sdks/script/README.md)
-
-* [Create](docs/sdks/script/README.md#create) - Create Script
-* [Delete](docs/sdks/script/README.md#delete) - Delete Script
-* [Get](docs/sdks/script/README.md#get) - Get Script by ID
-* [Update](docs/sdks/script/README.md#update) - Update Script
+* [Create](docs/sdks/schemas/README.md#create) - Create Schema
+* [Delete](docs/sdks/schemas/README.md#delete) - Delete Schema
+* [Get](docs/sdks/schemas/README.md#get) - Get Schema by ID
+* [ListSchemas](docs/sdks/schemas/README.md#listschemas) - Get a list of Schema objects
+* [Update](docs/sdks/schemas/README.md#update) - Update Schema
 
 ### [Scripts](docs/sdks/scripts/README.md)
 
-* [Get](docs/sdks/scripts/README.md#get) - Get a list of Script objects
+* [Create](docs/sdks/scripts/README.md#create) - Create Script
+* [Delete](docs/sdks/scripts/README.md#delete) - Delete Script
+* [Get](docs/sdks/scripts/README.md#get) - Get Script by ID
+* [ListScripts](docs/sdks/scripts/README.md#listscripts) - Get a list of Script objects
+* [Update](docs/sdks/scripts/README.md#update) - Update Script
 
 ### [Search](docs/sdks/search/README.md)
 
+* [Apply](docs/sdks/search/README.md#apply) - Applies a query snippet on a set of input events for preview
+* [Create](docs/sdks/search/README.md#create) - Create SearchJob
+* [Delete](docs/sdks/search/README.md#delete) - Delete SearchJob
 * [DispatchSearch](docs/sdks/search/README.md#dispatchsearch) - Dispatch search *id* to worker nodes filtered by worker node filter using RPC
+* [Get](docs/sdks/search/README.md#get) - Get Search documentation
+* [GetJob](docs/sdks/search/README.md#getjob) - Get SearchJob by ID
+* [GetTimeline](docs/sdks/search/README.md#gettimeline) - Get search timeline
+* [ListFieldSummaries](docs/sdks/search/README.md#listfieldsummaries) - List field summaries
+* [ListJobStatus](docs/sdks/search/README.md#listjobstatus) - Get job status
+* [ListSearchJobMetrics](docs/sdks/search/README.md#listsearchjobmetrics) - Get search job metrics
+* [ListSearchJobs](docs/sdks/search/README.md#listsearchjobs) - Get a list of SearchJob objects
+* [ListSearchLogs](docs/sdks/search/README.md#listsearchlogs) - Get search logs
+* [Post](docs/sdks/search/README.md#post) - Runs an event breaker rule on the specified data
+* [Update](docs/sdks/search/README.md#update) - Update SearchJob
 
-### [SearchDoc](docs/sdks/searchdoc/README.md)
+### [Secrets](docs/sdks/secrets/README.md)
 
-* [Get](docs/sdks/searchdoc/README.md#get) - Get Search documentation
+* [Create](docs/sdks/secrets/README.md#create) - Create RestSecret
+* [Delete](docs/sdks/secrets/README.md#delete) - Delete RestSecret
+* [Get](docs/sdks/secrets/README.md#get) - Get RestSecret by ID
+* [ListRestSecrets](docs/sdks/secrets/README.md#listrestsecrets) - Get a list of RestSecret objects
+* [Update](docs/sdks/secrets/README.md#update) - Update RestSecret
 
-### [SearchJob](docs/sdks/searchjob/README.md)
+### [Security](docs/sdks/security/README.md)
 
-* [Create](docs/sdks/searchjob/README.md#create) - Create SearchJob
-* [Delete](docs/sdks/searchjob/README.md#delete) - Delete SearchJob
-* [Get](docs/sdks/searchjob/README.md#get) - Get SearchJob by ID
-* [Update](docs/sdks/searchjob/README.md#update) - Update SearchJob
+* [GetKMSConfig](docs/sdks/security/README.md#getkmsconfig) - Get Cribl KMS config
+* [GetKMSHealth](docs/sdks/security/README.md#getkmshealth) - Get Cribl KMS health
+* [Update](docs/sdks/security/README.md#update) - Update Cribl KMS config
 
-### [SearchJobMetrics](docs/sdks/searchjobmetrics/README.md)
+### [System](docs/sdks/system/README.md)
 
-* [Get](docs/sdks/searchjobmetrics/README.md#get) - Get search job metrics
-
-### [SearchJobs](docs/sdks/searchjobs/README.md)
-
-* [Get](docs/sdks/searchjobs/README.md#get) - Get a list of SearchJob objects
-
-### [SearchLimits](docs/sdks/searchlimits/README.md)
-
-* [Get](docs/sdks/searchlimits/README.md#get) - Get search limits
-
-### [SearchLogs](docs/sdks/searchlogs/README.md)
-
-* [Get](docs/sdks/searchlogs/README.md#get) - Get search logs
-
-### [SearchTimeline](docs/sdks/searchtimeline/README.md)
-
-* [Get](docs/sdks/searchtimeline/README.md#get) - Get search timeline
-
-### [SpecifiedOutput](docs/sdks/specifiedoutput/README.md)
-
-* [Get](docs/sdks/specifiedoutput/README.md#get) - Get samples data for the specified output. Used to get sample data for the test action.
-
-### [StageDistributedPackage](docs/sdks/stagedistributedpackage/README.md)
-
-* [Post](docs/sdks/stagedistributedpackage/README.md#post) - Stage distributed group upgrade
-
-### [SystemInfo](docs/sdks/systeminfo/README.md)
-
-* [Get](docs/sdks/systeminfo/README.md#get) - Get basic system information
-
-### [TaskError](docs/sdks/taskerror/README.md)
-
-* [Get](docs/sdks/taskerror/README.md#get) - Get Task errors for a job by id
-
-### [TaskErrors](docs/sdks/taskerrors/README.md)
-
-* [Get](docs/sdks/taskerrors/README.md#get) - Get Task errors for a job by id
-
-### [TestDatabaseConnection](docs/sdks/testdatabaseconnection/README.md)
-
-* [Post](docs/sdks/testdatabaseconnection/README.md#post) - Test a database connection given a type and connectionString
-
-### [TextualDiff](docs/sdks/textualdiff/README.md)
-
-* [Get](docs/sdks/textualdiff/README.md#get) - get the textual diff for given commit
+* [ReloadCriblSettings](docs/sdks/system/README.md#reloadcriblsettings) - Reload Cribl settings from the filesystem
+* [CancelRunningGroup](docs/sdks/system/README.md#cancelrunninggroup) - Cancel a running group upgrade
+* [ExecuteGroupUpgrade](docs/sdks/system/README.md#executegroupupgrade) - Execute distributed group upgrade
+* [~~Get~~](docs/sdks/system/README.md#get) - Get Cribl system settings. Deprecated: use specific endpoints /system/limits, /system/job-limits, /system/redis-cache-limits, /system/services-limits, /system/settings/git-settings, and /system/settings/conf respectively :warning: **Deprecated**
+* [GetPreviousPackage](docs/sdks/system/README.md#getpreviouspackage) - Get the previously downloaded Cribl package
+* [ListAuthenticationSettings](docs/sdks/system/README.md#listauthenticationsettings) - Get authentication settings
+* [ListCriblVersion](docs/sdks/system/README.md#listcriblversion) - Get a list of Cribl versions available for upgrade
+* [ListSearchLimits](docs/sdks/system/README.md#listsearchlimits) - Get search limits
+* [ListSettings](docs/sdks/system/README.md#listsettings) - Get Cribl system settings
+* [Restart](docs/sdks/system/README.md#restart) - Restart Cribl server
+* [StageGroupUpgrade](docs/sdks/system/README.md#stagegroupupgrade) - Stage distributed group upgrade
+* [~~Update~~](docs/sdks/system/README.md#update) - Update Cribl system settings. Deprecated: use specific endpoints /system/limits, /system/job-limits, /system/settings/git-settings, /system/settings/auth and /system/settings/conf respectively :warning: **Deprecated**
+* [UpdateAuthSettings](docs/sdks/system/README.md#updateauthsettings) - Update authentication settings
+* [UpdateChangelogViewState](docs/sdks/system/README.md#updatechangelogviewstate) - Update changelog viewed state
+* [UpdateCriblSettings](docs/sdks/system/README.md#updatecriblsettings) - Update Cribl system settings
+* [UpgradeCribl](docs/sdks/system/README.md#upgradecribl) - Upgrade Cribl to a given version
+* [UpgradeMaster](docs/sdks/system/README.md#upgrademaster) - Upgrade master node with the provided package
 
 ### [TrustPolicies](docs/sdks/trustpolicies/README.md)
 
-* [Get](docs/sdks/trustpolicies/README.md#get) - Get a list of TrustPolicy objects
+* [ListTrustPolicies](docs/sdks/trustpolicies/README.md#listtrustpolicies) - Get a list of TrustPolicy objects
 
 ### [UIState](docs/sdks/uistate/README.md)
 
 * [Get](docs/sdks/uistate/README.md#get) - Get UI state by key
 * [Update](docs/sdks/uistate/README.md#update) - Update UI state by key
 
-### [User](docs/sdks/user/README.md)
+### [Users](docs/sdks/users/README.md)
 
-* [CreateUser](docs/sdks/user/README.md#createuser) - Create User
-
-### [UserAuth](docs/sdks/userauth/README.md)
-
-* [Logout](docs/sdks/userauth/README.md#logout) - Log current user out
-
-### [UserID](docs/sdks/userid/README.md)
-
-* [Delete](docs/sdks/userid/README.md#delete) - Delete User
-* [Get](docs/sdks/userid/README.md#get) - Get User by ID
-
-### [UserObject](docs/sdks/userobject/README.md)
-
-* [Get](docs/sdks/userobject/README.md#get) - Get a list of User objects
-* [Update](docs/sdks/userobject/README.md#update) - Update User except for their roles
-
-### [UserProperties](docs/sdks/userproperties/README.md)
-
-* [Update](docs/sdks/userproperties/README.md#update) - Update User properties – admin use only
+* [CreateUser](docs/sdks/users/README.md#createuser) - Create User
+* [Delete](docs/sdks/users/README.md#delete) - Delete User
+* [Get](docs/sdks/users/README.md#get) - Get User by ID
+* [ListUsers](docs/sdks/users/README.md#listusers) - Get a list of User objects
+* [UpdateInfo](docs/sdks/users/README.md#updateinfo) - Update User except for their roles
+* [UpdateProperties](docs/sdks/users/README.md#updateproperties) - Update User properties – admin use only
 
 ### [Versioning](docs/sdks/versioning/README.md)
 
+* [CountFiles](docs/sdks/versioning/README.md#countfiles) - get the count of files of changed
+* [Create](docs/sdks/versioning/README.md#create) - create a new commit containing the current configs the given log message describing the changes.
 * [Get](docs/sdks/versioning/README.md#get) - Get info about versioning availability
+* [GetLogandTextualDiff](docs/sdks/versioning/README.md#getlogandtextualdiff) - get the log message and textual diff for given commit
+* [GetTextualDiff](docs/sdks/versioning/README.md#gettextualdiff) - get the textual diff for given commit
+* [GetWorkingTree](docs/sdks/versioning/README.md#getworkingtree) - get the the working tree status
+* [ListBranches](docs/sdks/versioning/README.md#listbranches) - get the list of branches
+* [ListChangedFiles](docs/sdks/versioning/README.md#listchangedfiles) - get the files changed
+* [Push](docs/sdks/versioning/README.md#push) - push the current configs to the remote repository.
+* [Sync](docs/sdks/versioning/README.md#sync) - syncs with remote repo via POST requests
 
-### [WorkerEdgeNodes](docs/sdks/workeredgenodes/README.md)
+### [Workers](docs/sdks/workers/README.md)
 
-* [Get](docs/sdks/workeredgenodes/README.md#get) - get worker and edge nodes
-* [Restarts](docs/sdks/workeredgenodes/README.md#restarts) - restarts worker nodes
-
-### [WorkerEdgeNodesCount](docs/sdks/workeredgenodescount/README.md)
-
-* [Get](docs/sdks/workeredgenodescount/README.md#get) - get worker and edge nodes count
-
-### [WorkingTree](docs/sdks/workingtree/README.md)
-
-* [Get](docs/sdks/workingtree/README.md#get) - get the the working tree status
+* [Get](docs/sdks/workers/README.md#get) - get worker and edge nodes count
+* [ListWorkerEdgeNodes](docs/sdks/workers/README.md#listworkeredgenodes) - get worker and edge nodes
+* [Restart](docs/sdks/workers/README.md#restart) - restarts worker nodes
 <!-- End SDK Available Operations -->
 
 ### Maturity

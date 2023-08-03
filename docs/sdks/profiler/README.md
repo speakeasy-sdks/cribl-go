@@ -5,6 +5,7 @@
 * [Create](#create) - Create ProfilerItem
 * [Delete](#delete) - Delete ProfilerItem
 * [Get](#get) - Get ProfilerItem by ID
+* [ListProfilers](#listprofilers) - Get a list of ProfilerItem objects
 * [Update](#update) - Update ProfilerItem
 
 ## Create
@@ -32,10 +33,10 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Profiler.Create(ctx, shared.ProfilerItem{
-        CreateTime: cribl.Int64(496578),
-        ID: "00878756-143f-45a6-898b-55554080d40b",
-        Size: cribl.Int64(751298),
-        WorkerID: cribl.String("similique"),
+        CreateTime: cribl.Int64(34989),
+        ID: "688f77c1-ffc7-41dc-a163-f2a3c80a97ff",
+        Size: cribl.Int64(242013),
+        WorkerID: cribl.String("adipisci"),
     })
     if err != nil {
         log.Fatal(err)
@@ -83,7 +84,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "porro"
+    id := "non"
 
     ctx := context.Background()
     res, err := s.Profiler.Delete(ctx, id)
@@ -133,7 +134,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "impedit"
+    id := "optio"
 
     ctx := context.Background()
     res, err := s.Profiler.Get(ctx, id)
@@ -160,6 +161,53 @@ func main() {
 **[*operations.GetProfilerResponse](../../models/operations/getprofilerresponse.md), error**
 
 
+## ListProfilers
+
+Get a list of ProfilerItem objects
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	"github.com/speakeasy-sdks/cribl-go"
+	"github.com/speakeasy-sdks/cribl-go/pkg/models/shared"
+)
+
+func main() {
+    s := cribl.New(
+        cribl.WithSecurity(shared.Security{
+            BearerAuth: "",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.Profiler.ListProfilers(ctx)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.ProfilerItems != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+
+
+### Response
+
+**[*operations.ListProfilersResponse](../../models/operations/listprofilersresponse.md), error**
+
+
 ## Update
 
 Update ProfilerItem
@@ -183,12 +231,12 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "nisi"
+    id := "illum"
     profilerItem := &shared.ProfilerItem{
-        CreateTime: cribl.Int64(768920),
-        ID: "bd6b5f3e-c909-4304-b926-bad2553819b4",
-        Size: cribl.Int64(452653),
-        WorkerID: cribl.String("eius"),
+        CreateTime: cribl.Int64(870183),
+        ID: "f857a9e6-1876-4c6a-b21d-29dfc94d6fec",
+        Size: cribl.Int64(818078),
+        WorkerID: cribl.String("dignissimos"),
     }
 
     ctx := context.Background()
