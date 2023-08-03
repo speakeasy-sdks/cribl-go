@@ -27,12 +27,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    query := "nam"
+    context := "earum"
 
     ctx := context.Background()
-    res, err := s.Cluis.Get(ctx, operations.GetCluisRequest{
-        Context: cribl.String("nemo"),
-        Query: "asperiores",
-    })
+    res, err := s.Cluis.Get(ctx, query, context)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,10 +44,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| `ctx`                                                                    | [context.Context](https://pkg.go.dev/context#Context)                    | :heavy_check_mark:                                                       | The context to use for the request.                                      |
-| `request`                                                                | [operations.GetCluisRequest](../../models/operations/getcluisrequest.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `query`                                               | *string*                                              | :heavy_check_mark:                                    | Search query                                          |
+| `context`                                             | **string*                                             | :heavy_minus_sign:                                    | Search query context, either "stream" or "edge"       |
 
 
 ### Response

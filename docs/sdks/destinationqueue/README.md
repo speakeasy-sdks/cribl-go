@@ -27,11 +27,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "magnam"
 
     ctx := context.Background()
-    res, err := s.DestinationQueue.Delete(ctx, operations.DeleteDestinationQueueRequest{
-        ID: "aea4c506-a8aa-494c-8264-4cf5e9d9a457",
-    })
+    res, err := s.DestinationQueue.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,10 +43,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.DeleteDestinationQueueRequest](../../models/operations/deletedestinationqueuerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Output Id                                             |
 
 
 ### Response

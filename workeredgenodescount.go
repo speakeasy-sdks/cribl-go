@@ -27,7 +27,11 @@ func newWorkerEdgeNodesCount(sdkConfig sdkConfiguration) *workerEdgeNodesCount {
 
 // Get - get worker and edge nodes count
 // get worker and edge nodes count
-func (s *workerEdgeNodesCount) Get(ctx context.Context, request operations.GetWorkerEdgeNodesCountRequest) (*operations.GetWorkerEdgeNodesCountResponse, error) {
+func (s *workerEdgeNodesCount) Get(ctx context.Context, filterExp *string) (*operations.GetWorkerEdgeNodesCountResponse, error) {
+	request := operations.GetWorkerEdgeNodesCountRequest{
+		FilterExp: filterExp,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/master/summary/workers"
 

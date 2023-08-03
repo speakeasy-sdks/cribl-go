@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateUserPropertiesRequest struct {
-	// UserProfile object
-	UserProfile *shared.UserProfile `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateUserPropertiesRequest) GetUserProfile() *shared.UserProfile {
-	if o == nil {
-		return nil
-	}
-	return o.UserProfile
+	// UserProfile object
+	UserProfile *shared.UserProfile `request:"mediaType=application/json"`
 }
 
 func (o *UpdateUserPropertiesRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateUserPropertiesRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateUserPropertiesRequest) GetUserProfile() *shared.UserProfile {
+	if o == nil {
+		return nil
+	}
+	return o.UserProfile
 }
 
 type UpdateUserPropertiesResponse struct {

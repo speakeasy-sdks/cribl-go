@@ -27,11 +27,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    path := "architecto"
 
     ctx := context.Background()
-    res, err := s.EdgeListing.Get(ctx, operations.GetEdgeListingRequest{
-        Path: "quasi",
-    })
+    res, err := s.EdgeListing.Get(ctx, path)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,10 +43,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetEdgeListingRequest](../../models/operations/getedgelistingrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `path`                                                | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response

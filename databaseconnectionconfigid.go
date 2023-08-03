@@ -26,7 +26,11 @@ func newDatabaseConnectionConfigID(sdkConfig sdkConfiguration) *databaseConnecti
 
 // Delete - Delete DatabaseConnectionConfig
 // Delete DatabaseConnectionConfig
-func (s *databaseConnectionConfigID) Delete(ctx context.Context, request operations.DeleteDatabaseConnectionConfigIDRequest) (*operations.DeleteDatabaseConnectionConfigIDResponse, error) {
+func (s *databaseConnectionConfigID) Delete(ctx context.Context, id string) (*operations.DeleteDatabaseConnectionConfigIDResponse, error) {
+	request := operations.DeleteDatabaseConnectionConfigIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/database-connections/{id}", request, nil)
 	if err != nil {
@@ -103,7 +107,11 @@ func (s *databaseConnectionConfigID) Delete(ctx context.Context, request operati
 
 // Get - Get DatabaseConnectionConfig by ID
 // Get DatabaseConnectionConfig by ID
-func (s *databaseConnectionConfigID) Get(ctx context.Context, request operations.GetDatabaseConnectionConfigIDRequest) (*operations.GetDatabaseConnectionConfigIDResponse, error) {
+func (s *databaseConnectionConfigID) Get(ctx context.Context, id string) (*operations.GetDatabaseConnectionConfigIDResponse, error) {
+	request := operations.GetDatabaseConnectionConfigIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/database-connections/{id}", request, nil)
 	if err != nil {
@@ -180,7 +188,12 @@ func (s *databaseConnectionConfigID) Get(ctx context.Context, request operations
 
 // Update - Update DatabaseConnectionConfig
 // Update DatabaseConnectionConfig
-func (s *databaseConnectionConfigID) Update(ctx context.Context, request operations.UpdateDatabaseConnectionConfigIDRequest) (*operations.UpdateDatabaseConnectionConfigIDResponse, error) {
+func (s *databaseConnectionConfigID) Update(ctx context.Context, id string, databaseConnectionConfig *shared.DatabaseConnectionConfig) (*operations.UpdateDatabaseConnectionConfigIDResponse, error) {
+	request := operations.UpdateDatabaseConnectionConfigIDRequest{
+		ID:                       id,
+		DatabaseConnectionConfig: databaseConnectionConfig,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/database-connections/{id}", request, nil)
 	if err != nil {

@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateProfilerRequest struct {
-	// ProfilerItem object to be updated
-	ProfilerItem *shared.ProfilerItem `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateProfilerRequest) GetProfilerItem() *shared.ProfilerItem {
-	if o == nil {
-		return nil
-	}
-	return o.ProfilerItem
+	// ProfilerItem object to be updated
+	ProfilerItem *shared.ProfilerItem `request:"mediaType=application/json"`
 }
 
 func (o *UpdateProfilerRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateProfilerRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateProfilerRequest) GetProfilerItem() *shared.ProfilerItem {
+	if o == nil {
+		return nil
+	}
+	return o.ProfilerItem
 }
 
 type UpdateProfilerResponse struct {

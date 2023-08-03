@@ -31,17 +31,17 @@ func main() {
 
     ctx := context.Background()
     res, err := s.BulletinMessage.Create(ctx, shared.BulletinMessage{
-        Group: cribl.String("provident"),
-        ID: "dfe0ab7d-a8a5-40ce-987f-86bc173d689e",
+        Group: cribl.String("error"),
+        ID: "eee9526f-8d98-46e8-81ea-d4f0e1012563",
         Metadata: []shared.BulletinMessageMetadata{
             shared.BulletinMessageMetadata{},
             shared.BulletinMessageMetadata{},
             shared.BulletinMessageMetadata{},
             shared.BulletinMessageMetadata{},
         },
-        Severity: shared.BulletinMessageSeverityFatal.ToPointer(),
-        Text: "natus",
-        Time: cribl.Int64(328303),
+        Severity: shared.BulletinMessageSeverityError.ToPointer(),
+        Text: "magnam",
+        Time: cribl.Int64(906355),
         Title: cribl.String("Mr."),
     })
     if err != nil {
@@ -90,11 +90,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "occaecati"
 
     ctx := context.Background()
-    res, err := s.BulletinMessage.Delete(ctx, operations.DeleteBulletinMessageRequest{
-        ID: "6f8d986e-881e-4ad4-b0e1-012563f94e29",
-    })
+    res, err := s.BulletinMessage.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -107,10 +106,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.DeleteBulletinMessageRequest](../../models/operations/deletebulletinmessagerequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -141,11 +140,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "officiis"
 
     ctx := context.Background()
-    res, err := s.BulletinMessage.Get(ctx, operations.GetBulletinMessageRequest{
-        ID: "e973e922-a57a-415b-a3e0-60807e2b6e3a",
-    })
+    res, err := s.BulletinMessage.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -158,10 +156,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.GetBulletinMessageRequest](../../models/operations/getbulletinmessagerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response

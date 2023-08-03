@@ -31,29 +31,27 @@ func main() {
     res, err := s.InternalSystemMetrics.Post(ctx, shared.MetricsAggOpts{
         Aggs: shared.AggregationMgrOptions{
             Aggregations: []string{
-                "ducimus",
-                "libero",
+                "alias",
             },
             Cumulative: false,
-            FlushEventLimit: 562065,
-            FlushMemLimit: 900676,
-            Hostname: "eager-satire.name",
-            IdleTimeLimitSeconds: cribl.Int64(849690),
-            LagToleranceSeconds: cribl.Int64(717853),
+            FlushEventLimit: 910073,
+            FlushMemLimit: 941668,
+            Hostname: "altruistic-doorpost.biz",
+            IdleTimeLimitSeconds: cribl.Int64(185897),
+            LagToleranceSeconds: cribl.Int64(895912),
             MetricsMode: false,
-            Prefix: cribl.String("voluptatem"),
+            Prefix: cribl.String("harum"),
             PreserveSplitByStructure: cribl.Bool(false),
-            SearchAggMode: cribl.String("non"),
+            SearchAggMode: cribl.String("explicabo"),
             SplitBys: []string{
-                "consequatur",
-                "laudantium",
+                "aliquid",
             },
             SufficientStatsOnly: false,
-            TimeWindowSeconds: 831067,
+            TimeWindowSeconds: 264649,
         },
         AlwaysBounds: cribl.Bool(false),
         Metrics: &shared.MetricsStore{},
-        Where: cribl.String("commodi"),
+        Where: cribl.String("optio"),
     })
     if err != nil {
         log.Fatal(err)

@@ -32,9 +32,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Role.Create(ctx, shared.Role{
-        ID: "85b26059-1d74-45e3-8205-9c9c3f567e0e",
+        ID: "355338ce-c086-4fa2-9e91-52cb3119167b",
         Policy: []string{
-            "corporis",
+            "necessitatibus",
+            "ipsum",
+            "impedit",
         },
     })
     if err != nil {
@@ -83,11 +85,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "quos"
 
     ctx := context.Background()
-    res, err := s.Role.Delete(ctx, operations.DeleteRoleRequest{
-        ID: "2765b1d6-2fcd-4ace-9f01-216ce2239e8f",
-    })
+    res, err := s.Role.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -100,10 +101,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.DeleteRoleRequest](../../models/operations/deleterolerequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -134,11 +135,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "illum"
 
     ctx := context.Background()
-    res, err := s.Role.Get(ctx, operations.GetRoleRequest{
-        ID: "25cd0d19-d959-4f43-9e39-266cbd95f7aa",
-    })
+    res, err := s.Role.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -151,10 +151,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `ctx`                                                                  | [context.Context](https://pkg.go.dev/context#Context)                  | :heavy_check_mark:                                                     | The context to use for the request.                                    |
-| `request`                                                              | [operations.GetRoleRequest](../../models/operations/getrolerequest.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -185,18 +185,17 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "distinctio"
+    role := &shared.Role{
+        ID: "03408d6d-364f-4fd4-9590-6d1263d48e93",
+        Policy: []string{
+            "quod",
+            "dolores",
+        },
+    }
 
     ctx := context.Background()
-    res, err := s.Role.Update(ctx, operations.UpdateRoleRequest{
-        Role: &shared.Role{
-            ID: "2b241136-95d1-4e66-98fc-c4596217c297",
-            Policy: []string{
-                "aliquid",
-                "voluptate",
-            },
-        },
-        ID: "63342540-38bf-4b59-b1e9-8190557389ce",
-    })
+    res, err := s.Role.Update(ctx, id, role)
     if err != nil {
         log.Fatal(err)
     }
@@ -209,10 +208,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.UpdateRoleRequest](../../models/operations/updaterolerequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `role`                                                | [*shared.Role](../../models/shared/role.md)           | :heavy_minus_sign:                                    | Role object to be updated                             |
 
 
 ### Response

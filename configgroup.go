@@ -108,7 +108,11 @@ func (s *configGroup) Create(ctx context.Context, request shared.ConfigGroup) (*
 
 // Delete - Delete ConfigGroup
 // Delete ConfigGroup
-func (s *configGroup) Delete(ctx context.Context, request operations.DeleteConfigGroupRequest) (*operations.DeleteConfigGroupResponse, error) {
+func (s *configGroup) Delete(ctx context.Context, id string) (*operations.DeleteConfigGroupResponse, error) {
+	request := operations.DeleteConfigGroupRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/master/groups/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,12 @@ func (s *configGroup) Delete(ctx context.Context, request operations.DeleteConfi
 
 // Get - Get a specific ConfigGroup object
 // Get a specific ConfigGroup object
-func (s *configGroup) Get(ctx context.Context, request operations.GetConfigGroupRequest) (*operations.GetConfigGroupResponse, error) {
+func (s *configGroup) Get(ctx context.Context, id string, fields *string) (*operations.GetConfigGroupResponse, error) {
+	request := operations.GetConfigGroupRequest{
+		ID:     id,
+		Fields: fields,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/master/groups/{id}", request, nil)
 	if err != nil {
@@ -266,7 +275,12 @@ func (s *configGroup) Get(ctx context.Context, request operations.GetConfigGroup
 
 // Update - Update ConfigGroup
 // Update ConfigGroup
-func (s *configGroup) Update(ctx context.Context, request operations.UpdateConfigGroupRequest) (*operations.UpdateConfigGroupResponse, error) {
+func (s *configGroup) Update(ctx context.Context, id string, configGroup *shared.ConfigGroup) (*operations.UpdateConfigGroupResponse, error) {
+	request := operations.UpdateConfigGroupRequest{
+		ID:          id,
+		ConfigGroup: configGroup,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/master/groups/{id}", request, nil)
 	if err != nil {

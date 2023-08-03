@@ -8,17 +8,10 @@ import (
 )
 
 type DeployFleetOrWorkerGroupRequest struct {
-	// DeployRequest object
-	DeployRequest *shared.DeployRequest `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *DeployFleetOrWorkerGroupRequest) GetDeployRequest() *shared.DeployRequest {
-	if o == nil {
-		return nil
-	}
-	return o.DeployRequest
+	// DeployRequest object
+	DeployRequest *shared.DeployRequest `request:"mediaType=application/json"`
 }
 
 func (o *DeployFleetOrWorkerGroupRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *DeployFleetOrWorkerGroupRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *DeployFleetOrWorkerGroupRequest) GetDeployRequest() *shared.DeployRequest {
+	if o == nil {
+		return nil
+	}
+	return o.DeployRequest
 }
 
 type DeployFleetOrWorkerGroupResponse struct {

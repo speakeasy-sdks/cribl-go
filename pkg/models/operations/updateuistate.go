@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateUIStateRequest struct {
-	// UI State Patch object
-	UIStatePatch *shared.UIStatePatch `request:"mediaType=application/json"`
 	// UI state key
 	Key string `pathParam:"style=simple,explode=false,name=key"`
-}
-
-func (o *UpdateUIStateRequest) GetUIStatePatch() *shared.UIStatePatch {
-	if o == nil {
-		return nil
-	}
-	return o.UIStatePatch
+	// UI State Patch object
+	UIStatePatch *shared.UIStatePatch `request:"mediaType=application/json"`
 }
 
 func (o *UpdateUIStateRequest) GetKey() string {
@@ -26,6 +19,13 @@ func (o *UpdateUIStateRequest) GetKey() string {
 		return ""
 	}
 	return o.Key
+}
+
+func (o *UpdateUIStateRequest) GetUIStatePatch() *shared.UIStatePatch {
+	if o == nil {
+		return nil
+	}
+	return o.UIStatePatch
 }
 
 type UpdateUIStateResponse struct {

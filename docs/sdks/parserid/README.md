@@ -29,11 +29,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "eius"
 
     ctx := context.Background()
-    res, err := s.ParserID.Delete(ctx, operations.DeleteParserIDRequest{
-        ID: "5047b4c2-1ccb-4423-abcd-c91faabdd88e",
-    })
+    res, err := s.ParserID.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.DeleteParserIDRequest](../../models/operations/deleteparseridrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -80,11 +79,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "rerum"
 
     ctx := context.Background()
-    res, err := s.ParserID.Get(ctx, operations.GetParserIDRequest{
-        ID: "71f6c482-52d7-4771-a7fd-074009ef8d29",
-    })
+    res, err := s.ParserID.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -97,10 +95,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.GetParserIDRequest](../../models/operations/getparseridrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -131,17 +129,14 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "itaque"
+    requestBody := map[string]interface{}{
+        "ipsam": "explicabo",
+        "impedit": "aliquid",
+    }
 
     ctx := context.Background()
-    res, err := s.ParserID.Update(ctx, operations.UpdateParserIDRequest{
-        RequestBody: map[string]interface{}{
-            "voluptates": "illo",
-            "facere": "fugiat",
-            "ducimus": "aut",
-            "provident": "voluptate",
-        },
-        ID: "b5da08c5-7fa6-4c78-a216-e19bafeca619",
-    })
+    res, err := s.ParserID.Update(ctx, id, requestBody)
     if err != nil {
         log.Fatal(err)
     }
@@ -154,10 +149,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.UpdateParserIDRequest](../../models/operations/updateparseridrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `requestBody`                                         | map[string]*interface{}*                              | :heavy_minus_sign:                                    | Parser object to be updated                           |
 
 
 ### Response

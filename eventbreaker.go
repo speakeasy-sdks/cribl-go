@@ -27,7 +27,11 @@ func newEventBreaker(sdkConfig sdkConfiguration) *eventBreaker {
 
 // Delete - Delete Event Breaker Ruleset
 // Delete Event Breaker Ruleset
-func (s *eventBreaker) Delete(ctx context.Context, request operations.DeleteEventBreakerRequest) (*operations.DeleteEventBreakerResponse, error) {
+func (s *eventBreaker) Delete(ctx context.Context, id string) (*operations.DeleteEventBreakerResponse, error) {
+	request := operations.DeleteEventBreakerRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/breakers/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,12 @@ func (s *eventBreaker) Post(ctx context.Context, request shared.EventBreakerRule
 
 // Update - Update Event Breaker Ruleset
 // Update Event Breaker Ruleset
-func (s *eventBreaker) Update(ctx context.Context, request operations.UpdateEventBreakerRequest) (*operations.UpdateEventBreakerResponse, error) {
+func (s *eventBreaker) Update(ctx context.Context, id string, eventBreakerRuleset *shared.EventBreakerRuleset) (*operations.UpdateEventBreakerResponse, error) {
+	request := operations.UpdateEventBreakerRequest{
+		ID:                  id,
+		EventBreakerRuleset: eventBreakerRuleset,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/breakers/{id}", request, nil)
 	if err != nil {

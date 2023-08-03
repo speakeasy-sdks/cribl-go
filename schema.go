@@ -108,7 +108,11 @@ func (s *schema) Create(ctx context.Context, request map[string]interface{}) (*o
 
 // Delete - Delete Schema
 // Delete Schema
-func (s *schema) Delete(ctx context.Context, request operations.DeleteSchemaRequest) (*operations.DeleteSchemaResponse, error) {
+func (s *schema) Delete(ctx context.Context, id string) (*operations.DeleteSchemaResponse, error) {
+	request := operations.DeleteSchemaRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/schemas/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *schema) Delete(ctx context.Context, request operations.DeleteSchemaRequ
 
 // Get - Get Schema by ID
 // Get Schema by ID
-func (s *schema) Get(ctx context.Context, request operations.GetSchemaRequest) (*operations.GetSchemaResponse, error) {
+func (s *schema) Get(ctx context.Context, id string) (*operations.GetSchemaResponse, error) {
+	request := operations.GetSchemaRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/schemas/{id}", request, nil)
 	if err != nil {
@@ -343,7 +351,12 @@ func (s *schema) Post(ctx context.Context, request map[string]interface{}) (*ope
 
 // Update - Update Schema
 // Update Schema
-func (s *schema) Update(ctx context.Context, request operations.UpdateSchemaRequest) (*operations.UpdateSchemaResponse, error) {
+func (s *schema) Update(ctx context.Context, id string, requestBody map[string]interface{}) (*operations.UpdateSchemaResponse, error) {
+	request := operations.UpdateSchemaRequest{
+		ID:          id,
+		RequestBody: requestBody,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/schemas/{id}", request, nil)
 	if err != nil {

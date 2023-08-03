@@ -108,7 +108,11 @@ func (s *bulletinMessage) Create(ctx context.Context, request shared.BulletinMes
 
 // Delete - Delete BulletinMessage
 // Delete BulletinMessage
-func (s *bulletinMessage) Delete(ctx context.Context, request operations.DeleteBulletinMessageRequest) (*operations.DeleteBulletinMessageResponse, error) {
+func (s *bulletinMessage) Delete(ctx context.Context, id string) (*operations.DeleteBulletinMessageResponse, error) {
+	request := operations.DeleteBulletinMessageRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/messages/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *bulletinMessage) Delete(ctx context.Context, request operations.DeleteB
 
 // Get - Get BulletinMessage by ID
 // Get BulletinMessage by ID
-func (s *bulletinMessage) Get(ctx context.Context, request operations.GetBulletinMessageRequest) (*operations.GetBulletinMessageResponse, error) {
+func (s *bulletinMessage) Get(ctx context.Context, id string) (*operations.GetBulletinMessageResponse, error) {
+	request := operations.GetBulletinMessageRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/messages/{id}", request, nil)
 	if err != nil {

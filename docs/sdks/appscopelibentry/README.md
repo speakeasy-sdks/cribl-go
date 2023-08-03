@@ -888,11 +888,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "voluptatibus"
 
     ctx := context.Background()
-    res, err := s.AppscopeLibEntry.Delete(ctx, operations.DeleteAppscopeLibEntryRequest{
-        ID: "fce953f7-3ef7-4fbc-babd-74dd39c0f5d2",
-    })
+    res, err := s.AppscopeLibEntry.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -905,10 +904,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.DeleteAppscopeLibEntryRequest](../../models/operations/deleteappscopelibentryrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -939,11 +938,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "quisquam"
 
     ctx := context.Background()
-    res, err := s.AppscopeLibEntry.Get(ctx, operations.GetAppscopeLibEntryRequest{
-        ID: "cff7c70a-4562-46d4-b681-3f16d9f5fce6",
-    })
+    res, err := s.AppscopeLibEntry.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -956,10 +954,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.GetAppscopeLibEntryRequest](../../models/operations/getappscopelibentryrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -990,724 +988,835 @@ func main() {
             BearerAuth: "",
         }),
     )
-
-    ctx := context.Background()
-    res, err := s.AppscopeLibEntry.Update(ctx, operations.UpdateAppscopeLibEntryRequest{
-        AppscopeLibEntry: &shared.AppscopeLibEntry{
-            Config: shared.AppscopeConfigWithCustom{
-                Cribl: &shared.AppscopeConfigWithCustomCribl{
-                    Authtoken: cribl.String("impedit"),
-                    Enable: cribl.Bool(false),
-                    Transport: &shared.AppscopeTransport{
-                        Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                        Host: cribl.String("veniam"),
-                        Path: cribl.String("aliquid"),
-                        Port: cribl.Int64(81101),
-                        TLS: &shared.AppscopeTransportTLS{
-                            Cacertpath: cribl.String("magnam"),
-                            Enable: cribl.Bool(false),
-                            Validateserver: cribl.Bool(false),
-                        },
-                        Type: cribl.String("ea"),
+    id := "vero"
+    appscopeLibEntry := &shared.AppscopeLibEntry{
+        Config: shared.AppscopeConfigWithCustom{
+            Cribl: &shared.AppscopeConfigWithCustomCribl{
+                Authtoken: cribl.String("omnis"),
+                Enable: cribl.Bool(false),
+                Transport: &shared.AppscopeTransport{
+                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                    Host: cribl.String("ipsum"),
+                    Path: cribl.String("delectus"),
+                    Port: cribl.Int64(455169),
+                    TLS: &shared.AppscopeTransportTLS{
+                        Cacertpath: cribl.String("consectetur"),
+                        Enable: cribl.Bool(false),
+                        Validateserver: cribl.Bool(false),
                     },
-                    UseScopeSourceTransport: cribl.Bool(false),
+                    Type: cribl.String("vero"),
                 },
-                Custom: []shared.AppscopeCustom{
-                    shared.AppscopeCustom{
-                        Ancestor: cribl.String("consectetur"),
-                        Arg: cribl.String("recusandae"),
-                        Config: shared.AppscopeConfig{
-                            Cribl: &shared.AppscopeConfigCribl{
-                                Authtoken: cribl.String("aspernatur"),
-                                Enable: cribl.Bool(false),
+                UseScopeSourceTransport: cribl.Bool(false),
+            },
+            Custom: []shared.AppscopeCustom{
+                shared.AppscopeCustom{
+                    Ancestor: cribl.String("dignissimos"),
+                    Arg: cribl.String("hic"),
+                    Config: shared.AppscopeConfig{
+                        Cribl: &shared.AppscopeConfigCribl{
+                            Authtoken: cribl.String("distinctio"),
+                            Enable: cribl.Bool(false),
+                            Transport: &shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("odio"),
+                                Path: cribl.String("similique"),
+                                Port: cribl.Int64(708548),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("vero"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("ducimus"),
+                            },
+                            UseScopeSourceTransport: cribl.Bool(false),
+                        },
+                        Event: &shared.AppscopeConfigEvent{
+                            Enable: false,
+                            Format: shared.AppscopeConfigEventFormat{
+                                Enhancefs: false,
+                                Maxeventpersec: 293020,
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("illum"),
+                                Path: cribl.String("sequi"),
+                                Port: cribl.Int64(617877),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("impedit"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("aut"),
+                            },
+                            Type: shared.AppscopeConfigEventTypeNdjson,
+                            Watch: []shared.AppscopeConfigEventWatch{
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("exercitationem"),
+                                    Headers: cribl.String("nulla"),
+                                    Name: cribl.String("Johnnie Wunsch"),
+                                    Type: "eligendi",
+                                    Value: cribl.String("ducimus"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("alias"),
+                                    Headers: cribl.String("officia"),
+                                    Name: cribl.String("Roberta Jenkins"),
+                                    Type: "possimus",
+                                    Value: cribl.String("magnam"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("ratione"),
+                                    Headers: cribl.String("ex"),
+                                    Name: cribl.String("Willie Fahey III"),
+                                    Type: "nulla",
+                                    Value: cribl.String("excepturi"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("voluptatibus"),
+                                    Headers: cribl.String("nostrum"),
+                                    Name: cribl.String("Devin Ullrich"),
+                                    Type: "corporis",
+                                    Value: cribl.String("veniam"),
+                                },
+                            },
+                        },
+                        Libscope: &shared.AppscopeConfigLibscope{
+                            Commanddir: cribl.String("aliquid"),
+                            Configevent: cribl.Bool(false),
+                            Log: &shared.AppscopeConfigLibscopeLog{
+                                Level: shared.AppscopeConfigLibscopeLogLevelDebug.ToPointer(),
                                 Transport: &shared.AppscopeTransport{
                                     Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                                    Host: cribl.String("eaque"),
-                                    Path: cribl.String("a"),
-                                    Port: cribl.Int64(725595),
+                                    Host: cribl.String("ea"),
+                                    Path: cribl.String("quo"),
+                                    Port: cribl.Int64(232234),
                                     TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("aut"),
+                                        Cacertpath: cribl.String("recusandae"),
                                         Enable: cribl.Bool(false),
                                         Validateserver: cribl.Bool(false),
                                     },
-                                    Type: cribl.String("aut"),
+                                    Type: cribl.String("aspernatur"),
                                 },
-                                UseScopeSourceTransport: cribl.Bool(false),
                             },
-                            Event: &shared.AppscopeConfigEvent{
-                                Enable: false,
-                                Format: shared.AppscopeConfigEventFormat{
-                                    Enhancefs: false,
-                                    Maxeventpersec: 533466,
+                            Summaryperiod: cribl.Int64(325310),
+                        },
+                        Metric: &shared.AppscopeConfigMetric{
+                            Enable: false,
+                            Format: shared.AppscopeConfigMetricFormat{
+                                Statsdmaxlen: cribl.Int64(53427),
+                                Statsdprefix: cribl.String("a"),
+                                Type: cribl.String("libero"),
+                                Verbosity: cribl.Int64(13948),
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("deleniti"),
+                                Path: cribl.String("impedit"),
+                                Port: cribl.Int64(304582),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("fugit"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
                                 },
-                                Transport: shared.AppscopeTransport{
+                                Type: cribl.String("accusamus"),
+                            },
+                            Watch: []string{
+                                "non",
+                            },
+                        },
+                        Payload: &shared.AppscopeConfigPayload{
+                            Dir: "et",
+                            Enable: false,
+                        },
+                        Protocol: []shared.AppscopeConfigProtocol{
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 672048,
+                                Name: "Lee Kemmer",
+                                Payload: false,
+                                Regex: "quas",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 829603,
+                                Name: "Mrs. Shane Reinger",
+                                Payload: false,
+                                Regex: "explicabo",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 591935,
+                                Name: "Minnie Gutkowski",
+                                Payload: false,
+                                Regex: "esse",
+                            },
+                        },
+                        Tags: []shared.AppscopeConfigTags{
+                            shared.AppscopeConfigTags{
+                                Key: "rem",
+                                Value: "fuga",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "reprehenderit",
+                                Value: "quidem",
+                            },
+                        },
+                    },
+                    Env: cribl.String("fugiat"),
+                    Hostname: cribl.String("firm-honoree.info"),
+                    Procname: cribl.String("assumenda"),
+                    Username: cribl.String("Chet.Lang5"),
+                },
+                shared.AppscopeCustom{
+                    Ancestor: cribl.String("id"),
+                    Arg: cribl.String("quidem"),
+                    Config: shared.AppscopeConfig{
+                        Cribl: &shared.AppscopeConfigCribl{
+                            Authtoken: cribl.String("neque"),
+                            Enable: cribl.Bool(false),
+                            Transport: &shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("illum"),
+                                Path: cribl.String("quo"),
+                                Port: cribl.Int64(681359),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("eius"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("eos"),
+                            },
+                            UseScopeSourceTransport: cribl.Bool(false),
+                        },
+                        Event: &shared.AppscopeConfigEvent{
+                            Enable: false,
+                            Format: shared.AppscopeConfigEventFormat{
+                                Enhancefs: false,
+                                Maxeventpersec: 373813,
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("cupiditate"),
+                                Path: cribl.String("consequatur"),
+                                Port: cribl.Int64(272822),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("debitis"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("ipsam"),
+                            },
+                            Type: shared.AppscopeConfigEventTypeNdjson,
+                            Watch: []shared.AppscopeConfigEventWatch{
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("sequi"),
+                                    Headers: cribl.String("quo"),
+                                    Name: cribl.String("Sophie Bayer"),
+                                    Type: "dignissimos",
+                                    Value: cribl.String("inventore"),
+                                },
+                            },
+                        },
+                        Libscope: &shared.AppscopeConfigLibscope{
+                            Commanddir: cribl.String("nihil"),
+                            Configevent: cribl.Bool(false),
+                            Log: &shared.AppscopeConfigLibscopeLog{
+                                Level: shared.AppscopeConfigLibscopeLogLevelWarning.ToPointer(),
+                                Transport: &shared.AppscopeTransport{
                                     Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
                                     Host: cribl.String("aliquam"),
-                                    Path: cribl.String("fugit"),
-                                    Port: cribl.Int64(882860),
-                                    TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("inventore"),
-                                        Enable: cribl.Bool(false),
-                                        Validateserver: cribl.Bool(false),
-                                    },
-                                    Type: cribl.String("non"),
-                                },
-                                Type: shared.AppscopeConfigEventTypeNdjson,
-                                Watch: []shared.AppscopeConfigEventWatch{
-                                    shared.AppscopeConfigEventWatch{
-                                        Allowbinary: cribl.Bool(false),
-                                        Enabled: cribl.Bool(false),
-                                        Field: cribl.String("dolorum"),
-                                        Headers: cribl.String("laborum"),
-                                        Name: cribl.String("Lee Kemmer"),
-                                        Type: "quas",
-                                        Value: cribl.String("assumenda"),
-                                    },
-                                },
-                            },
-                            Libscope: &shared.AppscopeConfigLibscope{
-                                Commanddir: cribl.String("nulla"),
-                                Configevent: cribl.Bool(false),
-                                Log: &shared.AppscopeConfigLibscopeLog{
-                                    Level: shared.AppscopeConfigLibscopeLogLevelInfo.ToPointer(),
-                                    Transport: &shared.AppscopeTransport{
-                                        Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
-                                        Host: cribl.String("quasi"),
-                                        Path: cribl.String("tempora"),
-                                        Port: cribl.Int64(256139),
-                                        TLS: &shared.AppscopeTransportTLS{
-                                            Cacertpath: cribl.String("explicabo"),
-                                            Enable: cribl.Bool(false),
-                                            Validateserver: cribl.Bool(false),
-                                        },
-                                        Type: cribl.String("provident"),
-                                    },
-                                },
-                                Summaryperiod: cribl.Int64(55374),
-                            },
-                            Metric: &shared.AppscopeConfigMetric{
-                                Enable: false,
-                                Format: shared.AppscopeConfigMetricFormat{
-                                    Statsdmaxlen: cribl.Int64(476477),
-                                    Statsdprefix: cribl.String("magnam"),
-                                    Type: cribl.String("odio"),
-                                    Verbosity: cribl.Int64(262118),
-                                },
-                                Transport: shared.AppscopeTransport{
-                                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                                    Host: cribl.String("esse"),
-                                    Path: cribl.String("rem"),
-                                    Port: cribl.Int64(683282),
-                                    TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("reprehenderit"),
-                                        Enable: cribl.Bool(false),
-                                        Validateserver: cribl.Bool(false),
-                                    },
-                                    Type: cribl.String("quidem"),
-                                },
-                                Watch: []string{
-                                    "ut",
-                                    "eum",
-                                    "suscipit",
-                                    "assumenda",
-                                },
-                            },
-                            Payload: &shared.AppscopeConfigPayload{
-                                Dir: "eos",
-                                Enable: false,
-                            },
-                            Protocol: []shared.AppscopeConfigProtocol{
-                                shared.AppscopeConfigProtocol{
-                                    Binary: false,
-                                    Detect: false,
-                                    Len: 788546,
-                                    Name: "Angela Olson",
-                                    Payload: false,
-                                    Regex: "quo",
-                                },
-                                shared.AppscopeConfigProtocol{
-                                    Binary: false,
-                                    Detect: false,
-                                    Len: 847276,
-                                    Name: "Wilbur Gerlach",
-                                    Payload: false,
-                                    Regex: "ab",
-                                },
-                                shared.AppscopeConfigProtocol{
-                                    Binary: false,
-                                    Detect: false,
-                                    Len: 587600,
-                                    Name: "Rhonda Toy",
-                                    Payload: false,
-                                    Regex: "sequi",
-                                },
-                            },
-                            Tags: []shared.AppscopeConfigTags{
-                                shared.AppscopeConfigTags{
-                                    Key: "esse",
-                                    Value: "recusandae",
-                                },
-                                shared.AppscopeConfigTags{
-                                    Key: "aperiam",
-                                    Value: "distinctio",
-                                },
-                                shared.AppscopeConfigTags{
-                                    Key: "quod",
-                                    Value: "dignissimos",
-                                },
-                                shared.AppscopeConfigTags{
-                                    Key: "inventore",
-                                    Value: "nihil",
-                                },
-                            },
-                        },
-                        Env: cribl.String("totam"),
-                        Hostname: cribl.String("uncommon-encounter.info"),
-                        Procname: cribl.String("occaecati"),
-                        Username: cribl.String("Harvey64"),
-                    },
-                    shared.AppscopeCustom{
-                        Ancestor: cribl.String("molestiae"),
-                        Arg: cribl.String("accusantium"),
-                        Config: shared.AppscopeConfig{
-                            Cribl: &shared.AppscopeConfigCribl{
-                                Authtoken: cribl.String("porro"),
-                                Enable: cribl.Bool(false),
-                                Transport: &shared.AppscopeTransport{
-                                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                                    Host: cribl.String("quas"),
-                                    Path: cribl.String("praesentium"),
-                                    Port: cribl.Int64(159867),
-                                    TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("deleniti"),
-                                        Enable: cribl.Bool(false),
-                                        Validateserver: cribl.Bool(false),
-                                    },
-                                    Type: cribl.String("fugit"),
-                                },
-                                UseScopeSourceTransport: cribl.Bool(false),
-                            },
-                            Event: &shared.AppscopeConfigEvent{
-                                Enable: false,
-                                Format: shared.AppscopeConfigEventFormat{
-                                    Enhancefs: false,
-                                    Maxeventpersec: 681393,
-                                },
-                                Transport: shared.AppscopeTransport{
-                                    Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
-                                    Host: cribl.String("incidunt"),
-                                    Path: cribl.String("atque"),
-                                    Port: cribl.Int64(128860),
-                                    TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("minima"),
-                                        Enable: cribl.Bool(false),
-                                        Validateserver: cribl.Bool(false),
-                                    },
-                                    Type: cribl.String("nisi"),
-                                },
-                                Type: shared.AppscopeConfigEventTypeNdjson,
-                                Watch: []shared.AppscopeConfigEventWatch{
-                                    shared.AppscopeConfigEventWatch{
-                                        Allowbinary: cribl.Bool(false),
-                                        Enabled: cribl.Bool(false),
-                                        Field: cribl.String("sapiente"),
-                                        Headers: cribl.String("consequuntur"),
-                                        Name: cribl.String("Rose Turner"),
-                                        Type: "et",
-                                        Value: cribl.String("esse"),
-                                    },
-                                },
-                            },
-                            Libscope: &shared.AppscopeConfigLibscope{
-                                Commanddir: cribl.String("eveniet"),
-                                Configevent: cribl.Bool(false),
-                                Log: &shared.AppscopeConfigLibscopeLog{
-                                    Level: shared.AppscopeConfigLibscopeLogLevelNone.ToPointer(),
-                                    Transport: &shared.AppscopeTransport{
-                                        Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                                        Host: cribl.String("esse"),
-                                        Path: cribl.String("quod"),
-                                        Port: cribl.Int64(724168),
-                                        TLS: &shared.AppscopeTransportTLS{
-                                            Cacertpath: cribl.String("vero"),
-                                            Enable: cribl.Bool(false),
-                                            Validateserver: cribl.Bool(false),
-                                        },
-                                        Type: cribl.String("aliquid"),
-                                    },
-                                },
-                                Summaryperiod: cribl.Int64(93459),
-                            },
-                            Metric: &shared.AppscopeConfigMetric{
-                                Enable: false,
-                                Format: shared.AppscopeConfigMetricFormat{
-                                    Statsdmaxlen: cribl.Int64(904045),
-                                    Statsdprefix: cribl.String("vel"),
-                                    Type: cribl.String("harum"),
-                                    Verbosity: cribl.Int64(473221),
-                                },
-                                Transport: shared.AppscopeTransport{
-                                    Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
-                                    Host: cribl.String("occaecati"),
-                                    Path: cribl.String("minima"),
-                                    Port: cribl.Int64(716244),
-                                    TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("eligendi"),
-                                        Enable: cribl.Bool(false),
-                                        Validateserver: cribl.Bool(false),
-                                    },
-                                    Type: cribl.String("sit"),
-                                },
-                                Watch: []string{
-                                    "tempore",
-                                    "adipisci",
-                                    "cumque",
-                                },
-                            },
-                            Payload: &shared.AppscopeConfigPayload{
-                                Dir: "consequuntur",
-                                Enable: false,
-                            },
-                            Protocol: []shared.AppscopeConfigProtocol{
-                                shared.AppscopeConfigProtocol{
-                                    Binary: false,
-                                    Detect: false,
-                                    Len: 796392,
-                                    Name: "Miranda Feest",
-                                    Payload: false,
-                                    Regex: "provident",
-                                },
-                            },
-                            Tags: []shared.AppscopeConfigTags{
-                                shared.AppscopeConfigTags{
-                                    Key: "nulla",
-                                    Value: "quas",
-                                },
-                                shared.AppscopeConfigTags{
-                                    Key: "esse",
-                                    Value: "quasi",
-                                },
-                                shared.AppscopeConfigTags{
-                                    Key: "a",
-                                    Value: "error",
-                                },
-                                shared.AppscopeConfigTags{
-                                    Key: "sint",
-                                    Value: "pariatur",
-                                },
-                            },
-                        },
-                        Env: cribl.String("possimus"),
-                        Hostname: cribl.String("cuddly-timpani.org"),
-                        Procname: cribl.String("facere"),
-                        Username: cribl.String("Arvel62"),
-                    },
-                    shared.AppscopeCustom{
-                        Ancestor: cribl.String("culpa"),
-                        Arg: cribl.String("aliquid"),
-                        Config: shared.AppscopeConfig{
-                            Cribl: &shared.AppscopeConfigCribl{
-                                Authtoken: cribl.String("tenetur"),
-                                Enable: cribl.Bool(false),
-                                Transport: &shared.AppscopeTransport{
-                                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                                    Host: cribl.String("earum"),
-                                    Path: cribl.String("vel"),
-                                    Port: cribl.Int64(447378),
-                                    TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("eius"),
-                                        Enable: cribl.Bool(false),
-                                        Validateserver: cribl.Bool(false),
-                                    },
-                                    Type: cribl.String("libero"),
-                                },
-                                UseScopeSourceTransport: cribl.Bool(false),
-                            },
-                            Event: &shared.AppscopeConfigEvent{
-                                Enable: false,
-                                Format: shared.AppscopeConfigEventFormat{
-                                    Enhancefs: false,
-                                    Maxeventpersec: 849039,
-                                },
-                                Transport: shared.AppscopeTransport{
-                                    Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
-                                    Host: cribl.String("accusantium"),
-                                    Path: cribl.String("aliquam"),
-                                    Port: cribl.Int64(958983),
-                                    TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("dicta"),
-                                        Enable: cribl.Bool(false),
-                                        Validateserver: cribl.Bool(false),
-                                    },
-                                    Type: cribl.String("ullam"),
-                                },
-                                Type: shared.AppscopeConfigEventTypeNdjson,
-                                Watch: []shared.AppscopeConfigEventWatch{
-                                    shared.AppscopeConfigEventWatch{
-                                        Allowbinary: cribl.Bool(false),
-                                        Enabled: cribl.Bool(false),
-                                        Field: cribl.String("ullam"),
-                                        Headers: cribl.String("nisi"),
-                                        Name: cribl.String("Nora Denesik"),
-                                        Type: "deleniti",
-                                        Value: cribl.String("itaque"),
-                                    },
-                                    shared.AppscopeConfigEventWatch{
-                                        Allowbinary: cribl.Bool(false),
-                                        Enabled: cribl.Bool(false),
-                                        Field: cribl.String("dolorum"),
-                                        Headers: cribl.String("architecto"),
-                                        Name: cribl.String("Irvin Boyle III"),
-                                        Type: "ipsa",
-                                        Value: cribl.String("minima"),
-                                    },
-                                },
-                            },
-                            Libscope: &shared.AppscopeConfigLibscope{
-                                Commanddir: cribl.String("veritatis"),
-                                Configevent: cribl.Bool(false),
-                                Log: &shared.AppscopeConfigLibscopeLog{
-                                    Level: shared.AppscopeConfigLibscopeLogLevelInfo.ToPointer(),
-                                    Transport: &shared.AppscopeTransport{
-                                        Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                                        Host: cribl.String("iste"),
-                                        Path: cribl.String("temporibus"),
-                                        Port: cribl.Int64(33074),
-                                        TLS: &shared.AppscopeTransportTLS{
-                                            Cacertpath: cribl.String("rem"),
-                                            Enable: cribl.Bool(false),
-                                            Validateserver: cribl.Bool(false),
-                                        },
-                                        Type: cribl.String("aut"),
-                                    },
-                                },
-                                Summaryperiod: cribl.Int64(513075),
-                            },
-                            Metric: &shared.AppscopeConfigMetric{
-                                Enable: false,
-                                Format: shared.AppscopeConfigMetricFormat{
-                                    Statsdmaxlen: cribl.Int64(428796),
-                                    Statsdprefix: cribl.String("mollitia"),
-                                    Type: cribl.String("ab"),
-                                    Verbosity: cribl.Int64(544591),
-                                },
-                                Transport: shared.AppscopeTransport{
-                                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                                    Host: cribl.String("voluptatem"),
-                                    Path: cribl.String("dolor"),
-                                    Port: cribl.Int64(580152),
-                                    TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("numquam"),
-                                        Enable: cribl.Bool(false),
-                                        Validateserver: cribl.Bool(false),
-                                    },
-                                    Type: cribl.String("impedit"),
-                                },
-                                Watch: []string{
-                                    "voluptas",
-                                },
-                            },
-                            Payload: &shared.AppscopeConfigPayload{
-                                Dir: "aut",
-                                Enable: false,
-                            },
-                            Protocol: []shared.AppscopeConfigProtocol{
-                                shared.AppscopeConfigProtocol{
-                                    Binary: false,
-                                    Detect: false,
-                                    Len: 115484,
-                                    Name: "Wendell Frami",
-                                    Payload: false,
-                                    Regex: "asperiores",
-                                },
-                                shared.AppscopeConfigProtocol{
-                                    Binary: false,
-                                    Detect: false,
-                                    Len: 45659,
-                                    Name: "Bertha Cruickshank",
-                                    Payload: false,
-                                    Regex: "maxime",
-                                },
-                            },
-                            Tags: []shared.AppscopeConfigTags{
-                                shared.AppscopeConfigTags{
-                                    Key: "officia",
-                                    Value: "asperiores",
-                                },
-                                shared.AppscopeConfigTags{
-                                    Key: "nemo",
-                                    Value: "quae",
-                                },
-                            },
-                        },
-                        Env: cribl.String("quaerat"),
-                        Hostname: cribl.String("spanish-show-stopper.biz"),
-                        Procname: cribl.String("ab"),
-                        Username: cribl.String("Dayton.Paucek"),
-                    },
-                    shared.AppscopeCustom{
-                        Ancestor: cribl.String("velit"),
-                        Arg: cribl.String("culpa"),
-                        Config: shared.AppscopeConfig{
-                            Cribl: &shared.AppscopeConfigCribl{
-                                Authtoken: cribl.String("est"),
-                                Enable: cribl.Bool(false),
-                                Transport: &shared.AppscopeTransport{
-                                    Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
-                                    Host: cribl.String("totam"),
-                                    Path: cribl.String("fugiat"),
-                                    Port: cribl.Int64(424089),
-                                    TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("ducimus"),
-                                        Enable: cribl.Bool(false),
-                                        Validateserver: cribl.Bool(false),
-                                    },
-                                    Type: cribl.String("quos"),
-                                },
-                                UseScopeSourceTransport: cribl.Bool(false),
-                            },
-                            Event: &shared.AppscopeConfigEvent{
-                                Enable: false,
-                                Format: shared.AppscopeConfigEventFormat{
-                                    Enhancefs: false,
-                                    Maxeventpersec: 427834,
-                                },
-                                Transport: shared.AppscopeTransport{
-                                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                                    Host: cribl.String("possimus"),
-                                    Path: cribl.String("facilis"),
-                                    Port: cribl.Int64(738227),
+                                    Path: cribl.String("odio"),
+                                    Port: cribl.Int64(577543),
                                     TLS: &shared.AppscopeTransportTLS{
                                         Cacertpath: cribl.String("commodi"),
                                         Enable: cribl.Bool(false),
                                         Validateserver: cribl.Bool(false),
                                     },
-                                    Type: cribl.String("in"),
-                                },
-                                Type: shared.AppscopeConfigEventTypeNdjson,
-                                Watch: []shared.AppscopeConfigEventWatch{
-                                    shared.AppscopeConfigEventWatch{
-                                        Allowbinary: cribl.Bool(false),
-                                        Enabled: cribl.Bool(false),
-                                        Field: cribl.String("reiciendis"),
-                                        Headers: cribl.String("assumenda"),
-                                        Name: cribl.String("Miss Sophie Jacobi"),
-                                        Type: "in",
-                                        Value: cribl.String("exercitationem"),
-                                    },
-                                    shared.AppscopeConfigEventWatch{
-                                        Allowbinary: cribl.Bool(false),
-                                        Enabled: cribl.Bool(false),
-                                        Field: cribl.String("earum"),
-                                        Headers: cribl.String("facere"),
-                                        Name: cribl.String("Melba Homenick"),
-                                        Type: "saepe",
-                                        Value: cribl.String("necessitatibus"),
-                                    },
+                                    Type: cribl.String("sapiente"),
                                 },
                             },
-                            Libscope: &shared.AppscopeConfigLibscope{
-                                Commanddir: cribl.String("dolore"),
-                                Configevent: cribl.Bool(false),
-                                Log: &shared.AppscopeConfigLibscopeLog{
-                                    Level: shared.AppscopeConfigLibscopeLogLevelDebug.ToPointer(),
-                                    Transport: &shared.AppscopeTransport{
-                                        Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
-                                        Host: cribl.String("adipisci"),
-                                        Path: cribl.String("non"),
-                                        Port: cribl.Int64(228263),
-                                        TLS: &shared.AppscopeTransportTLS{
-                                            Cacertpath: cribl.String("beatae"),
-                                            Enable: cribl.Bool(false),
-                                            Validateserver: cribl.Bool(false),
-                                        },
-                                        Type: cribl.String("dignissimos"),
-                                    },
-                                },
-                                Summaryperiod: cribl.Int64(950953),
+                            Summaryperiod: cribl.Int64(174112),
+                        },
+                        Metric: &shared.AppscopeConfigMetric{
+                            Enable: false,
+                            Format: shared.AppscopeConfigMetricFormat{
+                                Statsdmaxlen: cribl.Int64(645570),
+                                Statsdprefix: cribl.String("molestiae"),
+                                Type: cribl.String("accusantium"),
+                                Verbosity: cribl.Int64(783648),
                             },
-                            Metric: &shared.AppscopeConfigMetric{
-                                Enable: false,
-                                Format: shared.AppscopeConfigMetricFormat{
-                                    Statsdmaxlen: cribl.Int64(891523),
-                                    Statsdprefix: cribl.String("consectetur"),
-                                    Type: cribl.String("corporis"),
-                                    Verbosity: cribl.Int64(689768),
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("quas"),
+                                Path: cribl.String("praesentium"),
+                                Port: cribl.Int64(159867),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("deleniti"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
                                 },
-                                Transport: shared.AppscopeTransport{
+                                Type: cribl.String("fugit"),
+                            },
+                            Watch: []string{
+                                "mollitia",
+                                "incidunt",
+                                "atque",
+                            },
+                        },
+                        Payload: &shared.AppscopeConfigPayload{
+                            Dir: "explicabo",
+                            Enable: false,
+                        },
+                        Protocol: []shared.AppscopeConfigProtocol{
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 392676,
+                                Name: "Jeannie Cronin",
+                                Payload: false,
+                                Regex: "saepe",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 578922,
+                                Name: "Carl Koch",
+                                Payload: false,
+                                Regex: "veritatis",
+                            },
+                        },
+                        Tags: []shared.AppscopeConfigTags{
+                            shared.AppscopeConfigTags{
+                                Key: "quod",
+                                Value: "nam",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "vero",
+                                Value: "aliquid",
+                            },
+                        },
+                    },
+                    Env: cribl.String("quasi"),
+                    Hostname: cribl.String("untidy-heterosexual.net"),
+                    Procname: cribl.String("molestiae"),
+                    Username: cribl.String("Maximus71"),
+                },
+                shared.AppscopeCustom{
+                    Ancestor: cribl.String("eligendi"),
+                    Arg: cribl.String("sit"),
+                    Config: shared.AppscopeConfig{
+                        Cribl: &shared.AppscopeConfigCribl{
+                            Authtoken: cribl.String("culpa"),
+                            Enable: cribl.Bool(false),
+                            Transport: &shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("adipisci"),
+                                Path: cribl.String("cumque"),
+                                Port: cribl.Int64(160538),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("consequatur"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("minus"),
+                            },
+                            UseScopeSourceTransport: cribl.Bool(false),
+                        },
+                        Event: &shared.AppscopeConfigEvent{
+                            Enable: false,
+                            Format: shared.AppscopeConfigEventFormat{
+                                Enhancefs: false,
+                                Maxeventpersec: 308286,
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("consectetur"),
+                                Path: cribl.String("esse"),
+                                Port: cribl.Int64(503427),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("provident"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("a"),
+                            },
+                            Type: shared.AppscopeConfigEventTypeNdjson,
+                            Watch: []shared.AppscopeConfigEventWatch{
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("quas"),
+                                    Headers: cribl.String("esse"),
+                                    Name: cribl.String("Lorene Mueller"),
+                                    Type: "possimus",
+                                    Value: cribl.String("quia"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("eveniet"),
+                                    Headers: cribl.String("asperiores"),
+                                    Name: cribl.String("Miss Peter Cronin"),
+                                    Type: "aliquid",
+                                    Value: cribl.String("tenetur"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("quae"),
+                                    Headers: cribl.String("earum"),
+                                    Name: cribl.String("Pearl Gerlach"),
+                                    Type: "soluta",
+                                    Value: cribl.String("accusantium"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("aliquam"),
+                                    Headers: cribl.String("sapiente"),
+                                    Name: cribl.String("Marion Kihn"),
+                                    Type: "aut",
+                                    Value: cribl.String("voluptatum"),
+                                },
+                            },
+                        },
+                        Libscope: &shared.AppscopeConfigLibscope{
+                            Commanddir: cribl.String("qui"),
+                            Configevent: cribl.Bool(false),
+                            Log: &shared.AppscopeConfigLibscopeLog{
+                                Level: shared.AppscopeConfigLibscopeLogLevelNone.ToPointer(),
+                                Transport: &shared.AppscopeTransport{
                                     Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                                    Host: cribl.String("ipsa"),
-                                    Path: cribl.String("voluptates"),
-                                    Port: cribl.Int64(730709),
+                                    Host: cribl.String("deleniti"),
+                                    Path: cribl.String("itaque"),
+                                    Port: cribl.Int64(680270),
                                     TLS: &shared.AppscopeTransportTLS{
-                                        Cacertpath: cribl.String("vitae"),
+                                        Cacertpath: cribl.String("architecto"),
                                         Enable: cribl.Bool(false),
                                         Validateserver: cribl.Bool(false),
                                     },
-                                    Type: cribl.String("accusamus"),
-                                },
-                                Watch: []string{
-                                    "tempora",
-                                    "aspernatur",
-                                    "voluptas",
+                                    Type: cribl.String("omnis"),
                                 },
                             },
-                            Payload: &shared.AppscopeConfigPayload{
-                                Dir: "voluptas",
-                                Enable: false,
+                            Summaryperiod: cribl.Int64(945302),
+                        },
+                        Metric: &shared.AppscopeConfigMetric{
+                            Enable: false,
+                            Format: shared.AppscopeConfigMetricFormat{
+                                Statsdmaxlen: cribl.Int64(98478),
+                                Statsdprefix: cribl.String("at"),
+                                Type: cribl.String("et"),
+                                Verbosity: cribl.Int64(454162),
                             },
-                            Protocol: []shared.AppscopeConfigProtocol{
-                                shared.AppscopeConfigProtocol{
-                                    Binary: false,
-                                    Detect: false,
-                                    Len: 324405,
-                                    Name: "Wilbur Ferry",
-                                    Payload: false,
-                                    Regex: "blanditiis",
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("minima"),
+                                Path: cribl.String("veritatis"),
+                                Port: cribl.Int64(232744),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("adipisci"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
                                 },
-                                shared.AppscopeConfigProtocol{
-                                    Binary: false,
-                                    Detect: false,
-                                    Len: 449292,
-                                    Name: "Suzanne Torphy",
-                                    Payload: false,
-                                    Regex: "adipisci",
-                                },
+                                Type: cribl.String("iste"),
                             },
-                            Tags: []shared.AppscopeConfigTags{
-                                shared.AppscopeConfigTags{
-                                    Key: "blanditiis",
-                                    Value: "quas",
-                                },
-                                shared.AppscopeConfigTags{
-                                    Key: "hic",
-                                    Value: "nesciunt",
-                                },
-                                shared.AppscopeConfigTags{
-                                    Key: "culpa",
-                                    Value: "corrupti",
-                                },
+                            Watch: []string{
+                                "accusantium",
+                                "rem",
+                                "aut",
+                                "laudantium",
                             },
                         },
-                        Env: cribl.String("pariatur"),
-                        Hostname: cribl.String("mature-underneath.info"),
-                        Procname: cribl.String("nobis"),
-                        Username: cribl.String("Alberto96"),
+                        Payload: &shared.AppscopeConfigPayload{
+                            Dir: "eum",
+                            Enable: false,
+                        },
+                        Protocol: []shared.AppscopeConfigProtocol{
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 68074,
+                                Name: "Kyle Bartoletti",
+                                Payload: false,
+                                Regex: "numquam",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 771089,
+                                Name: "Loretta Anderson DVM",
+                                Payload: false,
+                                Regex: "natus",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 244651,
+                                Name: "Ms. Glen Zboncak",
+                                Payload: false,
+                                Regex: "consequuntur",
+                            },
+                        },
+                        Tags: []shared.AppscopeConfigTags{
+                            shared.AppscopeConfigTags{
+                                Key: "officia",
+                                Value: "maxime",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "dignissimos",
+                                Value: "officia",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "asperiores",
+                                Value: "nemo",
+                            },
+                            shared.AppscopeConfigTags{
+                                Key: "quae",
+                                Value: "quaerat",
+                            },
+                        },
                     },
+                    Env: cribl.String("porro"),
+                    Hostname: cribl.String("steep-dumbwaiter.com"),
+                    Procname: cribl.String("adipisci"),
+                    Username: cribl.String("Mark.Ondricka"),
                 },
-                Event: &shared.AppscopeConfigWithCustomEvent{
-                    Enable: false,
-                    Format: shared.AppscopeConfigWithCustomEventFormat{
-                        Enhancefs: false,
-                        Maxeventpersec: 131852,
-                    },
-                    Transport: shared.AppscopeTransport{
-                        Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
-                        Host: cribl.String("facilis"),
-                        Path: cribl.String("voluptate"),
-                        Port: cribl.Int64(709072),
-                        TLS: &shared.AppscopeTransportTLS{
-                            Cacertpath: cribl.String("ab"),
+                shared.AppscopeCustom{
+                    Ancestor: cribl.String("culpa"),
+                    Arg: cribl.String("est"),
+                    Config: shared.AppscopeConfig{
+                        Cribl: &shared.AppscopeConfigCribl{
+                            Authtoken: cribl.String("recusandae"),
                             Enable: cribl.Bool(false),
-                            Validateserver: cribl.Bool(false),
-                        },
-                        Type: cribl.String("iste"),
-                    },
-                    Type: shared.AppscopeConfigWithCustomEventTypeNdjson,
-                    Watch: []shared.AppscopeConfigWithCustomEventWatch{
-                        shared.AppscopeConfigWithCustomEventWatch{
-                            Allowbinary: cribl.Bool(false),
-                            Enabled: cribl.Bool(false),
-                            Field: cribl.String("laborum"),
-                            Headers: cribl.String("sed"),
-                            Name: cribl.String("Tonya Predovic"),
-                            Type: "unde",
-                            Value: cribl.String("architecto"),
-                        },
-                        shared.AppscopeConfigWithCustomEventWatch{
-                            Allowbinary: cribl.Bool(false),
-                            Enabled: cribl.Bool(false),
-                            Field: cribl.String("suscipit"),
-                            Headers: cribl.String("sapiente"),
-                            Name: cribl.String("Ms. Gregory Wisoky"),
-                            Type: "incidunt",
-                            Value: cribl.String("sed"),
-                        },
-                    },
-                },
-                Libscope: &shared.AppscopeConfigWithCustomLibscope{
-                    Commanddir: cribl.String("provident"),
-                    Configevent: cribl.Bool(false),
-                    Log: &shared.AppscopeConfigWithCustomLibscopeLog{
-                        Level: shared.AppscopeConfigWithCustomLibscopeLogLevelInfo.ToPointer(),
-                        Transport: &shared.AppscopeTransport{
-                            Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
-                            Host: cribl.String("ipsum"),
-                            Path: cribl.String("ea"),
-                            Port: cribl.Int64(579912),
-                            TLS: &shared.AppscopeTransportTLS{
-                                Cacertpath: cribl.String("quos"),
-                                Enable: cribl.Bool(false),
-                                Validateserver: cribl.Bool(false),
+                            Transport: &shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("fugiat"),
+                                Path: cribl.String("vel"),
+                                Port: cribl.Int64(497678),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("quos"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("vel"),
                             },
-                            Type: cribl.String("voluptatibus"),
+                            UseScopeSourceTransport: cribl.Bool(false),
+                        },
+                        Event: &shared.AppscopeConfigEvent{
+                            Enable: false,
+                            Format: shared.AppscopeConfigEventFormat{
+                                Enhancefs: false,
+                                Maxeventpersec: 287051,
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                                Host: cribl.String("facilis"),
+                                Path: cribl.String("cum"),
+                                Port: cribl.Int64(414857),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("in"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("corporis"),
+                            },
+                            Type: shared.AppscopeConfigEventTypeNdjson,
+                            Watch: []shared.AppscopeConfigEventWatch{
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("assumenda"),
+                                    Headers: cribl.String("nemo"),
+                                    Name: cribl.String("Gilbert Bayer"),
+                                    Type: "in",
+                                    Value: cribl.String("exercitationem"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("earum"),
+                                    Headers: cribl.String("facere"),
+                                    Name: cribl.String("Melba Homenick"),
+                                    Type: "saepe",
+                                    Value: cribl.String("necessitatibus"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("dolore"),
+                                    Headers: cribl.String("sunt"),
+                                    Name: cribl.String("Chad Franey IV"),
+                                    Type: "a",
+                                    Value: cribl.String("debitis"),
+                                },
+                                shared.AppscopeConfigEventWatch{
+                                    Allowbinary: cribl.Bool(false),
+                                    Enabled: cribl.Bool(false),
+                                    Field: cribl.String("consectetur"),
+                                    Headers: cribl.String("corporis"),
+                                    Name: cribl.String("Rick Beer"),
+                                    Type: "vitae",
+                                    Value: cribl.String("accusamus"),
+                                },
+                            },
+                        },
+                        Libscope: &shared.AppscopeConfigLibscope{
+                            Commanddir: cribl.String("similique"),
+                            Configevent: cribl.Bool(false),
+                            Log: &shared.AppscopeConfigLibscopeLog{
+                                Level: shared.AppscopeConfigLibscopeLogLevelInfo.ToPointer(),
+                                Transport: &shared.AppscopeTransport{
+                                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                    Host: cribl.String("voluptas"),
+                                    Path: cribl.String("voluptas"),
+                                    Port: cribl.Int64(374296),
+                                    TLS: &shared.AppscopeTransportTLS{
+                                        Cacertpath: cribl.String("minima"),
+                                        Enable: cribl.Bool(false),
+                                        Validateserver: cribl.Bool(false),
+                                    },
+                                    Type: cribl.String("nobis"),
+                                },
+                            },
+                            Summaryperiod: cribl.Int64(680116),
+                        },
+                        Metric: &shared.AppscopeConfigMetric{
+                            Enable: false,
+                            Format: shared.AppscopeConfigMetricFormat{
+                                Statsdmaxlen: cribl.Int64(237807),
+                                Statsdprefix: cribl.String("minus"),
+                                Type: cribl.String("dolores"),
+                                Verbosity: cribl.Int64(503934),
+                            },
+                            Transport: shared.AppscopeTransport{
+                                Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                                Host: cribl.String("dolore"),
+                                Path: cribl.String("aliquam"),
+                                Port: cribl.Int64(885963),
+                                TLS: &shared.AppscopeTransportTLS{
+                                    Cacertpath: cribl.String("temporibus"),
+                                    Enable: cribl.Bool(false),
+                                    Validateserver: cribl.Bool(false),
+                                },
+                                Type: cribl.String("ullam"),
+                            },
+                            Watch: []string{
+                                "cum",
+                            },
+                        },
+                        Payload: &shared.AppscopeConfigPayload{
+                            Dir: "blanditiis",
+                            Enable: false,
+                        },
+                        Protocol: []shared.AppscopeConfigProtocol{
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 942584,
+                                Name: "Molly Lowe",
+                                Payload: false,
+                                Regex: "hic",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 348783,
+                                Name: "Paul Price",
+                                Payload: false,
+                                Regex: "explicabo",
+                            },
+                            shared.AppscopeConfigProtocol{
+                                Binary: false,
+                                Detect: false,
+                                Len: 994401,
+                                Name: "Miss Jared Quitzon",
+                                Payload: false,
+                                Regex: "laborum",
+                            },
+                        },
+                        Tags: []shared.AppscopeConfigTags{
+                            shared.AppscopeConfigTags{
+                                Key: "in",
+                                Value: "commodi",
+                            },
                         },
                     },
-                    Summaryperiod: cribl.Int64(271653),
+                    Env: cribl.String("quidem"),
+                    Hostname: cribl.String("common-gather.name"),
+                    Procname: cribl.String("architecto"),
+                    Username: cribl.String("Geovany.Willms96"),
                 },
-                Metric: &shared.AppscopeConfigWithCustomMetric{
-                    Enable: false,
-                    Format: shared.AppscopeConfigWithCustomMetricFormat{
-                        Statsdmaxlen: cribl.Int64(273009),
-                        Statsdprefix: cribl.String("voluptate"),
-                        Type: cribl.String("reiciendis"),
-                        Verbosity: cribl.Int64(401713),
-                    },
-                    Transport: shared.AppscopeTransport{
-                        Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
-                        Host: cribl.String("non"),
-                        Path: cribl.String("officiis"),
-                        Port: cribl.Int64(505866),
-                        TLS: &shared.AppscopeTransportTLS{
-                            Cacertpath: cribl.String("facilis"),
-                            Enable: cribl.Bool(false),
-                            Validateserver: cribl.Bool(false),
-                        },
-                        Type: cribl.String("quaerat"),
-                    },
-                    Watch: []string{
-                        "ipsam",
-                        "debitis",
-                    },
+            },
+            Event: &shared.AppscopeConfigWithCustomEvent{
+                Enable: false,
+                Format: shared.AppscopeConfigWithCustomEventFormat{
+                    Enhancefs: false,
+                    Maxeventpersec: 19300,
                 },
-                Payload: &shared.AppscopeConfigWithCustomPayload{
-                    Dir: "rem",
-                    Enable: false,
-                },
-                Protocol: []shared.AppscopeConfigWithCustomProtocol{
-                    shared.AppscopeConfigWithCustomProtocol{
-                        Binary: false,
-                        Detect: false,
-                        Len: 750595,
-                        Name: "Floyd Harber",
-                        Payload: false,
-                        Regex: "nulla",
+                Transport: shared.AppscopeTransport{
+                    Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                    Host: cribl.String("maiores"),
+                    Path: cribl.String("incidunt"),
+                    Port: cribl.Int64(148478),
+                    TLS: &shared.AppscopeTransportTLS{
+                        Cacertpath: cribl.String("provident"),
+                        Enable: cribl.Bool(false),
+                        Validateserver: cribl.Bool(false),
                     },
+                    Type: cribl.String("eius"),
                 },
-                Tags: []shared.AppscopeConfigWithCustomTags{
-                    shared.AppscopeConfigWithCustomTags{
-                        Key: "aperiam",
-                        Value: "saepe",
+                Type: shared.AppscopeConfigWithCustomEventTypeNdjson,
+                Watch: []shared.AppscopeConfigWithCustomEventWatch{
+                    shared.AppscopeConfigWithCustomEventWatch{
+                        Allowbinary: cribl.Bool(false),
+                        Enabled: cribl.Bool(false),
+                        Field: cribl.String("ipsum"),
+                        Headers: cribl.String("ea"),
+                        Name: cribl.String("Isaac Wolf"),
+                        Type: "voluptate",
+                        Value: cribl.String("reiciendis"),
+                    },
+                    shared.AppscopeConfigWithCustomEventWatch{
+                        Allowbinary: cribl.Bool(false),
+                        Enabled: cribl.Bool(false),
+                        Field: cribl.String("ex"),
+                        Headers: cribl.String("sit"),
+                        Name: cribl.String("Cecelia Lakin"),
+                        Type: "incidunt",
+                        Value: cribl.String("ipsam"),
+                    },
+                    shared.AppscopeConfigWithCustomEventWatch{
+                        Allowbinary: cribl.Bool(false),
+                        Enabled: cribl.Bool(false),
+                        Field: cribl.String("debitis"),
+                        Headers: cribl.String("rem"),
+                        Name: cribl.String("Della Muller"),
+                        Type: "recusandae",
+                        Value: cribl.String("reiciendis"),
+                    },
+                    shared.AppscopeConfigWithCustomEventWatch{
+                        Allowbinary: cribl.Bool(false),
+                        Enabled: cribl.Bool(false),
+                        Field: cribl.String("nulla"),
+                        Headers: cribl.String("magni"),
+                        Name: cribl.String("Gwen Fritsch"),
+                        Type: "officiis",
+                        Value: cribl.String("beatae"),
                     },
                 },
             },
-            Description: "numquam",
-            ID: "57e1858b-6a89-4fbe-ba5a-a8e4824d0ab4",
-            Lib: shared.CriblLibCribl,
-            Tags: cribl.String("esse"),
+            Libscope: &shared.AppscopeConfigWithCustomLibscope{
+                Commanddir: cribl.String("laudantium"),
+                Configevent: cribl.Bool(false),
+                Log: &shared.AppscopeConfigWithCustomLibscopeLog{
+                    Level: shared.AppscopeConfigWithCustomLibscopeLogLevelInfo.ToPointer(),
+                    Transport: &shared.AppscopeTransport{
+                        Buffer: shared.AppscopeTransportBufferFull.ToPointer(),
+                        Host: cribl.String("cum"),
+                        Path: cribl.String("laboriosam"),
+                        Port: cribl.Int64(680515),
+                        TLS: &shared.AppscopeTransportTLS{
+                            Cacertpath: cribl.String("voluptatum"),
+                            Enable: cribl.Bool(false),
+                            Validateserver: cribl.Bool(false),
+                        },
+                        Type: cribl.String("error"),
+                    },
+                },
+                Summaryperiod: cribl.Int64(944708),
+            },
+            Metric: &shared.AppscopeConfigWithCustomMetric{
+                Enable: false,
+                Format: shared.AppscopeConfigWithCustomMetricFormat{
+                    Statsdmaxlen: cribl.Int64(710529),
+                    Statsdprefix: cribl.String("debitis"),
+                    Type: cribl.String("neque"),
+                    Verbosity: cribl.Int64(677115),
+                },
+                Transport: shared.AppscopeTransport{
+                    Buffer: shared.AppscopeTransportBufferLine.ToPointer(),
+                    Host: cribl.String("officia"),
+                    Path: cribl.String("dolorum"),
+                    Port: cribl.Int64(548361),
+                    TLS: &shared.AppscopeTransportTLS{
+                        Cacertpath: cribl.String("accusamus"),
+                        Enable: cribl.Bool(false),
+                        Validateserver: cribl.Bool(false),
+                    },
+                    Type: cribl.String("tempora"),
+                },
+                Watch: []string{
+                    "fugit",
+                    "ut",
+                    "fugiat",
+                },
+            },
+            Payload: &shared.AppscopeConfigWithCustomPayload{
+                Dir: "voluptatem",
+                Enable: false,
+            },
+            Protocol: []shared.AppscopeConfigWithCustomProtocol{
+                shared.AppscopeConfigWithCustomProtocol{
+                    Binary: false,
+                    Detect: false,
+                    Len: 710337,
+                    Name: "Barbara Koelpin IV",
+                    Payload: false,
+                    Regex: "quas",
+                },
+                shared.AppscopeConfigWithCustomProtocol{
+                    Binary: false,
+                    Detect: false,
+                    Len: 922112,
+                    Name: "Janet Kuvalis",
+                    Payload: false,
+                    Regex: "sit",
+                },
+                shared.AppscopeConfigWithCustomProtocol{
+                    Binary: false,
+                    Detect: false,
+                    Len: 425508,
+                    Name: "Mrs. Tricia Mueller",
+                    Payload: false,
+                    Regex: "dolorem",
+                },
+            },
+            Tags: []shared.AppscopeConfigWithCustomTags{
+                shared.AppscopeConfigWithCustomTags{
+                    Key: "dicta",
+                    Value: "architecto",
+                },
+                shared.AppscopeConfigWithCustomTags{
+                    Key: "occaecati",
+                    Value: "labore",
+                },
+                shared.AppscopeConfigWithCustomTags{
+                    Key: "quidem",
+                    Value: "atque",
+                },
+            },
         },
-        ID: "5088e518-6206-45e9-84f3-b1194b8abf60",
-    })
+        Description: "laborum",
+        ID: "bf603a79-f9df-4e0a-b7da-8a50ce187f86",
+        Lib: shared.CriblLibCustom,
+        Tags: cribl.String("maxime"),
+    }
+
+    ctx := context.Background()
+    res, err := s.AppscopeLibEntry.Update(ctx, id, appscopeLibEntry)
     if err != nil {
         log.Fatal(err)
     }
@@ -1720,10 +1829,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.UpdateAppscopeLibEntryRequest](../../models/operations/updateappscopelibentryrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `ctx`                                                               | [context.Context](https://pkg.go.dev/context#Context)               | :heavy_check_mark:                                                  | The context to use for the request.                                 |
+| `id`                                                                | *string*                                                            | :heavy_check_mark:                                                  | Unique ID                                                           |
+| `appscopeLibEntry`                                                  | [*shared.AppscopeLibEntry](../../models/shared/appscopelibentry.md) | :heavy_minus_sign:                                                  | AppscopeLibEntry object to be updated                               |
 
 
 ### Response

@@ -26,7 +26,11 @@ func newJobStatus(sdkConfig sdkConfiguration) *jobStatus {
 
 // Get - Get job status
 // Get job status
-func (s *jobStatus) Get(ctx context.Context, request operations.GetJobStatusRequest) (*operations.GetJobStatusResponse, error) {
+func (s *jobStatus) Get(ctx context.Context, id string) (*operations.GetJobStatusResponse, error) {
+	request := operations.GetJobStatusRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/jobs/{id}/status", request, nil)
 	if err != nil {

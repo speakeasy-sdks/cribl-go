@@ -26,7 +26,11 @@ func newGlobalVariableID(sdkConfig sdkConfiguration) *globalVariableID {
 
 // Delete - Delete Global Variable
 // Delete Global Variable
-func (s *globalVariableID) Delete(ctx context.Context, request operations.DeleteGlobalVariableIDRequest) (*operations.DeleteGlobalVariableIDResponse, error) {
+func (s *globalVariableID) Delete(ctx context.Context, id string) (*operations.DeleteGlobalVariableIDResponse, error) {
+	request := operations.DeleteGlobalVariableIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/vars/{id}", request, nil)
 	if err != nil {
@@ -103,7 +107,11 @@ func (s *globalVariableID) Delete(ctx context.Context, request operations.Delete
 
 // Get - Get Global Variable by ID
 // Get Global Variable by ID
-func (s *globalVariableID) Get(ctx context.Context, request operations.GetGlobalVariableIDRequest) (*operations.GetGlobalVariableIDResponse, error) {
+func (s *globalVariableID) Get(ctx context.Context, id string) (*operations.GetGlobalVariableIDResponse, error) {
+	request := operations.GetGlobalVariableIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/vars/{id}", request, nil)
 	if err != nil {
@@ -180,7 +188,12 @@ func (s *globalVariableID) Get(ctx context.Context, request operations.GetGlobal
 
 // Update - Update Global Variable
 // Update Global Variable
-func (s *globalVariableID) Update(ctx context.Context, request operations.UpdateGlobalVariableIDRequest) (*operations.UpdateGlobalVariableIDResponse, error) {
+func (s *globalVariableID) Update(ctx context.Context, id string, globalVar *shared.GlobalVar) (*operations.UpdateGlobalVariableIDResponse, error) {
+	request := operations.UpdateGlobalVariableIDRequest{
+		ID:        id,
+		GlobalVar: globalVar,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/vars/{id}", request, nil)
 	if err != nil {

@@ -33,16 +33,13 @@ func main() {
     ctx := context.Background()
     res, err := s.PolicyRule.Create(ctx, shared.PolicyRule{
         Args: []string{
-            "nemo",
-            "dolore",
-            "numquam",
+            "quas",
         },
-        Description: cribl.String("dolor"),
-        ID: "9ee22446-0443-4bc1-9418-8c2f56e85da7",
+        Description: cribl.String("blanditiis"),
+        ID: "b1c4ee2c-8c6c-4e61-9fee-b1c7cbdb6eec",
         Template: []string{
-            "dolorem",
-            "odit",
-            "officiis",
+            "quaerat",
+            "ipsum",
         },
     })
     if err != nil {
@@ -91,11 +88,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "ducimus"
 
     ctx := context.Background()
-    res, err := s.PolicyRule.Delete(ctx, operations.DeletePolicyRuleRequest{
-        ID: "abd617c3-b0d5-41a4-8bf0-1bad8706d460",
-    })
+    res, err := s.PolicyRule.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -108,10 +104,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.DeletePolicyRuleRequest](../../models/operations/deletepolicyrulerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -142,11 +138,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "laudantium"
 
     ctx := context.Background()
-    res, err := s.PolicyRule.Get(ctx, operations.GetPolicyRuleRequest{
-        ID: "82bfbdc4-1ff5-4d4e-aae4-fb5cb35d1763",
-    })
+    res, err := s.PolicyRule.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -159,10 +154,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.GetPolicyRuleRequest](../../models/operations/getpolicyrulerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -193,26 +188,22 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "rerum"
+    policyRule := &shared.PolicyRule{
+        Args: []string{
+            "odit",
+            "ad",
+            "sequi",
+        },
+        Description: cribl.String("beatae"),
+        ID: "7747dc91-5ad2-4caf-9dd6-723dc0f5ae2f",
+        Template: []string{
+            "officia",
+        },
+    }
 
     ctx := context.Background()
-    res, err := s.PolicyRule.Update(ctx, operations.UpdatePolicyRuleRequest{
-        PolicyRule: &shared.PolicyRule{
-            Args: []string{
-                "delectus",
-                "sunt",
-                "repudiandae",
-            },
-            Description: cribl.String("facere"),
-            ID: "b78359ec-c5cb-4860-b8cd-580ba73810e4",
-            Template: []string{
-                "necessitatibus",
-                "tempora",
-                "quaerat",
-                "magnam",
-            },
-        },
-        ID: "7297cd3b-1dd3-4bbc-a247-b7684eff5012",
-    })
+    res, err := s.PolicyRule.Update(ctx, id, policyRule)
     if err != nil {
         log.Fatal(err)
     }
@@ -225,10 +216,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.UpdatePolicyRuleRequest](../../models/operations/updatepolicyrulerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                               | Type                                                    | Required                                                | Description                                             |
+| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
+| `ctx`                                                   | [context.Context](https://pkg.go.dev/context#Context)   | :heavy_check_mark:                                      | The context to use for the request.                     |
+| `id`                                                    | *string*                                                | :heavy_check_mark:                                      | Unique ID                                               |
+| `policyRule`                                            | [*shared.PolicyRule](../../models/shared/policyrule.md) | :heavy_minus_sign:                                      | PolicyRule object to be updated                         |
 
 
 ### Response

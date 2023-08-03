@@ -27,7 +27,11 @@ func newDiagBundle(sdkConfig sdkConfiguration) *diagBundle {
 
 // Delete - Remove diag bundle
 // Remove diag bundle
-func (s *diagBundle) Delete(ctx context.Context, request operations.DeleteDiagBundleRequest) (*operations.DeleteDiagBundleResponse, error) {
+func (s *diagBundle) Delete(ctx context.Context, path string) (*operations.DeleteDiagBundleResponse, error) {
+	request := operations.DeleteDiagBundleRequest{
+		Path: path,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/system/diag"
 

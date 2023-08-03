@@ -108,7 +108,11 @@ func (s *grokFile) Create(ctx context.Context, request shared.GrokFile) (*operat
 
 // Delete - Delete GrokFile
 // Delete GrokFile
-func (s *grokFile) Delete(ctx context.Context, request operations.DeleteGrokFileRequest) (*operations.DeleteGrokFileResponse, error) {
+func (s *grokFile) Delete(ctx context.Context, id string) (*operations.DeleteGrokFileResponse, error) {
+	request := operations.DeleteGrokFileRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/grok/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *grokFile) Delete(ctx context.Context, request operations.DeleteGrokFile
 
 // Get - Get GrokFile by ID
 // Get GrokFile by ID
-func (s *grokFile) Get(ctx context.Context, request operations.GetGrokFileRequest) (*operations.GetGrokFileResponse, error) {
+func (s *grokFile) Get(ctx context.Context, id string) (*operations.GetGrokFileResponse, error) {
+	request := operations.GetGrokFileRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/grok/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *grokFile) Get(ctx context.Context, request operations.GetGrokFileReques
 
 // Update - Update GrokFile
 // Update GrokFile
-func (s *grokFile) Update(ctx context.Context, request operations.UpdateGrokFileRequest) (*operations.UpdateGrokFileResponse, error) {
+func (s *grokFile) Update(ctx context.Context, id string, grokFile *shared.GrokFile) (*operations.UpdateGrokFileResponse, error) {
+	request := operations.UpdateGrokFileRequest{
+		ID:       id,
+		GrokFile: grokFile,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/grok/{id}", request, nil)
 	if err != nil {

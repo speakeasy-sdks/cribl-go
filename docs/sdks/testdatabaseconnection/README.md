@@ -29,12 +29,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.TestDatabaseConnection.Post(ctx, shared.DatabaseConnectionTest{
-        AuthType: "rem",
-        ConfigObj: cribl.String("consectetur"),
-        ConnectionString: cribl.String("nulla"),
-        ConnectionTimeout: cribl.Int64(169011),
-        DatabaseType: "dolor",
-        TextSecret: cribl.String("esse"),
+        AuthType: "beatae",
+        ConfigObj: cribl.String("quos"),
+        ConnectionString: cribl.String("consectetur"),
+        ConnectionTimeout: cribl.Int64(742010),
+        DatabaseType: "tenetur",
+        TextSecret: cribl.String("necessitatibus"),
     })
     if err != nil {
         log.Fatal(err)

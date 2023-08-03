@@ -28,12 +28,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    relayState := "architecto"
+    samlResponse := "a"
 
     ctx := context.Background()
-    res, err := s.RequestAuth.Get(ctx, operations.GetRequestAuthRequest{
-        RelayState: cribl.String("laboriosam"),
-        SAMLResponse: cribl.String("iste"),
-    })
+    res, err := s.RequestAuth.Get(ctx, relayState, samlResponse)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetRequestAuthRequest](../../models/operations/getrequestauthrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `relayState`                                          | **string*                                             | :heavy_minus_sign:                                    | N/A                                                   |
+| `samlResponse`                                        | **string*                                             | :heavy_minus_sign:                                    | Authentication request object                         |
 
 
 ### Response
@@ -83,8 +83,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.RequestAuth.Post(ctx, operations.PostRequestAuthRequestBody{
-        RelayState: cribl.String("quidem"),
-        SAMLResponse: cribl.String("iusto"),
+        RelayState: cribl.String("laborum"),
+        SAMLResponse: cribl.String("veritatis"),
     })
     if err != nil {
         log.Fatal(err)

@@ -27,14 +27,13 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "voluptatem"
+    deployRequest := &shared.DeployRequest{
+        Version: "ad",
+    }
 
     ctx := context.Background()
-    res, err := s.FleetOrWorkerGroup.Deploy(ctx, operations.DeployFleetOrWorkerGroupRequest{
-        DeployRequest: &shared.DeployRequest{
-            Version: "est",
-        },
-        ID: "4fa87cf5-35a6-4fae-94eb-f60c321f023b",
-    })
+    res, err := s.FleetOrWorkerGroup.Deploy(ctx, id, deployRequest)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,10 +46,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.DeployFleetOrWorkerGroupRequest](../../models/operations/deployfleetorworkergrouprequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                     | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `ctx`                                                         | [context.Context](https://pkg.go.dev/context#Context)         | :heavy_check_mark:                                            | The context to use for the request.                           |
+| `id`                                                          | *string*                                                      | :heavy_check_mark:                                            | Unique ID                                                     |
+| `deployRequest`                                               | [*shared.DeployRequest](../../models/shared/deployrequest.md) | :heavy_minus_sign:                                            | DeployRequest object                                          |
 
 
 ### Response

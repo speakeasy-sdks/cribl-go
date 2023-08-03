@@ -26,7 +26,11 @@ func newGiveCriblVersion(sdkConfig sdkConfiguration) *giveCriblVersion {
 
 // Post - Upgrade Cribl to a given version
 // Upgrade Cribl to a given version
-func (s *giveCriblVersion) Post(ctx context.Context, request operations.PostGiveCriblVersionRequest) (*operations.PostGiveCriblVersionResponse, error) {
+func (s *giveCriblVersion) Post(ctx context.Context, version string) (*operations.PostGiveCriblVersionResponse, error) {
+	request := operations.PostGiveCriblVersionRequest{
+		Version: version,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/settings/upgrade/{version}", request, nil)
 	if err != nil {

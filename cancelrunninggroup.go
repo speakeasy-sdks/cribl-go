@@ -26,7 +26,11 @@ func newCancelRunningGroup(sdkConfig sdkConfiguration) *cancelRunningGroup {
 
 // Post - Cancel a running group upgrade
 // Cancel a running group upgrade
-func (s *cancelRunningGroup) Post(ctx context.Context, request operations.PostCancelRunningGroupRequest) (*operations.PostCancelRunningGroupResponse, error) {
+func (s *cancelRunningGroup) Post(ctx context.Context, group string) (*operations.PostCancelRunningGroupResponse, error) {
+	request := operations.PostCancelRunningGroupRequest{
+		Group: group,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/distributed/upgrade/cancel/{group}", request, nil)
 	if err != nil {

@@ -27,21 +27,17 @@ func main() {
             BearerAuth: "",
         }),
     )
-
-    ctx := context.Background()
-    res, err := s.SampleOutput.Post(ctx, operations.PostSampleOutputRequest{
-        OutputTestRequest: &shared.OutputTestRequest{
-            Events: []shared.CriblEvent{
-                shared.CriblEvent{
-                    Raw: "sit",
-                },
-                shared.CriblEvent{
-                    Raw: "recusandae",
-                },
+    id := "magni"
+    outputTestRequest := &shared.OutputTestRequest{
+        Events: []shared.CriblEvent{
+            shared.CriblEvent{
+                Raw: "est",
             },
         },
-        ID: "f53a34a1-b8fe-4997-b1ad-c05d85ae2dfb",
-    })
+    }
+
+    ctx := context.Background()
+    res, err := s.SampleOutput.Post(ctx, id, outputTestRequest)
     if err != nil {
         log.Fatal(err)
     }
@@ -54,10 +50,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.PostSampleOutputRequest](../../models/operations/postsampleoutputrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `ctx`                                                                 | [context.Context](https://pkg.go.dev/context#Context)                 | :heavy_check_mark:                                                    | The context to use for the request.                                   |
+| `id`                                                                  | *string*                                                              | :heavy_check_mark:                                                    | Output Id                                                             |
+| `outputTestRequest`                                                   | [*shared.OutputTestRequest](../../models/shared/outputtestrequest.md) | :heavy_minus_sign:                                                    | OutputTestRequest object                                              |
 
 
 ### Response

@@ -8,17 +8,10 @@ import (
 )
 
 type PostExecuteDistributedUpgradeRequest struct {
-	// distributedUpgrade object
-	DistributedUpgradeRequest *shared.DistributedUpgradeRequest `request:"mediaType=application/json"`
 	// Group to upgrade
 	Group string `pathParam:"style=simple,explode=false,name=group"`
-}
-
-func (o *PostExecuteDistributedUpgradeRequest) GetDistributedUpgradeRequest() *shared.DistributedUpgradeRequest {
-	if o == nil {
-		return nil
-	}
-	return o.DistributedUpgradeRequest
+	// distributedUpgrade object
+	DistributedUpgradeRequest *shared.DistributedUpgradeRequest `request:"mediaType=application/json"`
 }
 
 func (o *PostExecuteDistributedUpgradeRequest) GetGroup() string {
@@ -26,6 +19,13 @@ func (o *PostExecuteDistributedUpgradeRequest) GetGroup() string {
 		return ""
 	}
 	return o.Group
+}
+
+func (o *PostExecuteDistributedUpgradeRequest) GetDistributedUpgradeRequest() *shared.DistributedUpgradeRequest {
+	if o == nil {
+		return nil
+	}
+	return o.DistributedUpgradeRequest
 }
 
 type PostExecuteDistributedUpgradeResponse struct {

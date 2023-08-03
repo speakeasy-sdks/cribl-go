@@ -108,7 +108,11 @@ func (s *appscopeLibEntry) Create(ctx context.Context, request shared.AppscopeLi
 
 // Delete - Delete AppscopeLibEntry
 // Delete AppscopeLibEntry
-func (s *appscopeLibEntry) Delete(ctx context.Context, request operations.DeleteAppscopeLibEntryRequest) (*operations.DeleteAppscopeLibEntryResponse, error) {
+func (s *appscopeLibEntry) Delete(ctx context.Context, id string) (*operations.DeleteAppscopeLibEntryResponse, error) {
+	request := operations.DeleteAppscopeLibEntryRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/appscope-configs/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *appscopeLibEntry) Delete(ctx context.Context, request operations.Delete
 
 // Get - Get AppscopeLibEntry by ID
 // Get AppscopeLibEntry by ID
-func (s *appscopeLibEntry) Get(ctx context.Context, request operations.GetAppscopeLibEntryRequest) (*operations.GetAppscopeLibEntryResponse, error) {
+func (s *appscopeLibEntry) Get(ctx context.Context, id string) (*operations.GetAppscopeLibEntryResponse, error) {
+	request := operations.GetAppscopeLibEntryRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/appscope-configs/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *appscopeLibEntry) Get(ctx context.Context, request operations.GetAppsco
 
 // Update - Update AppscopeLibEntry
 // Update AppscopeLibEntry
-func (s *appscopeLibEntry) Update(ctx context.Context, request operations.UpdateAppscopeLibEntryRequest) (*operations.UpdateAppscopeLibEntryResponse, error) {
+func (s *appscopeLibEntry) Update(ctx context.Context, id string, appscopeLibEntry *shared.AppscopeLibEntry) (*operations.UpdateAppscopeLibEntryResponse, error) {
+	request := operations.UpdateAppscopeLibEntryRequest{
+		ID:               id,
+		AppscopeLibEntry: appscopeLibEntry,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/appscope-configs/{id}", request, nil)
 	if err != nil {

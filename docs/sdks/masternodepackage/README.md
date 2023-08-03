@@ -31,8 +31,16 @@ func main() {
     res, err := s.MasterNodePackage.Post(ctx, shared.UpgradeMasterRequest{
         Packages: []shared.UpgradeMasterRequestPackages{
             shared.UpgradeMasterRequestPackages{
-                PackageHashURL: cribl.String("libero"),
-                PackageURL: "excepturi",
+                PackageHashURL: cribl.String("natus"),
+                PackageURL: "cumque",
+            },
+            shared.UpgradeMasterRequestPackages{
+                PackageHashURL: cribl.String("natus"),
+                PackageURL: "quaerat",
+            },
+            shared.UpgradeMasterRequestPackages{
+                PackageHashURL: cribl.String("doloribus"),
+                PackageURL: "quia",
             },
         },
     })

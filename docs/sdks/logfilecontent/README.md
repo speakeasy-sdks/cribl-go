@@ -30,12 +30,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.LogFileContent.Get(ctx, operations.GetLogFileContentRequest{
-        EndOffset: cribl.Int64(933840),
-        Et: cribl.Int64(523156),
-        Filter: cribl.String("nemo"),
-        ID: "4e90439d-2224-4656-9462-407084f7ab37",
-        Limit: cribl.Int64(761331),
-        Lt: cribl.Int64(904051),
+        EndOffset: cribl.Int64(276650),
+        Et: cribl.Int64(240490),
+        Filter: cribl.String("praesentium"),
+        ID: "35bbc05a-23a4-45ce-bc5f-de10a0ce2169",
+        Limit: cribl.Int64(892708),
+        Lt: cribl.Int64(354821),
     })
     if err != nil {
         log.Fatal(err)

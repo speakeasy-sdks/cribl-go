@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateKeyMetadataEntityRequest struct {
-	// KeyMetadataEntity object to be updated
-	KeyMetadataEntity *shared.KeyMetadataEntity `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateKeyMetadataEntityRequest) GetKeyMetadataEntity() *shared.KeyMetadataEntity {
-	if o == nil {
-		return nil
-	}
-	return o.KeyMetadataEntity
+	// KeyMetadataEntity object to be updated
+	KeyMetadataEntity *shared.KeyMetadataEntity `request:"mediaType=application/json"`
 }
 
 func (o *UpdateKeyMetadataEntityRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateKeyMetadataEntityRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateKeyMetadataEntityRequest) GetKeyMetadataEntity() *shared.KeyMetadataEntity {
+	if o == nil {
+		return nil
+	}
+	return o.KeyMetadataEntity
 }
 
 type UpdateKeyMetadataEntityResponse struct {

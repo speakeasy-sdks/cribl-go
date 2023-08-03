@@ -25,7 +25,11 @@ func newSearchJobMetrics(sdkConfig sdkConfiguration) *searchJobMetrics {
 
 // Get - Get search job metrics
 // Get search job metrics
-func (s *searchJobMetrics) Get(ctx context.Context, request operations.GethSearchJobMetricsRequest) (*operations.GethSearchJobMetricsResponse, error) {
+func (s *searchJobMetrics) Get(ctx context.Context, id string) (*operations.GethSearchJobMetricsResponse, error) {
+	request := operations.GethSearchJobMetricsRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/jobs/{id}/metrics", request, nil)
 	if err != nil {

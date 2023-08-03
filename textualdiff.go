@@ -27,7 +27,12 @@ func newTextualDiff(sdkConfig sdkConfiguration) *textualDiff {
 
 // Get - get the textual diff for given commit
 // get the textual diff for given commit
-func (s *textualDiff) Get(ctx context.Context, request operations.GetTextualDiffRequest) (*operations.GetTextualDiffResponse, error) {
+func (s *textualDiff) Get(ctx context.Context, commit *string, group *string) (*operations.GetTextualDiffResponse, error) {
+	request := operations.GetTextualDiffRequest{
+		Commit: commit,
+		Group:  group,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/version/diff"
 

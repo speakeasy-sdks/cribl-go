@@ -26,7 +26,12 @@ func newExecuteDistributedUpgrade(sdkConfig sdkConfiguration) *executeDistribute
 
 // Post - Execute distributed group upgrade
 // Execute distributed group upgrade
-func (s *executeDistributedUpgrade) Post(ctx context.Context, request operations.PostExecuteDistributedUpgradeRequest) (*operations.PostExecuteDistributedUpgradeResponse, error) {
+func (s *executeDistributedUpgrade) Post(ctx context.Context, group string, distributedUpgradeRequest *shared.DistributedUpgradeRequest) (*operations.PostExecuteDistributedUpgradeResponse, error) {
+	request := operations.PostExecuteDistributedUpgradeRequest{
+		Group:                     group,
+		DistributedUpgradeRequest: distributedUpgradeRequest,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/distributed/upgrade/{group}", request, nil)
 	if err != nil {

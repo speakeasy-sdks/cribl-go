@@ -29,12 +29,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.GlobalVariable.Post(ctx, shared.GlobalVar{
-        Description: cribl.String("expedita"),
-        ID: "7c15dfba-ce18-48b1-84ee-2c8c6ce611fe",
-        Lib: cribl.String("vero"),
-        Tags: cribl.String("quidem"),
-        Type: shared.GlobalVarTypeString,
-        Value: "quo",
+        Description: cribl.String("illum"),
+        ID: "8bb31180-f739-4ae9-a057-eb809e281033",
+        Lib: cribl.String("sunt"),
+        Tags: cribl.String("a"),
+        Type: shared.GlobalVarTypeNumber,
+        Value: "occaecati",
     })
     if err != nil {
         log.Fatal(err)

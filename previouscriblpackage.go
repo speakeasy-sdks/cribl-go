@@ -26,7 +26,11 @@ func newPreviousCriblPackage(sdkConfig sdkConfiguration) *previousCriblPackage {
 
 // Get - Get the previously downloaded Cribl package
 // Get the previously downloaded Cribl package
-func (s *previousCriblPackage) Get(ctx context.Context, request operations.GetPreviousCriblPackageRequest) (*operations.GetPreviousCriblPackageResponse, error) {
+func (s *previousCriblPackage) Get(ctx context.Context, file string) (*operations.GetPreviousCriblPackageResponse, error) {
+	request := operations.GetPreviousCriblPackageRequest{
+		File: file,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/distributed/upgrade/download/{file}", request, nil)
 	if err != nil {

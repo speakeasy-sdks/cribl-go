@@ -27,7 +27,11 @@ func newJob(sdkConfig sdkConfiguration) *job {
 
 // Cancel - Cancel a job by instance id
 // Cancel a job by instance id
-func (s *job) Cancel(ctx context.Context, request operations.CancelJobRequest) (*operations.CancelJobResponse, error) {
+func (s *job) Cancel(ctx context.Context, id string) (*operations.CancelJobResponse, error) {
+	request := operations.CancelJobRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}/cancel", request, nil)
 	if err != nil {
@@ -104,7 +108,11 @@ func (s *job) Cancel(ctx context.Context, request operations.CancelJobRequest) (
 
 // Delete - Remove job from job inspector by instance id
 // Remove job from job inspector by instance id
-func (s *job) Delete(ctx context.Context, request operations.DeleteJobRequest) (*operations.DeleteJobResponse, error) {
+func (s *job) Delete(ctx context.Context, id string) (*operations.DeleteJobResponse, error) {
+	request := operations.DeleteJobRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}", request, nil)
 	if err != nil {
@@ -181,7 +189,11 @@ func (s *job) Delete(ctx context.Context, request operations.DeleteJobRequest) (
 
 // Get - Get job info by instance id
 // Get job info by instance id
-func (s *job) Get(ctx context.Context, request operations.GetJobRequest) (*operations.GetJobResponse, error) {
+func (s *job) Get(ctx context.Context, id string) (*operations.GetJobResponse, error) {
+	request := operations.GetJobRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}", request, nil)
 	if err != nil {
@@ -258,7 +270,11 @@ func (s *job) Get(ctx context.Context, request operations.GetJobRequest) (*opera
 
 // PauseJob - Pause a job by instance id
 // Pause a job by instance id
-func (s *job) PauseJob(ctx context.Context, request operations.PauseJobRequest) (*operations.PauseJobResponse, error) {
+func (s *job) PauseJob(ctx context.Context, id string) (*operations.PauseJobResponse, error) {
+	request := operations.PauseJobRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}/pause", request, nil)
 	if err != nil {
@@ -335,7 +351,11 @@ func (s *job) PauseJob(ctx context.Context, request operations.PauseJobRequest) 
 
 // Prevent - prevent job from being deleted automatically
 // prevent job from being deleted automatically
-func (s *job) Prevent(ctx context.Context, request operations.PreventJobRequest) (*operations.PreventJobResponse, error) {
+func (s *job) Prevent(ctx context.Context, id string) (*operations.PreventJobResponse, error) {
+	request := operations.PreventJobRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}/keep", request, nil)
 	if err != nil {
@@ -412,7 +432,11 @@ func (s *job) Prevent(ctx context.Context, request operations.PreventJobRequest)
 
 // Resume - Resume a job by instance id
 // Resume a job by instance id
-func (s *job) Resume(ctx context.Context, request operations.ResumeJobRequest) (*operations.ResumeJobResponse, error) {
+func (s *job) Resume(ctx context.Context, id string) (*operations.ResumeJobResponse, error) {
+	request := operations.ResumeJobRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}/resume", request, nil)
 	if err != nil {

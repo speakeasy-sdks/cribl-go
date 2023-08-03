@@ -27,7 +27,12 @@ func newGroups(sdkConfig sdkConfiguration) *groups {
 
 // Get - Get a list of ConfigGroup objects
 // Get a list of ConfigGroup objects
-func (s *groups) Get(ctx context.Context, request operations.GetGroupsRequest) (*operations.GetGroupsResponse, error) {
+func (s *groups) Get(ctx context.Context, fields *string, product *string) (*operations.GetGroupsResponse, error) {
+	request := operations.GetGroupsRequest{
+		Fields:  fields,
+		Product: product,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/master/groups"
 

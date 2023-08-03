@@ -27,11 +27,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    version := "amet"
 
     ctx := context.Background()
-    res, err := s.GiveCriblVersion.Post(ctx, operations.PostGiveCriblVersionRequest{
-        Version: "labore",
-    })
+    res, err := s.GiveCriblVersion.Post(ctx, version)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,10 +43,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.PostGiveCriblVersionRequest](../../models/operations/postgivecriblversionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `version`                                             | *string*                                              | :heavy_check_mark:                                    | Version number                                        |
 
 
 ### Response

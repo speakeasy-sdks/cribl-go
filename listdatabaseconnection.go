@@ -27,7 +27,11 @@ func newListDatabaseConnection(sdkConfig sdkConfiguration) *listDatabaseConnecti
 
 // Get - Get a list of DatabaseConnection objects
 // Get a list of DatabaseConnection objects
-func (s *listDatabaseConnection) Get(ctx context.Context, request operations.GetListDatabaseConnectionRequest) (*operations.GetListDatabaseConnectionResponse, error) {
+func (s *listDatabaseConnection) Get(ctx context.Context, databaseType *string) (*operations.GetListDatabaseConnectionResponse, error) {
+	request := operations.GetListDatabaseConnectionRequest{
+		DatabaseType: databaseType,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/lib/database-connections"
 

@@ -29,8 +29,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.AuthToken.Login(ctx, shared.LoginInfo{
-        Password: "amet",
-        Username: "Luther_Klocko",
+        Password: "et",
+        Username: "Jairo.Farrell53",
     })
     if err != nil {
         log.Fatal(err)

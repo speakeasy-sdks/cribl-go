@@ -27,7 +27,12 @@ func newCluis(sdkConfig sdkConfiguration) *cluis {
 
 // Get - Get CLUI search results
 // Get CLUI search results
-func (s *cluis) Get(ctx context.Context, request operations.GetCluisRequest) (*operations.GetCluisResponse, error) {
+func (s *cluis) Get(ctx context.Context, query string, context *string) (*operations.GetCluisResponse, error) {
+	request := operations.GetCluisRequest{
+		Query:   query,
+		Context: context,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/clui"
 

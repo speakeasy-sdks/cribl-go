@@ -26,7 +26,11 @@ func newDataSampleID(sdkConfig sdkConfiguration) *dataSampleID {
 
 // Delete - Delete DataSample
 // Delete DataSample
-func (s *dataSampleID) Delete(ctx context.Context, request operations.DeleteDataSampleIDRequest) (*operations.DeleteDataSampleIDResponse, error) {
+func (s *dataSampleID) Delete(ctx context.Context, id string) (*operations.DeleteDataSampleIDResponse, error) {
+	request := operations.DeleteDataSampleIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/samples/{id}", request, nil)
 	if err != nil {
@@ -103,7 +107,11 @@ func (s *dataSampleID) Delete(ctx context.Context, request operations.DeleteData
 
 // Get - Get DataSample by ID
 // Get DataSample by ID
-func (s *dataSampleID) Get(ctx context.Context, request operations.GetDataSampleIDRequest) (*operations.GetDataSampleIDResponse, error) {
+func (s *dataSampleID) Get(ctx context.Context, id string) (*operations.GetDataSampleIDResponse, error) {
+	request := operations.GetDataSampleIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/samples/{id}", request, nil)
 	if err != nil {
@@ -180,7 +188,12 @@ func (s *dataSampleID) Get(ctx context.Context, request operations.GetDataSample
 
 // Update - Update DataSample
 // Update DataSample
-func (s *dataSampleID) Update(ctx context.Context, request operations.UpdateDataSampleIDRequest) (*operations.UpdateDataSampleIDResponse, error) {
+func (s *dataSampleID) Update(ctx context.Context, id string, requestBody map[string]interface{}) (*operations.UpdateDataSampleIDResponse, error) {
+	request := operations.UpdateDataSampleIDRequest{
+		ID:          id,
+		RequestBody: requestBody,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/samples/{id}", request, nil)
 	if err != nil {

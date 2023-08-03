@@ -26,7 +26,11 @@ func newSavedJob(sdkConfig sdkConfiguration) *savedJob {
 
 // Delete - Delete SavedJob
 // Delete SavedJob
-func (s *savedJob) Delete(ctx context.Context, request operations.DeleteSavedJobRequest) (*operations.DeleteSavedJobResponse, error) {
+func (s *savedJob) Delete(ctx context.Context, id string) (*operations.DeleteSavedJobResponse, error) {
+	request := operations.DeleteSavedJobRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/jobs/{id}", request, nil)
 	if err != nil {
@@ -103,7 +107,11 @@ func (s *savedJob) Delete(ctx context.Context, request operations.DeleteSavedJob
 
 // Get - Get SavedJob by ID
 // Get SavedJob by ID
-func (s *savedJob) Get(ctx context.Context, request operations.GetSavedJobRequest) (*operations.GetSavedJobResponse, error) {
+func (s *savedJob) Get(ctx context.Context, id string) (*operations.GetSavedJobResponse, error) {
+	request := operations.GetSavedJobRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/jobs/{id}", request, nil)
 	if err != nil {
@@ -180,7 +188,12 @@ func (s *savedJob) Get(ctx context.Context, request operations.GetSavedJobReques
 
 // Update - Update SavedJob
 // Update SavedJob
-func (s *savedJob) Update(ctx context.Context, request operations.UpdateSavedJobRequest) (*operations.UpdateSavedJobResponse, error) {
+func (s *savedJob) Update(ctx context.Context, id string, savedJob *shared.SavedJob) (*operations.UpdateSavedJobResponse, error) {
+	request := operations.UpdateSavedJobRequest{
+		ID:       id,
+		SavedJob: savedJob,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/jobs/{id}", request, nil)
 	if err != nil {

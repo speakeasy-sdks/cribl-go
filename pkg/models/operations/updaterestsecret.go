@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateRestSecretRequest struct {
-	// RestSecret object to be updated
-	RestSecret *shared.RestSecret `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateRestSecretRequest) GetRestSecret() *shared.RestSecret {
-	if o == nil {
-		return nil
-	}
-	return o.RestSecret
+	// RestSecret object to be updated
+	RestSecret *shared.RestSecret `request:"mediaType=application/json"`
 }
 
 func (o *UpdateRestSecretRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateRestSecretRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateRestSecretRequest) GetRestSecret() *shared.RestSecret {
+	if o == nil {
+		return nil
+	}
+	return o.RestSecret
 }
 
 type UpdateRestSecretResponse struct {

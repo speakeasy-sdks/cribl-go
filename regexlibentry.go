@@ -27,7 +27,11 @@ func newRegexLibEntry(sdkConfig sdkConfiguration) *regexLibEntry {
 
 // Delete - Delete RegexLibEntry
 // Delete RegexLibEntry
-func (s *regexLibEntry) Delete(ctx context.Context, request operations.DeleteRegexLibEntryRequest) (*operations.DeleteRegexLibEntryResponse, error) {
+func (s *regexLibEntry) Delete(ctx context.Context, id string) (*operations.DeleteRegexLibEntryResponse, error) {
+	request := operations.DeleteRegexLibEntryRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/regex/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,12 @@ func (s *regexLibEntry) Post(ctx context.Context, request shared.RegexLibEntry) 
 
 // Update - Update RegexLibEntry
 // Update RegexLibEntry
-func (s *regexLibEntry) Update(ctx context.Context, request operations.UpdateRegexLibEntryRequest) (*operations.UpdateRegexLibEntryResponse, error) {
+func (s *regexLibEntry) Update(ctx context.Context, id string, regexLibEntry *shared.RegexLibEntry) (*operations.UpdateRegexLibEntryResponse, error) {
+	request := operations.UpdateRegexLibEntryRequest{
+		ID:            id,
+		RegexLibEntry: regexLibEntry,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/regex/{id}", request, nil)
 	if err != nil {

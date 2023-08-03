@@ -27,7 +27,12 @@ func newLogandTextual(sdkConfig sdkConfiguration) *logandTextual {
 
 // Get - get the log message and textual diff for given commit
 // get the log message and textual diff for given commit
-func (s *logandTextual) Get(ctx context.Context, request operations.GetLogandTextualRequest) (*operations.GetLogandTextualResponse, error) {
+func (s *logandTextual) Get(ctx context.Context, commit *string, group *string) (*operations.GetLogandTextualResponse, error) {
+	request := operations.GetLogandTextualRequest{
+		Commit: commit,
+		Group:  group,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/version/show"
 

@@ -26,7 +26,11 @@ func newOutputStatusID(sdkConfig sdkConfiguration) *outputStatusID {
 
 // Get - Get OutputStatus by ID
 // Get OutputStatus by ID
-func (s *outputStatusID) Get(ctx context.Context, request operations.GetOutputStatusIDRequest) (*operations.GetOutputStatusIDResponse, error) {
+func (s *outputStatusID) Get(ctx context.Context, id string) (*operations.GetOutputStatusIDResponse, error) {
+	request := operations.GetOutputStatusIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/status/outputs/{id}", request, nil)
 	if err != nil {

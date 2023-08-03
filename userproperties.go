@@ -26,7 +26,12 @@ func newUserProperties(sdkConfig sdkConfiguration) *userProperties {
 
 // Update - Update User properties – admin use only
 // Update User properties – admin use only
-func (s *userProperties) Update(ctx context.Context, request operations.UpdateUserPropertiesRequest) (*operations.UpdateUserPropertiesResponse, error) {
+func (s *userProperties) Update(ctx context.Context, id string, userProfile *shared.UserProfile) (*operations.UpdateUserPropertiesResponse, error) {
+	request := operations.UpdateUserPropertiesRequest{
+		ID:          id,
+		UserProfile: userProfile,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/users/{id}", request, nil)
 	if err != nil {

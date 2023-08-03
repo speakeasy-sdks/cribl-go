@@ -33,14 +33,12 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Lookup.Create(ctx, operations.CreateLookupRequestBody1{
-        Description: cribl.String("dolores"),
-        FileInfo: &operations.CreateLookupRequestBody1FileInfo{
-            Filename: "enim",
-        },
-        ID: "7b992c8d-bda6-4a61-afa2-198258fd0a9e",
-        Size: cribl.Int64(723623),
-        Tags: cribl.String("animi"),
+    res, err := s.Lookup.Create(ctx, operations.CreateLookupRequestBody2{
+        Content: cribl.String("minus"),
+        Description: cribl.String("quia"),
+        ID: "47c88373-a40e-4194-af32-e55055756f5d",
+        Size: cribl.Int64(366480),
+        Tags: cribl.String("suscipit"),
     })
     if err != nil {
         log.Fatal(err)
@@ -88,11 +86,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "pariatur"
 
     ctx := context.Background()
-    res, err := s.Lookup.Delete(ctx, operations.DeleteLookupRequest{
-        ID: "47f7d3ef-0496-440d-aa18-31c87adf596f",
-    })
+    res, err := s.Lookup.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -105,10 +102,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.DeleteLookupRequest](../../models/operations/deletelookuprequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -139,11 +136,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "sit"
 
     ctx := context.Background()
-    res, err := s.Lookup.Get(ctx, operations.GetLookupRequest{
-        ID: "df1ad837-ae80-4c1c-99c9-5ba998678fa3",
-    })
+    res, err := s.Lookup.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -156,10 +152,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
-| `request`                                                                  | [operations.GetLookupRequest](../../models/operations/getlookuprequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -190,18 +186,17 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "quidem"
+    requestBody := operations.UpdateLookupRequestBody2{
+        Content: cribl.String("perferendis"),
+        Description: cribl.String("id"),
+        ID: "f2dfe13d-b4f6-42cb-a3f8-941aebc0b80a",
+        Size: cribl.Int64(396223),
+        Tags: cribl.String("excepturi"),
+    }
 
     ctx := context.Background()
-    res, err := s.Lookup.Update(ctx, operations.UpdateLookupRequest{
-        RequestBody: &operations.UpdateLookupRequestBody2{
-            Content: cribl.String("iure"),
-            Description: cribl.String("sint"),
-            ID: "6991af38-8ce0-4361-8448-c7977a0ef2f5",
-            Size: cribl.Int64(217552),
-            Tags: cribl.String("laboriosam"),
-        },
-        ID: "028efeef-9341-452e-97e2-53f4c157deaa",
-    })
+    res, err := s.Lookup.Update(ctx, id, requestBody)
     if err != nil {
         log.Fatal(err)
     }
@@ -214,10 +209,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.UpdateLookupRequest](../../models/operations/updatelookuprequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `requestBody`                                         | *interface{}*                                         | :heavy_minus_sign:                                    | LookupFile object to be updated                       |
 
 
 ### Response
@@ -248,11 +244,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    filename := "magni"
 
     ctx := context.Background()
-    res, err := s.Lookup.Upload(ctx, operations.UploadLookupRequest{
-        Filename: cribl.String("in"),
-    })
+    res, err := s.Lookup.Upload(ctx, filename)
     if err != nil {
         log.Fatal(err)
     }
@@ -265,10 +260,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.UploadLookupRequest](../../models/operations/uploadlookuprequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `filename`                                            | **string*                                             | :heavy_minus_sign:                                    | query LookupFilenameSchema required Filename          |
 
 
 ### Response

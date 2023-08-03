@@ -29,19 +29,17 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.CreateUser(ctx, shared.User{
-        CurrentPassword: cribl.String("nulla"),
+        CurrentPassword: cribl.String("nihil"),
         Disabled: false,
-        Email: "Devon65@yahoo.com",
-        First: "unde",
-        ID: "86a495ba-c707-4f06-b28e-cc86492386f6",
-        Last: "qui",
-        Password: cribl.String("eligendi"),
+        Email: "Maymie.Auer19@yahoo.com",
+        First: "eos",
+        ID: "a4da37cb-aaf4-4452-8484-2c9b2ad32daf",
+        Last: "necessitatibus",
+        Password: cribl.String("voluptatum"),
         Roles: []string{
-            "eum",
-            "sint",
-            "eligendi",
+            "mollitia",
         },
-        Username: "Douglas.Schamberger69",
+        Username: "Justina.Kutch27",
     })
     if err != nil {
         log.Fatal(err)

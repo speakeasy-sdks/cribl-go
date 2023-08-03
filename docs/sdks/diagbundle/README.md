@@ -29,11 +29,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    path := "quibusdam"
 
     ctx := context.Background()
-    res, err := s.DiagBundle.Delete(ctx, operations.DeleteDiagBundleRequest{
-        Path: "corrupti",
-    })
+    res, err := s.DiagBundle.Delete(ctx, path)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.DeleteDiagBundleRequest](../../models/operations/deletediagbundlerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `path`                                                | *string*                                              | :heavy_check_mark:                                    | Diag bundle path                                      |
 
 
 ### Response
@@ -130,7 +129,7 @@ func main() {
     ctx := context.Background()
     res, err := s.DiagBundle.Send(ctx, shared.SendDiagBundle{
         IncludeMetrics: cribl.Bool(false),
-        MaxIncludeJobs: cribl.Int64(684799),
+        MaxIncludeJobs: cribl.Int64(78969),
         Path: cribl.String("facere"),
         RenameJs: cribl.Bool(false),
         SendToCribl: cribl.Bool(false),

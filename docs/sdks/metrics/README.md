@@ -30,46 +30,45 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Metrics.Post(ctx, shared.GetNamesOpts{
-        DimKeyFilter: cribl.String("odio"),
-        DimValueFilter: cribl.String("omnis"),
-        Earliest: cribl.Int64(887422),
+        DimKeyFilter: cribl.String("officiis"),
+        DimValueFilter: cribl.String("mollitia"),
+        Earliest: cribl.Int64(765070),
         FilterExpr: &shared.Expression{
-            MaxCache: 961576,
+            MaxCache: 337081,
             Cache: shared.Map{
                 Op: shared.MapOp{},
             },
             DeclaredVariables: []string{
-                "sit",
+                "eum",
+                "nemo",
             },
             IsSafe: false,
-            ModifiedExpression: "velit",
+            ModifiedExpression: "illum",
             Opt: shared.ExpressionOptions{
                 AllowInternal: cribl.Bool(false),
                 Args: []string{
-                    "nihil",
-                    "neque",
-                    "aspernatur",
+                    "sit",
                 },
                 AstTraverseCallback: &shared.TraverseCallback{},
-                Context: cribl.String("eaque"),
+                Context: cribl.String("odio"),
                 DisallowAssign: cribl.Bool(false),
-                MaxNumOfAllowedIterations: cribl.Int64(360334),
+                MaxNumOfAllowedIterations: cribl.Int64(794306),
                 PartialEval: &shared.PartialEvalRewrite{
                     FieldFilter: shared.PartialEvalFieldFilter{},
-                    NullObj: "cupiditate",
+                    NullObj: "asperiores",
                 },
                 ReplaceIdentifiers: cribl.Bool(false),
                 ReplaceLiterals: cribl.Bool(false),
                 Unprotected: cribl.Bool(false),
             },
-            OriginalExpression: "aut",
-            PartialExpression: "impedit",
+            OriginalExpression: "recusandae",
+            PartialExpression: "voluptates",
             ReferencedCriblExport: false,
-            ReplaceIdentifiersExpression: "quod",
-            ReplaceLiteralExpression: "quo",
+            ReplaceIdentifiersExpression: "praesentium",
+            ReplaceLiteralExpression: "dicta",
         },
-        MaxValues: cribl.Int64(100704),
-        MetricNameFilter: cribl.String("voluptatem"),
+        MaxValues: cribl.Int64(144179),
+        MetricNameFilter: cribl.String("sit"),
     })
     if err != nil {
         log.Fatal(err)
@@ -120,11 +119,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Metrics.Query(ctx, operations.QueryMetricsRequest{
-        Earliest: cribl.Int64(595858),
-        FilterExpr: cribl.String("ea"),
-        Latest: cribl.Int64(262231),
-        MetricNameFilter: cribl.String("aperiam"),
-        NumBuckets: cribl.Int64(30015),
+        Earliest: cribl.Int64(396234),
+        FilterExpr: cribl.String("necessitatibus"),
+        Latest: cribl.Int64(148975),
+        MetricNameFilter: cribl.String("deleniti"),
+        NumBuckets: cribl.Int64(122744),
     })
     if err != nil {
         log.Fatal(err)

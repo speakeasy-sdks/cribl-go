@@ -27,11 +27,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "deserunt"
 
     ctx := context.Background()
-    res, err := s.EventBreakerID.Get(ctx, operations.GetEventBreakerIDRequest{
-        ID: "4ccca99b-c7fc-40b2-9ce1-0873e42b006d",
-    })
+    res, err := s.EventBreakerID.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,10 +43,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetEventBreakerIDRequest](../../models/operations/geteventbreakeridrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response

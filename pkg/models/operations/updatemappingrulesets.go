@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateMappingRulesetsRequest struct {
-	// MappingRuleset object to be updated
-	MappingRuleset *shared.MappingRuleset `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateMappingRulesetsRequest) GetMappingRuleset() *shared.MappingRuleset {
-	if o == nil {
-		return nil
-	}
-	return o.MappingRuleset
+	// MappingRuleset object to be updated
+	MappingRuleset *shared.MappingRuleset `request:"mediaType=application/json"`
 }
 
 func (o *UpdateMappingRulesetsRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateMappingRulesetsRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateMappingRulesetsRequest) GetMappingRuleset() *shared.MappingRuleset {
+	if o == nil {
+		return nil
+	}
+	return o.MappingRuleset
 }
 
 type UpdateMappingRulesetsResponse struct {

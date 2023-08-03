@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateRegexLibEntryRequest struct {
-	// RegexLibEntry object to be updated
-	RegexLibEntry *shared.RegexLibEntry `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateRegexLibEntryRequest) GetRegexLibEntry() *shared.RegexLibEntry {
-	if o == nil {
-		return nil
-	}
-	return o.RegexLibEntry
+	// RegexLibEntry object to be updated
+	RegexLibEntry *shared.RegexLibEntry `request:"mediaType=application/json"`
 }
 
 func (o *UpdateRegexLibEntryRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateRegexLibEntryRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateRegexLibEntryRequest) GetRegexLibEntry() *shared.RegexLibEntry {
+	if o == nil {
+		return nil
+	}
+	return o.RegexLibEntry
 }
 
 type UpdateRegexLibEntryResponse struct {

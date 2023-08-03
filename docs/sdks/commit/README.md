@@ -30,8 +30,8 @@ func main() {
     ctx := context.Background()
     res, err := s.Commit.Create(ctx, shared.GitCommitParams{
         Effective: cribl.Bool(false),
-        Group: cribl.String("eveniet"),
-        Message: "impedit",
+        Group: cribl.String("laborum"),
+        Message: "placeat",
     })
     if err != nil {
         log.Fatal(err)

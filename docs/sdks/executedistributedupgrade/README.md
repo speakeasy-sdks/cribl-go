@@ -27,23 +27,30 @@ func main() {
             BearerAuth: "",
         }),
     )
+    group := "fugiat"
+    distributedUpgradeRequest := &shared.DistributedUpgradeRequest{
+        PackageUrls: []shared.DistributedUpgradeRequestPackageUrls{
+            shared.DistributedUpgradeRequestPackageUrls{
+                PackageHashURL: cribl.String("officiis"),
+                PackageURL: "ducimus",
+            },
+            shared.DistributedUpgradeRequestPackageUrls{
+                PackageHashURL: cribl.String("dolor"),
+                PackageURL: "dicta",
+            },
+            shared.DistributedUpgradeRequestPackageUrls{
+                PackageHashURL: cribl.String("error"),
+                PackageURL: "porro",
+            },
+        },
+        UpgradeMode: shared.DistributedUpgradeRequestUpgradeModeRolling.ToPointer(),
+        UpgradePercentage: cribl.Int64(491591),
+        WorkerRetries: cribl.Int64(458970),
+        WorkerRetryDelay: cribl.Int64(854115),
+    }
 
     ctx := context.Background()
-    res, err := s.ExecuteDistributedUpgrade.Post(ctx, operations.PostExecuteDistributedUpgradeRequest{
-        DistributedUpgradeRequest: &shared.DistributedUpgradeRequest{
-            PackageUrls: []shared.DistributedUpgradeRequestPackageUrls{
-                shared.DistributedUpgradeRequestPackageUrls{
-                    PackageHashURL: cribl.String("nesciunt"),
-                    PackageURL: "delectus",
-                },
-            },
-            UpgradeMode: shared.DistributedUpgradeRequestUpgradeModeRegular.ToPointer(),
-            UpgradePercentage: cribl.Int64(303421),
-            WorkerRetries: cribl.Int64(644223),
-            WorkerRetryDelay: cribl.Int64(266680),
-        },
-        Group: "sunt",
-    })
+    res, err := s.ExecuteDistributedUpgrade.Post(ctx, group, distributedUpgradeRequest)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,10 +63,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.PostExecuteDistributedUpgradeRequest](../../models/operations/postexecutedistributedupgraderequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `ctx`                                                                                 | [context.Context](https://pkg.go.dev/context#Context)                                 | :heavy_check_mark:                                                                    | The context to use for the request.                                                   |
+| `group`                                                                               | *string*                                                                              | :heavy_check_mark:                                                                    | Group to upgrade                                                                      |
+| `distributedUpgradeRequest`                                                           | [*shared.DistributedUpgradeRequest](../../models/shared/distributedupgraderequest.md) | :heavy_minus_sign:                                                                    | distributedUpgrade object                                                             |
 
 
 ### Response

@@ -29,11 +29,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "ad"
 
     ctx := context.Background()
-    res, err := s.LoggerConfig.Delete(ctx, operations.DeleteLoggerConfigRequest{
-        ID: "faa348c3-1bf4-407e-a4fc-f0c42b78f156",
-    })
+    res, err := s.LoggerConfig.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.DeleteLoggerConfigRequest](../../models/operations/deleteloggerconfigrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -80,11 +79,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "facere"
 
     ctx := context.Background()
-    res, err := s.LoggerConfig.Get(ctx, operations.GetLoggerConfigRequest{
-        ID: "26398a0d-c766-4324-8cb0-6c8ca12d0252",
-    })
+    res, err := s.LoggerConfig.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -97,10 +95,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.GetLoggerConfigRequest](../../models/operations/getloggerconfigrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -131,40 +129,46 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "laborum"
+    loggerConfig := &shared.LoggerConfig{
+        Channels: []shared.LoggerEntry{
+            shared.LoggerEntry{
+                CanDelete: cribl.Bool(false),
+                ID: "a4c506a8-aa94-4c02-a44c-f5e9d9a4578a",
+                Level: "facere",
+            },
+            shared.LoggerEntry{
+                CanDelete: cribl.Bool(false),
+                ID: "c1ac600d-ec00-41ac-802e-2ec09ff8f0f8",
+                Level: "dicta",
+            },
+            shared.LoggerEntry{
+                CanDelete: cribl.Bool(false),
+                ID: "6ff3477c-13e9-402c-9412-5b0960a66815",
+                Level: "quae",
+            },
+            shared.LoggerEntry{
+                CanDelete: cribl.Bool(false),
+                ID: "a472af92-3c59-449f-83f3-50cf876ffb90",
+                Level: "dicta",
+            },
+        },
+        DefaultRedactFields: []string{
+            "commodi",
+            "eveniet",
+            "porro",
+            "tempore",
+        },
+        ID: "b4e243cf-789f-4faf-ada5-3e5ae6e0ac18",
+        RedactFields: []string{
+            "quisquam",
+            "eos",
+        },
+        RedactLabel: "nobis",
+    }
 
     ctx := context.Background()
-    res, err := s.LoggerConfig.Update(ctx, operations.UpdateLoggerConfigRequest{
-        LoggerConfig: &shared.LoggerConfig{
-            Channels: []shared.LoggerEntry{
-                shared.LoggerEntry{
-                    CanDelete: cribl.Bool(false),
-                    ID: "270b8d57-22dd-4895-b8bc-f24db9596933",
-                    Level: "nostrum",
-                },
-                shared.LoggerEntry{
-                    CanDelete: cribl.Bool(false),
-                    ID: "2f745339-94d7-48de-bb6e-9389f5abb7f6",
-                    Level: "commodi",
-                },
-                shared.LoggerEntry{
-                    CanDelete: cribl.Bool(false),
-                    ID: "2550a283-82ac-4483-afd2-315bba650164",
-                    Level: "eveniet",
-                },
-            },
-            DefaultRedactFields: []string{
-                "ea",
-            },
-            ID: "f5bf6ae5-91bc-48bd-af36-12b63c205fda",
-            RedactFields: []string{
-                "quaerat",
-                "aperiam",
-                "dignissimos",
-            },
-            RedactLabel: "quam",
-        },
-        ID: "4a68a9a3-5d08-46b6-b66f-ef020e9f443b",
-    })
+    res, err := s.LoggerConfig.Update(ctx, id, loggerConfig)
     if err != nil {
         log.Fatal(err)
     }
@@ -177,10 +181,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.UpdateLoggerConfigRequest](../../models/operations/updateloggerconfigrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `ctx`                                                       | [context.Context](https://pkg.go.dev/context#Context)       | :heavy_check_mark:                                          | The context to use for the request.                         |
+| `id`                                                        | *string*                                                    | :heavy_check_mark:                                          | Unique ID                                                   |
+| `loggerConfig`                                              | [*shared.LoggerConfig](../../models/shared/loggerconfig.md) | :heavy_minus_sign:                                          | LoggerConfig object to be updated                           |
 
 
 ### Response

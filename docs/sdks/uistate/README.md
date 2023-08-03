@@ -28,11 +28,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    key := "ullam"
 
     ctx := context.Background()
-    res, err := s.UIState.Get(ctx, operations.GetUIStateRequest{
-        Key: "debitis",
-    })
+    res, err := s.UIState.Get(ctx, key)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,10 +44,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.GetUIStateRequest](../../models/operations/getuistaterequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `key`                                                 | *string*                                              | :heavy_check_mark:                                    | UI state key                                          |
 
 
 ### Response
@@ -79,18 +78,20 @@ func main() {
             BearerAuth: "",
         }),
     )
+    key := "unde"
+    uiStatePatch := &shared.UIStatePatch{
+        Args: map[string]interface{}{
+            "quidem": "magnam",
+            "doloremque": "accusamus",
+            "quod": "sunt",
+            "voluptas": "earum",
+        },
+        Op: shared.UIStatePatchOpPushRecent,
+        Value: "earum",
+    }
 
     ctx := context.Background()
-    res, err := s.UIState.Update(ctx, operations.UpdateUIStateRequest{
-        UIStatePatch: &shared.UIStatePatch{
-            Args: map[string]interface{}{
-                "facilis": "sapiente",
-            },
-            Op: shared.UIStatePatchOpPushRecent,
-            Value: "sed",
-        },
-        Key: "dolor",
-    })
+    res, err := s.UIState.Update(ctx, key, uiStatePatch)
     if err != nil {
         log.Fatal(err)
     }
@@ -103,10 +104,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.UpdateUIStateRequest](../../models/operations/updateuistaterequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                   | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `ctx`                                                       | [context.Context](https://pkg.go.dev/context#Context)       | :heavy_check_mark:                                          | The context to use for the request.                         |
+| `key`                                                       | *string*                                                    | :heavy_check_mark:                                          | UI state key                                                |
+| `uiStatePatch`                                              | [*shared.UIStatePatch](../../models/shared/uistatepatch.md) | :heavy_minus_sign:                                          | UI State Patch object                                       |
 
 
 ### Response

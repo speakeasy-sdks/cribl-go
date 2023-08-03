@@ -107,7 +107,11 @@ func (s *datasetObject) Create(ctx context.Context, request interface{}) (*opera
 
 // Delete - Delete Dataset
 // Delete Dataset
-func (s *datasetObject) Delete(ctx context.Context, request operations.DeleteDatasetObjectRequest) (*operations.DeleteDatasetObjectResponse, error) {
+func (s *datasetObject) Delete(ctx context.Context, id string) (*operations.DeleteDatasetObjectResponse, error) {
+	request := operations.DeleteDatasetObjectRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/datasets/{id}", request, nil)
 	if err != nil {
@@ -184,7 +188,11 @@ func (s *datasetObject) Delete(ctx context.Context, request operations.DeleteDat
 
 // Get - Get Dataset by ID
 // Get Dataset by ID
-func (s *datasetObject) Get(ctx context.Context, request operations.GetDatasetObjectRequest) (*operations.GetDatasetObjectResponse, error) {
+func (s *datasetObject) Get(ctx context.Context, id string) (*operations.GetDatasetObjectResponse, error) {
+	request := operations.GetDatasetObjectRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/datasets/{id}", request, nil)
 	if err != nil {
@@ -261,7 +269,12 @@ func (s *datasetObject) Get(ctx context.Context, request operations.GetDatasetOb
 
 // Update - Update Dataset
 // Update Dataset
-func (s *datasetObject) Update(ctx context.Context, request operations.UpdateDatasetObjectRequest) (*operations.UpdateDatasetObjectResponse, error) {
+func (s *datasetObject) Update(ctx context.Context, id string, requestBody interface{}) (*operations.UpdateDatasetObjectResponse, error) {
+	request := operations.UpdateDatasetObjectRequest{
+		ID:          id,
+		RequestBody: requestBody,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/datasets/{id}", request, nil)
 	if err != nil {

@@ -30,12 +30,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.JobInfos.Get(ctx, operations.GetJobInfosRequest{
-        CollectorID: cribl.String("numquam"),
-        ID: cribl.String("8a47f939-0c58-4880-983d-abf9ef3ffdd9"),
-        Limit: cribl.Int64(966652),
-        Offset: cribl.Int64(487765),
-        RunType: cribl.String("voluptatibus"),
-        State: cribl.String("aut"),
+        CollectorID: cribl.String("aliquid"),
+        ID: cribl.String("6c723ffd-a9e0-46be-a482-5c1fc0e115c8"),
+        Limit: cribl.Int64(17060),
+        Offset: cribl.Int64(704271),
+        RunType: cribl.String("reiciendis"),
+        State: cribl.String("a"),
     })
     if err != nil {
         log.Fatal(err)

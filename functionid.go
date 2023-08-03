@@ -26,7 +26,11 @@ func newFunctionID(sdkConfig sdkConfiguration) *functionID {
 
 // Get - Get Function by ID
 // Get Function by ID
-func (s *functionID) Get(ctx context.Context, request operations.GetFunctionIDRequest) (*operations.GetFunctionIDResponse, error) {
+func (s *functionID) Get(ctx context.Context, id string) (*operations.GetFunctionIDResponse, error) {
+	request := operations.GetFunctionIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{id}", request, nil)
 	if err != nil {

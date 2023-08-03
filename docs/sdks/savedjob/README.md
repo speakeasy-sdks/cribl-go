@@ -29,11 +29,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "amet"
 
     ctx := context.Background()
-    res, err := s.SavedJob.Delete(ctx, operations.DeleteSavedJobRequest{
-        ID: "70fb3874-290d-4336-961e-ca16ef89451b",
-    })
+    res, err := s.SavedJob.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.DeleteSavedJobRequest](../../models/operations/deletesavedjobrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -80,11 +79,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "veritatis"
 
     ctx := context.Background()
-    res, err := s.SavedJob.Get(ctx, operations.GetSavedJobRequest{
-        ID: "d76eeeb5-18c4-4da1-bad3-5512f06d4e5b",
-    })
+    res, err := s.SavedJob.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -97,10 +95,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.GetSavedJobRequest](../../models/operations/getsavedjobrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -131,12 +129,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "error"
+    savedJob := shared.SavedJob{}
 
     ctx := context.Background()
-    res, err := s.SavedJob.Update(ctx, operations.UpdateSavedJobRequest{
-        SavedJob: &shared.SavedJob{},
-        ID: "72f0f548-568a-4042-8e00-a1d6eb943464",
-    })
+    res, err := s.SavedJob.Update(ctx, id, savedJob)
     if err != nil {
         log.Fatal(err)
     }
@@ -149,10 +146,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.UpdateSavedJobRequest](../../models/operations/updatesavedjobrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `savedJob`                                            | [*shared.SavedJob](../../models/shared/savedjob.md)   | :heavy_minus_sign:                                    | SavedJob object to be updated                         |
 
 
 ### Response

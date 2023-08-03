@@ -26,7 +26,11 @@ func newCollector(sdkConfig sdkConfiguration) *collector {
 
 // Get - Get Collector by ID
 // Get Collector by ID
-func (s *collector) Get(ctx context.Context, request operations.GetCollectorRequest) (*operations.GetCollectorResponse, error) {
+func (s *collector) Get(ctx context.Context, id string) (*operations.GetCollectorResponse, error) {
+	request := operations.GetCollectorRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/collectors/{id}", request, nil)
 	if err != nil {

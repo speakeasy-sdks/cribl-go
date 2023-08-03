@@ -30,14 +30,14 @@ func main() {
 
     ctx := context.Background()
     res, err := s.LogFileContents.Get(ctx, operations.GetLogFileContentsRequest{
-        EndOffset: cribl.Int64(981142),
-        Et: cribl.Int64(35219),
-        Filter: cribl.String("sed"),
-        GroupID: "eos",
-        ID: "25194db5-5410-4adc-a69a-f90a26c7cdc9",
-        Limit: cribl.Int64(536999),
-        Lt: cribl.Int64(94288),
-        Offset: cribl.Int64(978857),
+        EndOffset: cribl.Int64(103578),
+        Et: cribl.Int64(33771),
+        Filter: cribl.String("perferendis"),
+        GroupID: "veritatis",
+        ID: "9c6dc5e3-4762-4799-bfbb-e6949fb2bb4e",
+        Limit: cribl.Int64(797254),
+        Lt: cribl.Int64(664666),
+        Offset: cribl.Int64(904440),
     })
     if err != nil {
         log.Fatal(err)

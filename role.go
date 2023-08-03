@@ -108,7 +108,11 @@ func (s *role) Create(ctx context.Context, request shared.Role) (*operations.Cre
 
 // Delete - Delete Role
 // Delete Role
-func (s *role) Delete(ctx context.Context, request operations.DeleteRoleRequest) (*operations.DeleteRoleResponse, error) {
+func (s *role) Delete(ctx context.Context, id string) (*operations.DeleteRoleResponse, error) {
+	request := operations.DeleteRoleRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/roles/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *role) Delete(ctx context.Context, request operations.DeleteRoleRequest)
 
 // Get - Get Role by ID
 // Get Role by ID
-func (s *role) Get(ctx context.Context, request operations.GetRoleRequest) (*operations.GetRoleResponse, error) {
+func (s *role) Get(ctx context.Context, id string) (*operations.GetRoleResponse, error) {
+	request := operations.GetRoleRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/roles/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *role) Get(ctx context.Context, request operations.GetRoleRequest) (*ope
 
 // Update - Update Role
 // Update Role
-func (s *role) Update(ctx context.Context, request operations.UpdateRoleRequest) (*operations.UpdateRoleResponse, error) {
+func (s *role) Update(ctx context.Context, id string, role *shared.Role) (*operations.UpdateRoleResponse, error) {
+	request := operations.UpdateRoleRequest{
+		ID:   id,
+		Role: role,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/roles/{id}", request, nil)
 	if err != nil {

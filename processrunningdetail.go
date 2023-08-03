@@ -26,7 +26,11 @@ func newProcessRunningDetail(sdkConfig sdkConfiguration) *processRunningDetail {
 
 // Get - Get details of a process running on the edge host
 // Get details of a process running on the edge host
-func (s *processRunningDetail) Get(ctx context.Context, request operations.GetProcessRunningDetailRequest) (*operations.GetProcessRunningDetailResponse, error) {
+func (s *processRunningDetail) Get(ctx context.Context, pid string) (*operations.GetProcessRunningDetailResponse, error) {
+	request := operations.GetProcessRunningDetailRequest{
+		Pid: pid,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/edge/processes/{pid}", request, nil)
 	if err != nil {

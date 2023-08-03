@@ -29,11 +29,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "aliquam"
 
     ctx := context.Background()
-    res, err := s.OutputID.Delete(ctx, operations.DeleteOutputIDRequest{
-        ID: "2f0ea930-b69f-47ac-af72-f88500904911",
-    })
+    res, err := s.OutputID.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.DeleteOutputIDRequest](../../models/operations/deleteoutputidrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -80,11 +79,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "deserunt"
 
     ctx := context.Background()
-    res, err := s.OutputID.Get(ctx, operations.GetOutputIDRequest{
-        ID: "60820788-8ec6-4618-bbfe-9659eb40ec16",
-    })
+    res, err := s.OutputID.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -97,10 +95,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.GetOutputIDRequest](../../models/operations/getoutputidrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -131,12 +129,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "modi"
+    output := shared.Output{}
 
     ctx := context.Background()
-    res, err := s.OutputID.Update(ctx, operations.UpdateOutputIDRequest{
-        Output: &shared.Output{},
-        ID: "faf75b0b-532a-44da-b7cb-aaf4452c4842",
-    })
+    res, err := s.OutputID.Update(ctx, id, output)
     if err != nil {
         log.Fatal(err)
     }
@@ -149,10 +146,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.UpdateOutputIDRequest](../../models/operations/updateoutputidrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `output`                                              | [*shared.Output](../../models/shared/output.md)       | :heavy_minus_sign:                                    | Output object to be updated                           |
 
 
 ### Response

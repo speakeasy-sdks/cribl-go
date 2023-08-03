@@ -27,7 +27,11 @@ func newMappingRulesets(sdkConfig sdkConfiguration) *mappingRulesets {
 
 // Delete - Delete MappingRuleset
 // Delete MappingRuleset
-func (s *mappingRulesets) Delete(ctx context.Context, request operations.DeleteMappingRulesetsRequest) (*operations.DeleteMappingRulesetsResponse, error) {
+func (s *mappingRulesets) Delete(ctx context.Context, id string) (*operations.DeleteMappingRulesetsResponse, error) {
+	request := operations.DeleteMappingRulesetsRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/mappings/{id}", request, nil)
 	if err != nil {
@@ -178,7 +182,12 @@ func (s *mappingRulesets) Get(ctx context.Context) (*operations.GetMappingRulese
 
 // Update - Update MappingRuleset
 // Update MappingRuleset
-func (s *mappingRulesets) Update(ctx context.Context, request operations.UpdateMappingRulesetsRequest) (*operations.UpdateMappingRulesetsResponse, error) {
+func (s *mappingRulesets) Update(ctx context.Context, id string, mappingRuleset *shared.MappingRuleset) (*operations.UpdateMappingRulesetsResponse, error) {
+	request := operations.UpdateMappingRulesetsRequest{
+		ID:             id,
+		MappingRuleset: mappingRuleset,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/fleet-mappings/{id}", request, nil)
 	if err != nil {

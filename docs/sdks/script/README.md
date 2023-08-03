@@ -32,7 +32,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Script.Create(ctx, map[string]interface{}{
-        "optio": "minima",
+        "praesentium": "iusto",
     })
     if err != nil {
         log.Fatal(err)
@@ -80,11 +80,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "fugiat"
 
     ctx := context.Background()
-    res, err := s.Script.Delete(ctx, operations.DeleteScriptRequest{
-        ID: "7c1e4981-e8aa-4257-9dc1-912ebde64bfc",
-    })
+    res, err := s.Script.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -97,10 +96,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.DeleteScriptRequest](../../models/operations/deletescriptrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -131,11 +130,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "enim"
 
     ctx := context.Background()
-    res, err := s.Script.Get(ctx, operations.GetScriptRequest{
-        ID: "c5469d40-15df-4a79-a206-bef2b0a3e42c",
-    })
+    res, err := s.Script.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -148,10 +146,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
-| `request`                                                                  | [operations.GetScriptRequest](../../models/operations/getscriptrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -182,14 +180,15 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "iure"
+    requestBody := map[string]interface{}{
+        "modi": "magnam",
+        "accusamus": "nulla",
+        "repudiandae": "quibusdam",
+    }
 
     ctx := context.Background()
-    res, err := s.Script.Update(ctx, operations.UpdateScriptRequest{
-        RequestBody: map[string]interface{}{
-            "deserunt": "fuga",
-        },
-        ID: "010e9aac-2e91-4355-86d1-8f9f97a4bfad",
-    })
+    res, err := s.Script.Update(ctx, id, requestBody)
     if err != nil {
         log.Fatal(err)
     }
@@ -202,10 +201,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.UpdateScriptRequest](../../models/operations/updatescriptrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `requestBody`                                         | map[string]*interface{}*                              | :heavy_minus_sign:                                    | Script object to be updated                           |
 
 
 ### Response

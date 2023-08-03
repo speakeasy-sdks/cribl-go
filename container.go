@@ -26,7 +26,11 @@ func newContainer(sdkConfig sdkConfiguration) *container {
 
 // Get - Get details for a single container on the edge host. Add stream=true to get a stream instead.
 // Get details for a single container on the edge host. Add stream=true to get a stream instead.
-func (s *container) Get(ctx context.Context, request operations.GetContainerRequest) (*operations.GetContainerResponse, error) {
+func (s *container) Get(ctx context.Context, id string) (*operations.GetContainerResponse, error) {
+	request := operations.GetContainerRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/edge/containers/{id}", request, nil)
 	if err != nil {

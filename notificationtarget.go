@@ -108,7 +108,11 @@ func (s *notificationTarget) Create(ctx context.Context, request shared.Notifica
 
 // Delete - Delete NotificationTarget
 // Delete NotificationTarget
-func (s *notificationTarget) Delete(ctx context.Context, request operations.DeletetNotificationTargetRequest) (*operations.DeletetNotificationTargetResponse, error) {
+func (s *notificationTarget) Delete(ctx context.Context, id string) (*operations.DeletetNotificationTargetResponse, error) {
+	request := operations.DeletetNotificationTargetRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/notification-targets/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *notificationTarget) Delete(ctx context.Context, request operations.Dele
 
 // Get - Get NotificationTarget by ID
 // Get NotificationTarget by ID
-func (s *notificationTarget) Get(ctx context.Context, request operations.GetNotificationTargetRequest) (*operations.GetNotificationTargetResponse, error) {
+func (s *notificationTarget) Get(ctx context.Context, id string) (*operations.GetNotificationTargetResponse, error) {
+	request := operations.GetNotificationTargetRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/notification-targets/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *notificationTarget) Get(ctx context.Context, request operations.GetNoti
 
 // Update - Update NotificationTarget
 // Update NotificationTarget
-func (s *notificationTarget) Update(ctx context.Context, request operations.UpdatetNotificationTargetRequest) (*operations.UpdatetNotificationTargetResponse, error) {
+func (s *notificationTarget) Update(ctx context.Context, id string, notificationTarget *shared.NotificationTarget) (*operations.UpdatetNotificationTargetResponse, error) {
+	request := operations.UpdatetNotificationTargetRequest{
+		ID:                 id,
+		NotificationTarget: notificationTarget,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/notification-targets/{id}", request, nil)
 	if err != nil {

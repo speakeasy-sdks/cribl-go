@@ -27,7 +27,14 @@ func newLogFileList(sdkConfig sdkConfiguration) *logFileList {
 
 // Get - list log files
 // list log files
-func (s *logFileList) Get(ctx context.Context, request operations.GetLogFileListRequest) (*operations.GetLogFileListResponse, error) {
+func (s *logFileList) Get(ctx context.Context, allow *string, depth *int64, mode *string, path *string) (*operations.GetLogFileListResponse, error) {
+	request := operations.GetLogFileListRequest{
+		Allow: allow,
+		Depth: depth,
+		Mode:  mode,
+		Path:  path,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/edge/logs"
 

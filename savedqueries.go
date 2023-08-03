@@ -108,7 +108,11 @@ func (s *savedQueries) Create(ctx context.Context, request shared.SavedQuery) (*
 
 // Delete - Delete SavedQuery
 // Delete SavedQuery
-func (s *savedQueries) Delete(ctx context.Context, request operations.DeleteSavedQueriesRequest) (*operations.DeleteSavedQueriesResponse, error) {
+func (s *savedQueries) Delete(ctx context.Context, id string) (*operations.DeleteSavedQueriesResponse, error) {
+	request := operations.DeleteSavedQueriesRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/saved/{id}", request, nil)
 	if err != nil {
@@ -259,7 +263,12 @@ func (s *savedQueries) Get(ctx context.Context) (*operations.GetSavedQueriesResp
 
 // Update - Update SavedQuery
 // Update SavedQuery
-func (s *savedQueries) Update(ctx context.Context, request operations.UpdateSavedQueriesRequest) (*operations.UpdateSavedQueriesResponse, error) {
+func (s *savedQueries) Update(ctx context.Context, id string, savedQuery *shared.SavedQuery) (*operations.UpdateSavedQueriesResponse, error) {
+	request := operations.UpdateSavedQueriesRequest{
+		ID:         id,
+		SavedQuery: savedQuery,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/saved/{id}", request, nil)
 	if err != nil {

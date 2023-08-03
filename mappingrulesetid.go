@@ -26,7 +26,11 @@ func newMappingRulesetID(sdkConfig sdkConfiguration) *mappingRulesetID {
 
 // Get - Get MappingRuleset by ID
 // Get MappingRuleset by ID
-func (s *mappingRulesetID) Get(ctx context.Context, request operations.GetMappingRulesetIDRequest) (*operations.GetMappingRulesetIDResponse, error) {
+func (s *mappingRulesetID) Get(ctx context.Context, id string) (*operations.GetMappingRulesetIDResponse, error) {
+	request := operations.GetMappingRulesetIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/mappings/{id}", request, nil)
 	if err != nil {

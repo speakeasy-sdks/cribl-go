@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateSchemaIDRequest struct {
-	// Schema object to be updated
-	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateSchemaIDRequest) GetRequestBody() map[string]interface{} {
-	if o == nil {
-		return nil
-	}
-	return o.RequestBody
+	// Schema object to be updated
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 }
 
 func (o *UpdateSchemaIDRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateSchemaIDRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateSchemaIDRequest) GetRequestBody() map[string]interface{} {
+	if o == nil {
+		return nil
+	}
+	return o.RequestBody
 }
 
 type UpdateSchemaIDResponse struct {

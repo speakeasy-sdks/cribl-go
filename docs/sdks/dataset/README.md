@@ -32,10 +32,10 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Dataset.Create(ctx, shared.DatasetProviderType{
-        Description: cribl.String("architecto"),
-        ID: shared.ProviderTypeMmHeap,
+        Description: cribl.String("nam"),
+        ID: shared.ProviderTypeQuicksort,
         Locality: &shared.OriginConfig{
-            FilterExpression: cribl.String("enim"),
+            FilterExpression: cribl.String("iusto"),
             Origin: shared.DatasetOrigin{},
         },
     })
@@ -85,11 +85,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "voluptate"
 
     ctx := context.Background()
-    res, err := s.Dataset.Delete(ctx, operations.DeleteDatasetProviderTypeRequest{
-        ID: "c80bff91-8544-4ec4-adef-cce8f1977773",
-    })
+    res, err := s.Dataset.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -102,10 +101,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.DeleteDatasetProviderTypeRequest](../../models/operations/deletedatasetprovidertyperequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -136,11 +135,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "sequi"
 
     ctx := context.Background()
-    res, err := s.Dataset.Get(ctx, operations.GetDatasetProviderTypeRequest{
-        ID: "e63562a7-b408-4f05-a3d4-8fdaf313a1f5",
-    })
+    res, err := s.Dataset.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -153,10 +151,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetDatasetProviderTypeRequest](../../models/operations/getdatasetprovidertyperequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -187,19 +185,18 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "dignissimos"
+    datasetProviderType := &shared.DatasetProviderType{
+        Description: cribl.String("neque"),
+        ID: shared.ProviderTypeInvalid,
+        Locality: &shared.OriginConfig{
+            FilterExpression: cribl.String("deleniti"),
+            Origin: shared.DatasetOrigin{},
+        },
+    }
 
     ctx := context.Background()
-    res, err := s.Dataset.Update(ctx, operations.UpdateDatasetProviderTypeRequest{
-        DatasetProviderType: &shared.DatasetProviderType{
-            Description: cribl.String("doloribus"),
-            ID: shared.ProviderTypeInvalid,
-            Locality: &shared.OriginConfig{
-                FilterExpression: cribl.String("unde"),
-                Origin: shared.DatasetOrigin{},
-            },
-        },
-        ID: "4259c0b3-6f25-4ea9-84f3-b756c11f6c37",
-    })
+    res, err := s.Dataset.Update(ctx, id, datasetProviderType)
     if err != nil {
         log.Fatal(err)
     }
@@ -212,10 +209,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdateDatasetProviderTypeRequest](../../models/operations/updatedatasetprovidertyperequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `ctx`                                                                     | [context.Context](https://pkg.go.dev/context#Context)                     | :heavy_check_mark:                                                        | The context to use for the request.                                       |
+| `id`                                                                      | *string*                                                                  | :heavy_check_mark:                                                        | Unique ID                                                                 |
+| `datasetProviderType`                                                     | [*shared.DatasetProviderType](../../models/shared/datasetprovidertype.md) | :heavy_minus_sign:                                                        | DatasetProviderType object to be updated                                  |
 
 
 ### Response

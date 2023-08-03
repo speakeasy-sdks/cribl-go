@@ -26,7 +26,11 @@ func newSchemaID(sdkConfig sdkConfiguration) *schemaID {
 
 // Delete - Delete Schema
 // Delete Schema
-func (s *schemaID) Delete(ctx context.Context, request operations.DeleteSchemaIDRequest) (*operations.DeleteSchemaIDResponse, error) {
+func (s *schemaID) Delete(ctx context.Context, id string) (*operations.DeleteSchemaIDResponse, error) {
+	request := operations.DeleteSchemaIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/parquet-schemas/{id}", request, nil)
 	if err != nil {
@@ -103,7 +107,11 @@ func (s *schemaID) Delete(ctx context.Context, request operations.DeleteSchemaID
 
 // Get - Get Schema by ID
 // Get Schema by ID
-func (s *schemaID) Get(ctx context.Context, request operations.GetSchemaIDRequest) (*operations.GetSchemaIDResponse, error) {
+func (s *schemaID) Get(ctx context.Context, id string) (*operations.GetSchemaIDResponse, error) {
+	request := operations.GetSchemaIDRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/parquet-schemas/{id}", request, nil)
 	if err != nil {
@@ -180,7 +188,12 @@ func (s *schemaID) Get(ctx context.Context, request operations.GetSchemaIDReques
 
 // Update - Update Schema
 // Update Schema
-func (s *schemaID) Update(ctx context.Context, request operations.UpdateSchemaIDRequest) (*operations.UpdateSchemaIDResponse, error) {
+func (s *schemaID) Update(ctx context.Context, id string, requestBody map[string]interface{}) (*operations.UpdateSchemaIDResponse, error) {
+	request := operations.UpdateSchemaIDRequest{
+		ID:          id,
+		RequestBody: requestBody,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/lib/parquet-schemas/{id}", request, nil)
 	if err != nil {

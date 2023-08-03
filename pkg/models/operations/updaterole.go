@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateRoleRequest struct {
-	// Role object to be updated
-	Role *shared.Role `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateRoleRequest) GetRole() *shared.Role {
-	if o == nil {
-		return nil
-	}
-	return o.Role
+	// Role object to be updated
+	Role *shared.Role `request:"mediaType=application/json"`
 }
 
 func (o *UpdateRoleRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateRoleRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateRoleRequest) GetRole() *shared.Role {
+	if o == nil {
+		return nil
+	}
+	return o.Role
 }
 
 type UpdateRoleResponse struct {

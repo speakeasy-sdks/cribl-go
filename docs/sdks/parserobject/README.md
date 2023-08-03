@@ -29,7 +29,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.ParserObject.Post(ctx, map[string]interface{}{
-        "aliquam": "excepturi",
+        "facilis": "ipsum",
+        "ut": "quaerat",
     })
     if err != nil {
         log.Fatal(err)

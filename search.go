@@ -26,7 +26,11 @@ func newSearch(sdkConfig sdkConfiguration) *search {
 
 // DispatchSearch - Dispatch search *id* to worker nodes filtered by worker node filter using RPC
 // Dispatch search *id* to worker nodes filtered by worker node filter using RPC
-func (s *search) DispatchSearch(ctx context.Context, request operations.DispatchSearchRequest) (*operations.DispatchSearchResponse, error) {
+func (s *search) DispatchSearch(ctx context.Context, id string) (*operations.DispatchSearchResponse, error) {
+	request := operations.DispatchSearchRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/jobs/{id}/dispatch-executors", request, nil)
 	if err != nil {

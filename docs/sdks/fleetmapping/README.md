@@ -33,22 +33,23 @@ func main() {
         Conf: &shared.MappingRulesetConf{
             Functions: []map[string]interface{}{
                 map[string]interface{}{
-                    "saepe": "consequatur",
+                    "dignissimos": "libero",
+                    "illo": "ab",
                 },
                 map[string]interface{}{
-                    "debitis": "facere",
-                    "quisquam": "cumque",
+                    "accusamus": "saepe",
+                    "tempore": "veniam",
                 },
                 map[string]interface{}{
-                    "dolorum": "deserunt",
-                    "ad": "reiciendis",
+                    "reiciendis": "earum",
                 },
                 map[string]interface{}{
-                    "porro": "laborum",
+                    "praesentium": "nemo",
+                    "repellat": "quisquam",
                 },
             },
         },
-        ID: "bd905a97-2e05-4672-8227-b2d309470bf7",
+        ID: "37814d4c-98e0-4c2b-b89e-b75dad636c60",
     })
     if err != nil {
         log.Fatal(err)

@@ -26,7 +26,11 @@ func newEdgeListing(sdkConfig sdkConfiguration) *edgeListing {
 
 // Get - Get a directory listing of the given path
 // Get a directory listing of the given path
-func (s *edgeListing) Get(ctx context.Context, request operations.GetEdgeListingRequest) (*operations.GetEdgeListingResponse, error) {
+func (s *edgeListing) Get(ctx context.Context, path string) (*operations.GetEdgeListingResponse, error) {
+	request := operations.GetEdgeListingRequest{
+		Path: path,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/edge/ls{path}", request, nil)
 	if err != nil {

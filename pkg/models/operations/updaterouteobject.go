@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateRouteObjectRequest struct {
-	// Routes object
-	Routes *shared.Routes `request:"mediaType=application/json"`
 	// There is only one route entity and it should be accessed with id: default.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateRouteObjectRequest) GetRoutes() *shared.Routes {
-	if o == nil {
-		return nil
-	}
-	return o.Routes
+	// Routes object
+	Routes *shared.Routes `request:"mediaType=application/json"`
 }
 
 func (o *UpdateRouteObjectRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateRouteObjectRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateRouteObjectRequest) GetRoutes() *shared.Routes {
+	if o == nil {
+		return nil
+	}
+	return o.Routes
 }
 
 type UpdateRouteObjectResponse struct {

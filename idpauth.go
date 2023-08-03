@@ -26,7 +26,12 @@ func newIDPAuth(sdkConfig sdkConfiguration) *idpAuth {
 }
 
 // Get - Get IDP used for an authorization code callback
-func (s *idpAuth) Get(ctx context.Context, request operations.GetIDPAuthRequest) (*operations.GetIDPAuthResponse, error) {
+func (s *idpAuth) Get(ctx context.Context, code *string, state *string) (*operations.GetIDPAuthResponse, error) {
+	request := operations.GetIDPAuthRequest{
+		Code:  code,
+		State: state,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/authorization-code/callback"
 

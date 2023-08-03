@@ -29,12 +29,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.LiveData.Post(ctx, shared.CaptureParams{
-        Filter: "sed",
-        Level: 501773,
-        MaxEvents: 573994,
-        StepDuration: cribl.Int64(811519),
-        WorkerID: cribl.String("ullam"),
-        WorkerThreshold: cribl.Int64(476084),
+        Filter: "fuga",
+        Level: 326903,
+        MaxEvents: 102446,
+        StepDuration: cribl.Int64(181476),
+        WorkerID: cribl.String("aliquid"),
+        WorkerThreshold: cribl.Int64(166289),
     })
     if err != nil {
         log.Fatal(err)

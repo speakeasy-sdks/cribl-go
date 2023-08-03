@@ -27,11 +27,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "aspernatur"
 
     ctx := context.Background()
-    res, err := s.Feature.Get(ctx, operations.GetFeatureRequest{
-        ID: "f9621a6a-4f77-4a87-ae3e-4be752c65b34",
-    })
+    res, err := s.Feature.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,10 +43,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.GetFeatureRequest](../../models/operations/getfeaturerequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Feature id                                            |
 
 
 ### Response

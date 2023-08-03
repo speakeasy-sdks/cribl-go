@@ -26,7 +26,12 @@ func newFleetOrWorkerGroup(sdkConfig sdkConfiguration) *fleetOrWorkerGroup {
 
 // Deploy - Deploy commits for a Fleet or Worker Group
 // Deploy commits for a Fleet or Worker Group
-func (s *fleetOrWorkerGroup) Deploy(ctx context.Context, request operations.DeployFleetOrWorkerGroupRequest) (*operations.DeployFleetOrWorkerGroupResponse, error) {
+func (s *fleetOrWorkerGroup) Deploy(ctx context.Context, id string, deployRequest *shared.DeployRequest) (*operations.DeployFleetOrWorkerGroupResponse, error) {
+	request := operations.DeployFleetOrWorkerGroupRequest{
+		ID:            id,
+		DeployRequest: deployRequest,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/master/groups/{id}/deploy", request, nil)
 	if err != nil {

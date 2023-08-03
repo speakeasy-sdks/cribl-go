@@ -27,12 +27,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    fields := "saepe"
+    product := "delectus"
 
     ctx := context.Background()
-    res, err := s.Groups.Get(ctx, operations.GetGroupsRequest{
-        Fields: cribl.String("quidem"),
-        Product: cribl.String("non"),
-    })
+    res, err := s.Groups.Get(ctx, fields, product)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,7 +47,8 @@ func main() {
 | Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
-| `request`                                                                  | [operations.GetGroupsRequest](../../models/operations/getgroupsrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| `fields`                                                                   | **string*                                                                  | :heavy_minus_sign:                                                         | additional fields to add to results: git.commit, git.localChanges, git.log |
+| `product`                                                                  | **string*                                                                  | :heavy_minus_sign:                                                         | filter to specific product: "stream" or "edge"                             |
 
 
 ### Response

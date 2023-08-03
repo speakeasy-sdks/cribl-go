@@ -30,12 +30,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Events.Get(ctx, operations.GetEventsRequest{
-        Files: cribl.String("fugit"),
-        Et: cribl.Int64(25190),
-        Filter: cribl.String("aliquid"),
-        Limit: cribl.Int64(898638),
-        Lt: cribl.Int64(148975),
-        Source: cribl.String("deleniti"),
+        Files: cribl.String("nostrum"),
+        Et: cribl.Int64(207296),
+        Filter: cribl.String("iusto"),
+        Limit: cribl.Int64(664965),
+        Lt: cribl.Int64(522176),
+        Source: cribl.String("eligendi"),
     })
     if err != nil {
         log.Fatal(err)

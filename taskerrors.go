@@ -26,7 +26,12 @@ func newTaskErrors(sdkConfig sdkConfiguration) *taskErrors {
 
 // Get - Get Task errors for a job by id
 // Get Task errors for a job by id
-func (s *taskErrors) Get(ctx context.Context, request operations.GetTaskErrorsRequest) (*operations.GetTaskErrorsResponse, error) {
+func (s *taskErrors) Get(ctx context.Context, group string, id string) (*operations.GetTaskErrorsResponse, error) {
+	request := operations.GetTaskErrorsRequest{
+		Group: group,
+		ID:    id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}/errors/{group}", request, nil)
 	if err != nil {

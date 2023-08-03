@@ -26,7 +26,11 @@ func newSavedQuery(sdkConfig sdkConfiguration) *savedQuery {
 
 // Get - Get SavedQuery by ID
 // Get SavedQuery by ID
-func (s *savedQuery) Get(ctx context.Context, request operations.GetSavedQueryRequest) (*operations.GetSavedQueryResponse, error) {
+func (s *savedQuery) Get(ctx context.Context, id string) (*operations.GetSavedQueryResponse, error) {
+	request := operations.GetSavedQueryRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/saved/{id}", request, nil)
 	if err != nil {

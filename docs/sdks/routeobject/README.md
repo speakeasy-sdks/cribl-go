@@ -27,49 +27,43 @@ func main() {
             BearerAuth: "",
         }),
     )
-
-    ctx := context.Background()
-    res, err := s.RouteObject.Update(ctx, operations.UpdateRouteObjectRequest{
-        Routes: &shared.Routes{
-            Comments: []map[string]interface{}{
-                map[string]interface{}{
-                    "iure": "voluptatibus",
-                    "id": "qui",
-                    "explicabo": "accusantium",
-                },
-                map[string]interface{}{
-                    "nesciunt": "commodi",
-                    "molestias": "atque",
-                },
+    id := "excepturi"
+    routes := &shared.Routes{
+        Comments: []map[string]interface{}{
+            map[string]interface{}{
+                "dicta": "sapiente",
+                "ipsum": "consequatur",
+                "soluta": "necessitatibus",
             },
-            Groups: map[string]shared.RoutesGroups{
-                "totam": shared.RoutesGroups{
-                    Description: cribl.String("ipsam"),
-                    Disabled: cribl.Bool(false),
-                    Name: "Lillian Ruecker Jr.",
-                },
+            map[string]interface{}{
+                "recusandae": "labore",
             },
-            ID: cribl.String("006bef49-21ec-4205-bb74-9366ac8ee0f2"),
-            Routes: []map[string]interface{}{
-                map[string]interface{}{
-                    "veritatis": "provident",
-                    "veniam": "quos",
-                    "totam": "facere",
-                    "eius": "doloremque",
-                },
-                map[string]interface{}{
-                    "aut": "sequi",
-                    "reiciendis": "neque",
-                    "assumenda": "saepe",
-                    "nobis": "est",
-                },
-                map[string]interface{}{
-                    "natus": "molestiae",
-                },
+            map[string]interface{}{
+                "magni": "aperiam",
+            },
+            map[string]interface{}{
+                "illum": "iusto",
             },
         },
-        ID: "be3e90bc-40df-4868-bd52-405cb331d492",
-    })
+        Groups: map[string]shared.RoutesGroups{
+            "beatae": shared.RoutesGroups{
+                Description: cribl.String("aliquid"),
+                Disabled: cribl.Bool(false),
+                Name: "Colleen Kautzer III",
+            },
+        },
+        ID: cribl.String("641870d9-d21f-49ad-830c-4ecc11a08364"),
+        Routes: []map[string]interface{}{
+            map[string]interface{}{
+                "voluptatem": "suscipit",
+                "laudantium": "facilis",
+                "laudantium": "ullam",
+            },
+        },
+    }
+
+    ctx := context.Background()
+    res, err := s.RouteObject.Update(ctx, id, routes)
     if err != nil {
         log.Fatal(err)
     }
@@ -82,10 +76,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.UpdateRouteObjectRequest](../../models/operations/updaterouteobjectrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
+| `id`                                                                       | *string*                                                                   | :heavy_check_mark:                                                         | There is only one route entity and it should be accessed with id: default. |
+| `routes`                                                                   | [*shared.Routes](../../models/shared/routes.md)                            | :heavy_minus_sign:                                                         | Routes object                                                              |
 
 
 ### Response

@@ -319,8 +319,8 @@ func New(opts ...SDKOption) *Cribl {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "1.1.2",
-			GenVersion:        "2.75.1",
+			SDKVersion:        "1.2.0",
+			GenVersion:        "2.79.1",
 			ServerDefaults: []map[string]string{
 				{
 					"organizationID": "api",

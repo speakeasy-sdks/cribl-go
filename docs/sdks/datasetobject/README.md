@@ -31,7 +31,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.DatasetObject.Create(ctx, "fuga")
+    res, err := s.DatasetObject.Create(ctx, "quibusdam")
     if err != nil {
         log.Fatal(err)
     }
@@ -78,11 +78,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "iure"
 
     ctx := context.Background()
-    res, err := s.DatasetObject.Delete(ctx, operations.DeleteDatasetObjectRequest{
-        ID: "51262438-35bb-4c05-a23a-45cefc5fde10",
-    })
+    res, err := s.DatasetObject.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -95,10 +94,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.DeleteDatasetObjectRequest](../../models/operations/deletedatasetobjectrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -129,11 +128,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "odit"
 
     ctx := context.Background()
-    res, err := s.DatasetObject.Get(ctx, operations.GetDatasetObjectRequest{
-        ID: "a0ce2169-e510-4019-86dc-5e34762799bf",
-    })
+    res, err := s.DatasetObject.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -146,10 +144,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.GetDatasetObjectRequest](../../models/operations/getdatasetobjectrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -180,12 +178,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "voluptatibus"
+    requestBody := "vel"
 
     ctx := context.Background()
-    res, err := s.DatasetObject.Update(ctx, operations.UpdateDatasetObjectRequest{
-        RequestBody: cribl.String("facilis"),
-        ID: "be6949fb-2bb4-4eca-a6c3-d5db3adebd5d",
-    })
+    res, err := s.DatasetObject.Update(ctx, id, requestBody)
     if err != nil {
         log.Fatal(err)
     }
@@ -198,10 +195,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.UpdateDatasetObjectRequest](../../models/operations/updatedatasetobjectrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `requestBody`                                         | *interface{}*                                         | :heavy_minus_sign:                                    | Dataset object to be updated                          |
 
 
 ### Response

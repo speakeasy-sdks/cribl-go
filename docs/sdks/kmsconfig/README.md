@@ -79,19 +79,19 @@ func main() {
     res, err := s.KMSConfig.Update(ctx, shared.IKMSProviderConfig{
         EnableHealthCheck: false,
         Engine: &shared.VaultKMSEngineConfig{
-            Mount: cribl.String("exercitationem"),
-            SecretPath: cribl.String("amet"),
+            Mount: cribl.String("modi"),
+            SecretPath: cribl.String("itaque"),
             Type: shared.VaultKMSEngineConfigTypeKv2,
         },
-        HealthCheckEndpoint: cribl.String("voluptate"),
-        Namespace: cribl.String("voluptate"),
-        Provider: shared.SecretProviderAwsKms,
-        SecretDir: cribl.String("minus"),
+        HealthCheckEndpoint: cribl.String("maxime"),
+        Namespace: cribl.String("modi"),
+        Provider: shared.SecretProviderLocal,
+        SecretDir: cribl.String("assumenda"),
         Service: &shared.IAWSKMSServiceConfig{
-            KmsKeyArn: "a",
-            Region: "fuga",
+            KmsKeyArn: "vero",
+            Region: "doloribus",
         },
-        URL: cribl.String("totam"),
+        URL: cribl.String("impedit"),
     })
     if err != nil {
         log.Fatal(err)

@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateGrokFileRequest struct {
-	// GrokFile object to be updated
-	GrokFile *shared.GrokFile `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateGrokFileRequest) GetGrokFile() *shared.GrokFile {
-	if o == nil {
-		return nil
-	}
-	return o.GrokFile
+	// GrokFile object to be updated
+	GrokFile *shared.GrokFile `request:"mediaType=application/json"`
 }
 
 func (o *UpdateGrokFileRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateGrokFileRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateGrokFileRequest) GetGrokFile() *shared.GrokFile {
+	if o == nil {
+		return nil
+	}
+	return o.GrokFile
 }
 
 type UpdateGrokFileResponse struct {

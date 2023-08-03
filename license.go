@@ -108,7 +108,11 @@ func (s *license) Create(ctx context.Context, request shared.License) (*operatio
 
 // Delete - Delete License
 // Delete License
-func (s *license) Delete(ctx context.Context, request operations.DeleteLicenseRequest) (*operations.DeleteLicenseResponse, error) {
+func (s *license) Delete(ctx context.Context, id string) (*operations.DeleteLicenseResponse, error) {
+	request := operations.DeleteLicenseRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/licenses/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *license) Delete(ctx context.Context, request operations.DeleteLicenseRe
 
 // Get - Get License by ID
 // Get License by ID
-func (s *license) Get(ctx context.Context, request operations.GetLicenseRequest) (*operations.GetLicenseResponse, error) {
+func (s *license) Get(ctx context.Context, id string) (*operations.GetLicenseResponse, error) {
+	request := operations.GetLicenseRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/licenses/{id}", request, nil)
 	if err != nil {

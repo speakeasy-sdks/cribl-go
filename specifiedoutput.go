@@ -25,7 +25,11 @@ func newSpecifiedOutput(sdkConfig sdkConfiguration) *specifiedOutput {
 
 // Get - Get samples data for the specified output. Used to get sample data for the test action.
 // Get samples data for the specified output. Used to get sample data for the test action.
-func (s *specifiedOutput) Get(ctx context.Context, request operations.GetSpecifiedOutputRequest) (*operations.GetSpecifiedOutputResponse, error) {
+func (s *specifiedOutput) Get(ctx context.Context, id string) (*operations.GetSpecifiedOutputResponse, error) {
+	request := operations.GetSpecifiedOutputRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/outputs/{id}/samples", request, nil)
 	if err != nil {

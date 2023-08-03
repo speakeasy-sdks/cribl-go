@@ -29,9 +29,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.DataSample.Post(ctx, map[string]interface{}{
-        "rem": "eligendi",
-        "fugiat": "unde",
-        "officiis": "ducimus",
+        "nemo": "voluptate",
+        "blanditiis": "officia",
+        "voluptas": "numquam",
     })
     if err != nil {
         log.Fatal(err)

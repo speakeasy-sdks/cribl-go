@@ -27,14 +27,13 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "quae"
+    deployRequest := &shared.DeployRequest{
+        Version: "eaque",
+    }
 
     ctx := context.Background()
-    res, err := s.GroupBundle.Get(ctx, operations.GetGroupBundleRequest{
-        DeployRequest: &shared.DeployRequest{
-            Version: "eum",
-        },
-        ID: "6a6d2d00-0355-4338-8ec0-86fa21e9152c",
-    })
+    res, err := s.GroupBundle.Get(ctx, id, deployRequest)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,10 +46,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetGroupBundleRequest](../../models/operations/getgroupbundlerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                     | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `ctx`                                                         | [context.Context](https://pkg.go.dev/context#Context)         | :heavy_check_mark:                                            | The context to use for the request.                           |
+| `id`                                                          | *string*                                                      | :heavy_check_mark:                                            | Group ID                                                      |
+| `deployRequest`                                               | [*shared.DeployRequest](../../models/shared/deployrequest.md) | :heavy_minus_sign:                                            | DeployRequest object                                          |
 
 
 ### Response

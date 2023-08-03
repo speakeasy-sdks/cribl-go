@@ -108,7 +108,11 @@ func (s *profiler) Create(ctx context.Context, request shared.ProfilerItem) (*op
 
 // Delete - Delete ProfilerItem
 // Delete ProfilerItem
-func (s *profiler) Delete(ctx context.Context, request operations.DeleteProfilerRequest) (*operations.DeleteProfilerResponse, error) {
+func (s *profiler) Delete(ctx context.Context, id string) (*operations.DeleteProfilerResponse, error) {
+	request := operations.DeleteProfilerRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/profiler/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *profiler) Delete(ctx context.Context, request operations.DeleteProfiler
 
 // Get - Get ProfilerItem by ID
 // Get ProfilerItem by ID
-func (s *profiler) Get(ctx context.Context, request operations.GetProfilerRequest) (*operations.GetProfilerResponse, error) {
+func (s *profiler) Get(ctx context.Context, id string) (*operations.GetProfilerResponse, error) {
+	request := operations.GetProfilerRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/profiler/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *profiler) Get(ctx context.Context, request operations.GetProfilerReques
 
 // Update - Update ProfilerItem
 // Update ProfilerItem
-func (s *profiler) Update(ctx context.Context, request operations.UpdateProfilerRequest) (*operations.UpdateProfilerResponse, error) {
+func (s *profiler) Update(ctx context.Context, id string, profilerItem *shared.ProfilerItem) (*operations.UpdateProfilerResponse, error) {
+	request := operations.UpdateProfilerRequest{
+		ID:           id,
+		ProfilerItem: profilerItem,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/profiler/{id}", request, nil)
 	if err != nil {

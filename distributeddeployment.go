@@ -27,7 +27,11 @@ func newDistributedDeployment(sdkConfig sdkConfiguration) *distributedDeployment
 
 // Get - Get summary of Distributed deployment
 // Get summary of Distributed deployment
-func (s *distributedDeployment) Get(ctx context.Context, request operations.GetDistributedDeploymentRequest) (*operations.GetDistributedDeploymentResponse, error) {
+func (s *distributedDeployment) Get(ctx context.Context, mode *string) (*operations.GetDistributedDeploymentResponse, error) {
+	request := operations.GetDistributedDeploymentRequest{
+		Mode: mode,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/master/summary"
 

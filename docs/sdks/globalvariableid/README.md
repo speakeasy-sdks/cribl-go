@@ -29,11 +29,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "atque"
 
     ctx := context.Background()
-    res, err := s.GlobalVariableID.Delete(ctx, operations.DeleteGlobalVariableIDRequest{
-        ID: "7cbdb6ee-c743-478b-a253-17747dc915ad",
-    })
+    res, err := s.GlobalVariableID.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +45,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.DeleteGlobalVariableIDRequest](../../models/operations/deleteglobalvariableidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -80,11 +79,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "beatae"
 
     ctx := context.Background()
-    res, err := s.GlobalVariableID.Get(ctx, operations.GetGlobalVariableIDRequest{
-        ID: "2caf5dd6-723d-4c0f-9ae2-f3a6b7008787",
-    })
+    res, err := s.GlobalVariableID.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -97,10 +95,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.GetGlobalVariableIDRequest](../../models/operations/getglobalvariableidrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -131,19 +129,18 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "at"
+    globalVar := &shared.GlobalVar{
+        Description: cribl.String("labore"),
+        ID: "c700b607-f3c9-43c7-bb9d-a3f2ceda7e23",
+        Lib: cribl.String("repellat"),
+        Tags: cribl.String("explicabo"),
+        Type: shared.GlobalVarTypeString,
+        Value: "exercitationem",
+    }
 
     ctx := context.Background()
-    res, err := s.GlobalVariableID.Update(ctx, operations.UpdateGlobalVariableIDRequest{
-        GlobalVar: &shared.GlobalVar{
-            Description: cribl.String("quis"),
-            ID: "6143f5a6-c98b-4555-9408-0d40bcacc6cb",
-            Lib: cribl.String("fugiat"),
-            Tags: cribl.String("laboriosam"),
-            Type: shared.GlobalVarTypeExpression,
-            Value: "enim",
-        },
-        ID: "f3ec9093-04f9-426b-ad25-53819b474b0e",
-    })
+    res, err := s.GlobalVariableID.Update(ctx, id, globalVar)
     if err != nil {
         log.Fatal(err)
     }
@@ -156,10 +153,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.UpdateGlobalVariableIDRequest](../../models/operations/updateglobalvariableidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
+| `globalVar`                                           | [*shared.GlobalVar](../../models/shared/globalvar.md) | :heavy_minus_sign:                                    | Global Variable object to be updated                  |
 
 
 ### Response

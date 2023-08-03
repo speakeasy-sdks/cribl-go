@@ -26,7 +26,11 @@ func newLoggerConfig(sdkConfig sdkConfiguration) *loggerConfig {
 
 // Delete - Delete LoggerConfig
 // Delete LoggerConfig
-func (s *loggerConfig) Delete(ctx context.Context, request operations.DeleteLoggerConfigRequest) (*operations.DeleteLoggerConfigResponse, error) {
+func (s *loggerConfig) Delete(ctx context.Context, id string) (*operations.DeleteLoggerConfigResponse, error) {
+	request := operations.DeleteLoggerConfigRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/logger/{id}", request, nil)
 	if err != nil {
@@ -103,7 +107,11 @@ func (s *loggerConfig) Delete(ctx context.Context, request operations.DeleteLogg
 
 // Get - Get LoggerConfig by ID
 // Get LoggerConfig by ID
-func (s *loggerConfig) Get(ctx context.Context, request operations.GetLoggerConfigRequest) (*operations.GetLoggerConfigResponse, error) {
+func (s *loggerConfig) Get(ctx context.Context, id string) (*operations.GetLoggerConfigResponse, error) {
+	request := operations.GetLoggerConfigRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/logger/{id}", request, nil)
 	if err != nil {
@@ -180,7 +188,12 @@ func (s *loggerConfig) Get(ctx context.Context, request operations.GetLoggerConf
 
 // Update - Update LoggerConfig
 // Update LoggerConfig
-func (s *loggerConfig) Update(ctx context.Context, request operations.UpdateLoggerConfigRequest) (*operations.UpdateLoggerConfigResponse, error) {
+func (s *loggerConfig) Update(ctx context.Context, id string, loggerConfig *shared.LoggerConfig) (*operations.UpdateLoggerConfigResponse, error) {
+	request := operations.UpdateLoggerConfigRequest{
+		ID:           id,
+		LoggerConfig: loggerConfig,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/logger/{id}", request, nil)
 	if err != nil {

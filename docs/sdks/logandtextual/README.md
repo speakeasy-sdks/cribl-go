@@ -27,12 +27,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    commit := "distinctio"
+    group := "pariatur"
 
     ctx := context.Background()
-    res, err := s.LogandTextual.Get(ctx, operations.GetLogandTextualRequest{
-        Commit: cribl.String("adipisci"),
-        Group: cribl.String("minus"),
-    })
+    res, err := s.LogandTextual.Get(ctx, commit, group)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,10 +44,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.GetLogandTextualRequest](../../models/operations/getlogandtextualrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `commit`                                              | **string*                                             | :heavy_minus_sign:                                    | Commit hash (default is HEAD)                         |
+| `group`                                               | **string*                                             | :heavy_minus_sign:                                    | Group ID                                              |
 
 
 ### Response

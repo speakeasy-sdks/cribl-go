@@ -32,16 +32,16 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Certificate.Create(ctx, shared.Certificate{
-        Ca: cribl.String("aliquam"),
-        Cert: "ad",
-        Description: cribl.String("repellat"),
-        ID: "0597a60f-f2a5-44a3-9e94-764a3e865e79",
+        Ca: cribl.String("eveniet"),
+        Cert: "occaecati",
+        Description: cribl.String("consequuntur"),
+        ID: "2a57a15b-e3e0-4608-87e2-b6e3ab8845f0",
         InUse: []string{
-            "eum",
-            "reiciendis",
+            "perspiciatis",
+            "nihil",
         },
-        Passphrase: cribl.String("provident"),
-        PrivKey: "aspernatur",
+        Passphrase: cribl.String("mollitia"),
+        PrivKey: "voluptas",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,11 +89,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "alias"
 
     ctx := context.Background()
-    res, err := s.Certificate.Delete(ctx, operations.DeleteCertificateRequest{
-        ID: "51a5a9da-660f-4f57-bfaa-d4f9efc1b451",
-    })
+    res, err := s.Certificate.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -106,10 +105,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.DeleteCertificateRequest](../../models/operations/deletecertificaterequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -140,11 +139,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "maiores"
 
     ctx := context.Background()
-    res, err := s.Certificate.Get(ctx, operations.GetCertificateRequest{
-        ID: "2c103264-8dc2-4f61-9199-ebfd0e9fe6c6",
-    })
+    res, err := s.Certificate.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -157,10 +155,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetCertificateRequest](../../models/operations/getcertificaterequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -191,22 +189,23 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "reiciendis"
+    certificate := &shared.Certificate{
+        Ca: cribl.String("dolores"),
+        Cert: "id",
+        Description: cribl.String("minima"),
+        ID: "4a31e947-64a3-4e86-9e79-56f9251a5a9d",
+        InUse: []string{
+            "ex",
+            "aliquid",
+            "accusantium",
+        },
+        Passphrase: cribl.String("repellat"),
+        PrivKey: "doloribus",
+    }
 
     ctx := context.Background()
-    res, err := s.Certificate.Update(ctx, operations.UpdateCertificateRequest{
-        Certificate: &shared.Certificate{
-            Ca: cribl.String("dolorem"),
-            Cert: "fugit",
-            Description: cribl.String("cumque"),
-            ID: "a3aed011-7996-4312-bde0-4771778ff61d",
-            InUse: []string{
-                "dicta",
-            },
-            Passphrase: cribl.String("odio"),
-            PrivKey: "tempora",
-        },
-        ID: "76360a15-db6a-4660-a59a-1adeaab5851d",
-    })
+    res, err := s.Certificate.Update(ctx, id, certificate)
     if err != nil {
         log.Fatal(err)
     }
@@ -219,10 +218,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.UpdateCertificateRequest](../../models/operations/updatecertificaterequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
+| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| `ctx`                                                     | [context.Context](https://pkg.go.dev/context#Context)     | :heavy_check_mark:                                        | The context to use for the request.                       |
+| `id`                                                      | *string*                                                  | :heavy_check_mark:                                        | Unique ID                                                 |
+| `certificate`                                             | [*shared.Certificate](../../models/shared/certificate.md) | :heavy_minus_sign:                                        | Certificate object to be updated                          |
 
 
 ### Response

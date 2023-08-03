@@ -108,7 +108,11 @@ func (s *searchJob) Create(ctx context.Context, request shared.SearchJob) (*oper
 
 // Delete - Delete SearchJob
 // Delete SearchJob
-func (s *searchJob) Delete(ctx context.Context, request operations.DeleteSearchJobRequest) (*operations.DeleteSearchJobResponse, error) {
+func (s *searchJob) Delete(ctx context.Context, id string) (*operations.DeleteSearchJobResponse, error) {
+	request := operations.DeleteSearchJobRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/jobs/{id}", request, nil)
 	if err != nil {
@@ -185,7 +189,11 @@ func (s *searchJob) Delete(ctx context.Context, request operations.DeleteSearchJ
 
 // Get - Get SearchJob by ID
 // Get SearchJob by ID
-func (s *searchJob) Get(ctx context.Context, request operations.GetSearchJobRequest) (*operations.GetSearchJobResponse, error) {
+func (s *searchJob) Get(ctx context.Context, id string) (*operations.GetSearchJobResponse, error) {
+	request := operations.GetSearchJobRequest{
+		ID: id,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/jobs/{id}", request, nil)
 	if err != nil {
@@ -262,7 +270,12 @@ func (s *searchJob) Get(ctx context.Context, request operations.GetSearchJobRequ
 
 // Update - Update SearchJob
 // Update SearchJob
-func (s *searchJob) Update(ctx context.Context, request operations.UpdateSearchJobRequest) (*operations.UpdateSearchJobResponse, error) {
+func (s *searchJob) Update(ctx context.Context, id string, searchJob *shared.SearchJob) (*operations.UpdateSearchJobResponse, error) {
+	request := operations.UpdateSearchJobRequest{
+		ID:        id,
+		SearchJob: searchJob,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/search/jobs/{id}", request, nil)
 	if err != nil {

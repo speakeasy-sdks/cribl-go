@@ -32,49 +32,33 @@ func main() {
 
     ctx := context.Background()
     res, err := s.ConfigGroup.Create(ctx, shared.ConfigGroup{
-        ConfigVersion: "optio",
-        Description: cribl.String("occaecati"),
-        EstimatedIngestRate: cribl.Int64(364544),
+        ConfigVersion: "voluptatibus",
+        Description: cribl.String("molestias"),
+        EstimatedIngestRate: cribl.Int64(889794),
         Git: &shared.ConfigGroupGit{
-            Commit: cribl.String("voluptate"),
-            LocalChanges: cribl.Int64(501063),
+            Commit: cribl.String("sapiente"),
+            LocalChanges: cribl.Int64(764562),
             Log: []shared.Commit{
                 shared.Commit{
-                    AuthorEmail: cribl.String("voluptas"),
-                    AuthorName: cribl.String("numquam"),
-                    Date: "nemo",
-                    Hash: "quos",
-                    Message: "eius",
-                    Short: "aspernatur",
-                },
-                shared.Commit{
-                    AuthorEmail: cribl.String("ducimus"),
-                    AuthorName: cribl.String("nesciunt"),
-                    Date: "fuga",
-                    Hash: "laudantium",
-                    Message: "incidunt",
-                    Short: "quasi",
-                },
-                shared.Commit{
-                    AuthorEmail: cribl.String("rem"),
-                    AuthorName: cribl.String("fugiat"),
-                    Date: "dicta",
-                    Hash: "nisi",
-                    Message: "consequuntur",
-                    Short: "consectetur",
+                    AuthorEmail: cribl.String("rerum"),
+                    AuthorName: cribl.String("tempora"),
+                    Date: "quis",
+                    Hash: "inventore",
+                    Message: "fugit",
+                    Short: "cumque",
                 },
             },
         },
-        ID: "09fb0929-921a-4efb-9f58-c4d86e68e4be",
-        Inherits: cribl.String("voluptatem"),
+        ID: "1032648d-c2f6-4151-99eb-fd0e9fe6c632",
+        Inherits: cribl.String("cumque"),
         IsFleet: cribl.Bool(false),
         IsSearch: cribl.Bool(false),
-        Name: cribl.String("Mrs. Gina Abbott"),
+        Name: cribl.String("Philip O'Kon"),
         OnPrem: cribl.Bool(false),
         Provisioned: cribl.Bool(false),
-        SourceGroupID: cribl.String("enim"),
-        Tags: cribl.String("sint"),
-        WorkerCount: cribl.Int64(858778),
+        SourceGroupID: cribl.String("consequatur"),
+        Tags: cribl.String("quasi"),
+        WorkerCount: cribl.Int64(90233),
         WorkerRemoteAccess: cribl.Bool(false),
     })
     if err != nil {
@@ -123,11 +107,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "ducimus"
 
     ctx := context.Background()
-    res, err := s.ConfigGroup.Delete(ctx, operations.DeleteConfigGroupRequest{
-        ID: "a757a59e-cfef-466e-b1ca-a3383c2beb47",
-    })
+    res, err := s.ConfigGroup.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -140,10 +123,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.DeleteConfigGroupRequest](../../models/operations/deleteconfiggrouprequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -174,12 +157,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "natus"
+    fields := "occaecati"
 
     ctx := context.Background()
-    res, err := s.ConfigGroup.Get(ctx, operations.GetConfigGroupRequest{
-        Fields: cribl.String("voluptate"),
-        ID: "373c8d72-f64d-41db-9f2c-4310661e9634",
-    })
+    res, err := s.ConfigGroup.Get(ctx, id, fields)
     if err != nil {
         log.Fatal(err)
     }
@@ -192,10 +174,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetConfigGroupRequest](../../models/operations/getconfiggrouprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `ctx`                                                                                   | [context.Context](https://pkg.go.dev/context#Context)                                   | :heavy_check_mark:                                                                      | The context to use for the request.                                                     |
+| `id`                                                                                    | *string*                                                                                | :heavy_check_mark:                                                                      | Unique ID                                                                               |
+| `fields`                                                                                | **string*                                                                               | :heavy_minus_sign:                                                                      | query string additional fields to add to results: git.commit, git.localChanges, git.log |
 
 
 ### Response
@@ -226,57 +209,64 @@ func main() {
             BearerAuth: "",
         }),
     )
-
-    ctx := context.Background()
-    res, err := s.ConfigGroup.Update(ctx, operations.UpdateConfigGroupRequest{
-        ConfigGroup: &shared.ConfigGroup{
-            ConfigVersion: "perspiciatis",
-            Description: cribl.String("earum"),
-            EstimatedIngestRate: cribl.Int64(117525),
-            Git: &shared.ConfigGroupGit{
-                Commit: cribl.String("impedit"),
-                LocalChanges: cribl.Int64(975884),
-                Log: []shared.Commit{
-                    shared.Commit{
-                        AuthorEmail: cribl.String("itaque"),
-                        AuthorName: cribl.String("alias"),
-                        Date: "nisi",
-                        Hash: "itaque",
-                        Message: "velit",
-                        Short: "laborum",
-                    },
-                    shared.Commit{
-                        AuthorEmail: cribl.String("non"),
-                        AuthorName: cribl.String("dolor"),
-                        Date: "iusto",
-                        Hash: "sit",
-                        Message: "doloremque",
-                        Short: "consequatur",
-                    },
-                    shared.Commit{
-                        AuthorEmail: cribl.String("officia"),
-                        AuthorName: cribl.String("recusandae"),
-                        Date: "ea",
-                        Hash: "quidem",
-                        Message: "voluptas",
-                        Short: "facilis",
-                    },
+    id := "suscipit"
+    configGroup := &shared.ConfigGroup{
+        ConfigVersion: "adipisci",
+        Description: cribl.String("quasi"),
+        EstimatedIngestRate: cribl.Int64(169025),
+        Git: &shared.ConfigGroupGit{
+            Commit: cribl.String("doloribus"),
+            LocalChanges: cribl.Int64(859581),
+            Log: []shared.Commit{
+                shared.Commit{
+                    AuthorEmail: cribl.String("ipsa"),
+                    AuthorName: cribl.String("tempora"),
+                    Date: "nihil",
+                    Hash: "molestiae",
+                    Message: "dicta",
+                    Short: "iusto",
+                },
+                shared.Commit{
+                    AuthorEmail: cribl.String("esse"),
+                    AuthorName: cribl.String("praesentium"),
+                    Date: "maiores",
+                    Hash: "reiciendis",
+                    Message: "vel",
+                    Short: "architecto",
+                },
+                shared.Commit{
+                    AuthorEmail: cribl.String("fugiat"),
+                    AuthorName: cribl.String("doloremque"),
+                    Date: "dicta",
+                    Hash: "odio",
+                    Message: "tempora",
+                    Short: "esse",
+                },
+                shared.Commit{
+                    AuthorEmail: cribl.String("ex"),
+                    AuthorName: cribl.String("consectetur"),
+                    Date: "aliquid",
+                    Hash: "ipsa",
+                    Message: "laborum",
+                    Short: "sunt",
                 },
             },
-            ID: "c9b8f759-eac5-45a9-b41d-311352965bb8",
-            Inherits: cribl.String("dolorum"),
-            IsFleet: cribl.Bool(false),
-            IsSearch: cribl.Bool(false),
-            Name: cribl.String("Beverly Abbott"),
-            OnPrem: cribl.Bool(false),
-            Provisioned: cribl.Bool(false),
-            SourceGroupID: cribl.String("quae"),
-            Tags: cribl.String("quae"),
-            WorkerCount: cribl.Int64(264333),
-            WorkerRemoteAccess: cribl.Bool(false),
         },
-        ID: "35e139db-c225-49b1-abda-8c070e1084cb",
-    })
+        ID: "5db6a660-659a-41ad-aaab-5851d6c645b0",
+        Inherits: cribl.String("molestias"),
+        IsFleet: cribl.Bool(false),
+        IsSearch: cribl.Bool(false),
+        Name: cribl.String("Gene Brekke"),
+        OnPrem: cribl.Bool(false),
+        Provisioned: cribl.Bool(false),
+        SourceGroupID: cribl.String("veritatis"),
+        Tags: cribl.String("rerum"),
+        WorkerCount: cribl.Int64(665678),
+        WorkerRemoteAccess: cribl.Bool(false),
+    }
+
+    ctx := context.Background()
+    res, err := s.ConfigGroup.Update(ctx, id, configGroup)
     if err != nil {
         log.Fatal(err)
     }
@@ -289,10 +279,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.UpdateConfigGroupRequest](../../models/operations/updateconfiggrouprequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                 | Type                                                      | Required                                                  | Description                                               |
+| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| `ctx`                                                     | [context.Context](https://pkg.go.dev/context#Context)     | :heavy_check_mark:                                        | The context to use for the request.                       |
+| `id`                                                      | *string*                                                  | :heavy_check_mark:                                        | Unique ID                                                 |
+| `configGroup`                                             | [*shared.ConfigGroup](../../models/shared/configgroup.md) | :heavy_minus_sign:                                        | ConfigGroup object to be updated                          |
 
 
 ### Response

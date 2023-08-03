@@ -8,17 +8,10 @@ import (
 )
 
 type UpdateDatasetProviderTypeRequest struct {
-	// DatasetProviderType object to be updated
-	DatasetProviderType *shared.DatasetProviderType `request:"mediaType=application/json"`
 	// Unique ID
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-}
-
-func (o *UpdateDatasetProviderTypeRequest) GetDatasetProviderType() *shared.DatasetProviderType {
-	if o == nil {
-		return nil
-	}
-	return o.DatasetProviderType
+	// DatasetProviderType object to be updated
+	DatasetProviderType *shared.DatasetProviderType `request:"mediaType=application/json"`
 }
 
 func (o *UpdateDatasetProviderTypeRequest) GetID() string {
@@ -26,6 +19,13 @@ func (o *UpdateDatasetProviderTypeRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateDatasetProviderTypeRequest) GetDatasetProviderType() *shared.DatasetProviderType {
+	if o == nil {
+		return nil
+	}
+	return o.DatasetProviderType
 }
 
 type UpdateDatasetProviderTypeResponse struct {

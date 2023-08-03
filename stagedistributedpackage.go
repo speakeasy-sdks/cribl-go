@@ -26,7 +26,12 @@ func newStageDistributedPackage(sdkConfig sdkConfiguration) *stageDistributedPac
 
 // Post - Stage distributed group upgrade
 // Stage distributed group upgrade
-func (s *stageDistributedPackage) Post(ctx context.Context, request operations.PostStageDistributedPackageRequest) (*operations.PostStageDistributedPackageResponse, error) {
+func (s *stageDistributedPackage) Post(ctx context.Context, group string, upgradePercentage *string) (*operations.PostStageDistributedPackageResponse, error) {
+	request := operations.PostStageDistributedPackageRequest{
+		Group:             group,
+		UpgradePercentage: upgradePercentage,
+	}
+
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/system/distributed/upgrade/stage/{group}", request, nil)
 	if err != nil {

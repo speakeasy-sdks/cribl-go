@@ -78,11 +78,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "nesciunt"
 
     ctx := context.Background()
-    res, err := s.NotificationTarget.Delete(ctx, operations.DeletetNotificationTargetRequest{
-        ID: "313b3e50-44f6-45fe-b2dc-4077d0cc3f40",
-    })
+    res, err := s.NotificationTarget.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -95,10 +94,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.DeletetNotificationTargetRequest](../../models/operations/deletetnotificationtargetrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -129,11 +128,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "delectus"
 
     ctx := context.Background()
-    res, err := s.NotificationTarget.Get(ctx, operations.GetNotificationTargetRequest{
-        ID: "8efc15ce-b4d6-4e1e-ae0f-75aedf2acab5",
-    })
+    res, err := s.NotificationTarget.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -146,10 +144,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetNotificationTargetRequest](../../models/operations/getnotificationtargetrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -180,12 +178,11 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "laborum"
+    notificationTarget := shared.NotificationTarget{}
 
     ctx := context.Background()
-    res, err := s.NotificationTarget.Update(ctx, operations.UpdatetNotificationTargetRequest{
-        NotificationTarget: &shared.NotificationTarget{},
-        ID: "8b991c92-6ddb-4589-861e-7421cbe6d950",
-    })
+    res, err := s.NotificationTarget.Update(ctx, id, notificationTarget)
     if err != nil {
         log.Fatal(err)
     }
@@ -198,10 +195,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdatetNotificationTargetRequest](../../models/operations/updatetnotificationtargetrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `ctx`                                                                   | [context.Context](https://pkg.go.dev/context#Context)                   | :heavy_check_mark:                                                      | The context to use for the request.                                     |
+| `id`                                                                    | *string*                                                                | :heavy_check_mark:                                                      | Unique ID                                                               |
+| `notificationTarget`                                                    | [*shared.NotificationTarget](../../models/shared/notificationtarget.md) | :heavy_minus_sign:                                                      | NotificationTarget object to be updated                                 |
 
 
 ### Response

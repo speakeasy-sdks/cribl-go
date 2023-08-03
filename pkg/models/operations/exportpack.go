@@ -8,19 +8,12 @@ import (
 )
 
 type ExportPackRequest struct {
-	// Filename of the exported Pack
-	Filename *string `queryParam:"style=form,explode=true,name=filename"`
 	// Pack name
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Export mode, one of "merge_safe", "merge", "default_only"
 	Mode string `queryParam:"style=form,explode=true,name=mode"`
-}
-
-func (o *ExportPackRequest) GetFilename() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Filename
+	// Filename of the exported Pack
+	Filename *string `queryParam:"style=form,explode=true,name=filename"`
 }
 
 func (o *ExportPackRequest) GetID() string {
@@ -35,6 +28,13 @@ func (o *ExportPackRequest) GetMode() string {
 		return ""
 	}
 	return o.Mode
+}
+
+func (o *ExportPackRequest) GetFilename() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Filename
 }
 
 type ExportPackResponse struct {

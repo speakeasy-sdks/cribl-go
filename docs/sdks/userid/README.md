@@ -28,11 +28,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "labore"
 
     ctx := context.Background()
-    res, err := s.UserID.Delete(ctx, operations.DeleteUserIDRequest{
-        ID: "78890a3f-d3c8-41da-90f8-c23df931da3e",
-    })
+    res, err := s.UserID.Delete(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,10 +44,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.DeleteUserIDRequest](../../models/operations/deleteuseridrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
@@ -79,11 +78,10 @@ func main() {
             BearerAuth: "",
         }),
     )
+    id := "ut"
 
     ctx := context.Background()
-    res, err := s.UserID.Get(ctx, operations.GetUserIDRequest{
-        ID: "db51fad9-4acc-4943-9137-726d15321b83",
-    })
+    res, err := s.UserID.Get(ctx, id)
     if err != nil {
         log.Fatal(err)
     }
@@ -96,10 +94,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
-| `request`                                                                  | [operations.GetUserIDRequest](../../models/operations/getuseridrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `id`                                                  | *string*                                              | :heavy_check_mark:                                    | Unique ID                                             |
 
 
 ### Response
