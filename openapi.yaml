@@ -164,10 +164,16 @@ x-speakeasy-name-override:
     methodNameOverride: prevent
   - operationId: ^resume.*
     methodNameOverride: resume
+  - operationId: ^restart.*
+    methodNameOverride: restart
+  - operationId: ^reload.*
+    methodNameOverride: reload
   - operationId: ^push.*
     methodNameOverride: push
   - operationId: ^sync.*
     methodNameOverride: sync
+  - operationId: ^test.*
+    methodNameOverride: test
 paths:
   x-speakeasy-errors:
     statusCodes:
@@ -177,8 +183,8 @@ paths:
     get:
       tags:
         - certificates
-      x-speakeasy-group: Certificates
-      operationId: getCertificates
+
+      operationId: listCertificates
       summary: Get a list of Certificate objects
       description: Get a list of Certificate objects
       responses:
@@ -203,7 +209,7 @@ paths:
     post:
       tags: 
         - certificates
-      x-speakeasy-group: Certificate
+
       operationId: createCertificate
       summary: Create Certificate
       description: Create Certificate
@@ -236,7 +242,7 @@ paths:
     get:
       tags:
         - certificates
-      x-speakeasy-group: Certificate
+
       operationId: getCertificate
       summary: Get Certificate by ID
       description: Get Certificate by ID
@@ -269,7 +275,7 @@ paths:
     patch:
       tags:
         - certificates
-      x-speakeasy-group: Certificate
+
       operationId: updateCertificate
       summary: Update Certificate
       description: Update Certificate
@@ -308,7 +314,7 @@ paths:
     delete:
       tags:
         - certificates
-      x-speakeasy-group: Certificate
+
       operationId: deleteCertificate
       summary: Delete Certificate
       description: Delete Certificate
@@ -342,8 +348,8 @@ paths:
     get:
       tags:
         - datasets
-      x-speakeasy-group: Datasets
-      operationId: getDatasetProviderTypes
+      operationId: listDatasetProviderTypes
+      x-speakeasy-name-override: listProviderTypes
       summary: Get a list of DatasetProviderType objects
       description: Get a list of DatasetProviderType objects
       responses:
@@ -368,8 +374,9 @@ paths:
     post:
       tags:
         - datasets
-      x-speakeasy-group: Dataset
+
       operationId: createDatasetProviderType
+      x-speakeasy-name-override: createProviderType
       summary: Create DatasetProviderType
       description: Create DatasetProviderType
       requestBody:
@@ -397,12 +404,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-  "/search/dataset-provider-types/{id}":
+  /search/dataset-provider-types/{id}:
     get:
       tags:
         - datasets
-      x-speakeasy-group: Dataset
       operationId: getDatasetProviderType
+      x-speakeasy-name-override: getProviderType
       summary: Get DatasetProviderType by ID
       description: Get DatasetProviderType by ID
       parameters:
@@ -434,8 +441,9 @@ paths:
     patch:
       tags:
         - datasets
-      x-speakeasy-group: Dataset
+
       operationId: updateDatasetProviderType
+      x-speakeasy-name-override: updateProviderType
       summary: Update DatasetProviderType
       description: Update DatasetProviderType
       parameters:
@@ -473,8 +481,8 @@ paths:
     delete:
       tags:
         - datasets
-      x-speakeasy-group: Dataset
       operationId: deleteDatasetProviderType
+      x-speakeasy-name-override: deleteProviderType
       summary: Delete DatasetProviderType
       description: Delete DatasetProviderType
       parameters:
@@ -507,8 +515,7 @@ paths:
     get:
       tags:
         - datasets
-      x-speakeasy-group: DatasetObjects
-      operationId: getDatasetObjects
+      operationId: listDatasetObjects
       summary: Get a list of Dataset objects
       description: Get a list of Dataset objects
       responses:
@@ -533,7 +540,7 @@ paths:
     post:
       tags:
         - datasets
-      x-speakeasy-group: DatasetObject
+
       operationId: createDatasetObject
       summary: Create Dataset
       description: Create Dataset
@@ -566,7 +573,7 @@ paths:
     get:
       tags:
         - datasets
-      x-speakeasy-group: DatasetObject
+
       operationId: getDatasetObject
       summary: Get Dataset by ID
       description: Get Dataset by ID
@@ -599,7 +606,7 @@ paths:
     patch:
       tags:
         - datasets
-      x-speakeasy-group: DatasetObject
+
       operationId: updateDatasetObject
       summary: Update Dataset
       description: Update Dataset
@@ -638,7 +645,7 @@ paths:
     delete:
       tags:
         - datasets
-      x-speakeasy-group: DatasetObject
+
       operationId: deleteDatasetObject
       summary: Delete Dataset
       description: Delete Dataset
@@ -672,7 +679,7 @@ paths:
     get:
       tags:
         - features
-      x-speakeasy-group: Feature
+
       operationId: getFeature
       summary: Get feature by Id 
       description: Get feature by id (i.e. 'type/name`)
@@ -707,8 +714,8 @@ paths:
     get:
       tags:
         - features
-      x-speakeasy-group: Features
-      operationId: getFeatures
+
+      operationId: listFeatures
       summary: List all features
       description: List all features
       deprecated: false
@@ -735,8 +742,8 @@ paths:
     get:
       tags:
         - fleet-mappings
-      x-speakeasy-group: FleetMappings
-      operationId: getFleetMappings
+
+      operationId: listFleetMappings
       summary: Get a list of MappingRuleset objects
       description: Get a list of MappingRuleset objects
       responses:
@@ -761,7 +768,7 @@ paths:
     post:
       tags:
         - fleet-mappings
-      x-speakeasy-group: FleetMapping
+
       operationId: createFleetMapping
       summary: Create MappingRuleset
       description: Create MappingRuleset
@@ -794,7 +801,7 @@ paths:
     get:
       tags:
         - fleet-mappings
-      x-speakeasy-group: MappingRuleset
+
       operationId: getMappingRuleset
       summary: Get MappingRuleset by ID
       description: Get MappingRuleset by ID
@@ -827,7 +834,7 @@ paths:
     patch:
       tags:
         - fleet-mappings
-      x-speakeasy-group: MappingRulesets
+
       operationId: updateMappingRulesets
       summary: Update MappingRuleset
       description: Update MappingRuleset
@@ -866,7 +873,7 @@ paths:
     delete:
       tags:
         - fleet-mappings
-      x-speakeasy-group: MappingRuleset
+
       operationId: deleteMappingRuleset
       summary: Delete MappingRuleset
       description: Delete MappingRuleset
@@ -900,8 +907,8 @@ paths:
     get:
       tags:
         - groups
-      x-speakeasy-group: Groups
-      operationId: getGroups
+
+      operationId: listGroups
       summary: Get a list of ConfigGroup objects
       description: Get a list of ConfigGroup objects
       deprecated: false
@@ -941,7 +948,7 @@ paths:
     post:
       tags:
         - groups
-      x-speakeasy-group: ConfigGroup
+
       operationId: createConfigGroup
       summary: Create ConfigGroup
       description: Create ConfigGroup
@@ -974,7 +981,7 @@ paths:
     get:
       tags:
         - groups
-      x-speakeasy-group: ConfigGroup
+
       operationId: getConfigGroup
       summary: Get a specific ConfigGroup object
       description: Get a specific ConfigGroup object
@@ -1015,7 +1022,7 @@ paths:
     patch:
       tags:
         - groups
-      x-speakeasy-group: ConfigGroup
+
       operationId: updateConfigGroup
       summary: Update ConfigGroup
       description: Update ConfigGroup
@@ -1054,7 +1061,7 @@ paths:
     delete:
       tags:
         - groups
-      x-speakeasy-group: ConfigGroup
+
       operationId: deleteConfigGroup
       summary: Delete ConfigGroup
       description: Delete ConfigGroup
@@ -1088,8 +1095,9 @@ paths:
     get:
       tags:
         - groups
-      x-speakeasy-group: GroupBundle
+
       operationId: getGroupBundle
+      x-speakeasy-name-override: getConfigVersion
       summary: Get effective bundle version for given Group
       description: Get effective bundle version for given Group
       deprecated: false
@@ -1129,7 +1137,7 @@ paths:
     patch:
       tags:
         - groups
-      x-speakeasy-group: FleetOrWorkerGroup
+
       operationId: deployFleetOrWorkerGroup
       summary: Deploy commits for a Fleet or Worker Group
       description: Deploy commits for a Fleet or Worker Group
@@ -1170,8 +1178,8 @@ paths:
     get:
       tags:
         - keys
-      x-speakeasy-group: KeyMetadataEntities
-      operationId: getKeyMetadataEntities
+
+      operationId: listKeyMetadataEntities
       summary: Get a list of KeyMetadataEntity objects
       description: Get a list of KeyMetadataEntity objects
       responses:
@@ -1196,7 +1204,7 @@ paths:
     post:
       tags:
         - keys
-      x-speakeasy-group: KeyMetadataEntity
+
       operationId: createKeyMetadataEntity
       summary: Create KeyMetadataEntity
       description: Create KeyMetadataEntity
@@ -1229,7 +1237,7 @@ paths:
     get:
       tags:
         - keys
-      x-speakeasy-group: KeyMetadataEntity
+
       operationId: getKeyMetadataEntity
       summary: Get KeyMetadataEntity by ID
       description: Get KeyMetadataEntity by ID
@@ -1262,7 +1270,7 @@ paths:
     patch:
       tags:
         - keys
-      x-speakeasy-group: KeyMetadataEntity
+
       operationId: updateKeyMetadataEntity
       summary: Update KeyMetadataEntity
       description: Update KeyMetadataEntity
@@ -1301,7 +1309,7 @@ paths:
     delete:
       tags:
         - keys
-      x-speakeasy-group: KeyMetadataEntity
+
       operationId: deleteKeyMetadataEntity
       summary: Delete KeyMetadataEntity
       description: Delete KeyMetadataEntity
@@ -1335,8 +1343,8 @@ paths:
     get:
       tags:
         - mappings
-      x-speakeasy-group: MappingRulesets
-      operationId: getMappingRulesets
+
+      operationId: listMappingRulesets
       summary: Get a list of MappingRuleset objects
       description: Get a list of MappingRuleset objects
       responses:
@@ -1361,7 +1369,7 @@ paths:
     post:
       tags:
         - mappings
-      x-speakeasy-group: MappingRuleset
+
       operationId: createMappingRuleset
       summary: Create MappingRuleset
       description: Create MappingRuleset
@@ -1394,7 +1402,7 @@ paths:
     get:
       tags:
         - mappings
-      x-speakeasy-group: MappingRulesetID
+
       operationId: getMappingRulesetID
       summary: Get MappingRuleset by ID
       description: Get MappingRuleset by ID
@@ -1427,7 +1435,7 @@ paths:
     patch:
       tags:
         - mappings
-      x-speakeasy-group: MappingRuleset
+
       operationId: updateMappingRuleset
       summary: Update MappingRuleset
       description: Update MappingRuleset
@@ -1466,7 +1474,7 @@ paths:
     delete:
       tags:
         - mappings
-      x-speakeasy-group: MappingRulesets
+
       operationId: deleteMappingRulesets
       summary: Delete MappingRuleset
       description: Delete MappingRuleset
@@ -1500,8 +1508,8 @@ paths:
     get:
       tags:
         - messages
-      x-speakeasy-group: BulletinMessages
-      operationId: getBulletinMessages
+
+      operationId: listBulletinMessages
       summary: Get a list of BulletinMessage objects
       description: Get a list of BulletinMessage objects
       responses:
@@ -1526,7 +1534,7 @@ paths:
     post:
       tags:
         - messages
-      x-speakeasy-group: BulletinMessage
+
       operationId: createBulletinMessage
       summary: Create BulletinMessage
       description: Create BulletinMessage
@@ -1559,7 +1567,7 @@ paths:
     get:
       tags:
         - messages
-      x-speakeasy-group: BulletinMessage
+
       operationId: getBulletinMessage
       summary: Get BulletinMessage by ID
       description: Get BulletinMessage by ID
@@ -1592,7 +1600,7 @@ paths:
     delete:
       tags:
         - messages
-      x-speakeasy-group: BulletinMessage
+
       operationId: deleteBulletinMessage
       summary: Delete BulletinMessage
       description: Delete BulletinMessage
@@ -1626,8 +1634,8 @@ paths:
     get:
       tags:
         - notification-targets
-      x-speakeasy-group: NotificationTargets
-      operationId: getNotificationTargets
+
+      operationId: listNotificationTargets
       summary: Get a list of NotificationTarget objects
       description: Get a list of NotificationTarget objects
       responses:
@@ -1652,7 +1660,7 @@ paths:
     post:
       tags:
         - notification-targets
-      x-speakeasy-group: NotificationTarget
+
       operationId: createNotificationTarget
       summary: Create NotificationTarget
       description: Create NotificationTarget
@@ -1685,7 +1693,7 @@ paths:
     get:
       tags:
         - notification-targets
-      x-speakeasy-group: NotificationTarget
+
       operationId: getNotificationTarget
       summary: Get NotificationTarget by ID
       description: Get NotificationTarget by ID
@@ -1718,7 +1726,7 @@ paths:
     patch:
       tags:
         - notification-targets
-      x-speakeasy-group: NotificationTarget
+
       operationId: updatetNotificationTarget
       summary: Update NotificationTarget
       description: Update NotificationTarget
@@ -1757,7 +1765,7 @@ paths:
     delete:
       tags:
         - notification-targets
-      x-speakeasy-group: NotificationTarget
+
       operationId: deletetNotificationTarget
       summary: Delete NotificationTarget
       description: Delete NotificationTarget
@@ -1791,8 +1799,8 @@ paths:
     get:
       tags:
         - policies
-      x-speakeasy-group: PolicyRules
-      operationId: getPolicyRules
+
+      operationId: listPolicyRules
       summary: Get a list of PolicyRule objects
       description: Get a list of PolicyRule objects
       responses:
@@ -1817,7 +1825,7 @@ paths:
     post:
       tags:
         - policies
-      x-speakeasy-group: PolicyRule
+
       operationId: createPolicyRule
       summary: Create PolicyRule
       description: Create PolicyRule
@@ -1850,7 +1858,7 @@ paths:
     get:
       tags:
         - policies
-      x-speakeasy-group: PolicyRule
+
       operationId: getPolicyRule
       summary: Get PolicyRule by ID
       description: Get PolicyRule by ID
@@ -1883,7 +1891,7 @@ paths:
     patch:
       tags:
         - policies
-      x-speakeasy-group: PolicyRule
+
       operationId: updatePolicyRule
       summary: Update PolicyRule
       description: Update PolicyRule
@@ -1922,7 +1930,7 @@ paths:
     delete:
       tags:
         - policies
-      x-speakeasy-group: PolicyRule
+
       operationId: deletePolicyRule
       summary: Delete PolicyRule
       description: Delete PolicyRule
@@ -1956,8 +1964,8 @@ paths:
     get:
       tags:
         - roles
-      x-speakeasy-group: Roles
-      operationId: getRoles
+
+      operationId: listRoles
       summary: Get a list of Role objects
       description: Get a list of Role objects
       responses:
@@ -1982,7 +1990,7 @@ paths:
     post:
       tags:
         - roles
-      x-speakeasy-group: Role
+
       operationId: createRole
       summary: Create Role
       description: Create Role
@@ -2015,7 +2023,7 @@ paths:
     get:
       tags:
         - roles
-      x-speakeasy-group: Role
+
       operationId: getRole
       summary: Get Role by ID
       description: Get Role by ID
@@ -2048,7 +2056,7 @@ paths:
     patch:
       tags:
         - roles
-      x-speakeasy-group: Role
+
       operationId: updateRole
       summary: Update Role
       description: Update Role
@@ -2087,7 +2095,7 @@ paths:
     delete:
       tags:
         - roles
-      x-speakeasy-group: Role
+
       operationId: deleteRole
       summary: Delete Role
       description: Delete Role
@@ -2121,8 +2129,8 @@ paths:
     get:
       tags:
         - saved-jobs
-      x-speakeasy-group: SavedJobs
-      operationId: getSavedJobs
+
+      operationId: listSavedJobs
       summary: Get a list of SavedJob objects
       description: Get a list of SavedJob objects
       responses:
@@ -2147,7 +2155,7 @@ paths:
     post:
       tags:
         - saved-jobs
-      x-speakeasy-group: SavedJobs
+
       operationId: createSavedJobs
       summary: Create SavedJob
       description: Create SavedJob
@@ -2180,7 +2188,7 @@ paths:
     get:
       tags:
         - saved-jobs
-      x-speakeasy-group: SavedJob
+
       operationId: getSavedJob
       summary: Get SavedJob by ID
       description: Get SavedJob by ID
@@ -2213,7 +2221,7 @@ paths:
     patch:
       tags:
         - saved-jobs
-      x-speakeasy-group: SavedJob
+
       operationId: updateSavedJob
       summary: Update SavedJob
       description: Update SavedJob
@@ -2252,7 +2260,7 @@ paths:
     delete:
       tags:
         - saved-jobs
-      x-speakeasy-group: SavedJob
+
       operationId: deleteSavedJob
       summary: Delete SavedJob
       description: Delete SavedJob
@@ -2286,8 +2294,8 @@ paths:
     get:
       tags:
         - savedQueries
-      x-speakeasy-group: SavedQueries
-      operationId: getSavedQueries
+
+      operationId: listSavedQueries
       summary: Get a list of SavedQuery objects
       description: Get a list of SavedQuery objects
       responses:
@@ -2312,7 +2320,7 @@ paths:
     post:
       tags:
         - savedQueries
-      x-speakeasy-group: SavedQueries
+
       operationId: createSavedQueries
       summary: Create SavedQuery
       description: Create SavedQuery
@@ -2345,7 +2353,7 @@ paths:
     get:
       tags:
         - savedQueries
-      x-speakeasy-group: SavedQuery
+
       operationId: getSavedQuery
       summary: Get SavedQuery by ID
       description: Get SavedQuery by ID
@@ -2378,7 +2386,7 @@ paths:
     patch:
       tags:
         - savedQueries
-      x-speakeasy-group: SavedQueries
+
       operationId: updateSavedQueries
       summary: Update SavedQuery
       description: Update SavedQuery
@@ -2417,7 +2425,7 @@ paths:
     delete:
       tags:
         - savedQueries
-      x-speakeasy-group: SavedQueries
+
       operationId: deleteSavedQueries
       summary: Delete SavedQuery
       description: Delete SavedQuery
@@ -2451,8 +2459,8 @@ paths:
     get:
       tags:
         - scripts
-      x-speakeasy-group: Scripts
-      operationId: getScripts
+
+      operationId: listScripts
       summary: Get a list of Script objects
       description: Get a list of Script objects
       responses:
@@ -2477,7 +2485,7 @@ paths:
     post:
       tags:
         - scripts
-      x-speakeasy-group: Script
+
       operationId: createScript
       summary: Create Script
       description: Create Script
@@ -2510,7 +2518,7 @@ paths:
     get:
       tags:
         - scripts
-      x-speakeasy-group: Script
+
       operationId: getScript
       summary: Get Script by ID
       description: Get Script by ID
@@ -2543,7 +2551,7 @@ paths:
     patch:
       tags:
         - scripts
-      x-speakeasy-group: Script
+
       operationId: updateScript
       summary: Update Script
       description: Update Script
@@ -2582,7 +2590,7 @@ paths:
     delete:
       tags:
         - scripts
-      x-speakeasy-group: Script
+
       operationId: deleteScript
       summary: Delete Script
       description: Delete Script
@@ -2616,8 +2624,8 @@ paths:
     get:
       tags:
         - search
-      x-speakeasy-group: SearchJobs
-      operationId: getSearchJobs
+
+      operationId: listSearchJobs
       summary: Get a list of SearchJob objects
       description: Get a list of SearchJob objects
       responses:
@@ -2642,7 +2650,7 @@ paths:
     post:
       tags:
         - search
-      x-speakeasy-group: SearchJob
+
       operationId: createSearchJob
       summary: Create SearchJob
       description: Create SearchJob
@@ -2675,8 +2683,9 @@ paths:
     get:
       tags:
         - search
-      x-speakeasy-group: SearchJob
+
       operationId: getSearchJob
+      x-speakeasy-name-override: getJob
       summary: Get SearchJob by ID
       description: Get SearchJob by ID
       parameters:
@@ -2708,7 +2717,7 @@ paths:
     patch:
       tags:
         - search
-      x-speakeasy-group: SearchJob
+
       operationId: updateSearchJob
       summary: Update SearchJob
       description: Update SearchJob
@@ -2747,7 +2756,7 @@ paths:
     delete:
       tags:
         - search
-      x-speakeasy-group: SearchJob
+
       operationId: deleteSearchJob
       summary: Delete SearchJob
       description: Delete SearchJob
@@ -2781,7 +2790,7 @@ paths:
     post:
       tags:
         - search
-      x-speakeasy-group: Search
+
       operationId: dispatchSearch
       summary: Dispatch search *id* to worker nodes filtered by
         worker node filter using RPC
@@ -2818,8 +2827,8 @@ paths:
     get:
       tags:
         - search
-      x-speakeasy-group: SearchJobMetrics
-      operationId: gethSearchJobMetrics
+
+      operationId: listSearchJobMetrics
       summary: Get search job metrics
       description: Get search job metrics
       deprecated: false
@@ -2853,8 +2862,8 @@ paths:
     get:
       tags:
         - search
-      x-speakeasy-group: JobStatus
-      operationId: getJobStatus
+
+      operationId: listJobStatus
       summary: Get job status
       description: Get job status
       deprecated: false
@@ -2888,8 +2897,9 @@ paths:
     get:
       tags:
         - search
-      x-speakeasy-group: SearchTimeline
+
       operationId: getSearchTimeline
+      x-speakeasy-name-override: getTimeline
       summary: Get search timeline
       description: Get search timeline
       deprecated: false
@@ -2923,8 +2933,8 @@ paths:
     get:
       tags:
         - search
-      x-speakeasy-group: FieldSummaries
-      operationId: getFieldSummaries
+
+      operationId: listFieldSummaries
       summary: List field summaries
       description: List field summaries
       deprecated: false
@@ -2958,8 +2968,8 @@ paths:
     get:
       tags:
         - search
-      x-speakeasy-group: SearchLogs
-      operationId: getSearchLogs
+
+      operationId: listSearchLogs
       summary: Get search logs
       description: Get search logs
       deprecated: false
@@ -2993,8 +3003,8 @@ paths:
     get:
       tags:
         - users
-      x-speakeasy-group: UserObject
-      operationId: getUserObject
+
+      operationId: listUsers
       summary: Get a list of User objects
       description: Get a list of User objects
       responses:
@@ -3019,8 +3029,9 @@ paths:
     post:
       tags:
         - users
-      x-speakeasy-group: User
+
       operationId: CreateUser
+      x-speakeasy-entity-operation: User#create
       summary: Create User
       description: Create User
       requestBody:
@@ -3052,7 +3063,7 @@ paths:
     get:
       tags:
         - users
-      x-speakeasy-group: UserID
+
       operationId: getUserID
       summary: Get User by ID
       description: Get User by ID
@@ -3085,8 +3096,8 @@ paths:
     patch:
       tags:
         - users
-      x-speakeasy-group: UserProperties
       operationId: updateUserProperties
+      x-speakeasy-name-override: updateProperties
       summary: Update User properties – admin use only
       description: Update User properties – admin use only
       deprecated: false
@@ -3125,7 +3136,7 @@ paths:
     delete:
       tags:
         - users
-      x-speakeasy-group: UserID
+
       operationId: deleteUserID
       summary: Delete User
       description: Delete User
@@ -3159,8 +3170,9 @@ paths:
     patch:
       tags:
         - users
-      x-speakeasy-group: UserObject
+
       operationId: updateUserObject
+      x-speakeasy-name-override: updateInfo
       summary: Update User except for their roles
       description: Update User except for their roles
       deprecated: false
@@ -3196,8 +3208,8 @@ paths:
     get:
       tags:
         - appscope-configs
-      x-speakeasy-group: AppscopeLibEntries
-      operationId: getAppscopeLibEntries
+
+      operationId: listAppscopeLibEntries
       summary: Get a list of AppscopeLibEntry objects
       description: Get a list of AppscopeLibEntry objects
       responses:
@@ -3218,7 +3230,7 @@ paths:
     post:
       tags:
         - appscope-configs
-      x-speakeasy-group: AppscopeLibEntry
+
       operationId: createAppscopeLibEntry
       summary: Create AppscopeLibEntry
       description: Create AppscopeLibEntry
@@ -3251,7 +3263,7 @@ paths:
     get:
       tags:
         - appscope-configs
-      x-speakeasy-group: AppscopeLibEntry
+
       operationId: getAppscopeLibEntry
       summary: Get AppscopeLibEntry by ID
       description: Get AppscopeLibEntry by ID
@@ -3284,7 +3296,7 @@ paths:
     patch:
       tags:
         - appscope-configs
-      x-speakeasy-group: AppscopeLibEntry
+
       operationId: updateAppscopeLibEntry
       summary: Update AppscopeLibEntry
       description: Update AppscopeLibEntry
@@ -3323,7 +3335,7 @@ paths:
     delete:
       tags:
         - appscope-configs
-      x-speakeasy-group: AppscopeLibEntry
+
       operationId: deleteAppscopeLibEntry
       summary: Delete AppscopeLibEntry
       description: Delete AppscopeLibEntry
@@ -3357,8 +3369,8 @@ paths:
     get:
       tags:
         - grokfiles
-      x-speakeasy-group: GrokFiles
-      operationId: getGrokFiles
+
+      operationId: listGrokFiles
       summary: Get a list of GrokFile objects
       description: Get a list of GrokFile objects
       responses:
@@ -3383,7 +3395,7 @@ paths:
     post:
       tags:
         - grokfiles
-      x-speakeasy-group: GrokFile
+
       operationId: createGrokFile
       summary: Create GrokFile
       description: Create GrokFile
@@ -3416,7 +3428,7 @@ paths:
     get:
       tags:
         - grokfiles
-      x-speakeasy-group: GrokFile
+
       operationId: getGrokFile
       summary: Get GrokFile by ID
       description: Get GrokFile by ID
@@ -3449,7 +3461,7 @@ paths:
     patch:
       tags:
         - grokfiles
-      x-speakeasy-group: GrokFile
+
       operationId: updateGrokFile
       summary: Update GrokFile
       description: Update GrokFile
@@ -3488,7 +3500,7 @@ paths:
     delete:
       tags:
         - grokfiles
-      x-speakeasy-group: GrokFile
+
       operationId: deleteGrokFile
       summary: Delete GrokFile
       description: Delete GrokFile
@@ -3522,8 +3534,8 @@ paths:
     get:
       tags:
         - lookups
-      x-speakeasy-group: Lookups
-      operationId: getLookups
+
+      operationId: listLookups
       summary: Get a list of LookupFile objects
       description: Get a list of LookupFile objects
       responses:
@@ -3548,7 +3560,7 @@ paths:
     post:
       tags:
         - lookups
-      x-speakeasy-group: Lookup
+
       operationId: createLookup
       summary: Create LookupFile
       description: Create LookupFile
@@ -3580,7 +3592,7 @@ paths:
     put:
       tags:
         - lookups
-      x-speakeasy-group: Lookup
+
       operationId: uploadLookup
       summary: Upload LookupFile
       description: Upload LookupFile
@@ -3615,7 +3627,7 @@ paths:
     get:
       tags:
         - lookups
-      x-speakeasy-group: Lookup
+
       operationId: getLookup
       summary: Get LookupFile by ID
       description: Get LookupFile by ID
@@ -3648,7 +3660,7 @@ paths:
     patch:
       tags:
         - lookups
-      x-speakeasy-group: Lookup
+
       operationId: updateLookup
       summary: Update LookupFile
       description: Update LookupFile
@@ -3687,7 +3699,7 @@ paths:
     delete:
       tags:
         - lookups
-      x-speakeasy-group: Lookup
+
       operationId: deleteLookup
       summary: Delete LookupFile
       description: Delete LookupFile
@@ -3721,8 +3733,8 @@ paths:
     get:
       tags:
         - parsers
-      x-speakeasy-group: ListParser
-      operationId: getListParser
+
+      operationId: listParser
       summary: Get a list of Parser objects
       description: Get a list of Parser objects
       responses:
@@ -3747,7 +3759,7 @@ paths:
     post:
       tags:
         - parsers
-      x-speakeasy-group: ParserObject
+
       operationId: postParserObject
       summary: Create Parser
       description: Create Parser
@@ -3780,7 +3792,7 @@ paths:
     get:
       tags:
         - parsers
-      x-speakeasy-group: ParserID
+
       operationId: getParserID
       summary: Get Parser by ID
       description: Get Parser by ID
@@ -3813,7 +3825,7 @@ paths:
     patch:
       tags:
         - parsers
-      x-speakeasy-group: ParserID
+
       operationId: updateParserID
       summary: Update Parser
       description: Update Parser
@@ -3852,7 +3864,7 @@ paths:
     delete:
       tags:
         - parsers
-      x-speakeasy-group: ParserID
+
       operationId: deleteParserID
       summary: Delete Parser
       description: Delete Parser
@@ -3886,8 +3898,8 @@ paths:
     get:
       tags:
         - regexes
-      x-speakeasy-group: RegexLibEntryObject
-      operationId: getRegexLibEntryObject
+
+      operationId: listRegexLibEntryObject
       summary: Get a list of RegexLibEntry objects
       description: Get a list of RegexLibEntry objects
       responses:
@@ -3912,7 +3924,7 @@ paths:
     post:
       tags:
         - regexes
-      x-speakeasy-group: RegexLibEntry
+
       operationId: postRegexLibEntry
       summary: Create RegexLibEntry
       description: Create RegexLibEntry
@@ -3945,7 +3957,7 @@ paths:
     get:
       tags:
         - regexes
-      x-speakeasy-group: RegexLibEntryID
+
       operationId: getRegexLibEntryID
       summary: Get RegexLibEntry by ID
       description: Get RegexLibEntry by ID
@@ -3978,7 +3990,7 @@ paths:
     patch:
       tags:
         - regexes
-      x-speakeasy-group: RegexLibEntry
+
       operationId: updateRegexLibEntry
       summary: Update RegexLibEntry
       description: Update RegexLibEntry
@@ -4017,7 +4029,7 @@ paths:
     delete:
       tags:
         - regexes
-      x-speakeasy-group: RegexLibEntry
+
       operationId: deleteRegexLibEntry
       summary: Delete RegexLibEntry
       description: Delete RegexLibEntry
@@ -4051,8 +4063,8 @@ paths:
     get:
       tags:
         - samples
-      x-speakeasy-group: ListDataSample
-      operationId: getListDataSample
+
+      operationId: listDataSample
       summary: Get a list of DataSample objects
       description: Get a list of DataSample objects
       responses:
@@ -4077,7 +4089,7 @@ paths:
     post:
       tags:
         - samples
-      x-speakeasy-group: DataSample
+
       operationId: postDataSample
       summary: Create DataSample
       description: Create DataSample
@@ -4110,7 +4122,7 @@ paths:
     get:
       tags:
         - samples
-      x-speakeasy-group: DataSampleID
+
       operationId: getDataSampleID
       summary: Get DataSample by ID
       description: Get DataSample by ID
@@ -4143,7 +4155,7 @@ paths:
     patch:
       tags:
         - samples
-      x-speakeasy-group: DataSampleID
+
       operationId: updateDataSampleID
       summary: Update DataSample
       description: Update DataSample
@@ -4182,7 +4194,7 @@ paths:
     delete:
       tags:
         - samples
-      x-speakeasy-group: DataSampleID
+
       operationId: deleteDataSampleID
       summary: Delete DataSample
       description: Delete DataSample
@@ -4216,8 +4228,9 @@ paths:
     get:
       tags:
         - samples
-      x-speakeasy-group: SampleContent
+
       operationId: getSampleContent
+      x-speakeasy-name-override: getContent
       summary: Get sample content by ID
       description: Get sample content by ID
       deprecated: false
@@ -4251,8 +4264,8 @@ paths:
     get:
       tags:
         - database-connections
-      x-speakeasy-group: ListDatabaseConnection
-      operationId: getListDatabaseConnection
+
+      operationId: listDatabaseConnection
       summary: Get a list of DatabaseConnection objects
       description: Get a list of DatabaseConnection objects
       deprecated: false
@@ -4285,7 +4298,7 @@ paths:
     post:
       tags:
         - database-connections
-      x-speakeasy-group: DatabaseConnection
+
       operationId: postDatabaseConnection
       summary: Create DatabaseConnectionConfig
       description: Create DatabaseConnectionConfig
@@ -4318,7 +4331,7 @@ paths:
     get:
       tags:
         - database-connections
-      x-speakeasy-group: DatabaseConnectionConfigID
+
       operationId: getDatabaseConnectionConfigID
       summary: Get DatabaseConnectionConfig by ID
       description: Get DatabaseConnectionConfig by ID
@@ -4351,7 +4364,7 @@ paths:
     patch:
       tags:
         - database-connections
-      x-speakeasy-group: DatabaseConnectionConfigID
+
       operationId: updateDatabaseConnectionConfigID
       summary: Update DatabaseConnectionConfig
       description: Update DatabaseConnectionConfig
@@ -4390,7 +4403,7 @@ paths:
     delete:
       tags:
         - database-connections
-      x-speakeasy-group: DatabaseConnectionConfigID
+
       operationId: deleteDatabaseConnectionConfigID
       summary: Delete DatabaseConnectionConfig
       description: Delete DatabaseConnectionConfig
@@ -4424,8 +4437,8 @@ paths:
     post:
       tags:
         - database-connections
-      x-speakeasy-group: TestDatabaseConnection
-      operationId: postTestDatabaseConnection
+
+      operationId: TestDatabaseConnection
       summary: Test a database connection given a type and connectionString
       description: Test a database connection given a type and connectionString
       deprecated: false
@@ -4458,8 +4471,8 @@ paths:
     get:
       tags:
         - event_breaker_rules
-      x-speakeasy-group: ListEventBreaker
-      operationId: getListEventBreaker
+
+      operationId: listEventBreaker
       summary: Get a list of Event Breaker Ruleset objects
       description: Get a list of Event Breaker Ruleset objects
       responses:
@@ -4484,7 +4497,7 @@ paths:
     post:
       tags:
         - event_breaker_rules
-      x-speakeasy-group: EventBreaker
+
       operationId: postEventBreaker
       summary: Create Event Breaker Ruleset
       description: Create Event Breaker Ruleset
@@ -4517,7 +4530,7 @@ paths:
     get:
       tags:
         - event_breaker_rules
-      x-speakeasy-group: EventBreakerID
+
       operationId: getEventBreakerID
       summary: Get Event Breaker Ruleset by ID
       description: Get Event Breaker Ruleset by ID
@@ -4550,7 +4563,7 @@ paths:
     patch:
       tags:
         - event_breaker_rules
-      x-speakeasy-group: EventBreaker
+
       operationId: updateEventBreaker
       summary: Update Event Breaker Ruleset
       description: Update Event Breaker Ruleset
@@ -4589,7 +4602,7 @@ paths:
     delete:
       tags:
         - event_breaker_rules
-      x-speakeasy-group: EventBreaker
+
       operationId: deleteEventBreaker
       summary: Delete Event Breaker Ruleset
       description: Delete Event Breaker Ruleset
@@ -4623,8 +4636,8 @@ paths:
     get:
       tags:
         - global_variables
-      x-speakeasy-group: ListGlobalVariable
-      operationId: getListGlobalVariable
+
+      operationId: listGlobalVariable
       summary: Get a list of Global Variable objects
       description: Get a list of Global Variable objects
       responses:
@@ -4649,7 +4662,7 @@ paths:
     post:
       tags:
         - global_variables
-      x-speakeasy-group: GlobalVariable
+
       operationId: postGlobalVariable
       summary: Create Global Variable
       description: Create Global Variable
@@ -4682,7 +4695,7 @@ paths:
     get:
       tags:
         - global_variables
-      x-speakeasy-group: GlobalVariableID
+
       operationId: getGlobalVariableID
       summary: Get Global Variable by ID
       description: Get Global Variable by ID
@@ -4715,7 +4728,7 @@ paths:
     patch:
       tags:
         - global_variables
-      x-speakeasy-group: GlobalVariableID
+
       operationId: updateGlobalVariableID
       summary: Update Global Variable
       description: Update Global Variable
@@ -4754,7 +4767,7 @@ paths:
     delete:
       tags:
         - global_variables
-      x-speakeasy-group: GlobalVariableID
+
       operationId: deleteGlobalVariableID
       summary: Delete Global Variable
       description: Delete Global Variable
@@ -4788,8 +4801,8 @@ paths:
     get:
       tags:
         - outputs
-      x-speakeasy-group: OutputObjects
-      operationId: getOutputObjects
+
+      operationId: listOutputObjects
       summary: Get a list of Output objects
       description: Get a list of Output objects
       responses:
@@ -4814,7 +4827,7 @@ paths:
     post:
       tags:
         - outputs
-      x-speakeasy-group: OutputObject
+
       operationId: createOutputObject
       summary: Create Output
       description: Create Output
@@ -4847,7 +4860,7 @@ paths:
     get:
       tags:
         - outputs
-      x-speakeasy-group: OutputID
+
       operationId: getOutputID
       summary: Get Output by ID
       description: Get Output by ID
@@ -4880,7 +4893,7 @@ paths:
     patch:
       tags:
         - outputs
-      x-speakeasy-group: OutputID
+
       operationId: updateOutputID
       summary: Update Output
       description: Update Output
@@ -4919,7 +4932,7 @@ paths:
     delete:
       tags:
         - outputs
-      x-speakeasy-group: OutputID
+
       operationId: deleteOutputID
       summary: Delete Output
       description: Delete Output
@@ -4953,8 +4966,9 @@ paths:
     delete:
       tags:
         - outputs
-      x-speakeasy-group: DestinationQueue
+
       operationId: deleteDestinationQueue
+      x-speakeasy-name-override: deletePQ
       summary: Delete destination persistent queue
       description: Delete destination persistent queue
       deprecated: false
@@ -4992,8 +5006,9 @@ paths:
     get:
       tags:
         - outputs
-      x-speakeasy-group: LatestPQ
+
       operationId: getLatestPQ
+      x-speakeasy-name-override: getLatestPQ
       summary: Get status of latest clear PQ job for an output
       description: Get status of latest clear PQ job for an output
       deprecated: false
@@ -5032,8 +5047,9 @@ paths:
     get:
       tags:
         - outputs
-      x-speakeasy-group: SpecifiedOutput
+
       operationId: getSpecifiedOutput
+      x-speakeasy-name-override: getSamples
       summary:
         Get samples data for the specified output. Used to get sample data
         for the test action.
@@ -5074,7 +5090,7 @@ paths:
     post:
       tags:
         - outputs
-      x-speakeasy-group: SampleOutput
+
       operationId: postSampleOutput
       summary: Send sample data to an output to validate configuration or test
         connectivity
@@ -5118,8 +5134,8 @@ paths:
     get:
       tags:
         - parquetschemas
-      x-speakeasy-group: ListSchema
-      operationId: getListSchema
+
+      operationId: listSchema
       summary: Get a list of Schema objects
       description: Get a list of Schema objects
       responses:
@@ -5144,7 +5160,7 @@ paths:
     post:
       tags:
         - parquetschemas
-      x-speakeasy-group: Schema
+
       operationId: postSchema
       summary: Create Schema
       description: Create Schema
@@ -5177,7 +5193,7 @@ paths:
     get:
       tags:
         - parquetschemas
-      x-speakeasy-group: SchemaID
+
       operationId: getSchemaID
       summary: Get Schema by ID
       description: Get Schema by ID
@@ -5210,7 +5226,7 @@ paths:
     patch:
       tags:
         - parquetschemas
-      x-speakeasy-group: SchemaID
+
       operationId: updateSchemaID
       summary: Update Schema
       description: Update Schema
@@ -5249,7 +5265,7 @@ paths:
     delete:
       tags:
         - parquetschemas
-      x-speakeasy-group: SchemaID
+
       operationId: deleteSchemaID
       summary: Delete Schema
       description: Delete Schema
@@ -5283,8 +5299,8 @@ paths:
     get:
       tags:
         - pipelines
-      x-speakeasy-group: PipelineObject
-      operationId: getPipelineObject
+
+      operationId: listPipelineObject
       summary: Get a list of Pipeline objects
       description: Get a list of Pipeline objects
       responses:
@@ -5309,7 +5325,7 @@ paths:
     post:
       tags:
         - pipelines
-      x-speakeasy-group: CreatePipeline
+
       operationId: postCreatePipeline
       summary: Create Pipeline
       description: Create Pipeline
@@ -5342,7 +5358,7 @@ paths:
     get:
       tags:
         - pipelines
-      x-speakeasy-group: PipelineID
+
       operationId: getPipelineID
       summary: Get Pipeline by ID
       description: Get Pipeline by ID
@@ -5375,7 +5391,7 @@ paths:
     patch:
       tags:
         - pipelines
-      x-speakeasy-group: PipelineID
+
       operationId: updatePipelineID
       summary: Update Pipeline
       description: Update Pipeline
@@ -5414,7 +5430,7 @@ paths:
     delete:
       tags:
         - pipelines
-      x-speakeasy-group: PipelineID
+
       operationId: deletePipelineID
       summary: Delete Pipeline
       description: Delete Pipeline
@@ -5448,8 +5464,8 @@ paths:
     get:
       tags:
         - profiler
-      x-speakeasy-group: Profilers
-      operationId: getProfilers
+
+      operationId: listProfilers
       summary: Get a list of ProfilerItem objects
       description: Get a list of ProfilerItem objects
       responses:
@@ -5474,7 +5490,7 @@ paths:
     post:
       tags:
         - profiler
-      x-speakeasy-group: Profiler
+
       operationId: createProfiler
       summary: Create ProfilerItem
       description: Create ProfilerItem
@@ -5507,7 +5523,7 @@ paths:
     get:
       tags:
         - profiler
-      x-speakeasy-group: Profiler
+
       operationId: getProfiler
       summary: Get ProfilerItem by ID
       description: Get ProfilerItem by ID
@@ -5540,7 +5556,7 @@ paths:
     patch:
       tags:
         - profiler
-      x-speakeasy-group: Profiler
+
       operationId: updateProfiler
       summary: Update ProfilerItem
       description: Update ProfilerItem
@@ -5579,7 +5595,7 @@ paths:
     delete:
       tags:
         - profiler
-      x-speakeasy-group: Profiler
+
       operationId: deleteProfiler
       summary: Delete ProfilerItem
       description: Delete ProfilerItem
@@ -5613,7 +5629,7 @@ paths:
     get:
       tags:
         - routes
-      x-speakeasy-group: RouteListID
+
       operationId: getRouteListID
       summary: List all routes by id
       description: List all routes by id
@@ -5648,7 +5664,7 @@ paths:
     patch:
       tags:
         - routes
-      x-speakeasy-group: RouteObject
+
       operationId: updateRouteObject
       summary: Add, delete or update the routes with the required content.
       description: Add, delete or update the routes with the required content.
@@ -5690,8 +5706,8 @@ paths:
     get:
       tags:
         - routes
-      x-speakeasy-group: RouteLists
-      operationId: getRouteLists
+
+      operationId: listRouteLists
       summary: List all routes
       description: List all routes
       deprecated: false
@@ -5718,8 +5734,8 @@ paths:
     get:
       tags:
         - schemas
-      x-speakeasy-group: Schemas
-      operationId: getSchemas
+
+      operationId: listSchemas
       summary: Get a list of Schema objects
       description: Get a list of Schema objects
       responses:
@@ -5744,7 +5760,7 @@ paths:
     post:
       tags:
         - schemas
-      x-speakeasy-group: Schema
+
       operationId: createSchema
       summary: Create Schema
       description: Create Schema
@@ -5777,7 +5793,7 @@ paths:
     get:
       tags:
         - schemas
-      x-speakeasy-group: Schema
+
       operationId: getSchema
       summary: Get Schema by ID
       description: Get Schema by ID
@@ -5810,7 +5826,7 @@ paths:
     patch:
       tags:
         - schemas
-      x-speakeasy-group: Schema
+
       operationId: updateSchema
       summary: Update Schema
       description: Update Schema
@@ -5849,7 +5865,7 @@ paths:
     delete:
       tags:
         - schemas
-      x-speakeasy-group: Schema
+
       operationId: deleteSchema
       summary: Delete Schema
       description: Delete Schema
@@ -5883,8 +5899,8 @@ paths:
     get:
       tags:
         - secrets
-      x-speakeasy-group: RestSecrets
-      operationId: getRestSecrets
+
+      operationId: listRestSecrets
       summary: Get a list of RestSecret objects
       description: Get a list of RestSecret objects
       responses:
@@ -5909,7 +5925,7 @@ paths:
     post:
       tags:
         - secrets
-      x-speakeasy-group: RestSecret
+
       operationId: createRestSecret
       summary: Create RestSecret
       description: Create RestSecret
@@ -5942,7 +5958,7 @@ paths:
     get:
       tags:
         - secrets
-      x-speakeasy-group: RestSecret
+
       operationId: getRestSecret
       summary: Get RestSecret by ID
       description: Get RestSecret by ID
@@ -5975,7 +5991,7 @@ paths:
     patch:
       tags:
         - secrets
-      x-speakeasy-group: RestSecret
+
       operationId: updateRestSecret
       summary: Update RestSecret
       description: Update RestSecret
@@ -6014,7 +6030,7 @@ paths:
     delete:
       tags:
         - secrets
-      x-speakeasy-group: RestSecret
+
       operationId: deleteRestSecret
       summary: Delete RestSecret
       description: Delete RestSecret
@@ -6048,8 +6064,8 @@ paths:
     get:
       tags:
         - outputs
-      x-speakeasy-group: OutputStatus
-      operationId: getOutputStatus
+
+      operationId: listOutputStatus
       summary: Get a list of OutputStatus objects
       description: Get a list of OutputStatus objects
       responses:
@@ -6075,8 +6091,9 @@ paths:
     get:
       tags:
         - outputs
-      x-speakeasy-group: OutputStatusID
+
       operationId: getOutputStatusID
+      x-speakeasy-name-override: getStatus
       summary: Get OutputStatus by ID
       description: Get OutputStatus by ID
       parameters:
@@ -6109,7 +6126,7 @@ paths:
     get:
       tags:
         - auth
-      x-speakeasy-group: IDPAuth
+
       operationId: getIDPAuth
       summary: Get IDP used for an authorization code callback
       parameters:
@@ -6137,8 +6154,9 @@ paths:
                 $ref: "#/components/schemas/Error"
   /auth/metadata:
     get:
-      x-speakeasy-group: CriblMetadata
+
       operationId: getCriblMetadata
+      x-speakeasy-name-override: getMetadata
       summary: Obtain metadata which Cribl Stream/Edge uses when acting as a Service
         Provider
       tags:
@@ -6158,7 +6176,7 @@ paths:
                 $ref: "#/components/schemas/Error"
   /auth/login:
     post:
-      x-speakeasy-group: AuthToken
+
       operationId: loginAuthToken
       summary: Log in and obtain Auth token
       description: "This endpoint is unavailable on Cribl.Cloud. Instead, get the
@@ -6202,7 +6220,7 @@ paths:
       summary: Log current user out
       tags:
         - auth
-      x-speakeasy-group: UserAuth
+
       operationId: logoutUserAuth
       responses:
         "200":
@@ -6221,8 +6239,9 @@ paths:
     post:
       tags:
         - auth
-      x-speakeasy-group: RequestUserAuth
+
       operationId: logoutRequestUserAuth
+      x-speakeasy-name-override: requestLogout
       summary: API call that the IDP should use for a logout request
       requestBody:
         description: Logout request object
@@ -6258,8 +6277,9 @@ paths:
     get:
       tags:
         - auth
-      x-speakeasy-group: IDPUserAuth
+
       operationId: logoutIDPUserAuth
+      x-speakeasy-name-override: IDPlogout
       summary: Accepts a logout request from an IDP and logs out the user
       parameters:
         - in: query
@@ -6301,8 +6321,9 @@ paths:
       summary: Redirect user to IDP with logout request
       tags:
         - auth
-      x-speakeasy-group: RedirectUserAuth
+
       operationId: logoutRedirectUserAuth
+      x-speakeasy-name-override: logoutRedirect
       responses:
         "200":
           description: SLO redirect info
@@ -6326,7 +6347,7 @@ paths:
     post:
       tags:
         - auth
-      x-speakeasy-group: RequestAuth
+
       operationId: postRequestAuth
       summary: API call that the IDP should use for an authentication request
       requestBody:
@@ -6369,8 +6390,9 @@ paths:
     get:
       tags:
         - auth
-      x-speakeasy-group: RequestAuth
+
       operationId: getRequestAuth
+      x-speakeasy-name-override: acceptIDPRequest
       summary: Accepts an authentication request from an IDP and authenticates the user
       parameters:
         - in: query
@@ -6414,8 +6436,9 @@ paths:
         IDP for authentication.
       tags:
         - auth
-      x-speakeasy-group: RedirectInfo
+
       operationId: getRedirectInfo
+      x-speakeasy-name-override: getRedirect
       responses:
         "200":
           description: Redirect info
@@ -6433,8 +6456,8 @@ paths:
     get:
       tags:
         - auth
-      x-speakeasy-group: ListAuthGroup
-      operationId: getListAuthGroup
+
+      operationId: listAuthGroup
       summary: List the external authentication system's groups
       description: List the external authentication system's groups
       deprecated: false
@@ -6461,8 +6484,8 @@ paths:
     get:
       tags:
         - authorize
-      x-speakeasy-group: Authorizations
-      operationId: getAuthorizations
+
+      operationId: listAuthorizations
       summary: get the client's authorization policy
       description: get the client's authorization policy
       deprecated: false
@@ -6489,8 +6512,8 @@ paths:
     get:
       tags:
         - authorize
-      x-speakeasy-group: ClientRoles
-      operationId: getClientRoles
+
+      operationId: listClientRoles
       summary: get the client's roles
       description: get the client's roles
       deprecated: false
@@ -6518,8 +6541,9 @@ paths:
       tags:
         - preview
         - samples
-      x-speakeasy-group: LiveData
+
       operationId: postLiveData
+      x-speakeasy-name-override: captureLiveData
       summary: Capture live incoming data
       description: Capture live incoming data
       deprecated: false
@@ -6552,8 +6576,8 @@ paths:
     get:
       tags:
         - changelog
-      x-speakeasy-group: Changelogs
-      operationId: getChangelogs
+
+      operationId: listChangelogs
       summary: Get changelog viewed state
       description: Get changelog viewed state
       deprecated: false
@@ -6579,8 +6603,9 @@ paths:
     patch:
       tags:
         - system
-      x-speakeasy-group: ChangelogViewState
+
       operationId: updateChangelogViewState
+      x-speakeasy-name-override: updateChangelogViewState
       summary: Update changelog viewed state
       description: Update changelog viewed state
       deprecated: false
@@ -6607,8 +6632,8 @@ paths:
     get:
       tags:
         - clui
-      x-speakeasy-group: Cluis
-      operationId: getCluis
+
+      operationId: listCluisResults
       summary: Get CLUI search results
       description: Get CLUI search results
       deprecated: false
@@ -6648,8 +6673,8 @@ paths:
     get:
       tags:
         - conditions
-      x-speakeasy-group: Conditions
-      operationId: getConditions
+
+      operationId: listConditions
       summary: Get a list of Condition objects
       description: Get a list of Condition objects
       responses:
@@ -6675,7 +6700,7 @@ paths:
     get:
       tags:
         - conditions
-      x-speakeasy-group: Condition
+
       operationId: getCondition
       summary: Get Condition by ID
       description: Get Condition by ID
@@ -6709,7 +6734,7 @@ paths:
     post:
       tags:
         - search
-      x-speakeasy-group: EventBreakerOnData
+
       operationId: postEventBreakerOnData
       summary: Runs an event breaker rule on the specified data
       description: Runs an event breaker rule on the specified data
@@ -6743,8 +6768,9 @@ paths:
     post:
       tags:
         - system
-      x-speakeasy-group: CancelRunningGroup
-      operationId: postCancelRunningGroup
+
+      operationId: cancelRunningGroup
+      x-speakeasy-name-override: cancelRunningGroup
       summary: Cancel a running group upgrade
       description: Cancel a running group upgrade
       deprecated: false
@@ -6778,8 +6804,9 @@ paths:
     get:
       tags:
         - system
-      x-speakeasy-group: PreviousCriblPackage
+
       operationId: getPreviousCriblPackage
+      x-speakeasy-name-override: getPreviousPackage
       summary: Get the previously downloaded Cribl package
       description: Get the previously downloaded Cribl package
       deprecated: false
@@ -6813,8 +6840,9 @@ paths:
     post:
       tags:
         - system
-      x-speakeasy-group: StageDistributedPackage
+
       operationId: postStageDistributedPackage
+      x-speakeasy-name-override: stageGroupUpgrade
       summary: Stage distributed group upgrade
       description: Stage distributed group upgrade
       deprecated: false
@@ -6854,8 +6882,9 @@ paths:
     post:
       tags:
         - system
-      x-speakeasy-group: ExecuteDistributedUpgrade
-      operationId: postExecuteDistributedUpgrade
+
+      operationId: ExecuteDistributedUpgrade
+      x-speakeasy-name-override: executeGroupUpgrade
       summary: Execute distributed group upgrade
       description: Execute distributed group upgrade
       deprecated: false
@@ -6896,8 +6925,8 @@ paths:
       tags:
         - edgeEvents
         - edge
-      x-speakeasy-group: ConfiguredCollectors
-      operationId: getConfiguredCollectors
+
+      operationId: listConfiguredCollectors
       summary: Get list of configured collectors
       description: Get list of configured collectors
       deprecated: false
@@ -6924,8 +6953,8 @@ paths:
     get:
       tags:
         - events
-      x-speakeasy-group: Events
-      operationId: getEvents
+
+      operationId: listEvents
       summary: Get events generated by a specified source
       description: Get events generated by a specified source
       deprecated: false
@@ -6994,8 +7023,8 @@ paths:
       tags:
         - edgeFiles
         - edge
-      x-speakeasy-group: EdgeHostFiles
-      operationId: getEdgeHostFiles
+
+      operationId: listEdgeHostFiles
       summary: Get details about a file on the edge host.
       description: Get details about a file on the edge host.
       deprecated: false
@@ -7023,8 +7052,9 @@ paths:
       tags:
         - edgeLs
         - edge
-      x-speakeasy-group: EdgeListing
+
       operationId: getEdgeListing
+      x-speakeasy-name-override: getDirectoryListing
       summary: Get a directory listing of the given path
       description: Get a directory listing of the given path
       deprecated: false
@@ -7058,8 +7088,9 @@ paths:
     get:
       tags:
         - edge
-      x-speakeasy-group: HostMetadataStructure
+
       operationId: getHostMetadataStructure
+      x-speakeasy-name-override: getMetadata
       summary: Get the host's metadata structure
       description: Get the host's metadata structure
       deprecated: false
@@ -7086,7 +7117,7 @@ paths:
     post:
       tags:
         - expressions
-      x-speakeasy-group: JavascriptExpression
+
       operationId: postJavascriptExpression
       summary: Evaluate JavaScript expression
       description: Evaluate JavaScript expression
@@ -7115,8 +7146,8 @@ paths:
       tags:
         - fileSampler
         - edge
-      x-speakeasy-group: Bytes
-      operationId: getBytes
+
+      operationId: listBytes
       summary: Get some number of bytes from the file at the given path
       description: Get some number of bytes from the file at the given path
       deprecated: false
@@ -7155,12 +7186,11 @@ paths:
             system limits.
   /health:
     get:
-      x-speakeasy-group: HealthInfo
+
       operationId: getHealthInfo
       summary: Provides health info for REST server
       security: []
       tags:
-        - diag
         - health
       responses:
         "200":
@@ -7179,8 +7209,8 @@ paths:
     get:
       tags:
         - jobs
-      x-speakeasy-group: JobResults
-      operationId: getJobResults
+
+      operationId: listJobResults
       summary: Get results for a discover job by instance id
       description: Get results for a discover job by instance id
       responses:
@@ -7214,7 +7244,7 @@ paths:
     patch:
       tags:
         - jobs
-      x-speakeasy-group: Job
+
       operationId: cancelJob
       summary: Cancel a job by instance id
       description: Cancel a job by instance id
@@ -7249,7 +7279,7 @@ paths:
     post:
       tags:
         - jobs
-      x-speakeasy-group: Job
+
       operationId: runJob
       summary: Run or schedule a job
       description: Run or schedule a job
@@ -7282,8 +7312,8 @@ paths:
     get:
       tags:
         - jobs
-      x-speakeasy-group: JobInfos
-      operationId: getJobInfos
+
+      operationId: listJobInfos
       summary: Get info on jobs
       description: Get info on jobs
       deprecated: false
@@ -7347,7 +7377,7 @@ paths:
     delete:
       tags:
         - jobs
-      x-speakeasy-group: Job
+
       operationId: deleteJob
       summary: Remove job from job inspector by instance id
       description: Remove job from job inspector by instance id
@@ -7381,7 +7411,7 @@ paths:
     get:
       tags:
         - jobs
-      x-speakeasy-group: Job
+
       operationId: getJob
       summary: Get job info by instance id
       description: Get job info by instance id
@@ -7416,7 +7446,7 @@ paths:
     patch:
       tags:
         - jobs
-      x-speakeasy-group: Job
+
       operationId: preventJob
       summary: prevent job from being deleted automatically
       description: prevent job from being deleted automatically
@@ -7451,7 +7481,7 @@ paths:
     patch:
       tags:
         - jobs
-      x-speakeasy-group: Job
+
       operationId: pauseJob
       summary: Pause a job by instance id
       description: Pause a job by instance id
@@ -7486,7 +7516,7 @@ paths:
     patch:
       tags:
         - jobs
-      x-speakeasy-group: Job
+
       operationId: resumeJob
       summary: Resume a job by instance id
       description: Resume a job by instance id
@@ -7521,8 +7551,9 @@ paths:
     get:
       tags:
         - jobs
-      x-speakeasy-group: JobResult
+
       operationId: getJobResult
+      x-speakeasy-name-override: getResult
       summary: Get results for a discover job by instance id
       description: Get results for a discover job by instance id
       deprecated: false
@@ -7568,8 +7599,8 @@ paths:
     get:
       tags:
         - jobs
-      x-speakeasy-group: TaskErrors
-      operationId: getTaskErrors
+
+      operationId: listTaskErrors
       summary: Get Task errors for a job by id
       description: Get Task errors for a job by id
       deprecated: false
@@ -7609,8 +7640,9 @@ paths:
     get:
       tags:
         - jobs
-      x-speakeasy-group: TaskError
+
       operationId: getTaskError
+      x-speakeasy-name-override: getError
       summary: Get Task errors for a job by id
       description: Get Task errors for a job by id
       deprecated: false
@@ -7644,8 +7676,9 @@ paths:
     get:
       tags:
         - security
-      x-speakeasy-group: KMSConfig
+
       operationId: getKMSConfig
+      x-speakeasy-name-override: getKMSConfig
       summary: Get Cribl KMS config
       description: Get Cribl KMS config
       deprecated: false
@@ -7671,7 +7704,7 @@ paths:
     patch:
       tags:
         - security
-      x-speakeasy-group: KMSConfig
+
       operationId: updateKMSConfig
       summary: Update Cribl KMS config
       description: Update Cribl KMS config
@@ -7705,8 +7738,9 @@ paths:
     get:
       tags:
         - security
-      x-speakeasy-group: KMSHealth
+
       operationId: getKMSHealth
+      x-speakeasy-name-override: getKMSHealth
       summary: Get Cribl KMS health
       description: Get Cribl KMS health
       deprecated: false
@@ -7733,8 +7767,8 @@ paths:
     get:
       tags:
         - licenses
-      x-speakeasy-group: Licenses
-      operationId: getLicenses
+
+      operationId: listLicenses
       summary: Get a list of License objects
       description: Get a list of License objects
       responses:
@@ -7759,7 +7793,7 @@ paths:
     post:
       tags:
         - licenses
-      x-speakeasy-group: License
+
       operationId: createLicense
       summary: Create License
       description: Create License
@@ -7792,7 +7826,7 @@ paths:
     get:
       tags:
         - licenses
-      x-speakeasy-group: License
+
       operationId: getLicense
       summary: Get License by ID
       description: Get License by ID
@@ -7825,7 +7859,7 @@ paths:
     delete:
       tags:
         - licenses
-      x-speakeasy-group: License
+
       operationId: deleteLicense
       summary: Delete License
       description: Delete License
@@ -7859,8 +7893,8 @@ paths:
     get:
       tags:
         - licenses
-      x-speakeasy-group: LicenseUsageMetrics
-      operationId: getLicenseUsageMetrics
+
+      operationId: listLicenseUsageMetrics
       summary: Get license usage metrics, aggregated by day, up to last 90 days
       description: Get license usage metrics, aggregated by day, up to last 90 days
       deprecated: false
@@ -7887,8 +7921,8 @@ paths:
     get:
       tags:
         - logger
-      x-speakeasy-group: LoggerConfigs
-      operationId: getLoggerConfigs
+
+      operationId: listLoggerConfigs
       summary: Get a list of LoggerConfig objects
       description: Get a list of LoggerConfig objects
       responses:
@@ -7914,7 +7948,7 @@ paths:
     get:
       tags:
         - logger
-      x-speakeasy-group: LoggerConfig
+
       operationId: getLoggerConfig
       summary: Get LoggerConfig by ID
       description: Get LoggerConfig by ID
@@ -7947,7 +7981,7 @@ paths:
     patch:
       tags:
         - logger
-      x-speakeasy-group: LoggerConfig
+
       operationId: updateLoggerConfig
       summary: Update LoggerConfig
       description: Update LoggerConfig
@@ -7986,7 +8020,7 @@ paths:
     delete:
       tags:
         - logger
-      x-speakeasy-group: LoggerConfig
+
       operationId: deleteLoggerConfig
       summary: Delete LoggerConfig
       description: Delete LoggerConfig
@@ -8020,8 +8054,8 @@ paths:
     get:
       tags:
         - logging
-      x-speakeasy-group: LogFileContents
-      operationId: getLogFileContents
+
+      operationId: listLogFileContents
       summary: Get contents of the log file
       description: Get contents of the log file
       deprecated: false
@@ -8099,7 +8133,7 @@ paths:
     get:
       tags:
         - logging
-      x-speakeasy-group: LogFileContent
+
       operationId: getLogFileContent
       summary: Get contents of the log file
       description: Get contents of the log file
@@ -8166,8 +8200,8 @@ paths:
     get:
       tags:
         - logging
-      x-speakeasy-group: LogFiles
-      operationId: getLogFiles
+
+      operationId: listLogFiles
       summary: Get a list of log files
       description: Get a list of log files
       deprecated: false
@@ -8194,8 +8228,8 @@ paths:
     get:
       tags:
         - logging
-      x-speakeasy-group: LogFilesContent
-      operationId: getLogFilesContents
+
+      operationId: listLogFilesContents
       summary: Get contents of the log file
       description: Get contents of the log file
       deprecated: false
@@ -8268,8 +8302,8 @@ paths:
       summary: Get list of existing diag bundles
       tags:
         - distributed
-      x-speakeasy-group: DiagBundles
-      operationId: getDiagBundles
+
+      operationId: listDiagBundles
       responses:
         "200":
           description: Get list of existing diag bundles
@@ -8294,7 +8328,7 @@ paths:
     get:
       tags:
         - distributed
-      x-speakeasy-group: DistributedDeployment
+
       operationId: getDistributedDeployment
       summary: Get summary of Distributed deployment
       description: Get summary of Distributed deployment
@@ -8329,9 +8363,8 @@ paths:
   /master/summary/workers:
     get:
       tags:
-        - distributed
         - workers
-      x-speakeasy-group: WorkerEdgeNodesCount
+
       operationId: getWorkerEdgeNodesCount
       summary: get worker and edge nodes count
       description: get worker and edge nodes count
@@ -8365,10 +8398,9 @@ paths:
   /master/workers:
     get:
       tags:
-        - distributed
         - workers
-      x-speakeasy-group: WorkerEdgeNodes
-      operationId: getWorkerEdgeNodes
+
+      operationId: listWorkerEdgeNodes
       summary: get worker and edge nodes
       description: get worker and edge nodes
       deprecated: false
@@ -8419,9 +8451,8 @@ paths:
   /master/workers/restart:
     patch:
       tags:
-        - distributed
         - workers
-      x-speakeasy-group: WorkerEdgeNodes
+
       operationId: restartsWorkerEdgeNodes
       summary: restarts worker nodes
       description: restarts worker nodes
@@ -8449,7 +8480,7 @@ paths:
     post:
       tags:
         - packs
-      x-speakeasy-group: Pack
+
       operationId: installPack
       summary: Install Pack
       description: Install Pack
@@ -8482,8 +8513,8 @@ paths:
     get:
       tags:
         - packs
-      x-speakeasy-group: Packs
-      operationId: getPacks
+
+      operationId: listPacks
       summary: Get info on packs
       description: Get info on packs
       deprecated: false
@@ -8509,7 +8540,7 @@ paths:
     put:
       tags:
         - packs
-      x-speakeasy-group: Pack
+
       operationId: uploadPack
       summary: Upload Pack
       description: Upload Pack
@@ -8544,7 +8575,7 @@ paths:
     delete:
       tags:
         - packs
-      x-speakeasy-group: Pack
+
       operationId: uninstallPack
       summary: Uninstall Pack from the system
       description: Uninstall Pack from the system
@@ -8578,7 +8609,7 @@ paths:
     patch:
       tags:
         - packs
-      x-speakeasy-group: Pack
+
       operationId: upgradePack
       summary: Upgrade Pack
       description: Upgrade Pack
@@ -8631,7 +8662,7 @@ paths:
     post:
       tags:
         - packs
-      x-speakeasy-group: Pack
+
       operationId: clonePack
       summary: Clone Pack
       description: Clone Pack
@@ -8665,7 +8696,7 @@ paths:
     get:
       tags:
         - packs
-      x-speakeasy-group: Pack
+
       operationId: exportPack
       summary: Export Pack
       description: Export Pack
@@ -8713,8 +8744,9 @@ paths:
       tags:
         - preview
         - samples
-      x-speakeasy-group: SampleEvents
+
       operationId: postSampleEvents
+      x-speakeasy-name-override: sendEvents
       summary: Sends sample events through a pipeline and returns the results
       description: Sends sample events through a pipeline and returns the results
       deprecated: false
@@ -8747,8 +8779,8 @@ paths:
     get:
       tags:
         - processes
-      x-speakeasy-group: Processes
-      operationId: getProcesses
+
+      operationId: listProcesses
       summary: Get a list of processes under management
       description: Get a list of processes under management
       deprecated: false
@@ -8775,7 +8807,7 @@ paths:
     get:
       tags:
         - search
-      x-speakeasy-group: SearchDoc
+
       operationId: getSearchDoc
       summary: Get Search documentation
       description: Get Search documentation
@@ -8803,7 +8835,7 @@ paths:
     post:
       tags:
         - search
-      x-speakeasy-group: QuerySnippet
+
       operationId: applyQuerySnippet
       summary: Applies a query snippet on a set of input events for preview
       description: Applies a query snippet on a set of input events for preview
@@ -8838,7 +8870,7 @@ paths:
       summary: Returns a diag bundle as a tar.gz archive
       tags:
         - diag
-      x-speakeasy-group: DiagBundle
+
       operationId: getDiagBundle
       responses:
         "200":
@@ -8858,8 +8890,9 @@ paths:
     get:
       tags:
         - diag
-      x-speakeasy-group: SystemInfo
+
       operationId: getSystemInfo
+      x-speakeasy-name-override: getSystemInfo
       summary: Get basic system information
       description: Get basic system information
       deprecated: false
@@ -8886,8 +8919,8 @@ paths:
     get:
       tags:
         - diag
-      x-speakeasy-group: ExistingDiagBundles
-      operationId: getExistingDiagBundles
+
+      operationId: listExistingDiagBundles
       summary: Get list of existing diag bundles
       description: Get list of existing diag bundles
       deprecated: false
@@ -8913,7 +8946,7 @@ paths:
     delete:
       tags:
         - diag
-      x-speakeasy-group: DiagBundle
+
       operationId: deleteDiagBundle
       summary: Remove diag bundle
       description: Remove diag bundle
@@ -8948,7 +8981,7 @@ paths:
     post:
       tags:
         - diag
-      x-speakeasy-group: DiagBundle
+
       operationId: sendDiagBundle
       summary: Send a diag bundle (tar.gz archive) to Cribl
       description: Send a diag bundle (tar.gz archive) to Cribl
@@ -8982,7 +9015,7 @@ paths:
     post:
       tags:
         - metrics
-      x-speakeasy-group: Metrics
+
       operationId: postMetrics
       summary: Enumerate all internal system metrics
       description: Enumerate all internal system metrics
@@ -9016,7 +9049,7 @@ paths:
     get:
       tags:
         - metrics
-      x-speakeasy-group: Metrics
+
       operationId: queryMetrics
       summary: Query raw internal system metrics
       description: Query raw internal system metrics
@@ -9076,8 +9109,9 @@ paths:
     post:
       tags:
         - metrics
-      x-speakeasy-group: InternalSystemMetrics
+
       operationId: postInternalSystemMetrics
+      x-speakeasy-name-override: aggregate
       summary: Aggregate raw internal system metrics
       description: Aggregate raw internal system metrics
       deprecated: false
@@ -9108,8 +9142,8 @@ paths:
               $ref: "#/components/schemas/MetricsAggOpts"
   /system/settings/reload:
     post:
-      x-speakeasy-group: ReloadCriblSettings
-      operationId: postReloadCriblSettings
+
+      operationId: ReloadCriblSettings
       summary: Reload Cribl settings from the filesystem
       tags:
         - system
@@ -9120,8 +9154,8 @@ paths:
           description: Internal error
   /system/settings/restart:
     post:
-      x-speakeasy-group: RestartCriblSettings
-      operationId: postRestartCriblSettings
+
+      operationId: restartCriblSettings
       summary: Restart Cribl server
       tags:
         - system
@@ -9134,8 +9168,8 @@ paths:
     get:
       tags:
         - system
-      x-speakeasy-group: AuthenticationSettings
-      operationId: getAuthenticationSettings
+
+      operationId: listAuthenticationSettings
       summary: Get authentication settings
       description: Get authentication settings
       deprecated: false
@@ -9161,8 +9195,9 @@ paths:
     patch:
       tags:
         - system
-      x-speakeasy-group: AuthenticationSettings
+
       operationId: updateAuthenticationSettings
+      x-speakeasy-name-override: updateAuthSettings
       summary: Update authentication settings
       description: Update authentication settings
       deprecated: false
@@ -9189,8 +9224,8 @@ paths:
     get:
       tags:
         - system
-      x-speakeasy-group: CriblSystemSettings
-      operationId: getCriblSystemSettings
+
+      operationId: listSettings
       summary: Get Cribl system settings
       description: Get Cribl system settings
       deprecated: false
@@ -9216,8 +9251,9 @@ paths:
     patch:
       tags:
         - system
-      x-speakeasy-group: CriblSystemSettings
+
       operationId: updateCriblSystemSettings
+      x-speakeasy-name-override: updateCriblSettings
       summary: Update Cribl system settings
       description: Update Cribl system settings
       deprecated: false
@@ -9243,10 +9279,9 @@ paths:
   /system/settings/git-settings:
     get:
       tags:
-        - system
         - git
-      x-speakeasy-group: GitSettings
-      operationId: getGitSettings
+
+      operationId: listGitSettings
       summary: Get git settings
       description: Get git settings
       deprecated: false
@@ -9271,9 +9306,8 @@ paths:
                 $ref: "#/components/schemas/Error"
     patch:
       tags:
-        - system
         - git
-      x-speakeasy-group: GitSettings
+
       operationId: updateGitSettings
       summary: Update git settings
       description: Update git settings
@@ -9301,8 +9335,8 @@ paths:
     get:
       tags:
         - system
-      x-speakeasy-group: SearchLimits
-      operationId: getSearchLimits
+
+      operationId: listSearchLimits
       summary: Get search limits
       description: Get search limits
       deprecated: false
@@ -9329,7 +9363,6 @@ paths:
     get:
       tags:
         - system
-      x-speakeasy-group: CriblsSettings
       operationId: getCriblsSettings
       summary: "Get Cribl system settings. Deprecated: use specific endpoints
         /system/limits, /system/job-limits, /system/redis-cache-limits,
@@ -9362,7 +9395,7 @@ paths:
     patch:
       tags:
         - system
-      x-speakeasy-group: CriblsSettings
+
       operationId: updateCriblsSettings
       summary: "Update Cribl system settings. Deprecated: use specific endpoints
         /system/limits, /system/job-limits, /system/settings/git-settings,
@@ -9394,8 +9427,8 @@ paths:
     get:
       tags:
         - system
-      x-speakeasy-group: ListCriblVersion
-      operationId: getListCriblVersion
+
+      operationId: listCriblVersion
       summary: Get a list of Cribl versions available for upgrade
       description: Get a list of Cribl versions available for upgrade
       deprecated: false
@@ -9422,8 +9455,9 @@ paths:
     post:
       tags:
         - system
-      x-speakeasy-group: GiveCriblVersion
+
       operationId: postGiveCriblVersion
+      x-speakeasy-name-override: upgradeCribl
       summary: Upgrade Cribl to a given version
       description: Upgrade Cribl to a given version
       deprecated: false
@@ -9457,8 +9491,9 @@ paths:
     post:
       tags:
         - system
-      x-speakeasy-group: MasterNodePackage
+
       operationId: postMasterNodePackage
+      x-speakeasy-name-override: upgradeMaster
       summary: Upgrade master node with the provided package
       description: Upgrade master node with the provided package
       deprecated: false
@@ -9491,8 +9526,8 @@ paths:
     get:
       tags:
         - trust-policies
-      x-speakeasy-group: TrustPolicies
-      operationId: getTrustPolicies
+
+      operationId: listTrustPolicies
       summary: Get a list of TrustPolicy objects
       description: Get a list of TrustPolicy objects
       responses:
@@ -9519,7 +9554,7 @@ paths:
     get:
       tags:
         - uiState
-      x-speakeasy-group: UIState
+
       operationId: getUIState
       summary: Get UI state by key
       description: Get UI state by key
@@ -9553,7 +9588,7 @@ paths:
     patch:
       tags:
         - uiState
-      x-speakeasy-group: UIState
+
       operationId: updateUIState
       summary: Update UI state by key
       description: Update UI state by key
@@ -9595,8 +9630,8 @@ paths:
       tags:
         - versioning
         - git
-      x-speakeasy-group: Branches
-      operationId: getBranches
+
+      operationId: listBranches
       summary: get the list of branches
       description: get the list of branches
       deprecated: false
@@ -9624,7 +9659,7 @@ paths:
       tags:
         - versioning
         - git
-      x-speakeasy-group: Commit
+
       operationId: createCommit
       summary: create a new commit containing the current configs the given log
         message describing the changes.
@@ -9661,8 +9696,9 @@ paths:
       tags:
         - versioning
         - git
-      x-speakeasy-group: CountFile
+
       operationId: getCountFile
+      x-speakeasy-name-override: CountFiles
       summary: get the count of files of changed
       description: get the count of files of changed
       deprecated: false
@@ -9697,8 +9733,9 @@ paths:
       tags:
         - versioning
         - git
-      x-speakeasy-group: TextualDiff
+
       operationId: getTextualDiff
+      x-speakeasy-name-override: getTextualDiff
       summary: get the textual diff for given commit
       description: get the textual diff for given commit
       deprecated: false
@@ -9739,8 +9776,8 @@ paths:
       tags:
         - versioning
         - git
-      x-speakeasy-group: ChangedFiles
-      operationId: getChangedFiles
+
+      operationId: listChangedFiles
       summary: get the files changed
       description: get the files changed
       deprecated: false
@@ -9781,7 +9818,7 @@ paths:
       tags:
         - versioning
         - git
-      x-speakeasy-group: Versioning
+
       operationId: getVersioning
       summary: Get info about versioning availability
       description: Get info about versioning availability
@@ -9810,7 +9847,7 @@ paths:
       tags:
         - versioning
         - git
-      x-speakeasy-group: CurrentConfig
+
       operationId: pushCurrentConfig
       summary: push the current configs to the remote repository.
       description: push the current configs to the remote repository.
@@ -9839,8 +9876,9 @@ paths:
       tags:
         - versioning
         - git
-      x-speakeasy-group: LogandTextual
-      operationId: getLogandTextual
+
+      operationId: getLogandTextualDiff
+      x-speakeasy-name-override: getLogandTextualDiff
       summary: get the log message and textual diff for given commit
       description: get the log message and textual diff for given commit
       deprecated: false
@@ -9881,8 +9919,9 @@ paths:
       tags:
         - versioning
         - git
-      x-speakeasy-group: WorkingTree
+
       operationId: getWorkingTree
+      x-speakeasy-name-override: getWorkingTree
       summary: get the the working tree status
       description: get the the working tree status
       deprecated: false
@@ -9917,7 +9956,7 @@ paths:
       tags:
         - versioning
         - git
-      x-speakeasy-group: RemoteRepo
+
       operationId: syncRemoteRepo
       summary: syncs with remote repo via POST requests
       description: syncs with remote repo via POST requests
@@ -9945,8 +9984,7 @@ paths:
     get:
       tags:
         - edgeContainers
-        - edge
-      x-speakeasy-group: Container
+
       operationId: getContainer
       summary: Get details for a single container on the edge host. Add stream=true to
         get a stream instead.
@@ -9983,9 +10021,8 @@ paths:
     get:
       tags:
         - edgeContainers
-        - edge
-      x-speakeasy-group: ListContainerDetail
-      operationId: getListContainerDetail
+
+      operationId: listContainerDetail
       summary: Get a detailed list of containers running on the edge host.
       description: Get a detailed list of containers running on the edge host.
       deprecated: false
@@ -10012,8 +10049,9 @@ paths:
     get:
       tags:
         - edge
-      x-speakeasy-group: LogFileList
-      operationId: getLogFileList
+
+      operationId: listLogFileList
+      x-speakeasy-name-override: listLogFiles
       summary: list log files
       description: list log files
       deprecated: false
@@ -10067,8 +10105,9 @@ paths:
       tags:
         - edgeProcesses
         - edge
-      x-speakeasy-group: ProcessRunningDetail
+
       operationId: getProcessRunningDetail
+      x-speakeasy-name-override: getRunDetails
       summary: Get details of a process running on the edge host
       description: Get details of a process running on the edge host
       deprecated: false
@@ -10103,8 +10142,8 @@ paths:
       tags:
         - edgeProcesses
         - edge
-      x-speakeasy-group: ListProcessRunningDetail
-      operationId: getListProcessRunningDetail
+
+      operationId: listProcessRunningDetail
       summary: Get a detailed list of processes running on the edge host
       description: Get a detailed list of processes running on the edge host
       deprecated: false
@@ -10131,8 +10170,9 @@ paths:
     get:
       tags:
         - collectors
-      x-speakeasy-group: CollectorObject
-      operationId: getCollectorObject
+
+      operationId: listCollectorObject
+
       summary: Get a list of Collector objects
       description: Get a list of Collector objects
       responses:
@@ -10158,7 +10198,7 @@ paths:
     get:
       tags:
         - collectors
-      x-speakeasy-group: Collector
+
       operationId: getCollector
       summary: Get Collector by ID
       description: Get Collector by ID
@@ -10192,8 +10232,8 @@ paths:
     get:
       tags:
         - executors
-      x-speakeasy-group: ExecutorObject
-      operationId: getExecutorObject
+
+      operationId: listExecutorObject
       summary: Get a list of Executor objects
       description: Get a list of Executor objects
       responses:
@@ -10219,7 +10259,7 @@ paths:
     get:
       tags:
         - executors
-      x-speakeasy-group: ExecutorID
+
       operationId: getExecutorID
       summary: Get Executor by ID
       description: Get Executor by ID
@@ -10253,8 +10293,8 @@ paths:
     get:
       tags:
         - functions
-      x-speakeasy-group: ObjectFunction
-      operationId: getObjectFunction
+
+      operationId: listObjectFunction
       summary: Get a list of Function objects
       description: Get a list of Function objects
       responses:
@@ -10280,7 +10320,7 @@ paths:
     get:
       tags:
         - functions
-      x-speakeasy-group: FunctionID
+
       operationId: getFunctionID
       summary: Get Function by ID
       description: Get Function by ID
@@ -13407,6 +13447,7 @@ components:
         - totalEventCount
     User:
       type: object
+      x-speakeasy-entity-operation: User
       properties:
         currentPassword:
           type: string
@@ -19355,7 +19396,7 @@ components:
             - manual
           default: manual
           description: Enter credentials directly, or select a stored secret
-        targetList:
+        tarlist:
           type: array
           title: Targets
           minItems: 1
