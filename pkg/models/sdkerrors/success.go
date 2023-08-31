@@ -4,12 +4,10 @@ package sdkerrors
 
 import (
 	"encoding/json"
-	"net/http"
 )
 
 // Success - Authorization success
 type Success struct {
-	RawResponse *http.Response `json:"-"`
 	// Success message
 	Message *string `json:"message,omitempty"`
 }

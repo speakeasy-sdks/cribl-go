@@ -1,6 +1,6 @@
 # Output
 
-Output object to be updated
+New Output object
 
 
 ## Supported Types
