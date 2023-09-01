@@ -5,13 +5,11 @@ package sdkerrors
 import (
 	"encoding/json"
 	"github.com/speakeasy-sdks/cribl-go/pkg/models/shared"
-	"net/http"
 )
 
 // HealthStatus - Healthy
 type HealthStatus struct {
-	RawResponse *http.Response            `json:"-"`
-	Status      shared.HealthStatusStatus `json:"status"`
+	Status shared.HealthStatusStatus `json:"status"`
 }
 
 var _ error = &HealthStatus{}

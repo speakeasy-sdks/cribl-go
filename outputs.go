@@ -92,8 +92,6 @@ func (s *outputs) Create(ctx context.Context, request shared.Output) (*operation
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -173,8 +171,6 @@ func (s *outputs) Delete(ctx context.Context, id string) (*operations.DeleteOutp
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -258,8 +254,6 @@ func (s *outputs) DeletePQ(ctx context.Context, id string) (*operations.DeleteDe
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -335,8 +329,6 @@ func (s *outputs) Get(ctx context.Context, id string) (*operations.GetOutputIDRe
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -420,8 +412,6 @@ func (s *outputs) GetLatestPQ(ctx context.Context, id string) (*operations.GetLa
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -501,8 +491,6 @@ func (s *outputs) GetSamples(ctx context.Context, id string) (*operations.GetSpe
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -578,8 +566,6 @@ func (s *outputs) GetStatus(ctx context.Context, id string) (*operations.GetOutp
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -652,8 +638,6 @@ func (s *outputs) ListOutputObjects(ctx context.Context) (*operations.ListOutput
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -726,8 +710,6 @@ func (s *outputs) ListOutputStatus(ctx context.Context) (*operations.ListOutputS
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -815,8 +797,6 @@ func (s *outputs) Post(ctx context.Context, id string, outputTestRequest *shared
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -904,8 +884,6 @@ func (s *outputs) Update(ctx context.Context, id string, output *shared.Output) 
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)

@@ -84,8 +84,6 @@ func (s *security) GetKMSConfig(ctx context.Context) (*operations.GetKMSConfigRe
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -158,8 +156,6 @@ func (s *security) GetKMSHealth(ctx context.Context) (*operations.GetKMSHealthRe
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -239,8 +235,6 @@ func (s *security) Update(ctx context.Context, request shared.IKMSProviderConfig
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)

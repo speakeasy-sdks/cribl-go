@@ -91,8 +91,6 @@ func (s *roles) Create(ctx context.Context, request shared.Role) (*operations.Cr
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -172,8 +170,6 @@ func (s *roles) Delete(ctx context.Context, id string) (*operations.DeleteRoleRe
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -253,8 +249,6 @@ func (s *roles) Get(ctx context.Context, id string) (*operations.GetRoleResponse
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -327,8 +321,6 @@ func (s *roles) ListRoles(ctx context.Context) (*operations.ListRolesResponse, e
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -416,8 +408,6 @@ func (s *roles) Update(ctx context.Context, id string, role *shared.Role) (*oper
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)

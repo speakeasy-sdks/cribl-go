@@ -92,8 +92,6 @@ func (s *preview) CaptureLiveData(ctx context.Context, request shared.CapturePar
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -173,8 +171,6 @@ func (s *preview) SendEvents(ctx context.Context, request shared.PreviewDataPara
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)

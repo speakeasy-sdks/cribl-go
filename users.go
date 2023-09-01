@@ -92,8 +92,6 @@ func (s *users) CreateUser(ctx context.Context, request shared.User) (*operation
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -173,8 +171,6 @@ func (s *users) Delete(ctx context.Context, id string) (*operations.DeleteUserID
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -254,8 +250,6 @@ func (s *users) Get(ctx context.Context, id string) (*operations.GetUserIDRespon
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -328,8 +322,6 @@ func (s *users) ListUsers(ctx context.Context) (*operations.ListUsersResponse, e
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -421,8 +413,6 @@ func (s *users) UpdateInfo(ctx context.Context, id string, user *shared.User) (*
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
@@ -506,8 +496,6 @@ func (s *users) UpdateProperties(ctx context.Context, id string, userProfile *sh
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
-			out.RawResponse = httpRes
-
 			return nil, out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)

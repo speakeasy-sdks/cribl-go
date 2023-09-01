@@ -1,6 +1,6 @@
 # NotificationTarget
 
-NotificationTarget object to be updated
+New NotificationTarget object
 
 
 ## Supported Types

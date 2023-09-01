@@ -4,12 +4,10 @@ package sdkerrors
 
 import (
 	"encoding/json"
-	"net/http"
 )
 
 // Error - Unauthorized
 type Error struct {
-	RawResponse *http.Response `json:"-"`
 	// Error message
 	Message *string `json:"message,omitempty"`
 }

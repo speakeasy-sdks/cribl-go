@@ -1,6 +1,6 @@
 # SavedJob
 
-SavedJob object to be updated
+SavedJob object
 
 
 ## Supported Types

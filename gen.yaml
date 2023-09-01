@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: c87ec142b6bc4462ed0dba0dd74c21f0
   docVersion: 1.0.0
-  speakeasyVersion: 1.68.2
-  generationVersion: 2.79.1
+  speakeasyVersion: 1.77.0
+  generationVersion: 2.91.2
 generation:
   comments:
     disableComments: false
@@ -12,7 +12,18 @@ generation:
   sdkClassName: cribl
   singleTagPerOp: false
   tagNamespacingDisabled: false
+features:
+  go:
+    core: 2.86.1
+    deprecations: 2.81.1
+    errors: 2.81.3
+    flattening: 2.81.1
+    getRequestBodies: 2.81.1
+    globalSecurity: 2.81.1
+    globalServerURLs: 2.82.0
+    nameOverrides: 2.81.1
+    unions: 2.81.2
 go:
-  version: 1.2.1
+  version: 1.3.0
   maxMethodParams: 4
   packageName: github.com/speakeasy-sdks/cribl-go
