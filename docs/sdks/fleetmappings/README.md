@@ -37,27 +37,11 @@ func main() {
         Conf: &shared.MappingRulesetConf{
             Functions: []map[string]interface{}{
                 map[string]interface{}{
-                    "corporis": "qui",
-                    "expedita": "voluptatum",
-                    "cupiditate": "minima",
-                    "placeat": "enim",
-                },
-                map[string]interface{}{
-                    "in": "minus",
-                },
-                map[string]interface{}{
-                    "modi": "corporis",
-                    "magnam": "voluptates",
-                },
-                map[string]interface{}{
-                    "tempore": "aperiam",
-                    "libero": "ratione",
-                    "labore": "totam",
-                    "occaecati": "voluptas",
+                    "omnis": "tenetur",
                 },
             },
         },
-        ID: "c3ca5acf-be2f-4d57-8757-7929177deac6",
+        ID: "1d170513-39d0-4808-aa18-40394c26071f",
     })
     if err != nil {
         log.Fatal(err)
@@ -105,7 +89,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quaerat"
+    id := "natus"
 
     ctx := context.Background()
     res, err := s.FleetMappings.Delete(ctx, id)
@@ -155,7 +139,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "commodi"
+    id := "velit"
 
     ctx := context.Background()
     res, err := s.FleetMappings.Get(ctx, id)
@@ -252,36 +236,17 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "officiis"
+    id := "voluptatibus"
     mappingRuleset := &shared.MappingRuleset{
         Active: cribl.Bool(false),
         Conf: &shared.MappingRulesetConf{
             Functions: []map[string]interface{}{
                 map[string]interface{}{
-                    "exercitationem": "quam",
-                    "dolorem": "modi",
-                    "ipsa": "sint",
-                },
-                map[string]interface{}{
-                    "sequi": "repudiandae",
-                    "cum": "dicta",
-                    "earum": "veniam",
-                    "animi": "dolores",
-                },
-                map[string]interface{}{
-                    "dicta": "consequuntur",
-                    "necessitatibus": "nobis",
-                    "ipsa": "ducimus",
-                },
-                map[string]interface{}{
-                    "veritatis": "quasi",
-                    "laboriosam": "pariatur",
-                    "libero": "excepturi",
-                    "occaecati": "nemo",
+                    "voluptas": "asperiores",
                 },
             },
         },
-        ID: "45fc95fa-8897-40e1-89db-b30fcb33ea05",
+        ID: "0642dac7-af51-45cc-813a-a63aae8d6786",
     }
 
     ctx := context.Background()

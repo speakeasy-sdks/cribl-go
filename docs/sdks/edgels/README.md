@@ -27,7 +27,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    path := "nemo"
+    path := "quo"
 
     ctx := context.Background()
     res, err := s.EdgeLs.GetDirectoryListing(ctx, path)

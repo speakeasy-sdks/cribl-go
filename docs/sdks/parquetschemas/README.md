@@ -31,7 +31,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "eaque"
+    id := "est"
 
     ctx := context.Background()
     res, err := s.Parquetschemas.Delete(ctx, id)
@@ -81,7 +81,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "dolorem"
+    id := "facere"
 
     ctx := context.Background()
     res, err := s.Parquetschemas.Get(ctx, id)
@@ -180,7 +180,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Parquetschemas.Post(ctx, map[string]interface{}{
-        "aperiam": "aspernatur",
+        "corrupti": "molestiae",
     })
     if err != nil {
         log.Fatal(err)
@@ -228,10 +228,9 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "nulla"
+    id := "provident"
     requestBody := map[string]interface{}{
-        "illo": "magnam",
-        "delectus": "numquam",
+        "accusamus": "necessitatibus",
     }
 
     ctx := context.Background()

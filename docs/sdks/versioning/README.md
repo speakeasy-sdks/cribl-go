@@ -36,7 +36,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    group := "debitis"
+    group := "nisi"
 
     ctx := context.Background()
     res, err := s.Versioning.CountFiles(ctx, group)
@@ -89,8 +89,8 @@ func main() {
     ctx := context.Background()
     res, err := s.Versioning.Create(ctx, shared.GitCommitParams{
         Effective: cribl.Bool(false),
-        Group: cribl.String("reprehenderit"),
-        Message: "eos",
+        Group: cribl.String("molestiae"),
+        Message: "quia",
     })
     if err != nil {
         log.Fatal(err)
@@ -185,8 +185,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    commit := "assumenda"
-    group := "cumque"
+    commit := "laudantium"
+    group := "sed"
 
     ctx := context.Background()
     res, err := s.Versioning.GetLogandTextualDiff(ctx, commit, group)
@@ -237,8 +237,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    commit := "ut"
-    group := "quae"
+    commit := "odit"
+    group := "iusto"
 
     ctx := context.Background()
     res, err := s.Versioning.GetTextualDiff(ctx, commit, group)
@@ -289,7 +289,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    group := "nihil"
+    group := "expedita"
 
     ctx := context.Background()
     res, err := s.Versioning.GetWorkingTree(ctx, group)
@@ -386,8 +386,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quam"
-    group := "assumenda"
+    id := "eos"
+    group := "repellendus"
 
     ctx := context.Background()
     res, err := s.Versioning.ListChangedFiles(ctx, id, group)

@@ -28,7 +28,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    key := "error"
+    key := "nesciunt"
 
     ctx := context.Background()
     res, err := s.UIState.Get(ctx, key)
@@ -78,16 +78,13 @@ func main() {
             BearerAuth: "",
         }),
     )
-    key := "placeat"
+    key := "sit"
     uiStatePatch := &shared.UIStatePatch{
         Args: map[string]interface{}{
-            "voluptate": "earum",
-            "minima": "odit",
-            "odit": "eius",
-            "error": "vel",
+            "odio": "minus",
         },
         Op: shared.UIStatePatchOpPushRecent,
-        Value: "alias",
+        Value: "recusandae",
     }
 
     ctx := context.Background()

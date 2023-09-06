@@ -89,7 +89,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "enim"
+    id := "qui"
 
     ctx := context.Background()
     res, err := s.Outputs.Delete(ctx, id)
@@ -139,7 +139,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "rem"
+    id := "iste"
 
     ctx := context.Background()
     res, err := s.Outputs.DeletePQ(ctx, id)
@@ -189,7 +189,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "magni"
+    id := "ex"
 
     ctx := context.Background()
     res, err := s.Outputs.Get(ctx, id)
@@ -239,7 +239,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quae"
+    id := "nemo"
 
     ctx := context.Background()
     res, err := s.Outputs.GetLatestPQ(ctx, id)
@@ -289,7 +289,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quas"
+    id := "soluta"
 
     ctx := context.Background()
     res, err := s.Outputs.GetSamples(ctx, id)
@@ -339,7 +339,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "placeat"
+    id := "libero"
 
     ctx := context.Background()
     res, err := s.Outputs.GetStatus(ctx, id)
@@ -483,14 +483,11 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "enim"
+    id := "rem"
     outputTestRequest := &shared.OutputTestRequest{
         Events: []shared.CriblEvent{
             shared.CriblEvent{
-                Raw: "sapiente",
-            },
-            shared.CriblEvent{
-                Raw: "saepe",
+                Raw: "dolorum",
             },
         },
     }
@@ -544,7 +541,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "delectus"
+    id := "odio"
     output := shared.Output{}
 
     ctx := context.Background()

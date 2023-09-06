@@ -35,20 +35,15 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Packs.Clone(ctx, shared.PackClone{
-        Dest: cribl.String("officia"),
+        Dest: cribl.String("fugit"),
         DstGroups: []string{
-            "cumque",
-            "natus",
-            "quaerat",
+            "alias",
         },
         Force: cribl.Bool(false),
         Packs: []string{
-            "quia",
-            "officiis",
-            "mollitia",
-            "cumque",
+            "magni",
         },
-        SrcGroup: "quis",
+        SrcGroup: "vel",
     })
     if err != nil {
         log.Fatal(err)
@@ -96,9 +91,9 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "enim"
-    mode := "eum"
-    filename := "nemo"
+    id := "quae"
+    mode := "quae"
+    filename := "modi"
 
     ctx := context.Background()
     res, err := s.Packs.Export(ctx, id, mode, filename)
@@ -152,7 +147,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Packs.Install(ctx, shared.CrudEntityBase{
-        ID: "d307cfee-8120-46e2-813f-a4a41c480d3f",
+        ID: "35e139db-c225-49b1-abda-8c070e1084cb",
     })
     if err != nil {
         log.Fatal(err)
@@ -247,7 +242,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "aspernatur"
+    id := "voluptatem"
 
     ctx := context.Background()
     res, err := s.Packs.Uninstall(ctx, id)
@@ -297,10 +292,10 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "inventore"
-    minor := "sequi"
-    source := "fugit"
-    spec := "fuga"
+    id := "autem"
+    minor := "esse"
+    source := "dolores"
+    spec := "assumenda"
 
     ctx := context.Background()
     res, err := s.Packs.Upgrade(ctx, id, minor, source, spec)
@@ -353,7 +348,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    filename := "hic"
+    filename := "beatae"
 
     ctx := context.Background()
     res, err := s.Packs.Upload(ctx, filename)

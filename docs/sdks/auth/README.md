@@ -41,8 +41,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    relayState := "qui"
-    samlResponse := "cum"
+    relayState := "enim"
+    samlResponse := "dolorem"
 
     ctx := context.Background()
     res, err := s.Auth.IDPlogout(ctx, relayState, samlResponse)
@@ -93,8 +93,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    relayState := "iure"
-    samlResponse := "necessitatibus"
+    relayState := "sapiente"
+    samlResponse := "totam"
 
     ctx := context.Background()
     res, err := s.Auth.AcceptIDPRequest(ctx, relayState, samlResponse)
@@ -145,8 +145,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    code := "ratione"
-    state := "laborum"
+    code := "nihil"
+    state := "sit"
 
     ctx := context.Background()
     res, err := s.Auth.Get(ctx, code, state)
@@ -340,8 +340,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Auth.Login(ctx, shared.LoginInfo{
-        Password: "distinctio",
-        Username: "Junior32",
+        Password: "expedita",
+        Username: "Corbin_Cremin",
     })
     if err != nil {
         log.Fatal(err)
@@ -486,8 +486,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Auth.Post(ctx, operations.PostRequestAuthRequestBody{
-        RelayState: cribl.String("repellat"),
-        SAMLResponse: cribl.String("alias"),
+        RelayState: cribl.String("voluptas"),
+        SAMLResponse: cribl.String("deserunt"),
     })
     if err != nil {
         log.Fatal(err)
@@ -537,8 +537,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Auth.RequestLogout(ctx, shared.LogoutRequest{
-        RelayState: cribl.String("corporis"),
-        SAMLResponse: cribl.String("perspiciatis"),
+        RelayState: cribl.String("quam"),
+        SAMLResponse: cribl.String("ipsum"),
     })
     if err != nil {
         log.Fatal(err)

@@ -31,7 +31,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "asperiores"
+    id := "aliquid"
 
     ctx := context.Background()
     res, err := s.GlobalVariables.Delete(ctx, id)
@@ -81,7 +81,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "veniam"
+    id := "aperiam"
 
     ctx := context.Background()
     res, err := s.GlobalVariables.Get(ctx, id)
@@ -180,12 +180,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.GlobalVariables.Post(ctx, shared.GlobalVar{
-        Description: cribl.String("consequuntur"),
-        ID: "d82d3513-bb6f-448b-a56b-cdb35ff2e4b2",
-        Lib: cribl.String("reprehenderit"),
-        Tags: cribl.String("nostrum"),
-        Type: shared.GlobalVarTypeNumber,
-        Value: "iusto",
+        Description: cribl.String("cum"),
+        ID: "375ed4f6-fbee-441f-b331-7fe35b60eb1e",
+        Lib: cribl.String("similique"),
+        Tags: cribl.String("tempora"),
+        Type: shared.GlobalVarTypeString,
+        Value: "voluptas",
     })
     if err != nil {
         log.Fatal(err)
@@ -233,14 +233,14 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "est"
+    id := "voluptas"
     globalVar := &shared.GlobalVar{
-        Description: cribl.String("rem"),
-        ID: "cd9e7319-c177-4d52-9f77-b114eeb52ff7",
-        Lib: cribl.String("praesentium"),
-        Tags: cribl.String("nemo"),
-        Type: shared.GlobalVarTypeAny,
-        Value: "quisquam",
+        Description: cribl.String("voluptas"),
+        ID: "5ba3c287-44ed-453b-88f3-a8d8f5c0b2f2",
+        Lib: cribl.String("asperiores"),
+        Tags: cribl.String("facilis"),
+        Type: shared.GlobalVarTypeArray,
+        Value: "expedita",
     }
 
     ctx := context.Background()

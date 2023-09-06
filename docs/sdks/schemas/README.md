@@ -33,7 +33,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Schemas.Create(ctx, map[string]interface{}{
-        "tenetur": "laudantium",
+        "culpa": "ipsa",
     })
     if err != nil {
         log.Fatal(err)
@@ -81,7 +81,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "aspernatur"
+    id := "nobis"
 
     ctx := context.Background()
     res, err := s.Schemas.Delete(ctx, id)
@@ -131,7 +131,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "eligendi"
+    id := "necessitatibus"
 
     ctx := context.Background()
     res, err := s.Schemas.Get(ctx, id)
@@ -228,9 +228,9 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "repudiandae"
+    id := "quia"
     requestBody := map[string]interface{}{
-        "inventore": "ullam",
+        "dicta": "vel",
     }
 
     ctx := context.Background()

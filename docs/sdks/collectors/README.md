@@ -32,7 +32,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "cupiditate"
+    id := "odio"
 
     ctx := context.Background()
     res, err := s.Collectors.Get(ctx, id)

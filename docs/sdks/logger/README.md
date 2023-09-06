@@ -30,7 +30,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "beatae"
+    id := "velit"
 
     ctx := context.Background()
     res, err := s.Logger.Delete(ctx, id)
@@ -80,7 +80,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "hic"
+    id := "aspernatur"
 
     ctx := context.Background()
     res, err := s.Logger.Get(ctx, id)
@@ -177,41 +177,23 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "nisi"
+    id := "eum"
     loggerConfig := &shared.LoggerConfig{
         Channels: []shared.LoggerEntry{
             shared.LoggerEntry{
                 CanDelete: cribl.Bool(false),
-                ID: "37a51262-4383-45bb-805a-23a45cefc5fd",
-                Level: "officiis",
-            },
-            shared.LoggerEntry{
-                CanDelete: cribl.Bool(false),
-                ID: "10a0ce21-69e5-4100-99c6-dc5e34762799",
-                Level: "cum",
-            },
-            shared.LoggerEntry{
-                CanDelete: cribl.Bool(false),
-                ID: "fbbe6949-fb2b-4b4e-8ae6-c3d5db3adebd",
-                Level: "ad",
-            },
-            shared.LoggerEntry{
-                CanDelete: cribl.Bool(false),
-                ID: "daea4c50-6a8a-4a94-8026-44cf5e9d9a45",
-                Level: "esse",
+                ID: "48dc2f61-5199-4ebf-90e9-fe6c632ca3ae",
+                Level: "nulla",
             },
         },
         DefaultRedactFields: []string{
-            "fuga",
-            "facere",
-            "impedit",
+            "consequatur",
         },
-        ID: "1ac600de-c001-4ac8-82e2-ec09ff8f0f81",
+        ID: "11799631-2fde-4047-b177-8ff61d017476",
         RedactFields: []string{
-            "earum",
-            "doloribus",
+            "consectetur",
         },
-        RedactLabel: "velit",
+        RedactLabel: "aliquid",
     }
 
     ctx := context.Background()

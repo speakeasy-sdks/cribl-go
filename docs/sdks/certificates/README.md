@@ -37,15 +37,15 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Certificates.Create(ctx, shared.Certificate{
-        Ca: cribl.String("nihil"),
-        Cert: "mollitia",
-        Description: cribl.String("voluptas"),
-        ID: "0ff2a54a-31e9-4476-8a3e-865e7956f925",
+        Ca: cribl.String("incidunt"),
+        Cert: "qui",
+        Description: cribl.String("cupiditate"),
+        ID: "cdb1a842-2bb6-479d-a322-715bf0cbb1e3",
         InUse: []string{
-            "animi",
+            "veritatis",
         },
-        Passphrase: cribl.String("nostrum"),
-        PrivKey: "mollitia",
+        Passphrase: cribl.String("nobis"),
+        PrivKey: "quos",
     })
     if err != nil {
         log.Fatal(err)
@@ -93,7 +93,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "provident"
+    id := "tempore"
 
     ctx := context.Background()
     res, err := s.Certificates.Delete(ctx, id)
@@ -143,7 +143,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "possimus"
+    id := "cupiditate"
 
     ctx := context.Background()
     res, err := s.Certificates.Get(ctx, id)
@@ -240,17 +240,17 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "animi"
+    id := "aperiam"
     certificate := &shared.Certificate{
-        Ca: cribl.String("ex"),
-        Cert: "aliquid",
-        Description: cribl.String("accusantium"),
-        ID: "ff57bfaa-d4f9-4efc-9b45-12c1032648dc",
+        Ca: cribl.String("delectus"),
+        Cert: "dolorem",
+        Description: cribl.String("dolore"),
+        ID: "43a1108e-0adc-4f4b-9218-79fce953f73e",
         InUse: []string{
-            "sapiente",
+            "tenetur",
         },
-        Passphrase: cribl.String("eum"),
-        PrivKey: "dicta",
+        Passphrase: cribl.String("dignissimos"),
+        PrivKey: "hic",
     }
 
     ctx := context.Background()

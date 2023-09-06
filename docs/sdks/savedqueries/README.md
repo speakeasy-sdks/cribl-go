@@ -33,20 +33,20 @@ func main() {
 
     ctx := context.Background()
     res, err := s.SavedQueries.Create(ctx, shared.SavedQuery{
-        Description: cribl.String("error"),
-        Earliest: cribl.String("recusandae"),
-        ID: "f3ffdd9f-7f07-49af-8d35-724cdb0f4d28",
-        Latest: cribl.String("quasi"),
-        Name: "Irma Kub",
-        Query: "iure",
-        SampleRate: cribl.Int64(512408),
+        Description: cribl.String("voluptas"),
+        Earliest: cribl.String("consequuntur"),
+        ID: "a7b408f0-5e3d-448f-9af3-13a1f5fd9425",
+        Latest: cribl.String("cupiditate"),
+        Name: "John Predovic",
+        Query: "sapiente",
+        SampleRate: cribl.Int64(164319),
         Schedule: &shared.SavedQuerySchedule{
-            CronSchedule: "modi",
+            CronSchedule: "veniam",
             Enabled: false,
-            KeepLastN: 301701,
-            Tz: "accusamus",
+            KeepLastN: 893773,
+            Tz: "officia",
         },
-        User: cribl.String("nulla"),
+        User: cribl.String("sint"),
     })
     if err != nil {
         log.Fatal(err)
@@ -94,7 +94,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "repudiandae"
+    id := "ut"
 
     ctx := context.Background()
     res, err := s.SavedQueries.Delete(ctx, id)
@@ -144,7 +144,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quibusdam"
+    id := "numquam"
 
     ctx := context.Background()
     res, err := s.SavedQueries.Get(ctx, id)
@@ -241,22 +241,22 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "praesentium"
+    id := "tenetur"
     savedQuery := &shared.SavedQuery{
-        Description: cribl.String("enim"),
-        Earliest: cribl.String("animi"),
-        ID: "9065e628-bdfc-4203-ab6c-879923b7e135",
-        Latest: cribl.String("atque"),
-        Name: "Nettie Kilback",
-        Query: "et",
-        SampleRate: cribl.Int64(181267),
+        Description: cribl.String("adipisci"),
+        Earliest: cribl.String("libero"),
+        ID: "756c11f6-c37a-4512-a243-835bbc05a23a",
+        Latest: cribl.String("modi"),
+        Name: "Traci Waters",
+        Query: "enim",
+        SampleRate: cribl.Int64(987759),
         Schedule: &shared.SavedQuerySchedule{
-            CronSchedule: "impedit",
+            CronSchedule: "assumenda",
             Enabled: false,
-            KeepLastN: 401388,
-            Tz: "praesentium",
+            KeepLastN: 887363,
+            Tz: "architecto",
         },
-        User: cribl.String("natus"),
+        User: cribl.String("alias"),
     }
 
     ctx := context.Background()

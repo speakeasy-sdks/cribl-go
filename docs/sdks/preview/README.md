@@ -34,12 +34,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Preview.CaptureLiveData(ctx, shared.CaptureParams{
-        Filter: "provident",
-        Level: 875693,
-        MaxEvents: 938094,
-        StepDuration: cribl.Int64(42763),
-        WorkerID: cribl.String("ipsum"),
-        WorkerThreshold: cribl.Int64(367),
+        Filter: "dignissimos",
+        Level: 458970,
+        MaxEvents: 854115,
+        StepDuration: cribl.Int64(322333),
+        WorkerID: cribl.String("aspernatur"),
+        WorkerThreshold: cribl.Int64(316501),
     })
     if err != nil {
         log.Fatal(err)
@@ -93,18 +93,17 @@ func main() {
         Dropped: cribl.Bool(false),
         Events: []map[string]interface{}{
             map[string]interface{}{
-                "perspiciatis": "quam",
-                "atque": "officia",
+                "delectus": "iusto",
             },
         },
-        InputID: cribl.String("ex"),
-        Level: cribl.Int64(101770),
-        Memory: cribl.Int64(953564),
-        Mode: shared.PreviewDataParamsModeRouteAndSend,
-        PipelineID: "veritatis",
-        SampleID: "quod",
-        SamplePipelineID: cribl.String("a"),
-        Timeout: cribl.Int64(185313),
+        InputID: cribl.String("dignissimos"),
+        Level: cribl.Int64(729828),
+        Memory: cribl.Int64(72350),
+        Mode: shared.PreviewDataParamsModePipe,
+        PipelineID: "incidunt",
+        SampleID: "accusamus",
+        SamplePipelineID: cribl.String("saepe"),
+        Timeout: cribl.Int64(734814),
     })
     if err != nil {
         log.Fatal(err)

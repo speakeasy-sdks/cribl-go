@@ -37,19 +37,11 @@ func main() {
         Conf: &shared.MappingRulesetConf{
             Functions: []map[string]interface{}{
                 map[string]interface{}{
-                    "earum": "praesentium",
-                },
-                map[string]interface{}{
-                    "non": "quasi",
-                    "mollitia": "accusamus",
-                    "harum": "cumque",
-                },
-                map[string]interface{}{
-                    "expedita": "corrupti",
+                    "iste": "magni",
                 },
             },
         },
-        ID: "0a6924d3-b2ec-4fcc-8f89-5010f5dd3d6f",
+        ID: "1aefb9f5-8c4d-486e-a8e4-be056013f59d",
     })
     if err != nil {
         log.Fatal(err)
@@ -97,7 +89,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "mollitia"
+    id := "deserunt"
 
     ctx := context.Background()
     res, err := s.Mappings.Delete(ctx, id)
@@ -147,7 +139,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quae"
+    id := "esse"
 
     ctx := context.Background()
     res, err := s.Mappings.Get(ctx, id)
@@ -244,18 +236,17 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quos"
+    id := "nemo"
     mappingRuleset := &shared.MappingRuleset{
         Active: cribl.Bool(false),
         Conf: &shared.MappingRulesetConf{
             Functions: []map[string]interface{}{
                 map[string]interface{}{
-                    "voluptates": "ad",
-                    "aliquam": "quisquam",
+                    "reprehenderit": "est",
                 },
             },
         },
-        ID: "82f168a3-63c8-4873-a484-380b1f6b8ca2",
+        ID: "59ecfef6-6ef1-4caa-b383-c2beb477373c",
     }
 
     ctx := context.Background()

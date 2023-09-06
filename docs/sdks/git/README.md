@@ -38,7 +38,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    group := "libero"
+    group := "possimus"
 
     ctx := context.Background()
     res, err := s.Git.CountFiles(ctx, group)
@@ -91,8 +91,8 @@ func main() {
     ctx := context.Background()
     res, err := s.Git.Create(ctx, shared.GitCommitParams{
         Effective: cribl.Bool(false),
-        Group: cribl.String("architecto"),
-        Message: "cupiditate",
+        Group: cribl.String("facilis"),
+        Message: "cum",
     })
     if err != nil {
         log.Fatal(err)
@@ -187,8 +187,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    commit := "molestiae"
-    group := "eligendi"
+    commit := "commodi"
+    group := "in"
 
     ctx := context.Background()
     res, err := s.Git.GetLogandTextualDiff(ctx, commit, group)
@@ -239,8 +239,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    commit := "possimus"
-    group := "non"
+    commit := "corporis"
+    group := "reiciendis"
 
     ctx := context.Background()
     res, err := s.Git.GetTextualDiff(ctx, commit, group)
@@ -291,7 +291,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    group := "magnam"
+    group := "assumenda"
 
     ctx := context.Background()
     res, err := s.Git.GetWorkingTree(ctx, group)
@@ -388,8 +388,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "itaque"
-    group := "sed"
+    id := "nemo"
+    group := "recusandae"
 
     ctx := context.Background()
     res, err := s.Git.ListChangedFiles(ctx, id, group)

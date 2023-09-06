@@ -37,8 +37,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Scripts.Create(ctx, map[string]interface{}{
-        "inventore": "voluptate",
-        "sed": "dolorem",
+        "perspiciatis": "debitis",
     })
     if err != nil {
         log.Fatal(err)
@@ -86,7 +85,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "eaque"
+    id := "ullam"
 
     ctx := context.Background()
     res, err := s.Scripts.Delete(ctx, id)
@@ -136,7 +135,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "exercitationem"
+    id := "architecto"
 
     ctx := context.Background()
     res, err := s.Scripts.Get(ctx, id)
@@ -233,10 +232,9 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "amet"
+    id := "accusantium"
     requestBody := map[string]interface{}{
-        "voluptate": "pariatur",
-        "minus": "a",
+        "perferendis": "veritatis",
     }
 
     ctx := context.Background()

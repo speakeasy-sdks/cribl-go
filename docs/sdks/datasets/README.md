@@ -37,7 +37,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Datasets.Create(ctx, "expedita")
+    res, err := s.Datasets.Create(ctx, "provident")
     if err != nil {
         log.Fatal(err)
     }
@@ -86,10 +86,10 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Datasets.CreateProviderType(ctx, shared.DatasetProviderType{
-        Description: cribl.String("voluptatem"),
-        ID: shared.ProviderTypeMerge,
+        Description: cribl.String("ipsa"),
+        ID: shared.ProviderTypeQuicksort,
         Locality: &shared.OriginConfig{
-            FilterExpression: cribl.String("cum"),
+            FilterExpression: cribl.String("magnam"),
             Origin: shared.DatasetOrigin{},
         },
     })
@@ -139,7 +139,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "aliquid"
+    id := "odio"
 
     ctx := context.Background()
     res, err := s.Datasets.Delete(ctx, id)
@@ -189,7 +189,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "beatae"
+    id := "eius"
 
     ctx := context.Background()
     res, err := s.Datasets.DeleteProviderType(ctx, id)
@@ -239,7 +239,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "voluptatum"
+    id := "esse"
 
     ctx := context.Background()
     res, err := s.Datasets.Get(ctx, id)
@@ -289,7 +289,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "omnis"
+    id := "esse"
 
     ctx := context.Background()
     res, err := s.Datasets.GetProviderType(ctx, id)
@@ -433,8 +433,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "veritatis"
-    requestBody := "rerum"
+    id := "rem"
+    requestBody := "fuga"
 
     ctx := context.Background()
     res, err := s.Datasets.Update(ctx, id, requestBody)
@@ -485,12 +485,12 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "est"
+    id := "reprehenderit"
     datasetProviderType := &shared.DatasetProviderType{
-        Description: cribl.String("culpa"),
-        ID: shared.ProviderTypeMmHeap,
+        Description: cribl.String("quidem"),
+        ID: shared.ProviderTypeInvalid,
         Locality: &shared.OriginConfig{
-            FilterExpression: cribl.String("sapiente"),
+            FilterExpression: cribl.String("ut"),
             Origin: shared.DatasetOrigin{},
         },
     }

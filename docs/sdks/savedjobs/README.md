@@ -79,7 +79,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "fuga"
+    id := "vel"
 
     ctx := context.Background()
     res, err := s.SavedJobs.Delete(ctx, id)
@@ -129,7 +129,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "facilis"
+    id := "neque"
 
     ctx := context.Background()
     res, err := s.SavedJobs.Get(ctx, id)
@@ -226,7 +226,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "maiores"
+    id := "corporis"
     savedJob := shared.SavedJob{}
 
     ctx := context.Background()

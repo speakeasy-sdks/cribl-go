@@ -79,7 +79,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "atque"
+    id := "inventore"
 
     ctx := context.Background()
     res, err := s.NotificationTargets.Delete(ctx, id)
@@ -129,7 +129,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "architecto"
+    id := "dolorem"
 
     ctx := context.Background()
     res, err := s.NotificationTargets.Get(ctx, id)
@@ -226,7 +226,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "est"
+    id := "ad"
     notificationTarget := shared.NotificationTarget{}
 
     ctx := context.Background()

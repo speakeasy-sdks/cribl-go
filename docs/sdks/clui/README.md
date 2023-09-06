@@ -27,8 +27,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    query := "minima"
-    context := "beatae"
+    query := "distinctio"
+    context := "quod"
 
     ctx := context.Background()
     res, err := s.Clui.ListCluisResults(ctx, query, context)

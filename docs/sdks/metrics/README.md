@@ -37,30 +37,27 @@ func main() {
     res, err := s.Metrics.Aggregate(ctx, shared.MetricsAggOpts{
         Aggs: shared.AggregationMgrOptions{
             Aggregations: []string{
-                "quo",
-                "incidunt",
-                "quod",
-                "minus",
+                "laborum",
             },
             Cumulative: false,
-            FlushEventLimit: 781491,
-            FlushMemLimit: 659971,
-            Hostname: "nimble-mouse.net",
-            IdleTimeLimitSeconds: cribl.Int64(774880),
-            LagToleranceSeconds: cribl.Int64(457150),
+            FlushEventLimit: 250398,
+            FlushMemLimit: 224467,
+            Hostname: "left-amber.com",
+            IdleTimeLimitSeconds: cribl.Int64(7468),
+            LagToleranceSeconds: cribl.Int64(639705),
             MetricsMode: false,
-            Prefix: cribl.String("hic"),
+            Prefix: cribl.String("recusandae"),
             PreserveSplitByStructure: cribl.Bool(false),
-            SearchAggMode: cribl.String("maxime"),
+            SearchAggMode: cribl.String("ea"),
             SplitBys: []string{
-                "soluta",
+                "quidem",
             },
             SufficientStatsOnly: false,
-            TimeWindowSeconds: 147400,
+            TimeWindowSeconds: 377406,
         },
         AlwaysBounds: cribl.Bool(false),
         Metrics: &shared.MetricsStore{},
-        Where: cribl.String("pariatur"),
+        Where: cribl.String("facilis"),
     })
     if err != nil {
         log.Fatal(err)
@@ -110,46 +107,44 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Metrics.Post(ctx, shared.GetNamesOpts{
-        DimKeyFilter: cribl.String("eligendi"),
-        DimValueFilter: cribl.String("recusandae"),
-        Earliest: cribl.Int64(83791),
+        DimKeyFilter: cribl.String("placeat"),
+        DimValueFilter: cribl.String("perspiciatis"),
+        Earliest: cribl.Int64(709036),
         FilterExpr: &shared.Expression{
-            MaxCache: 13637,
+            MaxCache: 537236,
             Cache: shared.Map{
                 Op: shared.MapOp{},
             },
             DeclaredVariables: []string{
-                "iusto",
-                "dolor",
-                "voluptates",
+                "a",
             },
             IsSafe: false,
-            ModifiedExpression: "tempora",
+            ModifiedExpression: "voluptate",
             Opt: shared.ExpressionOptions{
                 AllowInternal: cribl.Bool(false),
                 Args: []string{
-                    "rerum",
+                    "ullam",
                 },
                 AstTraverseCallback: &shared.TraverseCallback{},
-                Context: cribl.String("doloremque"),
+                Context: cribl.String("unde"),
                 DisallowAssign: cribl.Bool(false),
-                MaxNumOfAllowedIterations: cribl.Int64(30192),
+                MaxNumOfAllowedIterations: cribl.Int64(897543),
                 PartialEval: &shared.PartialEvalRewrite{
                     FieldFilter: shared.PartialEvalFieldFilter{},
-                    NullObj: "eum",
+                    NullObj: "animi",
                 },
                 ReplaceIdentifiers: cribl.Bool(false),
                 ReplaceLiterals: cribl.Bool(false),
                 Unprotected: cribl.Bool(false),
             },
-            OriginalExpression: "at",
-            PartialExpression: "eum",
+            OriginalExpression: "impedit",
+            PartialExpression: "ipsam",
             ReferencedCriblExport: false,
-            ReplaceIdentifiersExpression: "reprehenderit",
-            ReplaceLiteralExpression: "voluptatum",
+            ReplaceIdentifiersExpression: "corporis",
+            ReplaceLiteralExpression: "est",
         },
-        MaxValues: cribl.Int64(502393),
-        MetricNameFilter: cribl.String("nihil"),
+        MaxValues: cribl.Int64(621666),
+        MetricNameFilter: cribl.String("esse"),
     })
     if err != nil {
         log.Fatal(err)
@@ -200,11 +195,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Metrics.Query(ctx, operations.QueryMetricsRequest{
-        Earliest: cribl.Int64(540048),
-        FilterExpr: cribl.String("rerum"),
-        Latest: cribl.Int64(645544),
-        MetricNameFilter: cribl.String("atque"),
-        NumBuckets: cribl.Int64(344856),
+        Earliest: cribl.Int64(288570),
+        FilterExpr: cribl.String("veritatis"),
+        Latest: cribl.Int64(874400),
+        MetricNameFilter: cribl.String("consectetur"),
+        NumBuckets: cribl.Int64(112427),
     })
     if err != nil {
         log.Fatal(err)

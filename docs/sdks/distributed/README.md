@@ -28,7 +28,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    mode := "pariatur"
+    mode := "eos"
 
     ctx := context.Background()
     res, err := s.Distributed.Get(ctx, mode)

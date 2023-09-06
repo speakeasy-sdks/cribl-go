@@ -35,7 +35,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "dolore"
+    id := "corporis"
 
     ctx := context.Background()
     res, err := s.Pipelines.Delete(ctx, id)
@@ -85,7 +85,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "tenetur"
+    id := "officiis"
 
     ctx := context.Background()
     res, err := s.Pipelines.Get(ctx, id)
@@ -185,56 +185,32 @@ func main() {
     ctx := context.Background()
     res, err := s.Pipelines.Post(ctx, shared.Pipeline{
         Conf: shared.PipelineConf{
-            AsyncFuncTimeout: cribl.Int64(493407),
-            Description: cribl.String("esse"),
+            AsyncFuncTimeout: cribl.Int64(972912),
+            Description: cribl.String("cum"),
             Functions: []shared.PipelineFunctionConf{
                 shared.PipelineFunctionConf{
                     Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
-                    Description: cribl.String("laudantium"),
+                    Description: cribl.String("at"),
                     Disabled: cribl.Bool(false),
-                    Filter: cribl.String("esse"),
+                    Filter: cribl.String("alias"),
                     Final: cribl.Bool(false),
-                    GroupID: cribl.String("eveniet"),
-                    ID: "e3e4be75-2c65-4b34-818e-3bb91c8d975e",
-                },
-                shared.PipelineFunctionConf{
-                    Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
-                    Description: cribl.String("aperiam"),
-                    Disabled: cribl.Bool(false),
-                    Filter: cribl.String("voluptates"),
-                    Final: cribl.Bool(false),
-                    GroupID: cribl.String("laudantium"),
-                    ID: "419d8f84-f144-4f3e-87ed-cc4aa5f3cabd",
-                },
-                shared.PipelineFunctionConf{
-                    Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
-                    Description: cribl.String("omnis"),
-                    Disabled: cribl.Bool(false),
-                    Filter: cribl.String("aut"),
-                    Final: cribl.Bool(false),
-                    GroupID: cribl.String("ipsam"),
-                    ID: "a972e056-7282-427b-ad30-9470bf7a4fa8",
+                    GroupID: cribl.String("quia"),
+                    ID: "bae0be2d-7822-459e-bea4-b5197f92443d",
                 },
             },
             Groups: map[string]shared.PipelineConfGroups{
-                "quod": shared.PipelineConfGroups{
-                    Description: cribl.String("voluptatibus"),
+                "officia": shared.PipelineConfGroups{
+                    Description: cribl.String("dignissimos"),
                     Disabled: cribl.Bool(false),
-                    Name: "Sheila Hermann",
-                },
-                "doloribus": shared.PipelineConfGroups{
-                    Description: cribl.String("animi"),
-                    Disabled: cribl.Bool(false),
-                    Name: "Lewis Fritsch",
+                    Name: "Santiago Herzog",
                 },
             },
-            Output: cribl.String("maiores"),
+            Output: cribl.String("voluptatum"),
             Streamtags: []string{
-                "voluptatem",
-                "optio",
+                "cupiditate",
             },
         },
-        ID: "321f023b-75d2-4367-be1a-0cc8df79f0a3",
+        ID: "5c537c64-54ef-4b0b-b489-6c3ca5acfbe2",
     })
     if err != nil {
         log.Fatal(err)
@@ -282,59 +258,35 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "provident"
+    id := "repellat"
     pipeline := &shared.Pipeline{
         Conf: shared.PipelineConf{
-            AsyncFuncTimeout: cribl.Int64(404774),
-            Description: cribl.String("repellendus"),
+            AsyncFuncTimeout: cribl.Int64(865946),
+            Description: cribl.String("nemo"),
             Functions: []shared.PipelineFunctionConf{
                 shared.PipelineFunctionConf{
                     Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
-                    Description: cribl.String("alias"),
+                    Description: cribl.String("reprehenderit"),
                     Disabled: cribl.Bool(false),
-                    Filter: cribl.String("impedit"),
+                    Filter: cribl.String("aperiam"),
                     Final: cribl.Bool(false),
-                    GroupID: cribl.String("sequi"),
-                    ID: "64b7c15d-fbac-4e18-8b1c-4ee2c8c6ce61",
-                },
-                shared.PipelineFunctionConf{
-                    Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
-                    Description: cribl.String("veritatis"),
-                    Disabled: cribl.Bool(false),
-                    Filter: cribl.String("maiores"),
-                    Final: cribl.Bool(false),
-                    GroupID: cribl.String("itaque"),
-                    ID: "eb1c7cbd-b6ee-4c74-b78b-a25317747dc9",
-                },
-                shared.PipelineFunctionConf{
-                    Conf: shared.PipelineFunctionConfFunctionSpecificConfigs{},
-                    Description: cribl.String("illo"),
-                    Disabled: cribl.Bool(false),
-                    Filter: cribl.String("exercitationem"),
-                    Final: cribl.Bool(false),
-                    GroupID: cribl.String("laborum"),
-                    ID: "d2caf5dd-6723-4dc0-b5ae-2f3a6b700878",
+                    GroupID: cribl.String("odio"),
+                    ID: "57792917-7dea-4c64-aecb-573409e3eb1e",
                 },
             },
             Groups: map[string]shared.PipelineConfGroups{
-                "quis": shared.PipelineConfGroups{
-                    Description: cribl.String("iure"),
+                "veniam": shared.PipelineConfGroups{
+                    Description: cribl.String("animi"),
                     Disabled: cribl.Bool(false),
-                    Name: "Gail Fay",
-                },
-                "est": shared.PipelineConfGroups{
-                    Description: cribl.String("iure"),
-                    Disabled: cribl.Bool(false),
-                    Name: "Eduardo Larkin",
+                    Name: "Juana Buckridge",
                 },
             },
-            Output: cribl.String("enim"),
+            Output: cribl.String("nobis"),
             Streamtags: []string{
-                "minima",
-                "tempora",
+                "ipsa",
             },
         },
-        ID: "080d40bc-acc6-4cbd-ab5f-3ec909304f92",
+        ID: "7f116db9-9545-4fc9-9fa8-8970e189dbb3",
     }
 
     ctx := context.Background()

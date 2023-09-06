@@ -33,10 +33,10 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Profiler.Create(ctx, shared.ProfilerItem{
-        CreateTime: cribl.Int64(34989),
-        ID: "688f77c1-ffc7-41dc-a163-f2a3c80a97ff",
-        Size: cribl.Int64(242013),
-        WorkerID: cribl.String("adipisci"),
+        CreateTime: cribl.Int64(334018),
+        ID: "2ff785fc-3781-44d4-898e-0c2bb89eb75d",
+        Size: cribl.Int64(629377),
+        WorkerID: cribl.String("repellendus"),
     })
     if err != nil {
         log.Fatal(err)
@@ -84,7 +84,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "non"
+    id := "iure"
 
     ctx := context.Background()
     res, err := s.Profiler.Delete(ctx, id)
@@ -134,7 +134,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "optio"
+    id := "dolorem"
 
     ctx := context.Background()
     res, err := s.Profiler.Get(ctx, id)
@@ -231,12 +231,12 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "illum"
+    id := "commodi"
     profilerItem := &shared.ProfilerItem{
-        CreateTime: cribl.Int64(870183),
-        ID: "f857a9e6-1876-4c6a-b21d-29dfc94d6fec",
-        Size: cribl.Int64(818078),
-        WorkerID: cribl.String("dignissimos"),
+        CreateTime: cribl.Int64(771226),
+        ID: "600503d8-bb31-4180-b739-ae9e057eb809",
+        Size: cribl.Int64(879522),
+        WorkerID: cribl.String("eos"),
     }
 
     ctx := context.Background()

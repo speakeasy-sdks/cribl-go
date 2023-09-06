@@ -94,7 +94,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    group := "quis"
+    group := "natus"
 
     ctx := context.Background()
     res, err := s.System.CancelRunningGroup(ctx, group)
@@ -144,18 +144,18 @@ func main() {
             BearerAuth: "",
         }),
     )
-    group := "accusantium"
+    group := "cumque"
     distributedUpgradeRequest := &shared.DistributedUpgradeRequest{
         PackageUrls: []shared.DistributedUpgradeRequestPackageUrls{
             shared.DistributedUpgradeRequestPackageUrls{
-                PackageHashURL: cribl.String("consectetur"),
-                PackageURL: "asperiores",
+                PackageHashURL: cribl.String("natus"),
+                PackageURL: "quaerat",
             },
         },
-        UpgradeMode: shared.DistributedUpgradeRequestUpgradeModeRolling.ToPointer(),
-        UpgradePercentage: cribl.Int64(571498),
-        WorkerRetries: cribl.Int64(821993),
-        WorkerRetryDelay: cribl.Int64(732815),
+        UpgradeMode: shared.DistributedUpgradeRequestUpgradeModeRegular.ToPointer(),
+        UpgradePercentage: cribl.Int64(156098),
+        WorkerRetries: cribl.Int64(887284),
+        WorkerRetryDelay: cribl.Int64(651467),
     }
 
     ctx := context.Background()
@@ -256,7 +256,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    file := "asperiores"
+    file := "cumque"
 
     ctx := context.Background()
     res, err := s.System.GetPreviousPackage(ctx, file)
@@ -541,8 +541,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    group := "quasi"
-    upgradePercentage := "consequuntur"
+    group := "quis"
+    upgradePercentage := "enim"
 
     ctx := context.Background()
     res, err := s.System.StageGroupUpgrade(ctx, group, upgradePercentage)
@@ -783,7 +783,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    version := "nemo"
+    version := "eum"
 
     ctx := context.Background()
     res, err := s.System.UpgradeCribl(ctx, version)
@@ -837,20 +837,8 @@ func main() {
     res, err := s.System.UpgradeMaster(ctx, shared.UpgradeMasterRequest{
         Packages: []shared.UpgradeMasterRequestPackages{
             shared.UpgradeMasterRequestPackages{
-                PackageHashURL: cribl.String("debitis"),
-                PackageURL: "labore",
-            },
-            shared.UpgradeMasterRequestPackages{
-                PackageHashURL: cribl.String("veritatis"),
-                PackageURL: "minima",
-            },
-            shared.UpgradeMasterRequestPackages{
-                PackageHashURL: cribl.String("magni"),
-                PackageURL: "itaque",
-            },
-            shared.UpgradeMasterRequestPackages{
-                PackageHashURL: cribl.String("error"),
-                PackageURL: "expedita",
+                PackageHashURL: cribl.String("nemo"),
+                PackageURL: "illum",
             },
         },
     })

@@ -34,12 +34,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.DatabaseConnections.TestDatabaseConnection(ctx, shared.DatabaseConnectionTest{
-        AuthType: "earum",
-        ConfigObj: cribl.String("soluta"),
-        ConnectionString: cribl.String("hic"),
-        ConnectionTimeout: cribl.Int64(848151),
-        DatabaseType: "eaque",
-        TextSecret: cribl.String("earum"),
+        AuthType: "facilis",
+        ConfigObj: cribl.String("vero"),
+        ConnectionString: cribl.String("ducimus"),
+        ConnectionTimeout: cribl.Int64(293020),
+        DatabaseType: "quibusdam",
+        TextSecret: cribl.String("illum"),
     })
     if err != nil {
         log.Fatal(err)
@@ -87,7 +87,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "perspiciatis"
+    id := "sequi"
 
     ctx := context.Background()
     res, err := s.DatabaseConnections.Delete(ctx, id)
@@ -137,7 +137,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "maiores"
+    id := "natus"
 
     ctx := context.Background()
     res, err := s.DatabaseConnections.Get(ctx, id)
@@ -187,7 +187,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    databaseType := "debitis"
+    databaseType := "impedit"
 
     ctx := context.Background()
     res, err := s.DatabaseConnections.ListDatabaseConnection(ctx, databaseType)
@@ -239,15 +239,15 @@ func main() {
 
     ctx := context.Background()
     res, err := s.DatabaseConnections.Post(ctx, shared.DatabaseConnectionConfig{
-        AuthType: "aliquid",
-        ConfigObj: cribl.String("porro"),
-        ConnectionString: cribl.String("suscipit"),
-        ConnectionTimeout: cribl.Int64(211534),
+        AuthType: "aut",
+        ConfigObj: cribl.String("voluptatibus"),
+        ConnectionString: cribl.String("exercitationem"),
+        ConnectionTimeout: cribl.Int64(862310),
         DatabaseType: &shared.DatabaseConnectionType{},
         Description: "fugit",
-        ID: "ca3aed01-1799-4631-afde-04771778ff61",
-        RequestTimeout: cribl.Int64(857125),
-        Tags: cribl.String("doloremque"),
+        ID: "cff7c70a-4562-46d4-b681-3f16d9f5fce6",
+        RequestTimeout: cribl.Int64(774048),
+        Tags: cribl.String("corporis"),
     })
     if err != nil {
         log.Fatal(err)
@@ -295,17 +295,17 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "dicta"
+    id := "veniam"
     databaseConnectionConfig := &shared.DatabaseConnectionConfig{
-        AuthType: "odio",
-        ConfigObj: cribl.String("tempora"),
-        ConnectionString: cribl.String("esse"),
-        ConnectionTimeout: cribl.Int64(403793),
+        AuthType: "aliquid",
+        ConfigObj: cribl.String("inventore"),
+        ConnectionString: cribl.String("magnam"),
+        ConnectionTimeout: cribl.Int64(407241),
         DatabaseType: &shared.DatabaseConnectionType{},
-        Description: "consectetur",
-        ID: "60a15db6-a660-4659-a1ad-eaab5851d6c6",
-        RequestTimeout: cribl.Int64(281153),
-        Tags: cribl.String("ad"),
+        Description: "quo",
+        ID: "3e250fb0-08c4-42e1-81aa-c366c8dd6b14",
+        RequestTimeout: cribl.Int64(256139),
+        Tags: cribl.String("explicabo"),
     }
 
     ctx := context.Background()

@@ -37,12 +37,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Logging.Get(ctx, operations.GetLogFileContentRequest{
-        EndOffset: cribl.Int64(260588),
-        Et: cribl.Int64(458212),
-        Filter: cribl.String("in"),
-        ID: "c13e902c-1412-45b0-960a-668151a472af",
-        Limit: cribl.Int64(609537),
-        Lt: cribl.Int64(151230),
+        EndOffset: cribl.Int64(58870),
+        Et: cribl.Int64(671384),
+        Filter: cribl.String("sunt"),
+        ID: "5db6a660-659a-41ad-aaab-5851d6c645b0",
+        Limit: cribl.Int64(561577),
+        Lt: cribl.Int64(737254),
     })
     if err != nil {
         log.Fatal(err)
@@ -93,14 +93,14 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Logging.ListLogFileContents(ctx, operations.ListLogFileContentsRequest{
-        EndOffset: cribl.Int64(200950),
-        Et: cribl.Int64(805463),
-        Filter: cribl.String("quis"),
-        GroupID: "cupiditate",
-        ID: "49f83f35-0cf8-476f-bb90-1c6ecbb4e243",
-        Limit: cribl.Int64(758194),
-        Lt: cribl.Int64(992887),
-        Offset: cribl.Int64(459875),
+        EndOffset: cribl.Int64(399660),
+        Et: cribl.Int64(109784),
+        Filter: cribl.String("voluptatum"),
+        GroupID: "omnis",
+        ID: "1baa0fe1-ade0-408e-af8c-5f350d8cdb5a",
+        Limit: cribl.Int64(222864),
+        Lt: cribl.Int64(307376),
+        Offset: cribl.Int64(80532),
     })
     if err != nil {
         log.Fatal(err)
@@ -198,13 +198,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Logging.ListLogFilesContents(ctx, operations.ListLogFilesContentsRequest{
-        Et: cribl.Int64(500021),
-        Files: cribl.String("sint"),
-        Filter: cribl.String("repellat"),
-        GroupID: cribl.String("a"),
-        Limit: cribl.Int64(658604),
-        Lt: cribl.Int64(979287),
-        Type: "itaque",
+        Et: cribl.Int64(537279),
+        Files: cribl.String("veritatis"),
+        Filter: cribl.String("tempora"),
+        GroupID: cribl.String("dolor"),
+        Limit: cribl.Int64(8689),
+        Lt: cribl.Int64(100014),
+        Type: "sit",
     })
     if err != nil {
         log.Fatal(err)

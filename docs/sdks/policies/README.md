@@ -34,13 +34,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Policies.Create(ctx, shared.PolicyRule{
         Args: []string{
-            "cum",
-            "id",
+            "doloremque",
         },
-        Description: cribl.String("possimus"),
-        ID: "2553819b-474b-40ed-a0e5-6248fff639a9",
+        Description: cribl.String("delectus"),
+        ID: "cb33ea05-5b19-47cd-84e2-f52d82d3513b",
         Template: []string{
-            "ipsa",
+            "tempore",
         },
     })
     if err != nil {
@@ -89,7 +88,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "mollitia"
+    id := "nisi"
 
     ctx := context.Background()
     res, err := s.Policies.Delete(ctx, id)
@@ -139,7 +138,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "nam"
+    id := "voluptatibus"
 
     ctx := context.Background()
     res, err := s.Policies.Get(ctx, id)
@@ -236,21 +235,15 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "assumenda"
+    id := "quaerat"
     policyRule := &shared.PolicyRule{
         Args: []string{
-            "fuga",
-            "tempore",
-            "commodi",
-            "fugit",
+            "blanditiis",
         },
-        Description: cribl.String("suscipit"),
-        ID: "76696e1e-c002-421b-b35d-89acb3ecfda8",
+        Description: cribl.String("distinctio"),
+        ID: "656bcdb3-5ff2-4e4b-a753-7a8cd9e7319c",
         Template: []string{
-            "sit",
-            "quo",
-            "veniam",
-            "aliquam",
+            "vitae",
         },
     }
 

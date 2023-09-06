@@ -36,17 +36,15 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Messages.Create(ctx, shared.BulletinMessage{
-        Group: cribl.String("nihil"),
-        ID: "5a60a04c-495c-4c69-9171-b51c1bdb1cf4",
+        Group: cribl.String("deleniti"),
+        ID: "d72f64d1-db1f-42c4-b106-61e96349e1cf",
         Metadata: []shared.BulletinMessageMetadata{
-            shared.BulletinMessageMetadata{},
-            shared.BulletinMessageMetadata{},
             shared.BulletinMessageMetadata{},
         },
         Severity: shared.BulletinMessageSeverityError.ToPointer(),
-        Text: "rem",
-        Time: cribl.Int64(543353),
-        Title: cribl.String("Dr."),
+        Text: "itaque",
+        Time: cribl.Int64(2677),
+        Title: cribl.String("Mrs."),
     })
     if err != nil {
         log.Fatal(err)
@@ -94,7 +92,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "cum"
+    id := "itaque"
 
     ctx := context.Background()
     res, err := s.Messages.Delete(ctx, id)
@@ -144,7 +142,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "pariatur"
+    id := "velit"
 
     ctx := context.Background()
     res, err := s.Messages.Get(ctx, id)

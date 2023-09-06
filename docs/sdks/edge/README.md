@@ -38,7 +38,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    path := "debitis"
+    path := "praesentium"
 
     ctx := context.Background()
     res, err := s.Edge.GetDirectoryListing(ctx, path)
@@ -135,7 +135,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    pid := "voluptatem"
+    pid := "quisquam"
 
     ctx := context.Background()
     res, err := s.Edge.GetRunDetails(ctx, pid)
@@ -185,8 +185,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    path := "alias"
-    bytesRequested := 534917
+    path := "veritatis"
+    bytesRequested := 56848
 
     ctx := context.Background()
     res, err := s.Edge.ListBytes(ctx, path, bytesRequested)
@@ -331,10 +331,10 @@ func main() {
             BearerAuth: "",
         }),
     )
-    allow := "earum"
-    depth := 404244
-    mode := "sapiente"
-    path := "rem"
+    allow := "id"
+    depth := 696997
+    mode := "neque"
+    path := "quo"
 
     ctx := context.Background()
     res, err := s.Edge.ListLogFiles(ctx, allow, depth, mode, path)

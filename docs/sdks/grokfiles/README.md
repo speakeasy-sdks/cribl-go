@@ -33,10 +33,10 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Grokfiles.Create(ctx, shared.GrokFile{
-        Content: "sequi",
-        ID: "7814d4c9-8e0c-42bb-89eb-75dad636c600",
-        Size: 322829,
-        Tags: cribl.String("quae"),
+        Content: "ab",
+        ID: "94a276b2-6916-4fe1-b08f-4294e3698f44",
+        Size: 455444,
+        Tags: cribl.String("reiciendis"),
     })
     if err != nil {
         log.Fatal(err)
@@ -84,7 +84,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "amet"
+    id := "ex"
 
     ctx := context.Background()
     res, err := s.Grokfiles.Delete(ctx, id)
@@ -134,7 +134,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "illum"
+    id := "sit"
 
     ctx := context.Background()
     res, err := s.Grokfiles.Get(ctx, id)
@@ -231,12 +231,12 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "praesentium"
+    id := "non"
     grokFile := &shared.GrokFile{
-        Content: "quidem",
-        ID: "b31180f7-39ae-49e0-97eb-809e2810331f",
-        Size: 223291,
-        Tags: cribl.String("occaecati"),
+        Content: "officiis",
+        ID: "8b445e80-ca55-4efd-a0e4-57e1858b6a89",
+        Size: 944708,
+        Tags: cribl.String("expedita"),
     }
 
     ctx := context.Background()

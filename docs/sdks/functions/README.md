@@ -32,7 +32,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "veniam"
+    id := "labore"
 
     ctx := context.Background()
     res, err := s.Functions.Get(ctx, id)

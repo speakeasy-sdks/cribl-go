@@ -27,8 +27,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    path := "officia"
-    bytesRequested := 491892
+    path := "dolorum"
+    bytesRequested := 99615
 
     ctx := context.Background()
     res, err := s.FileSampler.ListBytes(ctx, path, bytesRequested)

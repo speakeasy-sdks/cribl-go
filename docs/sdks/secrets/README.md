@@ -33,15 +33,15 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Secrets.Create(ctx, shared.RestSecret{
-        APIKey: cribl.String("dolore"),
-        Description: cribl.String("nam"),
-        ID: "af91e506-ef89-40a5-8b47-5f16f56d385a",
-        Password: cribl.String("sequi"),
-        SecretKey: cribl.String("maxime"),
-        SecretType: shared.SecretTypeText,
-        Tags: cribl.String("laborum"),
-        Username: cribl.String("Niko12"),
-        Value: cribl.String("rerum"),
+        APIKey: cribl.String("magni"),
+        Description: cribl.String("nihil"),
+        ID: "5a60a04c-495c-4c69-9171-b51c1bdb1cf4",
+        Password: cribl.String("expedita"),
+        SecretKey: cribl.String("corrupti"),
+        SecretType: shared.SecretTypeKeypair,
+        Tags: cribl.String("atque"),
+        Username: cribl.String("Sheldon_Ritchie77"),
+        Value: cribl.String("incidunt"),
     })
     if err != nil {
         log.Fatal(err)
@@ -89,7 +89,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "occaecati"
+    id := "quod"
 
     ctx := context.Background()
     res, err := s.Secrets.Delete(ctx, id)
@@ -139,7 +139,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "provident"
+    id := "minus"
 
     ctx := context.Background()
     res, err := s.Secrets.Get(ctx, id)
@@ -236,17 +236,17 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "necessitatibus"
+    id := "porro"
     restSecret := &shared.RestSecret{
-        APIKey: cribl.String("fugit"),
-        Description: cribl.String("autem"),
-        ID: "ced8f9fd-b941-40f6-bbbf-817837b01afd",
-        Password: cribl.String("quibusdam"),
-        SecretKey: cribl.String("quam"),
+        APIKey: cribl.String("id"),
+        Description: cribl.String("excepturi"),
+        ID: "9bc7fc0b-2dce-4108-b3e4-2b006d678878",
+        Password: cribl.String("rerum"),
+        SecretKey: cribl.String("deserunt"),
         SecretType: shared.SecretTypeKeypair,
-        Tags: cribl.String("rem"),
-        Username: cribl.String("Herman12"),
-        Value: cribl.String("blanditiis"),
+        Tags: cribl.String("nostrum"),
+        Username: cribl.String("Karen.Bradtke52"),
+        Value: cribl.String("magni"),
     }
 
     ctx := context.Background()

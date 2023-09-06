@@ -38,18 +38,17 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Users.CreateUser(ctx, shared.User{
-        CurrentPassword: cribl.String("itaque"),
+        CurrentPassword: cribl.String("voluptates"),
         Disabled: false,
-        Email: "Braeden.Farrell54@gmail.com",
-        First: "non",
-        ID: "7ec59e1f-67f3-4c4c-8e4b-6d7696ff3c57",
-        Last: "eius",
-        Password: cribl.String("dignissimos"),
+        Email: "Billy39@yahoo.com",
+        First: "necessitatibus",
+        ID: "2813fa4a-41c4-480d-bf21-32af03102d51",
+        Last: "magnam",
+        Password: cribl.String("delectus"),
         Roles: []string{
-            "perferendis",
-            "architecto",
+            "numquam",
         },
-        Username: "Daphney_Hessel",
+        Username: "Noelia_Rolfson",
     })
     if err != nil {
         log.Fatal(err)
@@ -97,7 +96,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "dolore"
+    id := "quae"
 
     ctx := context.Background()
     res, err := s.Users.Delete(ctx, id)
@@ -147,7 +146,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "magnam"
+    id := "deleniti"
 
     ctx := context.Background()
     res, err := s.Users.Get(ctx, id)
@@ -244,19 +243,19 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "maiores"
+    id := "expedita"
     user := &shared.User{
-        CurrentPassword: cribl.String("ipsam"),
+        CurrentPassword: cribl.String("hic"),
         Disabled: false,
-        Email: "Tyrel.Lakin51@gmail.com",
-        First: "tempora",
-        ID: "c3197e19-3a24-4546-bf94-874c2d5cc497",
-        Last: "qui",
-        Password: cribl.String("qui"),
+        Email: "Gracie62@yahoo.com",
+        First: "ea",
+        ID: "a4f77a87-ee3e-44be-b52c-65b34418e3bb",
+        Last: "iste",
+        Password: cribl.String("illo"),
         Roles: []string{
-            "ratione",
+            "minus",
         },
-        Username: "Summer_Kertzmann",
+        Username: "Kay.Smith",
     }
 
     ctx := context.Background()
@@ -308,21 +307,18 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "fugiat"
+    id := "enim"
     userProfile := &shared.UserProfile{
         Disabled: false,
-        Email: "Wilbert_Torphy@yahoo.com",
-        First: "aut",
-        ID: "0b979ef2-0387-4320-990c-cc1096400313",
-        Last: "rerum",
-        Password: cribl.String("ipsum"),
+        Email: "Alvah.Von@hotmail.com",
+        First: "quae",
+        ID: "9d8f84f1-44f3-4e07-adcc-4aa5f3cabd90",
+        Last: "ipsam",
+        Password: cribl.String("officia"),
         Roles: []string{
-            "quis",
-            "eaque",
-            "incidunt",
-            "ut",
+            "cupiditate",
         },
-        Username: "Vilma_Jacobi",
+        Username: "Imelda.Crona32",
     }
 
     ctx := context.Background()

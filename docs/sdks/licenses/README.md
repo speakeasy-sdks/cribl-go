@@ -37,22 +37,21 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Licenses.Create(ctx, shared.License{
-        Cls: shared.LicenseClsTrial,
-        Email: "Michele52@yahoo.com",
-        Exp: 978154,
-        FPh: 35160,
-        FPhg: 331452,
-        GUID: "saepe",
-        Iat: 206063,
-        ID: "d48fdaf3-13a1-4f5f-9942-59c0b36f25ea",
-        Iss: "sint",
-        License: "ut",
+        Cls: shared.LicenseClsProd,
+        Email: "Davion.Toy@yahoo.com",
+        Exp: 367927,
+        FPh: 928219,
+        FPhg: 456520,
+        GUID: "provident",
+        Iat: 337477,
+        ID: "6f9251a5-a9da-4660-bf57-bfaad4f9efc1",
+        Iss: "rerum",
+        License: "tempora",
         Limits: map[string]interface{}{
-            "tenetur": "adipisci",
-            "libero": "in",
+            "quis": "inventore",
         },
-        Quota: 329651,
-        Title: "Ms.",
+        Quota: 147685,
+        Title: "Miss",
     })
     if err != nil {
         log.Fatal(err)
@@ -100,7 +99,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "minus"
+    id := "quae"
 
     ctx := context.Background()
     res, err := s.Licenses.Delete(ctx, id)
@@ -150,7 +149,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "ab"
+    id := "perferendis"
 
     ctx := context.Background()
     res, err := s.Licenses.Get(ctx, id)

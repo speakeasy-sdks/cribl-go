@@ -28,7 +28,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    pid := "asperiores"
+    pid := "fuga"
 
     ctx := context.Background()
     res, err := s.EdgeProcesses.GetRunDetails(ctx, pid)

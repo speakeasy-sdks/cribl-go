@@ -38,12 +38,14 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Lookups.Create(ctx, operations.CreateLookupRequestBody2{
-        Content: cribl.String("deserunt"),
-        Description: cribl.String("corporis"),
-        ID: "3e5ae6e0-ac18-44c2-b9c2-47c88373a40e",
-        Size: cribl.Int64(102316),
-        Tags: cribl.String("molestias"),
+    res, err := s.Lookups.Create(ctx, operations.CreateLookupRequestBody1{
+        Description: cribl.String("fugit"),
+        FileInfo: &operations.CreateLookupRequestBody1FileInfo{
+            Filename: "ab",
+        },
+        ID: "813d5208-ece7-4e25-bb66-8451c6c6e205",
+        Size: cribl.Int64(895692),
+        Tags: cribl.String("quasi"),
     })
     if err != nil {
         log.Fatal(err)
@@ -91,7 +93,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "dolore"
+    id := "nisi"
 
     ctx := context.Background()
     res, err := s.Lookups.Delete(ctx, id)
@@ -141,7 +143,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "sunt"
+    id := "at"
 
     ctx := context.Background()
     res, err := s.Lookups.Get(ctx, id)
@@ -238,15 +240,13 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "maiores"
-    requestBody := operations.UpdateLookupRequestBody1{
-        Description: cribl.String("odit"),
-        FileInfo: &operations.UpdateLookupRequestBody1FileInfo{
-            Filename: "earum",
-        },
-        ID: "55055756-f5d5-46d0-bd0a-f2dfe13db4f6",
-        Size: cribl.Int64(127087),
-        Tags: cribl.String("minus"),
+    id := "vero"
+    requestBody := operations.UpdateLookupRequestBody2{
+        Content: cribl.String("harum"),
+        Description: cribl.String("sequi"),
+        ID: "fec9578a-6458-4427-ba84-18d162309fb0",
+        Size: cribl.Int64(608989),
+        Tags: cribl.String("eos"),
     }
 
     ctx := context.Background()
@@ -298,7 +298,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    filename := "soluta"
+    filename := "occaecati"
 
     ctx := context.Background()
     res, err := s.Lookups.Upload(ctx, filename)

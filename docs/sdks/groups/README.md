@@ -35,41 +35,33 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Groups.Create(ctx, shared.ConfigGroup{
-        ConfigVersion: "atque",
-        Description: cribl.String("beatae"),
-        EstimatedIngestRate: cribl.Int64(868255),
+        ConfigVersion: "debitis",
+        Description: cribl.String("neque"),
+        EstimatedIngestRate: cribl.Int64(677115),
         Git: &shared.ConfigGroupGit{
-            Commit: cribl.String("labore"),
-            LocalChanges: cribl.Int64(794988),
+            Commit: cribl.String("nostrum"),
+            LocalChanges: cribl.Int64(639028),
             Log: []shared.Commit{
                 shared.Commit{
-                    AuthorEmail: cribl.String("voluptatem"),
-                    AuthorName: cribl.String("perferendis"),
-                    Date: "rerum",
-                    Hash: "ea",
-                    Message: "aperiam",
-                    Short: "dignissimos",
-                },
-                shared.Commit{
-                    AuthorEmail: cribl.String("repellat"),
-                    AuthorName: cribl.String("velit"),
-                    Date: "porro",
-                    Hash: "provident",
-                    Message: "consectetur",
-                    Short: "eligendi",
+                    AuthorEmail: cribl.String("dolorum"),
+                    AuthorName: cribl.String("corrupti"),
+                    Date: "accusamus",
+                    Hash: "tempora",
+                    Message: "atque",
+                    Short: "fugit",
                 },
             },
         },
-        ID: "73b9da3f-2ced-4a7e-a3f2-257411faf4b7",
-        Inherits: cribl.String("exercitationem"),
+        ID: "4d0ab407-5088-4e51-8620-65e904f3b119",
+        Inherits: cribl.String("labore"),
         IsFleet: cribl.Bool(false),
         IsSearch: cribl.Bool(false),
-        Name: cribl.String("Marjorie Waelchi"),
+        Name: cribl.String("Alberto Osinski"),
         OnPrem: cribl.Bool(false),
         Provisioned: cribl.Bool(false),
-        SourceGroupID: cribl.String("explicabo"),
-        Tags: cribl.String("accusamus"),
-        WorkerCount: cribl.Int64(525809),
+        SourceGroupID: cribl.String("laboriosam"),
+        Tags: cribl.String("alias"),
+        WorkerCount: cribl.Int64(227084),
         WorkerRemoteAccess: cribl.Bool(false),
     })
     if err != nil {
@@ -118,7 +110,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "aperiam"
+    id := "deserunt"
 
     ctx := context.Background()
     res, err := s.Groups.Delete(ctx, id)
@@ -168,9 +160,9 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "odit"
+    id := "voluptate"
     deployRequest := &shared.DeployRequest{
-        Version: "deleniti",
+        Version: "unde",
     }
 
     ctx := context.Background()
@@ -222,8 +214,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "enim"
-    fields := "voluptate"
+    id := "reiciendis"
+    fields := "provident"
 
     ctx := context.Background()
     res, err := s.Groups.Get(ctx, id, fields)
@@ -274,9 +266,9 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "similique"
+    id := "repellendus"
     deployRequest := &shared.DeployRequest{
-        Version: "minima",
+        Version: "delectus",
     }
 
     ctx := context.Background()
@@ -328,8 +320,8 @@ func main() {
             BearerAuth: "",
         }),
     )
-    fields := "libero"
-    product := "magnam"
+    fields := "voluptates"
+    product := "perferendis"
 
     ctx := context.Background()
     res, err := s.Groups.ListGroups(ctx, fields, product)
@@ -380,59 +372,35 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "sit"
+    id := "est"
     configGroup := &shared.ConfigGroup{
-        ConfigVersion: "modi",
-        Description: cribl.String("eum"),
-        EstimatedIngestRate: cribl.Int64(199529),
+        ConfigVersion: "quidem",
+        Description: cribl.String("reprehenderit"),
+        EstimatedIngestRate: cribl.Int64(813679),
         Git: &shared.ConfigGroupGit{
-            Commit: cribl.String("mollitia"),
-            LocalChanges: cribl.Int64(492632),
+            Commit: cribl.String("fuga"),
+            LocalChanges: cribl.Int64(509807),
             Log: []shared.Commit{
                 shared.Commit{
-                    AuthorEmail: cribl.String("nostrum"),
-                    AuthorName: cribl.String("molestiae"),
-                    Date: "veniam",
-                    Hash: "reiciendis",
-                    Message: "ab",
-                    Short: "modi",
-                },
-                shared.Commit{
-                    AuthorEmail: cribl.String("aut"),
-                    AuthorName: cribl.String("aut"),
-                    Date: "eveniet",
-                    Hash: "odio",
-                    Message: "commodi",
-                    Short: "numquam",
-                },
-                shared.Commit{
-                    AuthorEmail: cribl.String("dolorum"),
-                    AuthorName: cribl.String("possimus"),
-                    Date: "voluptate",
-                    Hash: "consectetur",
-                    Message: "nesciunt",
-                    Short: "quaerat",
-                },
-                shared.Commit{
-                    AuthorEmail: cribl.String("itaque"),
-                    AuthorName: cribl.String("minus"),
-                    Date: "sunt",
-                    Hash: "distinctio",
-                    Message: "iusto",
-                    Short: "quas",
+                    AuthorEmail: cribl.String("mollitia"),
+                    AuthorName: cribl.String("veniam"),
+                    Date: "voluptatem",
+                    Hash: "quisquam",
+                    Message: "repudiandae",
+                    Short: "quasi",
                 },
             },
         },
-        ID: "1b36a080-88d1-400e-bada-200ef0422eb2",
-        Inherits: cribl.String("beatae"),
+        ID: "87f86bc1-73d6-489e-ae95-26f8d986e881",
+        Inherits: cribl.String("recusandae"),
         IsFleet: cribl.Bool(false),
         IsSearch: cribl.Bool(false),
-        Name: cribl.String("Pauline Rowe"),
+        Name: cribl.String("Mack Grant DVM"),
         OnPrem: cribl.Bool(false),
         Provisioned: cribl.Bool(false),
-        SourceGroupID: cribl.String("officia"),
-        Tags: cribl.String("libero"),
-        WorkerCount: cribl.Int64(520678),
+        SourceGroupID: cribl.String("dicta"),
+        Tags: cribl.String("accusantium"),
+        WorkerCount: cribl.Int64(106429),
         WorkerRemoteAccess: cribl.Bool(false),
     }
 

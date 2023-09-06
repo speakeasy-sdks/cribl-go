@@ -35,7 +35,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "optio"
+    id := "tempore"
 
     ctx := context.Background()
     res, err := s.Parsers.Delete(ctx, id)
@@ -85,7 +85,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "nobis"
+    id := "sint"
 
     ctx := context.Background()
     res, err := s.Parsers.Get(ctx, id)
@@ -184,8 +184,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Parsers.Post(ctx, map[string]interface{}{
-        "repellat": "quae",
-        "deleniti": "expedita",
+        "ea": "autem",
     })
     if err != nil {
         log.Fatal(err)
@@ -233,11 +232,9 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "hic"
+    id := "ipsam"
     requestBody := map[string]interface{}{
-        "aliquid": "sed",
-        "beatae": "similique",
-        "ea": "animi",
+        "rerum": "laudantium",
     }
 
     ctx := context.Background()

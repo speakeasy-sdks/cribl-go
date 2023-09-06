@@ -33,7 +33,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "eos"
+    id := "voluptatibus"
 
     ctx := context.Background()
     res, err := s.Routes.Get(ctx, id)
@@ -130,39 +130,24 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "natus"
+    id := "molestias"
     routes := &shared.Routes{
         Comments: []map[string]interface{}{
             map[string]interface{}{
-                "laudantium": "facilis",
-                "laudantium": "ullam",
+                "officia": "libero",
             },
         },
         Groups: map[string]shared.RoutesGroups{
-            "quia": shared.RoutesGroups{
-                Description: cribl.String("officia"),
+            "totam": shared.RoutesGroups{
+                Description: cribl.String("sequi"),
                 Disabled: cribl.Bool(false),
-                Name: "Ana Torp",
+                Name: "Gertrude Ryan",
             },
         },
-        ID: cribl.String("73bc845e-320a-4319-b4ba-df947c9a867b"),
+        ID: cribl.String("3ffda9e0-6bee-4482-9c1f-c0e115c80bff"),
         Routes: []map[string]interface{}{
             map[string]interface{}{
-                "eos": "magnam",
-                "dolores": "aliquid",
-            },
-            map[string]interface{}{
-                "vel": "ad",
-                "quos": "illo",
-            },
-            map[string]interface{}{
-                "quibusdam": "fugiat",
-                "impedit": "culpa",
-            },
-            map[string]interface{}{
-                "voluptates": "maiores",
-                "nemo": "illo",
-                "doloribus": "cumque",
+                "iste": "dicta",
             },
         },
     }

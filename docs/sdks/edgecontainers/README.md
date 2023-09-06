@@ -28,7 +28,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "minus"
+    id := "illum"
 
     ctx := context.Background()
     res, err := s.EdgeContainers.Get(ctx, id)

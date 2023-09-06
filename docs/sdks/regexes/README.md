@@ -35,7 +35,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "iste"
+    id := "totam"
 
     ctx := context.Background()
     res, err := s.Regexes.Delete(ctx, id)
@@ -85,7 +85,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "provident"
+    id := "dicta"
 
     ctx := context.Background()
     res, err := s.Regexes.Get(ctx, id)
@@ -184,12 +184,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Regexes.Post(ctx, shared.RegexLibEntry{
-        Description: cribl.String("dolor"),
-        ID: "90066a6d-2d00-4035-9338-cec086fa21e9",
-        Lib: cribl.String("dicta"),
-        Regex: "ipsam",
-        SampleData: cribl.String("consequuntur"),
-        Tags: cribl.String("cumque"),
+        Description: cribl.String("voluptatem"),
+        ID: "331f3981-d4c7-400b-a07f-3c93c73b9da3",
+        Lib: cribl.String("tenetur"),
+        Regex: "aspernatur",
+        SampleData: cribl.String("quo"),
+        Tags: cribl.String("itaque"),
     })
     if err != nil {
         log.Fatal(err)
@@ -237,14 +237,14 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quidem"
+    id := "illum"
     regexLibEntry := &shared.RegexLibEntry{
-        Description: cribl.String("non"),
-        ID: "119167b8-e3c8-4db0-b408-d6d364ffd455",
-        Lib: cribl.String("perspiciatis"),
-        Regex: "alias",
-        SampleData: cribl.String("ex"),
-        Tags: cribl.String("quibusdam"),
+        Description: cribl.String("laborum"),
+        ID: "7e23f225-7411-4faf-8b75-44e472e80285",
+        Lib: cribl.String("voluptate"),
+        Regex: "similique",
+        SampleData: cribl.String("minima"),
+        Tags: cribl.String("libero"),
     }
 
     ctx := context.Background()

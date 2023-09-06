@@ -33,7 +33,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    filterExp := "consequatur"
+    filterExp := "nesciunt"
 
     ctx := context.Background()
     res, err := s.Workers.Get(ctx, filterExp)
@@ -83,10 +83,10 @@ func main() {
             BearerAuth: "",
         }),
     )
-    filterExp := "cumque"
-    limit := 810291
-    offset := 238566
-    sortExp := "tenetur"
+    filterExp := "ipsa"
+    limit := 575139
+    offset := 291389
+    sortExp := "esse"
 
     ctx := context.Background()
     res, err := s.Workers.ListWorkerEdgeNodes(ctx, filterExp, limit, offset, sortExp)

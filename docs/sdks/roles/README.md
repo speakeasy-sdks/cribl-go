@@ -33,10 +33,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Roles.Create(ctx, shared.Role{
-        ID: "1263d48e-935c-42c9-a81f-30be3e43202d",
+        ID: "40463a7d-575f-4140-8e76-4ad7334ec1b7",
         Policy: []string{
-            "magni",
-            "beatae",
+            "quas",
         },
     })
     if err != nil {
@@ -85,7 +84,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "aliquid"
+    id := "et"
 
     ctx := context.Background()
     res, err := s.Roles.Delete(ctx, id)
@@ -135,7 +134,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "ad"
+    id := "facilis"
 
     ctx := context.Background()
     res, err := s.Roles.Get(ctx, id)
@@ -232,13 +231,11 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "voluptate"
+    id := "amet"
     role := &shared.Role{
-        ID: "65066418-70d9-4d21-b9ad-030c4ecc11a0",
+        ID: "6a08088d-100e-4fad-a200-ef0422eb2164",
         Policy: []string{
-            "ratione",
-            "iure",
-            "tempora",
+            "optio",
         },
     }
 

@@ -40,12 +40,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Samples.CaptureLiveData(ctx, shared.CaptureParams{
-        Filter: "expedita",
-        Level: 266370,
-        MaxEvents: 768244,
-        StepDuration: cribl.Int64(368599),
-        WorkerID: cribl.String("occaecati"),
-        WorkerThreshold: cribl.Int64(219279),
+        Filter: "quos",
+        Level: 356315,
+        MaxEvents: 295950,
+        StepDuration: cribl.Int64(266284),
+        WorkerID: cribl.String("itaque"),
+        WorkerThreshold: cribl.Int64(807419),
     })
     if err != nil {
         log.Fatal(err)
@@ -93,7 +93,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "accusamus"
+    id := "modi"
 
     ctx := context.Background()
     res, err := s.Samples.Delete(ctx, id)
@@ -143,7 +143,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quisquam"
+    id := "consequuntur"
 
     ctx := context.Background()
     res, err := s.Samples.Get(ctx, id)
@@ -193,7 +193,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quasi"
+    id := "assumenda"
 
     ctx := context.Background()
     res, err := s.Samples.GetContent(ctx, id)
@@ -292,7 +292,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Samples.Post(ctx, map[string]interface{}{
-        "quo": "temporibus",
+        "vero": "doloribus",
     })
     if err != nil {
         log.Fatal(err)
@@ -346,29 +346,17 @@ func main() {
         Dropped: cribl.Bool(false),
         Events: []map[string]interface{}{
             map[string]interface{}{
-                "quibusdam": "ipsa",
-                "accusamus": "placeat",
-                "quam": "similique",
-            },
-            map[string]interface{}{
-                "saepe": "facere",
-                "nobis": "at",
-                "molestias": "aut",
-                "temporibus": "tenetur",
-            },
-            map[string]interface{}{
-                "numquam": "corrupti",
-                "similique": "dolore",
+                "impedit": "porro",
             },
         },
-        InputID: cribl.String("esse"),
-        Level: cribl.Int64(968205),
-        Memory: cribl.Int64(611792),
+        InputID: cribl.String("accusamus"),
+        Level: cribl.Int64(518990),
+        Memory: cribl.Int64(969168),
         Mode: shared.PreviewDataParamsModePipe,
-        PipelineID: "occaecati",
-        SampleID: "aut",
-        SamplePipelineID: cribl.String("impedit"),
-        Timeout: cribl.Int64(325855),
+        PipelineID: "sint",
+        SampleID: "nihil",
+        SamplePipelineID: cribl.String("esse"),
+        Timeout: cribl.Int64(438256),
     })
     if err != nil {
         log.Fatal(err)
@@ -416,11 +404,9 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "quos"
+    id := "odio"
     requestBody := map[string]interface{}{
-        "quas": "voluptatem",
-        "provident": "quas",
-        "ipsum": "vero",
+        "nesciunt": "debitis",
     }
 
     ctx := context.Background()

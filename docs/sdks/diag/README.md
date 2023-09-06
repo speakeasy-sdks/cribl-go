@@ -35,7 +35,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    path := "officiis"
+    path := "eum"
 
     ctx := context.Background()
     res, err := s.Diag.Delete(ctx, path)
@@ -229,8 +229,8 @@ func main() {
     ctx := context.Background()
     res, err := s.Diag.Send(ctx, shared.SendDiagBundle{
         IncludeMetrics: cribl.Bool(false),
-        MaxIncludeJobs: cribl.Int64(103298),
-        Path: cribl.String("fuga"),
+        MaxIncludeJobs: cribl.Int64(379927),
+        Path: cribl.String("assumenda"),
         RenameJs: cribl.Bool(false),
         SendToCribl: cribl.Bool(false),
     })

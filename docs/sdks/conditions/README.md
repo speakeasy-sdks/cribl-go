@@ -28,7 +28,7 @@ func main() {
             BearerAuth: "",
         }),
     )
-    id := "provident"
+    id := "similique"
 
     ctx := context.Background()
     res, err := s.Conditions.Get(ctx, id)
